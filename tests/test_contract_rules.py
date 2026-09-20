@@ -150,7 +150,12 @@ def test_engine_runs_in_process_without_matplotlib() -> None:
 
 
 def test_tests_do_not_freeze_demo_count_as_scientific_target() -> None:
+    this = Path(__file__).name
+    needle_eq = "n_adsorbed == " + str(146)
+    needle_frac = str(146) + "/200"
     for path in (ROOT / "tests").glob("test_*.py"):
+        if path.name == this:
+            continue
         src = path.read_text()
-        assert "n_adsorbed == 146" not in src
-        assert "146/200" not in src
+        assert needle_eq not in src
+        assert needle_frac not in src
