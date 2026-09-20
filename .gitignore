@@ -1,0 +1,11 @@
+__pycache__/
+.pytest_cache/
+.mypy_cache/
+*.pyc
+.venv/
+venv/
+data/results/*
+!data/results/.gitkeep
+figures/*
+!figures/.gitkeep
+.DS_Store
