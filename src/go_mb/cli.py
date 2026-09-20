@@ -10,14 +10,21 @@ from go_mb.config import SimulationConfig
 from go_mb.engine import run_simulation
 from go_mb.experiments import run_campaign
 from go_mb.io import load_run, save_run
-from go_mb.viz import plot_run, plot_snapshot
 
 
 def _add_run_args(p: argparse.ArgumentParser) -> None:
     p.add_argument("--seed", type=int, required=True)
     p.add_argument("--sigma", type=float, required=True, help="D/σ browniano en px/paso (PENDIENTE en el PDF)")
     p.add_argument("--steps", type=int, required=True, help="P pasos (PENDIENTE en el PDF)")
-    p.add_argument("--p-ads", type=float, default=None, help="P_ads opcional en [0,1]; por defecto regla de capacidad")
+    p.add_argument(
+        "--p-ads",
+        type=float,
+        default=None,
+        help=(
+            "P_ads inyectado en [0,1]. Defecto None = decisión provisional P_ads=1 "
+            "tras contacto y capacidad; NO es un valor de literatura"
+        ),
+    )
     p.add_argument("--out", type=str, default="data/results")
 
 
@@ -34,7 +41,15 @@ def main(argv: list[str] | None = None) -> int:
     camp.add_argument("--base-seed", type=int, required=True)
     camp.add_argument("--sigma", type=float, required=True)
     camp.add_argument("--steps", type=int, required=True)
-    camp.add_argument("--p-ads", type=float, default=None)
+    camp.add_argument(
+        "--p-ads",
+        type=float,
+        default=None,
+        help=(
+            "P_ads inyectado en [0,1]. Defecto None = decisión provisional P_ads=1 "
+            "tras contacto y capacidad; NO es un valor de literatura"
+        ),
+    )
     camp.add_argument("--out", type=str, default="data/results")
 
     plot_p = sub.add_parser("plot", help="Graficar un JSON ya escrito")
@@ -54,6 +69,8 @@ def main(argv: list[str] | None = None) -> int:
         )
         paths = save_run(result, args.out, f"go_seed_{args.seed}")
         if args.plot:
+            from go_mb.viz import plot_run, plot_snapshot
+
             plot_run(result, Path("figures") / f"go_seed_{args.seed}_series.png")
             plot_snapshot(result, Path("figures") / f"go_seed_{args.seed}_snap.png")
         print(json.dumps({"paths": paths, "summary": result["summary"]}, indent=2))
@@ -79,6 +96,8 @@ def main(argv: list[str] | None = None) -> int:
         return 0
 
     if args.cmd == "plot":
+        from go_mb.viz import plot_run, plot_snapshot
+
         result = load_run(args.input)
         stem = Path(args.input).stem
         s = plot_run(result, Path(args.out) / f"{stem}_series.png")

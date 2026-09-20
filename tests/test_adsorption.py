@@ -55,3 +55,29 @@ def test_adsorption_module_does_not_use_langmuir() -> None:
     assert "kl_l" not in src
     assert "langmuir_equilibrium" not in src
     assert "qe_mg" not in src
+    assert "pso" not in src
+
+
+def test_default_p_ads_none_matches_p_ads_one() -> None:
+    """None y 1.0 son la misma decisión provisional; no consumen RNG extra."""
+    pairs = np.array([[0, 0], [1, 0]], dtype=np.int64)
+    a = _state(n_mb=2, n_go=1)
+    b = _state(n_mb=2, n_go=1)
+    rng_a = np.random.default_rng(0)
+    rng_b = np.random.default_rng(0)
+    n_a = apply_adsorption(a, pairs, rng_a, p_ads=None)
+    n_b = apply_adsorption(b, pairs, rng_b, p_ads=1.0)
+    assert n_a == n_b == 2
+    assert a.n_adsorbed == b.n_adsorbed
+    leftover_a = rng_a.random()
+    leftover_b = rng_b.random()
+    assert leftover_a == leftover_b
+
+
+def test_p_ads_zero_rejects_without_rng() -> None:
+    state = _state(n_mb=1, n_go=1)
+    pairs = np.array([[0, 0]], dtype=np.int64)
+    n = apply_adsorption(state, pairs, rng=None, p_ads=0.0)
+    assert n == 0
+    assert state.n_adsorbed == 0
+    assert state.mb_free[0]

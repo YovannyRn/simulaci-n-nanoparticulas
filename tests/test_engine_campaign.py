@@ -20,7 +20,11 @@ def test_engine_reproducible_and_conserves_mass() -> None:
     assert a["summary"]["mass_conservation_ok"]
     qe = a["reference"]["langmuir"]["qe_mg_g"]
     assert "qe_mg_g" in a["reference"]["langmuir"]
-    assert a["run"]["adsorption_rule"] == "capacity_only_whole_objects"
+    assert a["run"]["adsorption_rule"] == "provisional_P_ads_eq_1_after_contact_and_capacity"
+    assert a["run"]["p_ads_implementation_status"] == "DECISIÓN COMPUTACIONAL PROVISIONAL"
+    assert a["run"]["sigma_role"] == "injected_execution_parameter"
+    assert a["run"]["n_steps_role"] == "injected_execution_parameter"
+    assert a["run"]["not_experimental_validation"] is True
     assert abs(qe - 380.7) < 0.05
 
 

@@ -33,13 +33,14 @@ def move(state: SimulationState, rng: np.random.Generator, sigma_px: float) -> N
         raise ValueError("sigma_px debe ser ≥ 0")
     domain = float(state.config.domain_px)
 
-    n_free = int(np.count_nonzero(state.mb_free))
+    free = state.mb_free
+    n_free = int(np.count_nonzero(free))
     if n_free:
         delta = rng.normal(0.0, sigma_px, size=(n_free, 2))
-        state.mb_xy[state.mb_free] += delta
+        state.mb_xy[free] += delta
         half = state.config.r_mb_px
-        state.mb_xy[:, 0] = _bounce_axis(state.mb_xy[:, 0], half, domain - half)
-        state.mb_xy[:, 1] = _bounce_axis(state.mb_xy[:, 1], half, domain - half)
+        state.mb_xy[free, 0] = _bounce_axis(state.mb_xy[free, 0], half, domain - half)
+        state.mb_xy[free, 1] = _bounce_axis(state.mb_xy[free, 1], half, domain - half)
 
     go_delta = rng.normal(0.0, sigma_px, size=state.go_xy.shape)
     state.go_xy += go_delta

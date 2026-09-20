@@ -6,7 +6,21 @@ La implementación posterior inyecta D, P, Nrep y radios como parámetros **etiq
 
 # Fase 1 definitiva — Especificación técnica GO–MB
 
-**Estado de esta entrega:** solo planificación. No hay código. No se inicia la Fase 2.
+**Estado de esta entrega:** contrato científico de Fase 1 (secciones 1–23). El código posterior implementa este contrato; no lo sustituye.
+
+**Estado de implementación (solo decisiones ya programadas, no física nueva):**
+
+- Recinto 442×442 px; 200 MB × 0,02 mg (5×5); 100 GO × 0,10 mg (7×7).
+- Movimiento Δx,Δy ~ N(0,σ²) con σ inyectado; rebote por reflexión por eje y recorte; solo MB libres y GO se mueven.
+- Contacto únicamente si d ≤ rMB + rGO (círculos inscritos: 2,5 y 3,5 px). Sin probabilidad de colisión.
+- Adsorción por defecto: contacto + capacidad restante ≥ 0,02 mg → adsorbe el objeto entero. **DECISIÓN COMPUTACIONAL PROVISIONAL equivalente a P_ads=1.** No es dato físico ni bibliográfico. P_ads de literatura sigue PENDIENTE.
+- Langmuir y PSO viven en `models`/`metrics` (referencia). No entran en el detector ni en la regla de adsorción.
+- Semilla por corrida (`numpy.random.default_rng(seed)`). Motor headless independiente de Matplotlib.
+- Conservación: MasaMB + Mlibre = 4 mg en cada registro.
+- σ y P se inyectan por corrida (`--sigma`, `--steps`). No son valores científicos definitivos.
+- Un recuento de demo (p. ej. 146/200) es **demostración computacional**, no validación experimental.
+
+Detalle operativo: [`docs/PENDIENTES.md`](PENDIENTES.md).
 
 **Fuente principal:** PDF `1º Simulacion.pdf` (*Simulación 1 — Nanopartículas de óxido de grafeno*).
 

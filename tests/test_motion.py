@@ -1,10 +1,18 @@
 """Fase 3: browniano + rebote."""
 
+import inspect
+
 import numpy as np
 
 from go_mb.config import RunSettings, SimulationConfig
 from go_mb.motion import move
 from go_mb.state import assert_inside, initialize_state
+
+
+def test_displacements_are_normal_zero_mean() -> None:
+    src = inspect.getsource(move)
+    assert "rng.normal(0.0, sigma_px" in src
+    assert "mb_free" in src
 
 
 def test_reproducible_trajectories() -> None:
@@ -41,3 +49,23 @@ def test_adsorbed_mb_does_not_move() -> None:
     frozen = state.mb_xy.copy()
     move(state, rng, 3.0)
     assert np.allclose(frozen, state.mb_xy)
+
+
+def test_sigma_zero_no_displacement() -> None:
+    cfg = SimulationConfig()
+    state, rng = initialize_state(cfg, RunSettings(seed=4, sigma_px=0.0, n_steps=1))
+    mb0 = state.mb_xy.copy()
+    go0 = state.go_xy.copy()
+    move(state, rng, 0.0)
+    assert np.allclose(mb0, state.mb_xy)
+    assert np.allclose(go0, state.go_xy)
+
+
+def test_bounce_reflects_and_clamps() -> None:
+    from go_mb.motion import _bounce_axis
+
+    lo, hi = 2.5, 439.5
+    out = _bounce_axis(np.array([lo - 1.0, hi + 2.0, (lo + hi) / 2.0]), lo, hi)
+    assert out[0] >= lo
+    assert out[1] <= hi
+    assert np.all(out >= lo) and np.all(out <= hi)

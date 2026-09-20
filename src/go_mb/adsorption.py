@@ -1,8 +1,10 @@
 """Regla de adsorción posterior al contacto.
 
 No consulta Langmuir ni PSO.
-No inventa un P_ads de literatura: por defecto adsorbe un objeto entero
-si queda capacidad másica suficiente.
+P_ads de literatura sigue PENDIENTE. El valor por defecto (p_ads=None)
+es una DECISIÓN COMPUTACIONAL PROVISIONAL equivalente a P_ads=1
+tras contacto geométrico y capacidad restante ≥ peso_MB.
+No es un dato físico ni bibliográfico. No se calibra a qe Langmuir.
 """
 
 from __future__ import annotations
@@ -57,12 +59,17 @@ def apply_adsorption(
         j_go = min(capable[int(t)] for t in ties)
 
         if p_ads is not None:
-            if rng is None:
-                raise ValueError("p_ads estocástico requiere un RNG")
             if not (0.0 <= p_ads <= 1.0):
                 raise ValueError("p_ads debe estar en [0, 1]")
-            if rng.random() > p_ads:
+            # p_ads=None (defecto) y p_ads=1.0: adsorbe sin extraer RNG.
+            # p_ads=0.0: rechaza sin extraer RNG. Solo (0, 1) es Bernoulli.
+            if p_ads <= 0.0:
                 continue
+            if p_ads < 1.0:
+                if rng is None:
+                    raise ValueError("p_ads estocástico requiere un RNG")
+                if rng.random() > p_ads:
+                    continue
 
         state.mb_free[i_mb] = False
         state.go_capacity_mg[j_go] -= peso

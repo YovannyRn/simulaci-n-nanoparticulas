@@ -185,24 +185,31 @@ class RunSettings:
     max_place_attempts: int = 20000
 
     def metadata(self) -> dict[str, Any]:
-        rule = (
-            "capacity_only_whole_objects"
-            if self.p_ads is None
-            else f"bernoulli_p_ads={self.p_ads}_after_capacity_check"
-        )
+        if self.p_ads is None or self.p_ads == 1.0:
+            rule = "provisional_P_ads_eq_1_after_contact_and_capacity"
+            p_ads_effective = 1.0
+        else:
+            rule = f"bernoulli_p_ads={self.p_ads}_after_capacity_check"
+            p_ads_effective = self.p_ads
         return {
             "seed": self.seed,
+            "run_classification": "computational_execution",
+            "not_experimental_validation": True,
             "sigma_px": self.sigma_px,
             "sigma_status": OriginStatus.PENDIENTE.value,
+            "sigma_role": "injected_execution_parameter",
             "n_steps": self.n_steps,
             "n_steps_status": OriginStatus.PENDIENTE.value,
+            "n_steps_role": "injected_execution_parameter",
             "p_ads": self.p_ads,
+            "p_ads_effective": p_ads_effective,
             "p_ads_status": OriginStatus.PENDIENTE.value,
+            "p_ads_implementation_status": "DECISIÓN COMPUTACIONAL PROVISIONAL",
             "adsorption_rule": rule,
             "adsorption_rule_note": (
-                "P_ads no existe en literatura. La regla por defecto adsorbe un "
-                "objeto MB entero si el GO tiene capacidad restante ≥ peso_MB. "
-                "No se calibra para alcanzar qe Langmuir."
+                "P_ads de literatura sigue PENDIENTE. p_ads=None (defecto) equivale "
+                "a P_ads=1 tras contacto geométrico y capacidad restante ≥ peso_MB. "
+                "Eso NO es un dato físico ni bibliográfico y no se calibra a qe."
             ),
             "radii_rule": "inscribed_circle_half_side",
             "radii_status": OriginStatus.DECISION_COMPUTACIONAL.value,
@@ -211,6 +218,9 @@ class RunSettings:
             "step_order": "move_then_contact_then_adsorb",
             "overlap_avoidance": self.avoid_overlap,
             "placement_status": OriginStatus.DECISION_COMPUTACIONAL.value,
+            "result_classification": (
+                "computational_execution_not_experimental_validation"
+            ),
         }
 
 

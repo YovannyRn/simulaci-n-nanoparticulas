@@ -95,4 +95,5 @@ def summarize_run(
             "c_remaining_mg_l = m_free/V (concentración restante)."
         ),
         "mass_conservation_ok": abs(float(last["m_adsorbed_mg"]) + float(last["m_free_mg"]) - config.m_mb_mg) < 1e-9,
+        "result_classification": "computational_execution_not_experimental_validation",
     }
