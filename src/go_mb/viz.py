@@ -61,7 +61,8 @@ def plot_snapshot(result: dict[str, Any], output_path: str | Path) -> str:
         ax.scatter(mb[free, 0], mb[free, 1], s=mb_s ** 2, c="tab:blue", marker="s", label="MB libre")
     if np.any(~free):
         ax.scatter(mb[~free, 0], mb[~free, 1], s=mb_s ** 2, c="tab:red", marker="s", label="MB adsorbido")
-    ax.set_title(f"Semilla {result['run']['seed']}  |  paso {result['summary'].get('n_adsorbed', '')}")
+    last_step = result["series"][-1]["step"] if result.get("series") else result["summary"].get("n_adsorbed", "")
+    ax.set_title(f"Semilla {result['run']['seed']}  |  paso {last_step}")
     ax.set_xlabel("px")
     ax.set_ylabel("px")
     ax.legend(loc="upper right", fontsize=8)
