@@ -29,6 +29,7 @@ def snapshot(state: SimulationState, prev_qt: float | None) -> dict[str, float |
         "qt_mg_g": qt,
         "percent_qmax": (qt / cfg.qmax_mg_g) * 100.0,
         "n_contacts": state.n_contacts,
+        "n_adsorption_events": state.n_adsorption_events,
         "dqt_per_step": dq,
     }
 
@@ -83,6 +84,12 @@ def summarize_run(
         "qfinal_mg_g": qfinal,
         "percent_qmax": float(last["percent_qmax"]),
         "n_contacts": int(last["n_contacts"]),
+        "n_adsorption_events": int(last.get("n_adsorption_events", last["n_adsorbed"])),
+        "contact_to_adsorption_ratio": (
+            float(last["n_adsorbed"]) / int(last["n_contacts"])
+            if int(last["n_contacts"]) > 0
+            else None
+        ),
         "mean_speed_q_per_step": qfinal / n_steps,
         "steps_to_percent_qe_L": steps_to_percentages(qt, langmuir["qe_mg_g"]),
         "steps_to_percent_qfinal": steps_to_percentages(qt, qfinal if qfinal > 0 else 1.0),

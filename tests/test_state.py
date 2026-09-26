@@ -11,7 +11,7 @@ def test_full_counts_and_occupation() -> None:
     assert state.go_xy.shape == (100, 2)
     assert state.n_free == 200
     assert state.n_adsorbed == 0
-    assert cfg.mb_area_px2 == 5000
+    assert cfg.mb_area_px2 == 200
     assert cfg.go_area_px2 == 4900
     assert_inside(state)
 

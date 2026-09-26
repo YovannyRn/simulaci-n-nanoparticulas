@@ -25,6 +25,19 @@ def save_run(result: dict[str, Any], directory: str | Path, stem: str) -> dict[s
     return {"json": str(json_path), "csv": str(csv_path)}
 
 
+def save_study(study: dict[str, Any], directory: str | Path, stem: str) -> str:
+    """Persiste un estudio de sensibilidad (JSON agregado + filas por corrida)."""
+    directory = Path(directory)
+    directory.mkdir(parents=True, exist_ok=True)
+    path = directory / f"{stem}.json"
+    path.write_text(json.dumps(study, indent=2, default=str))
+    return str(path)
+
+
+def load_study(json_path: str | Path) -> dict[str, Any]:
+    return json.loads(Path(json_path).read_text())
+
+
 def load_run(json_path: str | Path) -> dict[str, Any]:
     data = json.loads(Path(json_path).read_text())
     csv_path = data.get("series_csv")

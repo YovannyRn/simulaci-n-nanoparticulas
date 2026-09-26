@@ -42,8 +42,9 @@ def move(state: SimulationState, rng: np.random.Generator, sigma_px: float) -> N
         state.mb_xy[free, 0] = _bounce_axis(state.mb_xy[free, 0], half, domain - half)
         state.mb_xy[free, 1] = _bounce_axis(state.mb_xy[free, 1], half, domain - half)
 
-    go_delta = rng.normal(0.0, sigma_px, size=state.go_xy.shape)
-    state.go_xy += go_delta
-    half_go = state.config.r_go_px
-    state.go_xy[:, 0] = _bounce_axis(state.go_xy[:, 0], half_go, domain - half_go)
-    state.go_xy[:, 1] = _bounce_axis(state.go_xy[:, 1], half_go, domain - half_go)
+    if state.config.adsorbent_movable:
+        go_delta = rng.normal(0.0, sigma_px, size=state.go_xy.shape)
+        state.go_xy += go_delta
+        half_go = state.config.r_go_px
+        state.go_xy[:, 0] = _bounce_axis(state.go_xy[:, 0], half_go, domain - half_go)
+        state.go_xy[:, 1] = _bounce_axis(state.go_xy[:, 1], half_go, domain - half_go)

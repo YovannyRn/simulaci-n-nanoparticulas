@@ -1,0 +1,2162 @@
+{
+  "provenance": {
+    "classification": "final_protocol_analysis_descriptive_not_experimental_validation",
+    "not_experimental_validation": true,
+    "steps_are_not_minutes": true,
+    "alpha_status": "exploratory_not_definitive",
+    "no_automatic_sigma_selection": true,
+    "no_automatic_steps_selection": true,
+    "no_automatic_alpha_fixation": true,
+    "motor_unchanged": true,
+    "data_sources": {
+      "campaign_wiam_geometry": "data\\sensitivity\\homogeneous_temporal_wiam_geometry",
+      "temporal_calibration": "data\\analysis\\temporal_calibration"
+    },
+    "analysis_horizon_steps": 2000,
+    "geometry_era": "wiam_geometry"
+  },
+  "p2000_runs": [
+    {
+      "material": "GO",
+      "seed": 1,
+      "sigma_px": 1.5,
+      "n_steps": 2000,
+      "n_adsorbed": 185,
+      "percent_adsorbed": 92.5,
+      "qt_mg_g": 370.0,
+      "n_contacts": 614,
+      "mass_conservation_ok": true,
+      "json_path": "data\\sensitivity\\homogeneous_temporal_wiam_geometry\\go\\sens_grid_sigma_1.5_steps_2000_seed_1.json"
+    },
+    {
+      "material": "GO",
+      "seed": 2,
+      "sigma_px": 1.5,
+      "n_steps": 2000,
+      "n_adsorbed": 186,
+      "percent_adsorbed": 93.0,
+      "qt_mg_g": 372.0,
+      "n_contacts": 619,
+      "mass_conservation_ok": true,
+      "json_path": "data\\sensitivity\\homogeneous_temporal_wiam_geometry\\go\\sens_grid_sigma_1.5_steps_2000_seed_2.json"
+    },
+    {
+      "material": "GO",
+      "seed": 3,
+      "sigma_px": 1.5,
+      "n_steps": 2000,
+      "n_adsorbed": 182,
+      "percent_adsorbed": 91.0,
+      "qt_mg_g": 364.0,
+      "n_contacts": 564,
+      "mass_conservation_ok": true,
+      "json_path": "data\\sensitivity\\homogeneous_temporal_wiam_geometry\\go\\sens_grid_sigma_1.5_steps_2000_seed_3.json"
+    },
+    {
+      "material": "GO",
+      "seed": 4,
+      "sigma_px": 1.5,
+      "n_steps": 2000,
+      "n_adsorbed": 187,
+      "percent_adsorbed": 93.5,
+      "qt_mg_g": 374.0,
+      "n_contacts": 623,
+      "mass_conservation_ok": true,
+      "json_path": "data\\sensitivity\\homogeneous_temporal_wiam_geometry\\go\\sens_grid_sigma_1.5_steps_2000_seed_4.json"
+    },
+    {
+      "material": "GO",
+      "seed": 5,
+      "sigma_px": 1.5,
+      "n_steps": 2000,
+      "n_adsorbed": 191,
+      "percent_adsorbed": 95.5,
+      "qt_mg_g": 382.0,
+      "n_contacts": 517,
+      "mass_conservation_ok": true,
+      "json_path": "data\\sensitivity\\homogeneous_temporal_wiam_geometry\\go\\sens_grid_sigma_1.5_steps_2000_seed_5.json"
+    },
+    {
+      "material": "GO",
+      "seed": 1,
+      "sigma_px": 1.0,
+      "n_steps": 2000,
+      "n_adsorbed": 158,
+      "percent_adsorbed": 79.0,
+      "qt_mg_g": 316.0,
+      "n_contacts": 563,
+      "mass_conservation_ok": true,
+      "json_path": "data\\sensitivity\\homogeneous_temporal_wiam_geometry\\go\\sens_grid_sigma_1_steps_2000_seed_1.json"
+    },
+    {
+      "material": "GO",
+      "seed": 2,
+      "sigma_px": 1.0,
+      "n_steps": 2000,
+      "n_adsorbed": 166,
+      "percent_adsorbed": 83.0,
+      "qt_mg_g": 332.0,
+      "n_contacts": 761,
+      "mass_conservation_ok": true,
+      "json_path": "data\\sensitivity\\homogeneous_temporal_wiam_geometry\\go\\sens_grid_sigma_1_steps_2000_seed_2.json"
+    },
+    {
+      "material": "GO",
+      "seed": 3,
+      "sigma_px": 1.0,
+      "n_steps": 2000,
+      "n_adsorbed": 167,
+      "percent_adsorbed": 83.5,
+      "qt_mg_g": 334.0,
+      "n_contacts": 361,
+      "mass_conservation_ok": true,
+      "json_path": "data\\sensitivity\\homogeneous_temporal_wiam_geometry\\go\\sens_grid_sigma_1_steps_2000_seed_3.json"
+    },
+    {
+      "material": "GO",
+      "seed": 4,
+      "sigma_px": 1.0,
+      "n_steps": 2000,
+      "n_adsorbed": 163,
+      "percent_adsorbed": 81.5,
+      "qt_mg_g": 326.0,
+      "n_contacts": 572,
+      "mass_conservation_ok": true,
+      "json_path": "data\\sensitivity\\homogeneous_temporal_wiam_geometry\\go\\sens_grid_sigma_1_steps_2000_seed_4.json"
+    },
+    {
+      "material": "GO",
+      "seed": 5,
+      "sigma_px": 1.0,
+      "n_steps": 2000,
+      "n_adsorbed": 175,
+      "percent_adsorbed": 87.5,
+      "qt_mg_g": 350.0,
+      "n_contacts": 724,
+      "mass_conservation_ok": true,
+      "json_path": "data\\sensitivity\\homogeneous_temporal_wiam_geometry\\go\\sens_grid_sigma_1_steps_2000_seed_5.json"
+    },
+    {
+      "material": "AC",
+      "seed": 1,
+      "sigma_px": 1.5,
+      "n_steps": 2000,
+      "n_adsorbed": 136,
+      "percent_adsorbed": 68.0,
+      "qt_mg_g": 272.0,
+      "n_contacts": 276,
+      "mass_conservation_ok": true,
+      "json_path": "data\\sensitivity\\homogeneous_temporal_wiam_geometry\\ac\\ac_sens_grid_sigma_1.5_steps_2000_seed_1.json"
+    },
+    {
+      "material": "AC",
+      "seed": 2,
+      "sigma_px": 1.5,
+      "n_steps": 2000,
+      "n_adsorbed": 140,
+      "percent_adsorbed": 70.0,
+      "qt_mg_g": 280.0,
+      "n_contacts": 337,
+      "mass_conservation_ok": true,
+      "json_path": "data\\sensitivity\\homogeneous_temporal_wiam_geometry\\ac\\ac_sens_grid_sigma_1.5_steps_2000_seed_2.json"
+    },
+    {
+      "material": "AC",
+      "seed": 3,
+      "sigma_px": 1.5,
+      "n_steps": 2000,
+      "n_adsorbed": 141,
+      "percent_adsorbed": 70.5,
+      "qt_mg_g": 282.0,
+      "n_contacts": 298,
+      "mass_conservation_ok": true,
+      "json_path": "data\\sensitivity\\homogeneous_temporal_wiam_geometry\\ac\\ac_sens_grid_sigma_1.5_steps_2000_seed_3.json"
+    },
+    {
+      "material": "AC",
+      "seed": 4,
+      "sigma_px": 1.5,
+      "n_steps": 2000,
+      "n_adsorbed": 144,
+      "percent_adsorbed": 72.0,
+      "qt_mg_g": 288.0,
+      "n_contacts": 362,
+      "mass_conservation_ok": true,
+      "json_path": "data\\sensitivity\\homogeneous_temporal_wiam_geometry\\ac\\ac_sens_grid_sigma_1.5_steps_2000_seed_4.json"
+    },
+    {
+      "material": "AC",
+      "seed": 5,
+      "sigma_px": 1.5,
+      "n_steps": 2000,
+      "n_adsorbed": 135,
+      "percent_adsorbed": 67.5,
+      "qt_mg_g": 270.0,
+      "n_contacts": 365,
+      "mass_conservation_ok": true,
+      "json_path": "data\\sensitivity\\homogeneous_temporal_wiam_geometry\\ac\\ac_sens_grid_sigma_1.5_steps_2000_seed_5.json"
+    },
+    {
+      "material": "AC",
+      "seed": 1,
+      "sigma_px": 1.0,
+      "n_steps": 2000,
+      "n_adsorbed": 96,
+      "percent_adsorbed": 48.0,
+      "qt_mg_g": 192.0,
+      "n_contacts": 172,
+      "mass_conservation_ok": true,
+      "json_path": "data\\sensitivity\\homogeneous_temporal_wiam_geometry\\ac\\ac_sens_grid_sigma_1_steps_2000_seed_1.json"
+    },
+    {
+      "material": "AC",
+      "seed": 2,
+      "sigma_px": 1.0,
+      "n_steps": 2000,
+      "n_adsorbed": 109,
+      "percent_adsorbed": 54.50000000000001,
+      "qt_mg_g": 218.0,
+      "n_contacts": 266,
+      "mass_conservation_ok": true,
+      "json_path": "data\\sensitivity\\homogeneous_temporal_wiam_geometry\\ac\\ac_sens_grid_sigma_1_steps_2000_seed_2.json"
+    },
+    {
+      "material": "AC",
+      "seed": 3,
+      "sigma_px": 1.0,
+      "n_steps": 2000,
+      "n_adsorbed": 102,
+      "percent_adsorbed": 51.0,
+      "qt_mg_g": 204.0,
+      "n_contacts": 280,
+      "mass_conservation_ok": true,
+      "json_path": "data\\sensitivity\\homogeneous_temporal_wiam_geometry\\ac\\ac_sens_grid_sigma_1_steps_2000_seed_3.json"
+    },
+    {
+      "material": "AC",
+      "seed": 4,
+      "sigma_px": 1.0,
+      "n_steps": 2000,
+      "n_adsorbed": 109,
+      "percent_adsorbed": 54.50000000000001,
+      "qt_mg_g": 218.0,
+      "n_contacts": 306,
+      "mass_conservation_ok": true,
+      "json_path": "data\\sensitivity\\homogeneous_temporal_wiam_geometry\\ac\\ac_sens_grid_sigma_1_steps_2000_seed_4.json"
+    },
+    {
+      "material": "AC",
+      "seed": 5,
+      "sigma_px": 1.0,
+      "n_steps": 2000,
+      "n_adsorbed": 111,
+      "percent_adsorbed": 55.50000000000001,
+      "qt_mg_g": 222.00000000000003,
+      "n_contacts": 163,
+      "mass_conservation_ok": true,
+      "json_path": "data\\sensitivity\\homogeneous_temporal_wiam_geometry\\ac\\ac_sens_grid_sigma_1_steps_2000_seed_5.json"
+    }
+  ],
+  "p2000_material_sigma_aggregates": [
+    {
+      "material": "GO",
+      "sigma_px": 1.0,
+      "n_steps": 2000,
+      "n_seeds": 5,
+      "per_seed": [
+        {
+          "material": "GO",
+          "seed": 1,
+          "sigma_px": 1.0,
+          "n_steps": 2000,
+          "n_adsorbed": 158,
+          "percent_adsorbed": 79.0,
+          "qt_mg_g": 316.0,
+          "n_contacts": 563,
+          "mass_conservation_ok": true,
+          "json_path": "data\\sensitivity\\homogeneous_temporal_wiam_geometry\\go\\sens_grid_sigma_1_steps_2000_seed_1.json"
+        },
+        {
+          "material": "GO",
+          "seed": 2,
+          "sigma_px": 1.0,
+          "n_steps": 2000,
+          "n_adsorbed": 166,
+          "percent_adsorbed": 83.0,
+          "qt_mg_g": 332.0,
+          "n_contacts": 761,
+          "mass_conservation_ok": true,
+          "json_path": "data\\sensitivity\\homogeneous_temporal_wiam_geometry\\go\\sens_grid_sigma_1_steps_2000_seed_2.json"
+        },
+        {
+          "material": "GO",
+          "seed": 3,
+          "sigma_px": 1.0,
+          "n_steps": 2000,
+          "n_adsorbed": 167,
+          "percent_adsorbed": 83.5,
+          "qt_mg_g": 334.0,
+          "n_contacts": 361,
+          "mass_conservation_ok": true,
+          "json_path": "data\\sensitivity\\homogeneous_temporal_wiam_geometry\\go\\sens_grid_sigma_1_steps_2000_seed_3.json"
+        },
+        {
+          "material": "GO",
+          "seed": 4,
+          "sigma_px": 1.0,
+          "n_steps": 2000,
+          "n_adsorbed": 163,
+          "percent_adsorbed": 81.5,
+          "qt_mg_g": 326.0,
+          "n_contacts": 572,
+          "mass_conservation_ok": true,
+          "json_path": "data\\sensitivity\\homogeneous_temporal_wiam_geometry\\go\\sens_grid_sigma_1_steps_2000_seed_4.json"
+        },
+        {
+          "material": "GO",
+          "seed": 5,
+          "sigma_px": 1.0,
+          "n_steps": 2000,
+          "n_adsorbed": 175,
+          "percent_adsorbed": 87.5,
+          "qt_mg_g": 350.0,
+          "n_contacts": 724,
+          "mass_conservation_ok": true,
+          "json_path": "data\\sensitivity\\homogeneous_temporal_wiam_geometry\\go\\sens_grid_sigma_1_steps_2000_seed_5.json"
+        }
+      ],
+      "n_adsorbed": {
+        "mean": 165.8,
+        "std": 6.220932405998316,
+        "min": 158.0,
+        "max": 175.0,
+        "cv_percent": 3.7520702086841466
+      },
+      "percent_adsorbed": {
+        "mean": 82.9,
+        "std": 3.110466202999158,
+        "min": 79.0,
+        "max": 87.5,
+        "cv_percent": 3.7520702086841466
+      },
+      "qt_mg_g": {
+        "mean": 331.6,
+        "std": 12.441864811996632,
+        "min": 316.0,
+        "max": 350.0,
+        "cv_percent": 3.7520702086841466
+      },
+      "n_contacts": {
+        "mean": 596.2,
+        "std": 158.5077285182019,
+        "min": 361.0,
+        "max": 761.0,
+        "cv_percent": 26.58633487390169
+      }
+    },
+    {
+      "material": "GO",
+      "sigma_px": 1.5,
+      "n_steps": 2000,
+      "n_seeds": 5,
+      "per_seed": [
+        {
+          "material": "GO",
+          "seed": 1,
+          "sigma_px": 1.5,
+          "n_steps": 2000,
+          "n_adsorbed": 185,
+          "percent_adsorbed": 92.5,
+          "qt_mg_g": 370.0,
+          "n_contacts": 614,
+          "mass_conservation_ok": true,
+          "json_path": "data\\sensitivity\\homogeneous_temporal_wiam_geometry\\go\\sens_grid_sigma_1.5_steps_2000_seed_1.json"
+        },
+        {
+          "material": "GO",
+          "seed": 2,
+          "sigma_px": 1.5,
+          "n_steps": 2000,
+          "n_adsorbed": 186,
+          "percent_adsorbed": 93.0,
+          "qt_mg_g": 372.0,
+          "n_contacts": 619,
+          "mass_conservation_ok": true,
+          "json_path": "data\\sensitivity\\homogeneous_temporal_wiam_geometry\\go\\sens_grid_sigma_1.5_steps_2000_seed_2.json"
+        },
+        {
+          "material": "GO",
+          "seed": 3,
+          "sigma_px": 1.5,
+          "n_steps": 2000,
+          "n_adsorbed": 182,
+          "percent_adsorbed": 91.0,
+          "qt_mg_g": 364.0,
+          "n_contacts": 564,
+          "mass_conservation_ok": true,
+          "json_path": "data\\sensitivity\\homogeneous_temporal_wiam_geometry\\go\\sens_grid_sigma_1.5_steps_2000_seed_3.json"
+        },
+        {
+          "material": "GO",
+          "seed": 4,
+          "sigma_px": 1.5,
+          "n_steps": 2000,
+          "n_adsorbed": 187,
+          "percent_adsorbed": 93.5,
+          "qt_mg_g": 374.0,
+          "n_contacts": 623,
+          "mass_conservation_ok": true,
+          "json_path": "data\\sensitivity\\homogeneous_temporal_wiam_geometry\\go\\sens_grid_sigma_1.5_steps_2000_seed_4.json"
+        },
+        {
+          "material": "GO",
+          "seed": 5,
+          "sigma_px": 1.5,
+          "n_steps": 2000,
+          "n_adsorbed": 191,
+          "percent_adsorbed": 95.5,
+          "qt_mg_g": 382.0,
+          "n_contacts": 517,
+          "mass_conservation_ok": true,
+          "json_path": "data\\sensitivity\\homogeneous_temporal_wiam_geometry\\go\\sens_grid_sigma_1.5_steps_2000_seed_5.json"
+        }
+      ],
+      "n_adsorbed": {
+        "mean": 186.2,
+        "std": 3.2710854467592254,
+        "min": 182.0,
+        "max": 191.0,
+        "cv_percent": 1.75675910137445
+      },
+      "percent_adsorbed": {
+        "mean": 93.1,
+        "std": 1.6355427233796127,
+        "min": 91.0,
+        "max": 95.5,
+        "cv_percent": 1.75675910137445
+      },
+      "qt_mg_g": {
+        "mean": 372.4,
+        "std": 6.542170893518451,
+        "min": 364.0,
+        "max": 382.0,
+        "cv_percent": 1.75675910137445
+      },
+      "n_contacts": {
+        "mean": 587.4,
+        "std": 46.035855591049895,
+        "min": 517.0,
+        "max": 623.0,
+        "cv_percent": 7.837224308997258
+      }
+    },
+    {
+      "material": "AC",
+      "sigma_px": 1.0,
+      "n_steps": 2000,
+      "n_seeds": 5,
+      "per_seed": [
+        {
+          "material": "AC",
+          "seed": 1,
+          "sigma_px": 1.0,
+          "n_steps": 2000,
+          "n_adsorbed": 96,
+          "percent_adsorbed": 48.0,
+          "qt_mg_g": 192.0,
+          "n_contacts": 172,
+          "mass_conservation_ok": true,
+          "json_path": "data\\sensitivity\\homogeneous_temporal_wiam_geometry\\ac\\ac_sens_grid_sigma_1_steps_2000_seed_1.json"
+        },
+        {
+          "material": "AC",
+          "seed": 2,
+          "sigma_px": 1.0,
+          "n_steps": 2000,
+          "n_adsorbed": 109,
+          "percent_adsorbed": 54.50000000000001,
+          "qt_mg_g": 218.0,
+          "n_contacts": 266,
+          "mass_conservation_ok": true,
+          "json_path": "data\\sensitivity\\homogeneous_temporal_wiam_geometry\\ac\\ac_sens_grid_sigma_1_steps_2000_seed_2.json"
+        },
+        {
+          "material": "AC",
+          "seed": 3,
+          "sigma_px": 1.0,
+          "n_steps": 2000,
+          "n_adsorbed": 102,
+          "percent_adsorbed": 51.0,
+          "qt_mg_g": 204.0,
+          "n_contacts": 280,
+          "mass_conservation_ok": true,
+          "json_path": "data\\sensitivity\\homogeneous_temporal_wiam_geometry\\ac\\ac_sens_grid_sigma_1_steps_2000_seed_3.json"
+        },
+        {
+          "material": "AC",
+          "seed": 4,
+          "sigma_px": 1.0,
+          "n_steps": 2000,
+          "n_adsorbed": 109,
+          "percent_adsorbed": 54.50000000000001,
+          "qt_mg_g": 218.0,
+          "n_contacts": 306,
+          "mass_conservation_ok": true,
+          "json_path": "data\\sensitivity\\homogeneous_temporal_wiam_geometry\\ac\\ac_sens_grid_sigma_1_steps_2000_seed_4.json"
+        },
+        {
+          "material": "AC",
+          "seed": 5,
+          "sigma_px": 1.0,
+          "n_steps": 2000,
+          "n_adsorbed": 111,
+          "percent_adsorbed": 55.50000000000001,
+          "qt_mg_g": 222.00000000000003,
+          "n_contacts": 163,
+          "mass_conservation_ok": true,
+          "json_path": "data\\sensitivity\\homogeneous_temporal_wiam_geometry\\ac\\ac_sens_grid_sigma_1_steps_2000_seed_5.json"
+        }
+      ],
+      "n_adsorbed": {
+        "mean": 105.4,
+        "std": 6.268971207462991,
+        "min": 96.0,
+        "max": 111.0,
+        "cv_percent": 5.947790519414602
+      },
+      "percent_adsorbed": {
+        "mean": 52.7,
+        "std": 3.1344856037314996,
+        "min": 48.0,
+        "max": 55.50000000000001,
+        "cv_percent": 5.94779051941461
+      },
+      "qt_mg_g": {
+        "mean": 210.8,
+        "std": 12.53794241492599,
+        "min": 192.0,
+        "max": 222.00000000000003,
+        "cv_percent": 5.947790519414606
+      },
+      "n_contacts": {
+        "mean": 237.4,
+        "std": 65.48129503911785,
+        "min": 163.0,
+        "max": 306.0,
+        "cv_percent": 27.582685357673903
+      }
+    },
+    {
+      "material": "AC",
+      "sigma_px": 1.5,
+      "n_steps": 2000,
+      "n_seeds": 5,
+      "per_seed": [
+        {
+          "material": "AC",
+          "seed": 1,
+          "sigma_px": 1.5,
+          "n_steps": 2000,
+          "n_adsorbed": 136,
+          "percent_adsorbed": 68.0,
+          "qt_mg_g": 272.0,
+          "n_contacts": 276,
+          "mass_conservation_ok": true,
+          "json_path": "data\\sensitivity\\homogeneous_temporal_wiam_geometry\\ac\\ac_sens_grid_sigma_1.5_steps_2000_seed_1.json"
+        },
+        {
+          "material": "AC",
+          "seed": 2,
+          "sigma_px": 1.5,
+          "n_steps": 2000,
+          "n_adsorbed": 140,
+          "percent_adsorbed": 70.0,
+          "qt_mg_g": 280.0,
+          "n_contacts": 337,
+          "mass_conservation_ok": true,
+          "json_path": "data\\sensitivity\\homogeneous_temporal_wiam_geometry\\ac\\ac_sens_grid_sigma_1.5_steps_2000_seed_2.json"
+        },
+        {
+          "material": "AC",
+          "seed": 3,
+          "sigma_px": 1.5,
+          "n_steps": 2000,
+          "n_adsorbed": 141,
+          "percent_adsorbed": 70.5,
+          "qt_mg_g": 282.0,
+          "n_contacts": 298,
+          "mass_conservation_ok": true,
+          "json_path": "data\\sensitivity\\homogeneous_temporal_wiam_geometry\\ac\\ac_sens_grid_sigma_1.5_steps_2000_seed_3.json"
+        },
+        {
+          "material": "AC",
+          "seed": 4,
+          "sigma_px": 1.5,
+          "n_steps": 2000,
+          "n_adsorbed": 144,
+          "percent_adsorbed": 72.0,
+          "qt_mg_g": 288.0,
+          "n_contacts": 362,
+          "mass_conservation_ok": true,
+          "json_path": "data\\sensitivity\\homogeneous_temporal_wiam_geometry\\ac\\ac_sens_grid_sigma_1.5_steps_2000_seed_4.json"
+        },
+        {
+          "material": "AC",
+          "seed": 5,
+          "sigma_px": 1.5,
+          "n_steps": 2000,
+          "n_adsorbed": 135,
+          "percent_adsorbed": 67.5,
+          "qt_mg_g": 270.0,
+          "n_contacts": 365,
+          "mass_conservation_ok": true,
+          "json_path": "data\\sensitivity\\homogeneous_temporal_wiam_geometry\\ac\\ac_sens_grid_sigma_1.5_steps_2000_seed_5.json"
+        }
+      ],
+      "n_adsorbed": {
+        "mean": 139.2,
+        "std": 3.7013511046643495,
+        "min": 135.0,
+        "max": 144.0,
+        "cv_percent": 2.659016598178412
+      },
+      "percent_adsorbed": {
+        "mean": 69.6,
+        "std": 1.8506755523321747,
+        "min": 67.5,
+        "max": 72.0,
+        "cv_percent": 2.659016598178412
+      },
+      "qt_mg_g": {
+        "mean": 278.4,
+        "std": 7.402702209328699,
+        "min": 270.0,
+        "max": 288.0,
+        "cv_percent": 2.659016598178412
+      },
+      "n_contacts": {
+        "mean": 327.6,
+        "std": 39.39923857132267,
+        "min": 276.0,
+        "max": 365.0,
+        "cv_percent": 12.026629600525844
+      }
+    }
+  ],
+  "sigma_comparison": [
+    {
+      "material": "GO",
+      "metric": "n_adsorbed",
+      "mean_sigma_1_0": 165.8,
+      "mean_sigma_1_5": 186.2,
+      "absolute_delta": 20.399999999999977,
+      "relative_delta_percent": 12.303980699638103,
+      "qt_delta_mean": 40.799999999999955,
+      "contacts_delta_mean": -8.800000000000068,
+      "cv_percent_sigma_1_0_nads": 3.7520702086841466,
+      "cv_percent_sigma_1_5_nads": 1.75675910137445,
+      "note": "Descriptivo \u03c3=1.5 vs \u03c3=1.0; no ranking autom\u00e1tico."
+    },
+    {
+      "material": "AC",
+      "metric": "n_adsorbed",
+      "mean_sigma_1_0": 105.4,
+      "mean_sigma_1_5": 139.2,
+      "absolute_delta": 33.79999999999998,
+      "relative_delta_percent": 32.0683111954459,
+      "qt_delta_mean": 67.59999999999997,
+      "contacts_delta_mean": 90.20000000000002,
+      "cv_percent_sigma_1_0_nads": 5.947790519414602,
+      "cv_percent_sigma_1_5_nads": 2.659016598178412,
+      "note": "Descriptivo \u03c3=1.5 vs \u03c3=1.0; no ranking autom\u00e1tico."
+    }
+  ],
+  "fraction_reachability_p2000": [
+    {
+      "material": "GO",
+      "sigma_px": 1.0,
+      "seed": 1,
+      "fractions_reached": [
+        0.1,
+        0.2,
+        0.3,
+        0.4,
+        0.5,
+        0.6,
+        0.7,
+        0.8
+      ],
+      "fractions_not_reached": [
+        0.9
+      ],
+      "n_reached": 8,
+      "n_not_reached": 1
+    },
+    {
+      "material": "GO",
+      "sigma_px": 1.0,
+      "seed": 2,
+      "fractions_reached": [
+        0.1,
+        0.2,
+        0.3,
+        0.4,
+        0.5,
+        0.6,
+        0.7,
+        0.8
+      ],
+      "fractions_not_reached": [
+        0.9
+      ],
+      "n_reached": 8,
+      "n_not_reached": 1
+    },
+    {
+      "material": "GO",
+      "sigma_px": 1.0,
+      "seed": 3,
+      "fractions_reached": [
+        0.1,
+        0.2,
+        0.3,
+        0.4,
+        0.5,
+        0.6,
+        0.7,
+        0.8
+      ],
+      "fractions_not_reached": [
+        0.9
+      ],
+      "n_reached": 8,
+      "n_not_reached": 1
+    },
+    {
+      "material": "GO",
+      "sigma_px": 1.0,
+      "seed": 4,
+      "fractions_reached": [
+        0.1,
+        0.2,
+        0.3,
+        0.4,
+        0.5,
+        0.6,
+        0.7,
+        0.8
+      ],
+      "fractions_not_reached": [
+        0.9
+      ],
+      "n_reached": 8,
+      "n_not_reached": 1
+    },
+    {
+      "material": "GO",
+      "sigma_px": 1.0,
+      "seed": 5,
+      "fractions_reached": [
+        0.1,
+        0.2,
+        0.3,
+        0.4,
+        0.5,
+        0.6,
+        0.7,
+        0.8,
+        0.9
+      ],
+      "fractions_not_reached": [],
+      "n_reached": 9,
+      "n_not_reached": 0
+    },
+    {
+      "material": "GO",
+      "sigma_px": 1.5,
+      "seed": 1,
+      "fractions_reached": [
+        0.1,
+        0.2,
+        0.3,
+        0.4,
+        0.5,
+        0.6,
+        0.7,
+        0.8,
+        0.9
+      ],
+      "fractions_not_reached": [],
+      "n_reached": 9,
+      "n_not_reached": 0
+    },
+    {
+      "material": "GO",
+      "sigma_px": 1.5,
+      "seed": 2,
+      "fractions_reached": [
+        0.1,
+        0.2,
+        0.3,
+        0.4,
+        0.5,
+        0.6,
+        0.7,
+        0.8,
+        0.9
+      ],
+      "fractions_not_reached": [],
+      "n_reached": 9,
+      "n_not_reached": 0
+    },
+    {
+      "material": "GO",
+      "sigma_px": 1.5,
+      "seed": 3,
+      "fractions_reached": [
+        0.1,
+        0.2,
+        0.3,
+        0.4,
+        0.5,
+        0.6,
+        0.7,
+        0.8,
+        0.9
+      ],
+      "fractions_not_reached": [],
+      "n_reached": 9,
+      "n_not_reached": 0
+    },
+    {
+      "material": "GO",
+      "sigma_px": 1.5,
+      "seed": 4,
+      "fractions_reached": [
+        0.1,
+        0.2,
+        0.3,
+        0.4,
+        0.5,
+        0.6,
+        0.7,
+        0.8,
+        0.9
+      ],
+      "fractions_not_reached": [],
+      "n_reached": 9,
+      "n_not_reached": 0
+    },
+    {
+      "material": "GO",
+      "sigma_px": 1.5,
+      "seed": 5,
+      "fractions_reached": [
+        0.1,
+        0.2,
+        0.3,
+        0.4,
+        0.5,
+        0.6,
+        0.7,
+        0.8,
+        0.9
+      ],
+      "fractions_not_reached": [],
+      "n_reached": 9,
+      "n_not_reached": 0
+    },
+    {
+      "material": "AC",
+      "sigma_px": 1.0,
+      "seed": 1,
+      "fractions_reached": [
+        0.1,
+        0.2,
+        0.3,
+        0.4
+      ],
+      "fractions_not_reached": [
+        0.5,
+        0.6,
+        0.7,
+        0.8,
+        0.9
+      ],
+      "n_reached": 4,
+      "n_not_reached": 5
+    },
+    {
+      "material": "AC",
+      "sigma_px": 1.0,
+      "seed": 2,
+      "fractions_reached": [
+        0.1,
+        0.2,
+        0.3,
+        0.4,
+        0.5
+      ],
+      "fractions_not_reached": [
+        0.6,
+        0.7,
+        0.8,
+        0.9
+      ],
+      "n_reached": 5,
+      "n_not_reached": 4
+    },
+    {
+      "material": "AC",
+      "sigma_px": 1.0,
+      "seed": 3,
+      "fractions_reached": [
+        0.1,
+        0.2,
+        0.3,
+        0.4,
+        0.5
+      ],
+      "fractions_not_reached": [
+        0.6,
+        0.7,
+        0.8,
+        0.9
+      ],
+      "n_reached": 5,
+      "n_not_reached": 4
+    },
+    {
+      "material": "AC",
+      "sigma_px": 1.0,
+      "seed": 4,
+      "fractions_reached": [
+        0.1,
+        0.2,
+        0.3,
+        0.4,
+        0.5
+      ],
+      "fractions_not_reached": [
+        0.6,
+        0.7,
+        0.8,
+        0.9
+      ],
+      "n_reached": 5,
+      "n_not_reached": 4
+    },
+    {
+      "material": "AC",
+      "sigma_px": 1.0,
+      "seed": 5,
+      "fractions_reached": [
+        0.1,
+        0.2,
+        0.3,
+        0.4,
+        0.5
+      ],
+      "fractions_not_reached": [
+        0.6,
+        0.7,
+        0.8,
+        0.9
+      ],
+      "n_reached": 5,
+      "n_not_reached": 4
+    },
+    {
+      "material": "AC",
+      "sigma_px": 1.5,
+      "seed": 1,
+      "fractions_reached": [
+        0.1,
+        0.2,
+        0.3,
+        0.4,
+        0.5,
+        0.6,
+        0.7
+      ],
+      "fractions_not_reached": [
+        0.8,
+        0.9
+      ],
+      "n_reached": 7,
+      "n_not_reached": 2
+    },
+    {
+      "material": "AC",
+      "sigma_px": 1.5,
+      "seed": 2,
+      "fractions_reached": [
+        0.1,
+        0.2,
+        0.3,
+        0.4,
+        0.5,
+        0.6,
+        0.7
+      ],
+      "fractions_not_reached": [
+        0.8,
+        0.9
+      ],
+      "n_reached": 7,
+      "n_not_reached": 2
+    },
+    {
+      "material": "AC",
+      "sigma_px": 1.5,
+      "seed": 3,
+      "fractions_reached": [
+        0.1,
+        0.2,
+        0.3,
+        0.4,
+        0.5,
+        0.6,
+        0.7
+      ],
+      "fractions_not_reached": [
+        0.8,
+        0.9
+      ],
+      "n_reached": 7,
+      "n_not_reached": 2
+    },
+    {
+      "material": "AC",
+      "sigma_px": 1.5,
+      "seed": 4,
+      "fractions_reached": [
+        0.1,
+        0.2,
+        0.3,
+        0.4,
+        0.5,
+        0.6,
+        0.7
+      ],
+      "fractions_not_reached": [
+        0.8,
+        0.9
+      ],
+      "n_reached": 7,
+      "n_not_reached": 2
+    },
+    {
+      "material": "AC",
+      "sigma_px": 1.5,
+      "seed": 5,
+      "fractions_reached": [
+        0.1,
+        0.2,
+        0.3,
+        0.4,
+        0.5,
+        0.6,
+        0.7
+      ],
+      "fractions_not_reached": [
+        0.8,
+        0.9
+      ],
+      "n_reached": 7,
+      "n_not_reached": 2
+    }
+  ],
+  "alpha_analysis_go_p2000": {
+    "scope": "GO_only_pso_reference",
+    "horizon_steps": 2000,
+    "by_sigma_seed": [
+      {
+        "sigma_px": 1.0,
+        "seed": 1,
+        "n_alpha_points": 8,
+        "alpha_mean": 0.030721634018711502,
+        "alpha_std": 0.0017136865535532894,
+        "alpha_min": 0.027728104858502682,
+        "alpha_max": 0.03385552088750216,
+        "alpha_cv_percent": 5.57811004619592
+      },
+      {
+        "sigma_px": 1.0,
+        "seed": 2,
+        "n_alpha_points": 8,
+        "alpha_mean": 0.04156210133656553,
+        "alpha_std": 0.0022849970771282313,
+        "alpha_min": 0.03859357088448083,
+        "alpha_max": 0.04444622229333618,
+        "alpha_cv_percent": 5.49779006269333
+      },
+      {
+        "sigma_px": 1.0,
+        "seed": 3,
+        "n_alpha_points": 8,
+        "alpha_mean": 0.03158776487551774,
+        "alpha_std": 0.0043567984596019176,
+        "alpha_min": 0.026001040041601663,
+        "alpha_max": 0.039040600663065576,
+        "alpha_cv_percent": 13.792677249470971
+      },
+      {
+        "sigma_px": 1.0,
+        "seed": 4,
+        "n_alpha_points": 8,
+        "alpha_mean": 0.02914012138561492,
+        "alpha_std": 0.004259267719016936,
+        "alpha_min": 0.024142098460168678,
+        "alpha_max": 0.036112555613335644,
+        "alpha_cv_percent": 14.61650644022208
+      },
+      {
+        "sigma_px": 1.0,
+        "seed": 5,
+        "n_alpha_points": 9,
+        "alpha_mean": 0.048068224587075443,
+        "alpha_std": 0.006730452570089674,
+        "alpha_min": 0.04012506179259515,
+        "alpha_max": 0.06164630146849711,
+        "alpha_cv_percent": 14.001874685214302
+      },
+      {
+        "sigma_px": 1.5,
+        "seed": 1,
+        "n_alpha_points": 9,
+        "alpha_mean": 0.06681052805007481,
+        "alpha_std": 0.013640596496904982,
+        "alpha_min": 0.049746887834697065,
+        "alpha_max": 0.08654192321539017,
+        "alpha_cv_percent": 20.41683682949084
+      },
+      {
+        "sigma_px": 1.5,
+        "seed": 2,
+        "n_alpha_points": 9,
+        "alpha_mean": 0.07844910894615438,
+        "alpha_std": 0.01158710153727491,
+        "alpha_min": 0.059363105117812,
+        "alpha_max": 0.09286085729143452,
+        "alpha_cv_percent": 14.77021433758798
+      },
+      {
+        "sigma_px": 1.5,
+        "seed": 3,
+        "n_alpha_points": 9,
+        "alpha_mean": 0.07533248414842815,
+        "alpha_std": 0.0110674768887623,
+        "alpha_min": 0.06171132921266217,
+        "alpha_max": 0.0955920589764767,
+        "alpha_cv_percent": 14.691506610821392
+      },
+      {
+        "sigma_px": 1.5,
+        "seed": 4,
+        "n_alpha_points": 9,
+        "alpha_mean": 0.07641674990645433,
+        "alpha_std": 0.015864367622249458,
+        "alpha_min": 0.05350008239012688,
+        "alpha_max": 0.11196620113608374,
+        "alpha_cv_percent": 20.760327600519314
+      },
+      {
+        "sigma_px": 1.5,
+        "seed": 5,
+        "n_alpha_points": 9,
+        "alpha_mean": 0.0873899162583311,
+        "alpha_std": 0.016908028105806786,
+        "alpha_min": 0.073449265654242,
+        "alpha_max": 0.125005000200008,
+        "alpha_cv_percent": 19.347802160406463
+      }
+    ],
+    "by_sigma_fraction": [
+      {
+        "sigma_px": 1.0,
+        "fraction_of_pso_qe": 0.1,
+        "n_alpha_points": 5,
+        "alpha_mean": 0.03810197488486049,
+        "alpha_std": 0.008311504225164745,
+        "alpha_min": 0.030734089883689912,
+        "alpha_max": 0.05158936516190806,
+        "alpha_cv_percent": 21.813841015540785
+      },
+      {
+        "sigma_px": 1.0,
+        "fraction_of_pso_qe": 0.2,
+        "n_alpha_points": 5,
+        "alpha_mean": 0.03703288273552663,
+        "alpha_std": 0.0079657660235261,
+        "alpha_min": 0.026001040041601663,
+        "alpha_max": 0.04643042864571725,
+        "alpha_cv_percent": 21.509980955072475
+      },
+      {
+        "sigma_px": 1.0,
+        "fraction_of_pso_qe": 0.3,
+        "n_alpha_points": 5,
+        "alpha_mean": 0.034918787934456644,
+        "alpha_std": 0.007754161534512034,
+        "alpha_min": 0.028868660297855293,
+        "alpha_max": 0.04421945585306406,
+        "alpha_cv_percent": 22.206273451033784
+      },
+      {
+        "sigma_px": 1.0,
+        "fraction_of_pso_qe": 0.4,
+        "n_alpha_points": 5,
+        "alpha_mean": 0.03504226676044178,
+        "alpha_std": 0.01045195502641322,
+        "alpha_min": 0.024142098460168678,
+        "alpha_max": 0.047620952457145906,
+        "alpha_cv_percent": 29.82670926474464
+      },
+      {
+        "sigma_px": 1.0,
+        "fraction_of_pso_qe": 0.5,
+        "n_alpha_points": 5,
+        "alpha_mean": 0.03531688293507205,
+        "alpha_std": 0.009168911052650051,
+        "alpha_min": 0.025391640665626623,
+        "alpha_max": 0.04710333340869866,
+        "alpha_cv_percent": 25.961835503734964
+      },
+      {
+        "sigma_px": 1.0,
+        "fraction_of_pso_qe": 0.6,
+        "n_alpha_points": 5,
+        "alpha_mean": 0.033834603450409124,
+        "alpha_std": 0.006264734458328112,
+        "alpha_min": 0.02624600273378364,
+        "alpha_max": 0.04054216222702962,
+        "alpha_cv_percent": 18.515761437873035
+      },
+      {
+        "sigma_px": 1.0,
+        "fraction_of_pso_qe": 0.7,
+        "n_alpha_points": 5,
+        "alpha_mean": 0.033824196323747543,
+        "alpha_std": 0.006623250277681317,
+        "alpha_min": 0.02679730275194517,
+        "alpha_max": 0.04195649614827377,
+        "alpha_cv_percent": 19.581397335466672
+      },
+      {
+        "sigma_px": 1.0,
+        "fraction_of_pso_qe": 0.8,
+        "n_alpha_points": 5,
+        "alpha_mean": 0.03894054352477762,
+        "alpha_std": 0.009056807702331386,
+        "alpha_min": 0.03042836751503999,
+        "alpha_max": 0.05361039183835396,
+        "alpha_cv_percent": 23.25804131770425
+      },
+      {
+        "sigma_px": 1.0,
+        "fraction_of_pso_qe": 0.9,
+        "n_alpha_points": 1,
+        "alpha_mean": 0.06164630146849711,
+        "alpha_std": 0.0,
+        "alpha_min": 0.06164630146849711,
+        "alpha_max": 0.06164630146849711,
+        "alpha_cv_percent": 0.0
+      },
+      {
+        "sigma_px": 1.5,
+        "fraction_of_pso_qe": 0.1,
+        "n_alpha_points": 5,
+        "alpha_mean": 0.080116373379215,
+        "alpha_std": 0.016383717818754962,
+        "alpha_min": 0.05350008239012688,
+        "alpha_max": 0.09630014830222838,
+        "alpha_cv_percent": 20.449899474612856
+      },
+      {
+        "sigma_px": 1.5,
+        "fraction_of_pso_qe": 0.2,
+        "n_alpha_points": 5,
+        "alpha_mean": 0.09030323197721826,
+        "alpha_std": 0.022007808827785746,
+        "alpha_min": 0.06632918377959608,
+        "alpha_max": 0.125005000200008,
+        "alpha_cv_percent": 24.371009039120423
+      },
+      {
+        "sigma_px": 1.5,
+        "fraction_of_pso_qe": 0.3,
+        "n_alpha_points": 5,
+        "alpha_mean": 0.07338030588266815,
+        "alpha_std": 0.015618678926355574,
+        "alpha_min": 0.049746887834697065,
+        "alpha_max": 0.09286085729143452,
+        "alpha_cv_percent": 21.284565032107043
+      },
+      {
+        "sigma_px": 1.5,
+        "fraction_of_pso_qe": 0.4,
+        "n_alpha_points": 5,
+        "alpha_mean": 0.07101736500831798,
+        "alpha_std": 0.012086611194205892,
+        "alpha_min": 0.05158936516190807,
+        "alpha_max": 0.08497071909020153,
+        "alpha_cv_percent": 17.01923352519519
+      },
+      {
+        "sigma_px": 1.5,
+        "fraction_of_pso_qe": 0.5,
+        "n_alpha_points": 5,
+        "alpha_mean": 0.06919435057016689,
+        "alpha_std": 0.006995492143464912,
+        "alpha_min": 0.06018759268889274,
+        "alpha_max": 0.0797577915386554,
+        "alpha_cv_percent": 10.10991805808062
+      },
+      {
+        "sigma_px": 1.5,
+        "fraction_of_pso_qe": 0.6,
+        "n_alpha_points": 5,
+        "alpha_mean": 0.06873213992126703,
+        "alpha_std": 0.008209251776556107,
+        "alpha_min": 0.05945359765610136,
+        "alpha_max": 0.0789505264421103,
+        "alpha_cv_percent": 11.943832661051788
+      },
+      {
+        "sigma_px": 1.5,
+        "fraction_of_pso_qe": 0.7,
+        "n_alpha_points": 5,
+        "alpha_mean": 0.0676235212593078,
+        "alpha_std": 0.008740162193982931,
+        "alpha_min": 0.059363105117812,
+        "alpha_max": 0.07858690858860605,
+        "alpha_cv_percent": 12.924736883292546
+      },
+      {
+        "sigma_px": 1.5,
+        "fraction_of_pso_qe": 0.8,
+        "n_alpha_points": 5,
+        "alpha_mean": 0.07929415207311422,
+        "alpha_std": 0.010373700782758231,
+        "alpha_min": 0.06815475764508958,
+        "alpha_max": 0.09319369190538233,
+        "alpha_cv_percent": 13.082554654463072
+      },
+      {
+        "sigma_px": 1.5,
+        "fraction_of_pso_qe": 0.9,
+        "n_alpha_points": 5,
+        "alpha_mean": 0.09225637708572167,
+        "alpha_std": 0.01193118429812838,
+        "alpha_min": 0.08102817187479745,
+        "alpha_max": 0.11196620113608374,
+        "alpha_cv_percent": 12.932639103140053
+      }
+    ],
+    "note": "\u03b1 exploratorio; no umbral CV; no \u03b1 definitivo."
+  },
+  "candidate_final_protocol": {
+    "geometry": "Wiam",
+    "mb_count": 200,
+    "mb_side_px": 1,
+    "go_count": 100,
+    "go_side_px": 7,
+    "ac_side_px": 2,
+    "ac_movable": false,
+    "go_movable": true,
+    "sigma_candidates": [
+      1.0,
+      1.5
+    ],
+    "steps_candidates": [
+      200,
+      400,
+      600,
+      800,
+      1000,
+      1500,
+      2000
+    ],
+    "seeds_explored": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "max_horizon_analyzed_steps": 2000,
+    "p_ads_status": "provisional_computational_not_physical",
+    "alpha_status": "exploratory_only_not_motor_parameter",
+    "pso_reference": "GO_only_qe_384.6_k2_0.0002",
+    "ac_pso_reference": "PSO_reference_not_available_for_AC",
+    "human_decisions_still_required": [
+      "sigma definitivo para campa\u00f1a final",
+      "horizonte steps definitivo (P=2000 analizado, no elegido)",
+      "Nrep campa\u00f1a final (30 vs 40 u otro)",
+      "P_ads f\u00edsico/bibliogr\u00e1fico",
+      "k2 unificado y validez de \u03b1 como escala temporal",
+      "confirmaci\u00f3n unidad Co / 100 mg/g vs 100 mg/L",
+      "referencia PSO espec\u00edfica para AC si existe"
+    ]
+  },
+  "final_campaign_proposal": {
+    "status": "proposal_only_not_executed",
+    "based_on": "homogeneous_temporal_wiam_geometry + temporal_calibration",
+    "recommended_seed_count_range": {
+      "observed": 5,
+      "note": "CV entre seeds en P=2000 documentado en agregados; campa\u00f1a 30/40 sigue pendiente de decisi\u00f3n humana."
+    },
+    "sigma_candidates_for_final_design": [
+      1.0,
+      1.5
+    ],
+    "steps_candidates_for_final_design": [
+      200,
+      400,
+      600,
+      800,
+      1000,
+      1500,
+      2000
+    ],
+    "materials": [
+      "GO",
+      "AC"
+    ],
+    "metrics_to_persist": [
+      "n_adsorbed",
+      "percent_adsorbed",
+      "qt_mg_g",
+      "n_contacts",
+      "mass_conservation_ok",
+      "time_series_csv",
+      "geometry_snapshot",
+      "provenance"
+    ],
+    "statistics_to_report": [
+      "mean",
+      "std",
+      "min",
+      "max",
+      "spread",
+      "cv_percent"
+    ],
+    "descriptive_inputs": {
+      "p2000_aggregates": [
+        {
+          "material": "GO",
+          "sigma_px": 1.0,
+          "n_steps": 2000,
+          "n_seeds": 5,
+          "per_seed": [
+            {
+              "material": "GO",
+              "seed": 1,
+              "sigma_px": 1.0,
+              "n_steps": 2000,
+              "n_adsorbed": 158,
+              "percent_adsorbed": 79.0,
+              "qt_mg_g": 316.0,
+              "n_contacts": 563,
+              "mass_conservation_ok": true,
+              "json_path": "data\\sensitivity\\homogeneous_temporal_wiam_geometry\\go\\sens_grid_sigma_1_steps_2000_seed_1.json"
+            },
+            {
+              "material": "GO",
+              "seed": 2,
+              "sigma_px": 1.0,
+              "n_steps": 2000,
+              "n_adsorbed": 166,
+              "percent_adsorbed": 83.0,
+              "qt_mg_g": 332.0,
+              "n_contacts": 761,
+              "mass_conservation_ok": true,
+              "json_path": "data\\sensitivity\\homogeneous_temporal_wiam_geometry\\go\\sens_grid_sigma_1_steps_2000_seed_2.json"
+            },
+            {
+              "material": "GO",
+              "seed": 3,
+              "sigma_px": 1.0,
+              "n_steps": 2000,
+              "n_adsorbed": 167,
+              "percent_adsorbed": 83.5,
+              "qt_mg_g": 334.0,
+              "n_contacts": 361,
+              "mass_conservation_ok": true,
+              "json_path": "data\\sensitivity\\homogeneous_temporal_wiam_geometry\\go\\sens_grid_sigma_1_steps_2000_seed_3.json"
+            },
+            {
+              "material": "GO",
+              "seed": 4,
+              "sigma_px": 1.0,
+              "n_steps": 2000,
+              "n_adsorbed": 163,
+              "percent_adsorbed": 81.5,
+              "qt_mg_g": 326.0,
+              "n_contacts": 572,
+              "mass_conservation_ok": true,
+              "json_path": "data\\sensitivity\\homogeneous_temporal_wiam_geometry\\go\\sens_grid_sigma_1_steps_2000_seed_4.json"
+            },
+            {
+              "material": "GO",
+              "seed": 5,
+              "sigma_px": 1.0,
+              "n_steps": 2000,
+              "n_adsorbed": 175,
+              "percent_adsorbed": 87.5,
+              "qt_mg_g": 350.0,
+              "n_contacts": 724,
+              "mass_conservation_ok": true,
+              "json_path": "data\\sensitivity\\homogeneous_temporal_wiam_geometry\\go\\sens_grid_sigma_1_steps_2000_seed_5.json"
+            }
+          ],
+          "n_adsorbed": {
+            "mean": 165.8,
+            "std": 6.220932405998316,
+            "min": 158.0,
+            "max": 175.0,
+            "cv_percent": 3.7520702086841466
+          },
+          "percent_adsorbed": {
+            "mean": 82.9,
+            "std": 3.110466202999158,
+            "min": 79.0,
+            "max": 87.5,
+            "cv_percent": 3.7520702086841466
+          },
+          "qt_mg_g": {
+            "mean": 331.6,
+            "std": 12.441864811996632,
+            "min": 316.0,
+            "max": 350.0,
+            "cv_percent": 3.7520702086841466
+          },
+          "n_contacts": {
+            "mean": 596.2,
+            "std": 158.5077285182019,
+            "min": 361.0,
+            "max": 761.0,
+            "cv_percent": 26.58633487390169
+          }
+        },
+        {
+          "material": "GO",
+          "sigma_px": 1.5,
+          "n_steps": 2000,
+          "n_seeds": 5,
+          "per_seed": [
+            {
+              "material": "GO",
+              "seed": 1,
+              "sigma_px": 1.5,
+              "n_steps": 2000,
+              "n_adsorbed": 185,
+              "percent_adsorbed": 92.5,
+              "qt_mg_g": 370.0,
+              "n_contacts": 614,
+              "mass_conservation_ok": true,
+              "json_path": "data\\sensitivity\\homogeneous_temporal_wiam_geometry\\go\\sens_grid_sigma_1.5_steps_2000_seed_1.json"
+            },
+            {
+              "material": "GO",
+              "seed": 2,
+              "sigma_px": 1.5,
+              "n_steps": 2000,
+              "n_adsorbed": 186,
+              "percent_adsorbed": 93.0,
+              "qt_mg_g": 372.0,
+              "n_contacts": 619,
+              "mass_conservation_ok": true,
+              "json_path": "data\\sensitivity\\homogeneous_temporal_wiam_geometry\\go\\sens_grid_sigma_1.5_steps_2000_seed_2.json"
+            },
+            {
+              "material": "GO",
+              "seed": 3,
+              "sigma_px": 1.5,
+              "n_steps": 2000,
+              "n_adsorbed": 182,
+              "percent_adsorbed": 91.0,
+              "qt_mg_g": 364.0,
+              "n_contacts": 564,
+              "mass_conservation_ok": true,
+              "json_path": "data\\sensitivity\\homogeneous_temporal_wiam_geometry\\go\\sens_grid_sigma_1.5_steps_2000_seed_3.json"
+            },
+            {
+              "material": "GO",
+              "seed": 4,
+              "sigma_px": 1.5,
+              "n_steps": 2000,
+              "n_adsorbed": 187,
+              "percent_adsorbed": 93.5,
+              "qt_mg_g": 374.0,
+              "n_contacts": 623,
+              "mass_conservation_ok": true,
+              "json_path": "data\\sensitivity\\homogeneous_temporal_wiam_geometry\\go\\sens_grid_sigma_1.5_steps_2000_seed_4.json"
+            },
+            {
+              "material": "GO",
+              "seed": 5,
+              "sigma_px": 1.5,
+              "n_steps": 2000,
+              "n_adsorbed": 191,
+              "percent_adsorbed": 95.5,
+              "qt_mg_g": 382.0,
+              "n_contacts": 517,
+              "mass_conservation_ok": true,
+              "json_path": "data\\sensitivity\\homogeneous_temporal_wiam_geometry\\go\\sens_grid_sigma_1.5_steps_2000_seed_5.json"
+            }
+          ],
+          "n_adsorbed": {
+            "mean": 186.2,
+            "std": 3.2710854467592254,
+            "min": 182.0,
+            "max": 191.0,
+            "cv_percent": 1.75675910137445
+          },
+          "percent_adsorbed": {
+            "mean": 93.1,
+            "std": 1.6355427233796127,
+            "min": 91.0,
+            "max": 95.5,
+            "cv_percent": 1.75675910137445
+          },
+          "qt_mg_g": {
+            "mean": 372.4,
+            "std": 6.542170893518451,
+            "min": 364.0,
+            "max": 382.0,
+            "cv_percent": 1.75675910137445
+          },
+          "n_contacts": {
+            "mean": 587.4,
+            "std": 46.035855591049895,
+            "min": 517.0,
+            "max": 623.0,
+            "cv_percent": 7.837224308997258
+          }
+        },
+        {
+          "material": "AC",
+          "sigma_px": 1.0,
+          "n_steps": 2000,
+          "n_seeds": 5,
+          "per_seed": [
+            {
+              "material": "AC",
+              "seed": 1,
+              "sigma_px": 1.0,
+              "n_steps": 2000,
+              "n_adsorbed": 96,
+              "percent_adsorbed": 48.0,
+              "qt_mg_g": 192.0,
+              "n_contacts": 172,
+              "mass_conservation_ok": true,
+              "json_path": "data\\sensitivity\\homogeneous_temporal_wiam_geometry\\ac\\ac_sens_grid_sigma_1_steps_2000_seed_1.json"
+            },
+            {
+              "material": "AC",
+              "seed": 2,
+              "sigma_px": 1.0,
+              "n_steps": 2000,
+              "n_adsorbed": 109,
+              "percent_adsorbed": 54.50000000000001,
+              "qt_mg_g": 218.0,
+              "n_contacts": 266,
+              "mass_conservation_ok": true,
+              "json_path": "data\\sensitivity\\homogeneous_temporal_wiam_geometry\\ac\\ac_sens_grid_sigma_1_steps_2000_seed_2.json"
+            },
+            {
+              "material": "AC",
+              "seed": 3,
+              "sigma_px": 1.0,
+              "n_steps": 2000,
+              "n_adsorbed": 102,
+              "percent_adsorbed": 51.0,
+              "qt_mg_g": 204.0,
+              "n_contacts": 280,
+              "mass_conservation_ok": true,
+              "json_path": "data\\sensitivity\\homogeneous_temporal_wiam_geometry\\ac\\ac_sens_grid_sigma_1_steps_2000_seed_3.json"
+            },
+            {
+              "material": "AC",
+              "seed": 4,
+              "sigma_px": 1.0,
+              "n_steps": 2000,
+              "n_adsorbed": 109,
+              "percent_adsorbed": 54.50000000000001,
+              "qt_mg_g": 218.0,
+              "n_contacts": 306,
+              "mass_conservation_ok": true,
+              "json_path": "data\\sensitivity\\homogeneous_temporal_wiam_geometry\\ac\\ac_sens_grid_sigma_1_steps_2000_seed_4.json"
+            },
+            {
+              "material": "AC",
+              "seed": 5,
+              "sigma_px": 1.0,
+              "n_steps": 2000,
+              "n_adsorbed": 111,
+              "percent_adsorbed": 55.50000000000001,
+              "qt_mg_g": 222.00000000000003,
+              "n_contacts": 163,
+              "mass_conservation_ok": true,
+              "json_path": "data\\sensitivity\\homogeneous_temporal_wiam_geometry\\ac\\ac_sens_grid_sigma_1_steps_2000_seed_5.json"
+            }
+          ],
+          "n_adsorbed": {
+            "mean": 105.4,
+            "std": 6.268971207462991,
+            "min": 96.0,
+            "max": 111.0,
+            "cv_percent": 5.947790519414602
+          },
+          "percent_adsorbed": {
+            "mean": 52.7,
+            "std": 3.1344856037314996,
+            "min": 48.0,
+            "max": 55.50000000000001,
+            "cv_percent": 5.94779051941461
+          },
+          "qt_mg_g": {
+            "mean": 210.8,
+            "std": 12.53794241492599,
+            "min": 192.0,
+            "max": 222.00000000000003,
+            "cv_percent": 5.947790519414606
+          },
+          "n_contacts": {
+            "mean": 237.4,
+            "std": 65.48129503911785,
+            "min": 163.0,
+            "max": 306.0,
+            "cv_percent": 27.582685357673903
+          }
+        },
+        {
+          "material": "AC",
+          "sigma_px": 1.5,
+          "n_steps": 2000,
+          "n_seeds": 5,
+          "per_seed": [
+            {
+              "material": "AC",
+              "seed": 1,
+              "sigma_px": 1.5,
+              "n_steps": 2000,
+              "n_adsorbed": 136,
+              "percent_adsorbed": 68.0,
+              "qt_mg_g": 272.0,
+              "n_contacts": 276,
+              "mass_conservation_ok": true,
+              "json_path": "data\\sensitivity\\homogeneous_temporal_wiam_geometry\\ac\\ac_sens_grid_sigma_1.5_steps_2000_seed_1.json"
+            },
+            {
+              "material": "AC",
+              "seed": 2,
+              "sigma_px": 1.5,
+              "n_steps": 2000,
+              "n_adsorbed": 140,
+              "percent_adsorbed": 70.0,
+              "qt_mg_g": 280.0,
+              "n_contacts": 337,
+              "mass_conservation_ok": true,
+              "json_path": "data\\sensitivity\\homogeneous_temporal_wiam_geometry\\ac\\ac_sens_grid_sigma_1.5_steps_2000_seed_2.json"
+            },
+            {
+              "material": "AC",
+              "seed": 3,
+              "sigma_px": 1.5,
+              "n_steps": 2000,
+              "n_adsorbed": 141,
+              "percent_adsorbed": 70.5,
+              "qt_mg_g": 282.0,
+              "n_contacts": 298,
+              "mass_conservation_ok": true,
+              "json_path": "data\\sensitivity\\homogeneous_temporal_wiam_geometry\\ac\\ac_sens_grid_sigma_1.5_steps_2000_seed_3.json"
+            },
+            {
+              "material": "AC",
+              "seed": 4,
+              "sigma_px": 1.5,
+              "n_steps": 2000,
+              "n_adsorbed": 144,
+              "percent_adsorbed": 72.0,
+              "qt_mg_g": 288.0,
+              "n_contacts": 362,
+              "mass_conservation_ok": true,
+              "json_path": "data\\sensitivity\\homogeneous_temporal_wiam_geometry\\ac\\ac_sens_grid_sigma_1.5_steps_2000_seed_4.json"
+            },
+            {
+              "material": "AC",
+              "seed": 5,
+              "sigma_px": 1.5,
+              "n_steps": 2000,
+              "n_adsorbed": 135,
+              "percent_adsorbed": 67.5,
+              "qt_mg_g": 270.0,
+              "n_contacts": 365,
+              "mass_conservation_ok": true,
+              "json_path": "data\\sensitivity\\homogeneous_temporal_wiam_geometry\\ac\\ac_sens_grid_sigma_1.5_steps_2000_seed_5.json"
+            }
+          ],
+          "n_adsorbed": {
+            "mean": 139.2,
+            "std": 3.7013511046643495,
+            "min": 135.0,
+            "max": 144.0,
+            "cv_percent": 2.659016598178412
+          },
+          "percent_adsorbed": {
+            "mean": 69.6,
+            "std": 1.8506755523321747,
+            "min": 67.5,
+            "max": 72.0,
+            "cv_percent": 2.659016598178412
+          },
+          "qt_mg_g": {
+            "mean": 278.4,
+            "std": 7.402702209328699,
+            "min": 270.0,
+            "max": 288.0,
+            "cv_percent": 2.659016598178412
+          },
+          "n_contacts": {
+            "mean": 327.6,
+            "std": 39.39923857132267,
+            "min": 276.0,
+            "max": 365.0,
+            "cv_percent": 12.026629600525844
+          }
+        }
+      ],
+      "sigma_comparison": [
+        {
+          "material": "GO",
+          "metric": "n_adsorbed",
+          "mean_sigma_1_0": 165.8,
+          "mean_sigma_1_5": 186.2,
+          "absolute_delta": 20.399999999999977,
+          "relative_delta_percent": 12.303980699638103,
+          "qt_delta_mean": 40.799999999999955,
+          "contacts_delta_mean": -8.800000000000068,
+          "cv_percent_sigma_1_0_nads": 3.7520702086841466,
+          "cv_percent_sigma_1_5_nads": 1.75675910137445,
+          "note": "Descriptivo \u03c3=1.5 vs \u03c3=1.0; no ranking autom\u00e1tico."
+        },
+        {
+          "material": "AC",
+          "metric": "n_adsorbed",
+          "mean_sigma_1_0": 105.4,
+          "mean_sigma_1_5": 139.2,
+          "absolute_delta": 33.79999999999998,
+          "relative_delta_percent": 32.0683111954459,
+          "qt_delta_mean": 67.59999999999997,
+          "contacts_delta_mean": 90.20000000000002,
+          "cv_percent_sigma_1_0_nads": 5.947790519414602,
+          "cv_percent_sigma_1_5_nads": 2.659016598178412,
+          "note": "Descriptivo \u03c3=1.5 vs \u03c3=1.0; no ranking autom\u00e1tico."
+        }
+      ],
+      "alpha_go_p2000": {
+        "scope": "GO_only_pso_reference",
+        "horizon_steps": 2000,
+        "by_sigma_seed": [
+          {
+            "sigma_px": 1.0,
+            "seed": 1,
+            "n_alpha_points": 8,
+            "alpha_mean": 0.030721634018711502,
+            "alpha_std": 0.0017136865535532894,
+            "alpha_min": 0.027728104858502682,
+            "alpha_max": 0.03385552088750216,
+            "alpha_cv_percent": 5.57811004619592
+          },
+          {
+            "sigma_px": 1.0,
+            "seed": 2,
+            "n_alpha_points": 8,
+            "alpha_mean": 0.04156210133656553,
+            "alpha_std": 0.0022849970771282313,
+            "alpha_min": 0.03859357088448083,
+            "alpha_max": 0.04444622229333618,
+            "alpha_cv_percent": 5.49779006269333
+          },
+          {
+            "sigma_px": 1.0,
+            "seed": 3,
+            "n_alpha_points": 8,
+            "alpha_mean": 0.03158776487551774,
+            "alpha_std": 0.0043567984596019176,
+            "alpha_min": 0.026001040041601663,
+            "alpha_max": 0.039040600663065576,
+            "alpha_cv_percent": 13.792677249470971
+          },
+          {
+            "sigma_px": 1.0,
+            "seed": 4,
+            "n_alpha_points": 8,
+            "alpha_mean": 0.02914012138561492,
+            "alpha_std": 0.004259267719016936,
+            "alpha_min": 0.024142098460168678,
+            "alpha_max": 0.036112555613335644,
+            "alpha_cv_percent": 14.61650644022208
+          },
+          {
+            "sigma_px": 1.0,
+            "seed": 5,
+            "n_alpha_points": 9,
+            "alpha_mean": 0.048068224587075443,
+            "alpha_std": 0.006730452570089674,
+            "alpha_min": 0.04012506179259515,
+            "alpha_max": 0.06164630146849711,
+            "alpha_cv_percent": 14.001874685214302
+          },
+          {
+            "sigma_px": 1.5,
+            "seed": 1,
+            "n_alpha_points": 9,
+            "alpha_mean": 0.06681052805007481,
+            "alpha_std": 0.013640596496904982,
+            "alpha_min": 0.049746887834697065,
+            "alpha_max": 0.08654192321539017,
+            "alpha_cv_percent": 20.41683682949084
+          },
+          {
+            "sigma_px": 1.5,
+            "seed": 2,
+            "n_alpha_points": 9,
+            "alpha_mean": 0.07844910894615438,
+            "alpha_std": 0.01158710153727491,
+            "alpha_min": 0.059363105117812,
+            "alpha_max": 0.09286085729143452,
+            "alpha_cv_percent": 14.77021433758798
+          },
+          {
+            "sigma_px": 1.5,
+            "seed": 3,
+            "n_alpha_points": 9,
+            "alpha_mean": 0.07533248414842815,
+            "alpha_std": 0.0110674768887623,
+            "alpha_min": 0.06171132921266217,
+            "alpha_max": 0.0955920589764767,
+            "alpha_cv_percent": 14.691506610821392
+          },
+          {
+            "sigma_px": 1.5,
+            "seed": 4,
+            "n_alpha_points": 9,
+            "alpha_mean": 0.07641674990645433,
+            "alpha_std": 0.015864367622249458,
+            "alpha_min": 0.05350008239012688,
+            "alpha_max": 0.11196620113608374,
+            "alpha_cv_percent": 20.760327600519314
+          },
+          {
+            "sigma_px": 1.5,
+            "seed": 5,
+            "n_alpha_points": 9,
+            "alpha_mean": 0.0873899162583311,
+            "alpha_std": 0.016908028105806786,
+            "alpha_min": 0.073449265654242,
+            "alpha_max": 0.125005000200008,
+            "alpha_cv_percent": 19.347802160406463
+          }
+        ],
+        "by_sigma_fraction": [
+          {
+            "sigma_px": 1.0,
+            "fraction_of_pso_qe": 0.1,
+            "n_alpha_points": 5,
+            "alpha_mean": 0.03810197488486049,
+            "alpha_std": 0.008311504225164745,
+            "alpha_min": 0.030734089883689912,
+            "alpha_max": 0.05158936516190806,
+            "alpha_cv_percent": 21.813841015540785
+          },
+          {
+            "sigma_px": 1.0,
+            "fraction_of_pso_qe": 0.2,
+            "n_alpha_points": 5,
+            "alpha_mean": 0.03703288273552663,
+            "alpha_std": 0.0079657660235261,
+            "alpha_min": 0.026001040041601663,
+            "alpha_max": 0.04643042864571725,
+            "alpha_cv_percent": 21.509980955072475
+          },
+          {
+            "sigma_px": 1.0,
+            "fraction_of_pso_qe": 0.3,
+            "n_alpha_points": 5,
+            "alpha_mean": 0.034918787934456644,
+            "alpha_std": 0.007754161534512034,
+            "alpha_min": 0.028868660297855293,
+            "alpha_max": 0.04421945585306406,
+            "alpha_cv_percent": 22.206273451033784
+          },
+          {
+            "sigma_px": 1.0,
+            "fraction_of_pso_qe": 0.4,
+            "n_alpha_points": 5,
+            "alpha_mean": 0.03504226676044178,
+            "alpha_std": 0.01045195502641322,
+            "alpha_min": 0.024142098460168678,
+            "alpha_max": 0.047620952457145906,
+            "alpha_cv_percent": 29.82670926474464
+          },
+          {
+            "sigma_px": 1.0,
+            "fraction_of_pso_qe": 0.5,
+            "n_alpha_points": 5,
+            "alpha_mean": 0.03531688293507205,
+            "alpha_std": 0.009168911052650051,
+            "alpha_min": 0.025391640665626623,
+            "alpha_max": 0.04710333340869866,
+            "alpha_cv_percent": 25.961835503734964
+          },
+          {
+            "sigma_px": 1.0,
+            "fraction_of_pso_qe": 0.6,
+            "n_alpha_points": 5,
+            "alpha_mean": 0.033834603450409124,
+            "alpha_std": 0.006264734458328112,
+            "alpha_min": 0.02624600273378364,
+            "alpha_max": 0.04054216222702962,
+            "alpha_cv_percent": 18.515761437873035
+          },
+          {
+            "sigma_px": 1.0,
+            "fraction_of_pso_qe": 0.7,
+            "n_alpha_points": 5,
+            "alpha_mean": 0.033824196323747543,
+            "alpha_std": 0.006623250277681317,
+            "alpha_min": 0.02679730275194517,
+            "alpha_max": 0.04195649614827377,
+            "alpha_cv_percent": 19.581397335466672
+          },
+          {
+            "sigma_px": 1.0,
+            "fraction_of_pso_qe": 0.8,
+            "n_alpha_points": 5,
+            "alpha_mean": 0.03894054352477762,
+            "alpha_std": 0.009056807702331386,
+            "alpha_min": 0.03042836751503999,
+            "alpha_max": 0.05361039183835396,
+            "alpha_cv_percent": 23.25804131770425
+          },
+          {
+            "sigma_px": 1.0,
+            "fraction_of_pso_qe": 0.9,
+            "n_alpha_points": 1,
+            "alpha_mean": 0.06164630146849711,
+            "alpha_std": 0.0,
+            "alpha_min": 0.06164630146849711,
+            "alpha_max": 0.06164630146849711,
+            "alpha_cv_percent": 0.0
+          },
+          {
+            "sigma_px": 1.5,
+            "fraction_of_pso_qe": 0.1,
+            "n_alpha_points": 5,
+            "alpha_mean": 0.080116373379215,
+            "alpha_std": 0.016383717818754962,
+            "alpha_min": 0.05350008239012688,
+            "alpha_max": 0.09630014830222838,
+            "alpha_cv_percent": 20.449899474612856
+          },
+          {
+            "sigma_px": 1.5,
+            "fraction_of_pso_qe": 0.2,
+            "n_alpha_points": 5,
+            "alpha_mean": 0.09030323197721826,
+            "alpha_std": 0.022007808827785746,
+            "alpha_min": 0.06632918377959608,
+            "alpha_max": 0.125005000200008,
+            "alpha_cv_percent": 24.371009039120423
+          },
+          {
+            "sigma_px": 1.5,
+            "fraction_of_pso_qe": 0.3,
+            "n_alpha_points": 5,
+            "alpha_mean": 0.07338030588266815,
+            "alpha_std": 0.015618678926355574,
+            "alpha_min": 0.049746887834697065,
+            "alpha_max": 0.09286085729143452,
+            "alpha_cv_percent": 21.284565032107043
+          },
+          {
+            "sigma_px": 1.5,
+            "fraction_of_pso_qe": 0.4,
+            "n_alpha_points": 5,
+            "alpha_mean": 0.07101736500831798,
+            "alpha_std": 0.012086611194205892,
+            "alpha_min": 0.05158936516190807,
+            "alpha_max": 0.08497071909020153,
+            "alpha_cv_percent": 17.01923352519519
+          },
+          {
+            "sigma_px": 1.5,
+            "fraction_of_pso_qe": 0.5,
+            "n_alpha_points": 5,
+            "alpha_mean": 0.06919435057016689,
+            "alpha_std": 0.006995492143464912,
+            "alpha_min": 0.06018759268889274,
+            "alpha_max": 0.0797577915386554,
+            "alpha_cv_percent": 10.10991805808062
+          },
+          {
+            "sigma_px": 1.5,
+            "fraction_of_pso_qe": 0.6,
+            "n_alpha_points": 5,
+            "alpha_mean": 0.06873213992126703,
+            "alpha_std": 0.008209251776556107,
+            "alpha_min": 0.05945359765610136,
+            "alpha_max": 0.0789505264421103,
+            "alpha_cv_percent": 11.943832661051788
+          },
+          {
+            "sigma_px": 1.5,
+            "fraction_of_pso_qe": 0.7,
+            "n_alpha_points": 5,
+            "alpha_mean": 0.0676235212593078,
+            "alpha_std": 0.008740162193982931,
+            "alpha_min": 0.059363105117812,
+            "alpha_max": 0.07858690858860605,
+            "alpha_cv_percent": 12.924736883292546
+          },
+          {
+            "sigma_px": 1.5,
+            "fraction_of_pso_qe": 0.8,
+            "n_alpha_points": 5,
+            "alpha_mean": 0.07929415207311422,
+            "alpha_std": 0.010373700782758231,
+            "alpha_min": 0.06815475764508958,
+            "alpha_max": 0.09319369190538233,
+            "alpha_cv_percent": 13.082554654463072
+          },
+          {
+            "sigma_px": 1.5,
+            "fraction_of_pso_qe": 0.9,
+            "n_alpha_points": 5,
+            "alpha_mean": 0.09225637708572167,
+            "alpha_std": 0.01193118429812838,
+            "alpha_min": 0.08102817187479745,
+            "alpha_max": 0.11196620113608374,
+            "alpha_cv_percent": 12.932639103140053
+          }
+        ],
+        "note": "\u03b1 exploratorio; no umbral CV; no \u03b1 definitivo."
+      }
+    },
+    "limitations": [
+      "No validaci\u00f3n experimental",
+      "PSO GO no transfiere a AC",
+      "steps \u2260 minutos",
+      "\u03b1 no constante demostrada"
+    ]
+  },
+  "limitations": [
+    "An\u00e1lisis descriptivo; no selecci\u00f3n autom\u00e1tica de \u03c3, P ni \u03b1.",
+    "Referencia PSO solo GO; AC sin curva PSO.",
+    "Pasos computacionales no equivalen a minutos sin decisi\u00f3n documentada."
+  ]
+}

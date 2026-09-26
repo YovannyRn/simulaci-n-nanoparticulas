@@ -5,7 +5,7 @@ from __future__ import annotations
 import math
 from typing import Any
 
-from go_mb.config import SimulationConfig
+from go_mb.config import MaterialKind, SimulationConfig
 
 
 def langmuir_qe(qmax: float, kl: float, ce: float) -> float:
@@ -73,27 +73,58 @@ def pso_time_for_fraction(k2: float, qe: float, fraction: float) -> float | None
 
 def reference_bundle(config: SimulationConfig) -> dict[str, Any]:
     eq = langmuir_equilibrium(config)
-    example_t = 10.0
-    qt10 = pso_qt(config.k2_example_g_mg_min, config.qe_pso_mg_g, example_t)
-    return {
+    bundle: dict[str, Any] = {
         "langmuir": eq,
-        "pso": {
-            "qe_pso_mg_g": config.qe_pso_mg_g,
-            "qe_exp_article2_mg_g": config.qe_exp_article2_mg_g,
-            "k2_example_g_mg_min": config.k2_example_g_mg_min,
-            "k2_table_g_mg_min": config.k2_table_g_mg_min,
-            "k2_used_for_reference_curve": config.k2_example_g_mg_min,
-            "k2_note": (
-                "PENDIENTE de unificación: el ejemplo a 10 min cierra con 0.0002; "
-                "la tabla transcribe 0.001. La curva de referencia usa 0.0002."
-            ),
-            "qt_10min_mg_g": qt10,
-            "mass_10min_mg": qt10 * config.m_go_g,
-            "objects_10min": (qt10 * config.m_go_g) / config.peso_mb_mg,
-            "conditions_note": "PSO de [2] es pH 7 y 20 °C; Langmuir de [1] es pH 6 y 25 °C.",
-        },
+        "material": config.material.value,
         "use": (
             "Referencia macroscópica. El motor NO detiene ni sesga la adsorción "
             "para alcanzar qe."
         ),
     }
+    if config.material == MaterialKind.AC:
+        bundle["wiam_documented"] = {
+            "ce_mg_l": config.wiam_ce_mg_l,
+            "qe_mg_g": config.wiam_qe_mg_g,
+            "total_capacity_mg": config.wiam_total_capacity_mg,
+            "equilibrium_adsorption_mg": config.wiam_eq_adsorption_mg,
+            "note": (
+                "Valores transcritos de Wiam para comparación descriptiva. "
+                "No calibran el motor ni fijan el resultado de la simulación."
+            ),
+        }
+        bundle["langmuir_vs_wiam"] = {
+            "delta_qe_mg_g": eq["qe_mg_g"] - (config.wiam_qe_mg_g or 0.0),
+            "delta_ce_mg_l": eq["ce_mg_l"] - (config.wiam_ce_mg_l or 0.0),
+            "delta_m_eq_mg": eq["m_adsorbed_eq_mg"] - (config.wiam_eq_adsorption_mg or 0.0),
+        }
+        from go_mb.pso_reference import AC_PSO, PSO_FORMULA
+
+        bundle["pso"] = {
+            "qe_pso_mg_g": AC_PSO.qe_pso_mg_g,
+            "k2_g_mg_min": AC_PSO.k2_g_mg_min,
+            "formula_qt": PSO_FORMULA,
+            "note": (
+                "Referencia cinética PSO AC (Wiam confirmado). "
+                "No calibra el motor ni se mezcla con parámetros GO."
+            ),
+        }
+        return bundle
+
+    example_t = 10.0
+    qt10 = pso_qt(config.k2_example_g_mg_min, config.qe_pso_mg_g, example_t)
+    bundle["pso"] = {
+        "qe_pso_mg_g": config.qe_pso_mg_g,
+        "qe_exp_article2_mg_g": config.qe_exp_article2_mg_g,
+        "k2_example_g_mg_min": config.k2_example_g_mg_min,
+        "k2_table_g_mg_min": config.k2_table_g_mg_min,
+        "k2_used_for_reference_curve": config.k2_example_g_mg_min,
+        "k2_note": (
+            "PENDIENTE de unificación: el ejemplo a 10 min cierra con 0.0002; "
+            "la tabla transcribe 0.001. La curva de referencia usa 0.0002."
+        ),
+        "qt_10min_mg_g": qt10,
+        "mass_10min_mg": qt10 * config.m_go_g,
+        "objects_10min": (qt10 * config.m_go_g) / config.peso_mb_mg,
+        "conditions_note": "PSO de [2] es pH 7 y 20 °C; Langmuir de [1] es pH 6 y 25 °C.",
+    }
+    return bundle

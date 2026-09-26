@@ -1,0 +1,123 @@
+{
+  "provenance": {
+    "geometry_alignment_classification": "geometry_alignment_pilot_not_experimental_validation",
+    "not_experimental_validation": true,
+    "no_langmuir_optimization": true,
+    "steps_are_not_minutes": true,
+    "pilot_design": {
+      "sigma_px": 1.0,
+      "n_steps": 200,
+      "seeds": [
+        1,
+        2,
+        3
+      ],
+      "materials": [
+        "GO",
+        "AC"
+      ]
+    },
+    "motor_geometry_wiam": {
+      "mb_side_px": 1,
+      "go_side_px": 7,
+      "ac_side_px": 2,
+      "r_mb_px": 0.5,
+      "r_go_px": 3.5,
+      "r_ac_px": 1.0,
+      "contact_rule": "dist <= r_MB + r_adsorbente"
+    },
+    "legacy_reference": {
+      "path": "data\\sensitivity\\homogeneous_temporal",
+      "geometry": "MB 5\u00d75; adsorbente 7\u00d77 (GO y AC)",
+      "note": "Campa\u00f1as en data/sensitivity/homogeneous_temporal/ usaron MB 5\u00d75 y adsorbente 7\u00d77 para GO y AC (geometr\u00eda anterior)."
+    },
+    "adsorption_unchanged": "apply_adsorption y P_ads provisional no modificados en esta etapa."
+  },
+  "per_run": [
+    {
+      "material": "GO",
+      "seed": 1,
+      "legacy_n_adsorbed": 77,
+      "new_n_adsorbed": 64,
+      "delta_n_adsorbed": -13,
+      "legacy_percent": 38.5,
+      "new_percent": 32.0,
+      "legacy_qt": 154.0,
+      "new_qt": 128.0,
+      "legacy_contacts": 79,
+      "new_contacts": 64,
+      "new_mass_ok": true
+    },
+    {
+      "material": "GO",
+      "seed": 2,
+      "legacy_n_adsorbed": 97,
+      "new_n_adsorbed": 78,
+      "delta_n_adsorbed": -19,
+      "legacy_percent": 48.5,
+      "new_percent": 39.0,
+      "legacy_qt": 194.0,
+      "new_qt": 156.0,
+      "legacy_contacts": 97,
+      "new_contacts": 80,
+      "new_mass_ok": true
+    },
+    {
+      "material": "GO",
+      "seed": 3,
+      "legacy_n_adsorbed": 76,
+      "new_n_adsorbed": 59,
+      "delta_n_adsorbed": -17,
+      "legacy_percent": 38.0,
+      "new_percent": 29.5,
+      "legacy_qt": 152.0,
+      "new_qt": 117.99999999999999,
+      "legacy_contacts": 76,
+      "new_contacts": 59,
+      "new_mass_ok": true
+    },
+    {
+      "material": "AC",
+      "seed": 1,
+      "legacy_n_adsorbed": 56,
+      "new_n_adsorbed": 26,
+      "delta_n_adsorbed": -30,
+      "legacy_percent": 28.000000000000004,
+      "new_percent": 13.0,
+      "legacy_qt": 112.00000000000001,
+      "new_qt": 52.0,
+      "legacy_contacts": 64,
+      "new_contacts": 26,
+      "new_mass_ok": true
+    },
+    {
+      "material": "AC",
+      "seed": 2,
+      "legacy_n_adsorbed": 67,
+      "new_n_adsorbed": 23,
+      "delta_n_adsorbed": -44,
+      "legacy_percent": 33.5,
+      "new_percent": 11.5,
+      "legacy_qt": 134.0,
+      "new_qt": 46.0,
+      "legacy_contacts": 137,
+      "new_contacts": 23,
+      "new_mass_ok": true
+    },
+    {
+      "material": "AC",
+      "seed": 3,
+      "legacy_n_adsorbed": 49,
+      "new_n_adsorbed": 23,
+      "delta_n_adsorbed": -26,
+      "legacy_percent": 24.5,
+      "new_percent": 11.5,
+      "legacy_qt": 98.0,
+      "new_qt": 46.0,
+      "legacy_contacts": 49,
+      "new_contacts": 23,
+      "new_mass_ok": true
+    }
+  ],
+  "note": "Comparaci\u00f3n descriptiva piloto \u03c3=1.0, P=200, seeds 1\u20133. No validaci\u00f3n experimental ni ranking de materiales."
+}

@@ -31,6 +31,7 @@ SCIENTIFIC_MODULES = [
     "io.py",
     "stats.py",
     "experiments.py",
+    "sensitivity.py",
 ]
 
 
@@ -41,9 +42,9 @@ def test_domain_masses_and_graphic_sizes() -> None:
     assert cfg.n_go == 100
     assert cfg.peso_mb_mg == 0.02
     assert cfg.peso_go_mg == 0.10
-    assert cfg.mb_size_px == 5
+    assert cfg.mb_size_px == 1
     assert cfg.go_size_px == 7
-    assert cfg.r_mb_px == 2.5
+    assert cfg.r_mb_px == 0.5
     assert cfg.r_go_px == 3.5
     assert abs(cfg.n_mb * cfg.peso_mb_mg - 4.0) < 1e-12
     assert abs(cfg.n_go * cfg.peso_go_mg - 10.0) < 1e-12
@@ -112,13 +113,13 @@ def test_same_seed_reproduces_full_run() -> None:
 
 def test_scientific_modules_do_not_import_matplotlib() -> None:
     for name in SCIENTIFIC_MODULES:
-        src = (SRC / name).read_text()
+        src = (SRC / name).read_text(encoding="utf-8")
         assert "matplotlib" not in src
         assert "go_mb.viz" not in src
 
 
 def test_cli_imports_viz_only_lazily() -> None:
-    tree = ast.parse((SRC / "cli.py").read_text())
+    tree = ast.parse((SRC / "cli.py").read_text(encoding="utf-8"))
     for node in tree.body:
         if isinstance(node, ast.ImportFrom) and node.module == "go_mb.viz":
             raise AssertionError("viz no debe importarse en el nivel de cli")
@@ -128,8 +129,10 @@ def test_cli_imports_viz_only_lazily() -> None:
 
 
 def test_engine_runs_in_process_without_matplotlib() -> None:
+    src_path = (ROOT / "src").as_posix().replace("\\", "/")
     code = (
         "import sys\n"
+        f"sys.path.insert(0, r'{src_path}')\n"
         "assert not any(m == 'matplotlib' or m.startswith('matplotlib.') for m in sys.modules)\n"
         "from go_mb.engine import run_simulation\n"
         "run_simulation(seed=0, sigma_px=0.0, n_steps=1)\n"
@@ -156,6 +159,6 @@ def test_tests_do_not_freeze_demo_count_as_scientific_target() -> None:
     for path in (ROOT / "tests").glob("test_*.py"):
         if path.name == this:
             continue
-        src = path.read_text()
+        src = path.read_text(encoding="utf-8")
         assert needle_eq not in src
         assert needle_frac not in src

@@ -1,0 +1,5602 @@
+{
+  "provenance": {
+    "study_classification": "computational_sensitivity_not_experimental_validation",
+    "not_experimental_validation": true,
+    "no_langmuir_optimization": true,
+    "steps_are_not_minutes": true,
+    "pending_parameters": {
+      "D_sigma": "PENDIENTE",
+      "P_steps": "PENDIENTE",
+      "P_ads_physical": "PENDIENTE",
+      "k2_unified": "PENDIENTE",
+      "Nrep": "PENDIENTE",
+      "CA": "PENDIENTE",
+      "alpha_min_per_step": "PENDIENTE"
+    },
+    "computational_decisions": {
+      "p_ads_default": "DECISI\u00d3N COMPUTACIONAL PROVISIONAL (equivalente P_ads=1 tras contacto+capacidad)",
+      "contact_radii_px": "c\u00edrculos inscritos: r_MB=lado_MB/2, r_ads=lado_ads/2 (Wiam: MB 1, GO 7, AC 2 px)",
+      "bounce": "reflexi\u00f3n por eje + recorte"
+    },
+    "bibliographic_reference_only": "Langmuir y PSO aparecen en reference/ de cada corrida como referencia macrosc\u00f3pica; no se usan como objetivo de barrido ni condici\u00f3n de parada.",
+    "k2_note": "k2 ejemplo 0.0002 y k2 tabla 0.001 siguen PENDIENTES de unificaci\u00f3n. Curvas PSO en reference usan k2_example con etiqueta expl\u00edcita.",
+    "material": "GO",
+    "stage_label": "computational_sensitivity",
+    "homogeneous_temporal_classification": "homogeneous_temporal_wiam_geometry_not_experimental_validation",
+    "no_physical_p_ads": true,
+    "symmetric_design": {
+      "sigma_px": [
+        1.0,
+        1.5
+      ],
+      "n_steps": [
+        200,
+        400,
+        600,
+        800,
+        1000,
+        1500,
+        2000
+      ],
+      "seeds": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "materials": [
+        "GO",
+        "AC"
+      ],
+      "runs_per_material": 70,
+      "total_runs": 140
+    },
+    "geometry": {
+      "geometry_era": "wiam_geometry",
+      "mb_side_px": 1,
+      "go_side_px": 7,
+      "ac_side_px": 2,
+      "r_mb_px": 0.5,
+      "r_go_px": 3.5,
+      "r_ac_px": 1.0,
+      "contact_threshold_mb_go_px": 4.0,
+      "contact_threshold_mb_ac_px": 1.5,
+      "go_movable": true,
+      "ac_fixed": true,
+      "px_scale_um": 77.4,
+      "px_area_um2": 5990.76,
+      "legacy_reference": {
+        "geometry_era": "legacy_geometry",
+        "path": "data/sensitivity/homogeneous_temporal",
+        "note": "Campa\u00f1as en data/sensitivity/homogeneous_temporal/ usaron MB 5\u00d75 y adsorbente 7\u00d77 para GO y AC (geometr\u00eda anterior)."
+      }
+    },
+    "geometry_note": "Campa\u00f1a con geometr\u00eda Wiam confirmada (MB 1\u00d71, GO 7\u00d77, AC 2\u00d72). Referencia hist\u00f3rica en data/sensitivity/homogeneous_temporal/ (legacy_geometry).",
+    "concentration_note": "Co operativo del motor: 4 mg / 0,04 L = 100 mg/L. Unidad/frase \u00ab100 mg/g\u00bb comunicada por Wiam pendiente de confirmaci\u00f3n. No se alter\u00f3 Co en esta campa\u00f1a.",
+    "wiam_documentation": {
+      "go_visual_px": "7\u00d77 (Wiam)",
+      "ac_visual_px": "2\u00d72 (Wiam)",
+      "mb_visual_px": "1\u00d71 (Wiam)",
+      "px_scale_um": "77,4 \u00b5m/px; 5990,76 \u00b5m\u00b2/px\u00b2"
+    },
+    "homogeneous_temporal": true
+  },
+  "study": {
+    "kind": "homogeneous_temporal_wiam_grid",
+    "classification": "computational_sensitivity_not_experimental_validation",
+    "material": "GO",
+    "fixed_parameters": {
+      "p_ads": null,
+      "seeds": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ]
+    },
+    "swept_parameters": {
+      "sigma_px": [
+        1.0,
+        1.5
+      ],
+      "n_steps": [
+        200,
+        400,
+        600,
+        800,
+        1000,
+        1500,
+        2000
+      ]
+    },
+    "n_runs": 70,
+    "geometry_era": "wiam_geometry"
+  },
+  "runs": [
+    {
+      "role": "simulation_outcome",
+      "material": "GO",
+      "paths": {
+        "json": "data\\sensitivity\\homogeneous_temporal_wiam_geometry\\go\\sens_grid_sigma_1_steps_200_seed_1.json",
+        "csv": "data\\sensitivity\\homogeneous_temporal_wiam_geometry\\go\\sens_grid_sigma_1_steps_200_seed_1.csv"
+      },
+      "execution_parameters": {
+        "role": "injected_execution_parameter",
+        "seed": 1,
+        "sigma_px": {
+          "value": 1.0,
+          "status": "PENDIENTE"
+        },
+        "n_steps": {
+          "value": 200,
+          "status": "PENDIENTE"
+        },
+        "p_ads": {
+          "value": null,
+          "effective": 1.0,
+          "implementation_status": "DECISI\u00d3N COMPUTACIONAL PROVISIONAL",
+          "status": "PENDIENTE"
+        }
+      },
+      "system_counts": {
+        "N_MB": 200,
+        "N_GO": 100,
+        "N_adsorbent": 100,
+        "adsorbent_symbol": "GO",
+        "status": "DECISI\u00d3N COMPUTACIONAL"
+      },
+      "outcomes": {
+        "n_adsorbed": 64,
+        "percent_adsorbed": 32.0,
+        "m_adsorbed_mg": 1.28,
+        "m_free_mg": 2.7199999999999998,
+        "qfinal_mg_g": 128.0,
+        "n_contacts": 64,
+        "mass_conservation_ok": true,
+        "result_classification": "computational_execution_not_experimental_validation"
+      },
+      "series_csv": "data\\sensitivity\\homogeneous_temporal_wiam_geometry\\go\\sens_grid_sigma_1_steps_200_seed_1.csv",
+      "full_result_keys": [
+        "config",
+        "run",
+        "reference",
+        "summary",
+        "series",
+        "final_state"
+      ],
+      "geometry": {
+        "geometry_era": "wiam_geometry",
+        "mb_side_px": 1,
+        "adsorbent_side_px": 7,
+        "adsorbent_symbol": "GO",
+        "r_mb_px": 0.5,
+        "r_adsorbent_px": 3.5,
+        "contact_threshold_px": 4.0,
+        "adsorbent_movable": true
+      }
+    },
+    {
+      "role": "simulation_outcome",
+      "material": "GO",
+      "paths": {
+        "json": "data\\sensitivity\\homogeneous_temporal_wiam_geometry\\go\\sens_grid_sigma_1_steps_400_seed_1.json",
+        "csv": "data\\sensitivity\\homogeneous_temporal_wiam_geometry\\go\\sens_grid_sigma_1_steps_400_seed_1.csv"
+      },
+      "execution_parameters": {
+        "role": "injected_execution_parameter",
+        "seed": 1,
+        "sigma_px": {
+          "value": 1.0,
+          "status": "PENDIENTE"
+        },
+        "n_steps": {
+          "value": 400,
+          "status": "PENDIENTE"
+        },
+        "p_ads": {
+          "value": null,
+          "effective": 1.0,
+          "implementation_status": "DECISI\u00d3N COMPUTACIONAL PROVISIONAL",
+          "status": "PENDIENTE"
+        }
+      },
+      "system_counts": {
+        "N_MB": 200,
+        "N_GO": 100,
+        "N_adsorbent": 100,
+        "adsorbent_symbol": "GO",
+        "status": "DECISI\u00d3N COMPUTACIONAL"
+      },
+      "outcomes": {
+        "n_adsorbed": 93,
+        "percent_adsorbed": 46.5,
+        "m_adsorbed_mg": 1.86,
+        "m_free_mg": 2.1399999999999997,
+        "qfinal_mg_g": 186.0,
+        "n_contacts": 101,
+        "mass_conservation_ok": true,
+        "result_classification": "computational_execution_not_experimental_validation"
+      },
+      "series_csv": "data\\sensitivity\\homogeneous_temporal_wiam_geometry\\go\\sens_grid_sigma_1_steps_400_seed_1.csv",
+      "full_result_keys": [
+        "config",
+        "run",
+        "reference",
+        "summary",
+        "series",
+        "final_state"
+      ],
+      "geometry": {
+        "geometry_era": "wiam_geometry",
+        "mb_side_px": 1,
+        "adsorbent_side_px": 7,
+        "adsorbent_symbol": "GO",
+        "r_mb_px": 0.5,
+        "r_adsorbent_px": 3.5,
+        "contact_threshold_px": 4.0,
+        "adsorbent_movable": true
+      }
+    },
+    {
+      "role": "simulation_outcome",
+      "material": "GO",
+      "paths": {
+        "json": "data\\sensitivity\\homogeneous_temporal_wiam_geometry\\go\\sens_grid_sigma_1_steps_600_seed_1.json",
+        "csv": "data\\sensitivity\\homogeneous_temporal_wiam_geometry\\go\\sens_grid_sigma_1_steps_600_seed_1.csv"
+      },
+      "execution_parameters": {
+        "role": "injected_execution_parameter",
+        "seed": 1,
+        "sigma_px": {
+          "value": 1.0,
+          "status": "PENDIENTE"
+        },
+        "n_steps": {
+          "value": 600,
+          "status": "PENDIENTE"
+        },
+        "p_ads": {
+          "value": null,
+          "effective": 1.0,
+          "implementation_status": "DECISI\u00d3N COMPUTACIONAL PROVISIONAL",
+          "status": "PENDIENTE"
+        }
+      },
+      "system_counts": {
+        "N_MB": 200,
+        "N_GO": 100,
+        "N_adsorbent": 100,
+        "adsorbent_symbol": "GO",
+        "status": "DECISI\u00d3N COMPUTACIONAL"
+      },
+      "outcomes": {
+        "n_adsorbed": 110,
+        "percent_adsorbed": 55.00000000000001,
+        "m_adsorbed_mg": 2.2,
+        "m_free_mg": 1.7999999999999998,
+        "qfinal_mg_g": 220.0,
+        "n_contacts": 178,
+        "mass_conservation_ok": true,
+        "result_classification": "computational_execution_not_experimental_validation"
+      },
+      "series_csv": "data\\sensitivity\\homogeneous_temporal_wiam_geometry\\go\\sens_grid_sigma_1_steps_600_seed_1.csv",
+      "full_result_keys": [
+        "config",
+        "run",
+        "reference",
+        "summary",
+        "series",
+        "final_state"
+      ],
+      "geometry": {
+        "geometry_era": "wiam_geometry",
+        "mb_side_px": 1,
+        "adsorbent_side_px": 7,
+        "adsorbent_symbol": "GO",
+        "r_mb_px": 0.5,
+        "r_adsorbent_px": 3.5,
+        "contact_threshold_px": 4.0,
+        "adsorbent_movable": true
+      }
+    },
+    {
+      "role": "simulation_outcome",
+      "material": "GO",
+      "paths": {
+        "json": "data\\sensitivity\\homogeneous_temporal_wiam_geometry\\go\\sens_grid_sigma_1_steps_800_seed_1.json",
+        "csv": "data\\sensitivity\\homogeneous_temporal_wiam_geometry\\go\\sens_grid_sigma_1_steps_800_seed_1.csv"
+      },
+      "execution_parameters": {
+        "role": "injected_execution_parameter",
+        "seed": 1,
+        "sigma_px": {
+          "value": 1.0,
+          "status": "PENDIENTE"
+        },
+        "n_steps": {
+          "value": 800,
+          "status": "PENDIENTE"
+        },
+        "p_ads": {
+          "value": null,
+          "effective": 1.0,
+          "implementation_status": "DECISI\u00d3N COMPUTACIONAL PROVISIONAL",
+          "status": "PENDIENTE"
+        }
+      },
+      "system_counts": {
+        "N_MB": 200,
+        "N_GO": 100,
+        "N_adsorbent": 100,
+        "adsorbent_symbol": "GO",
+        "status": "DECISI\u00d3N COMPUTACIONAL"
+      },
+      "outcomes": {
+        "n_adsorbed": 126,
+        "percent_adsorbed": 63.0,
+        "m_adsorbed_mg": 2.52,
+        "m_free_mg": 1.48,
+        "qfinal_mg_g": 252.0,
+        "n_contacts": 249,
+        "mass_conservation_ok": true,
+        "result_classification": "computational_execution_not_experimental_validation"
+      },
+      "series_csv": "data\\sensitivity\\homogeneous_temporal_wiam_geometry\\go\\sens_grid_sigma_1_steps_800_seed_1.csv",
+      "full_result_keys": [
+        "config",
+        "run",
+        "reference",
+        "summary",
+        "series",
+        "final_state"
+      ],
+      "geometry": {
+        "geometry_era": "wiam_geometry",
+        "mb_side_px": 1,
+        "adsorbent_side_px": 7,
+        "adsorbent_symbol": "GO",
+        "r_mb_px": 0.5,
+        "r_adsorbent_px": 3.5,
+        "contact_threshold_px": 4.0,
+        "adsorbent_movable": true
+      }
+    },
+    {
+      "role": "simulation_outcome",
+      "material": "GO",
+      "paths": {
+        "json": "data\\sensitivity\\homogeneous_temporal_wiam_geometry\\go\\sens_grid_sigma_1_steps_1000_seed_1.json",
+        "csv": "data\\sensitivity\\homogeneous_temporal_wiam_geometry\\go\\sens_grid_sigma_1_steps_1000_seed_1.csv"
+      },
+      "execution_parameters": {
+        "role": "injected_execution_parameter",
+        "seed": 1,
+        "sigma_px": {
+          "value": 1.0,
+          "status": "PENDIENTE"
+        },
+        "n_steps": {
+          "value": 1000,
+          "status": "PENDIENTE"
+        },
+        "p_ads": {
+          "value": null,
+          "effective": 1.0,
+          "implementation_status": "DECISI\u00d3N COMPUTACIONAL PROVISIONAL",
+          "status": "PENDIENTE"
+        }
+      },
+      "system_counts": {
+        "N_MB": 200,
+        "N_GO": 100,
+        "N_adsorbent": 100,
+        "adsorbent_symbol": "GO",
+        "status": "DECISI\u00d3N COMPUTACIONAL"
+      },
+      "outcomes": {
+        "n_adsorbed": 133,
+        "percent_adsorbed": 66.5,
+        "m_adsorbed_mg": 2.66,
+        "m_free_mg": 1.3399999999999999,
+        "qfinal_mg_g": 266.0,
+        "n_contacts": 342,
+        "mass_conservation_ok": true,
+        "result_classification": "computational_execution_not_experimental_validation"
+      },
+      "series_csv": "data\\sensitivity\\homogeneous_temporal_wiam_geometry\\go\\sens_grid_sigma_1_steps_1000_seed_1.csv",
+      "full_result_keys": [
+        "config",
+        "run",
+        "reference",
+        "summary",
+        "series",
+        "final_state"
+      ],
+      "geometry": {
+        "geometry_era": "wiam_geometry",
+        "mb_side_px": 1,
+        "adsorbent_side_px": 7,
+        "adsorbent_symbol": "GO",
+        "r_mb_px": 0.5,
+        "r_adsorbent_px": 3.5,
+        "contact_threshold_px": 4.0,
+        "adsorbent_movable": true
+      }
+    },
+    {
+      "role": "simulation_outcome",
+      "material": "GO",
+      "paths": {
+        "json": "data\\sensitivity\\homogeneous_temporal_wiam_geometry\\go\\sens_grid_sigma_1_steps_1500_seed_1.json",
+        "csv": "data\\sensitivity\\homogeneous_temporal_wiam_geometry\\go\\sens_grid_sigma_1_steps_1500_seed_1.csv"
+      },
+      "execution_parameters": {
+        "role": "injected_execution_parameter",
+        "seed": 1,
+        "sigma_px": {
+          "value": 1.0,
+          "status": "PENDIENTE"
+        },
+        "n_steps": {
+          "value": 1500,
+          "status": "PENDIENTE"
+        },
+        "p_ads": {
+          "value": null,
+          "effective": 1.0,
+          "implementation_status": "DECISI\u00d3N COMPUTACIONAL PROVISIONAL",
+          "status": "PENDIENTE"
+        }
+      },
+      "system_counts": {
+        "N_MB": 200,
+        "N_GO": 100,
+        "N_adsorbent": 100,
+        "adsorbent_symbol": "GO",
+        "status": "DECISI\u00d3N COMPUTACIONAL"
+      },
+      "outcomes": {
+        "n_adsorbed": 149,
+        "percent_adsorbed": 74.5,
+        "m_adsorbed_mg": 2.98,
+        "m_free_mg": 1.02,
+        "qfinal_mg_g": 298.0,
+        "n_contacts": 438,
+        "mass_conservation_ok": true,
+        "result_classification": "computational_execution_not_experimental_validation"
+      },
+      "series_csv": "data\\sensitivity\\homogeneous_temporal_wiam_geometry\\go\\sens_grid_sigma_1_steps_1500_seed_1.csv",
+      "full_result_keys": [
+        "config",
+        "run",
+        "reference",
+        "summary",
+        "series",
+        "final_state"
+      ],
+      "geometry": {
+        "geometry_era": "wiam_geometry",
+        "mb_side_px": 1,
+        "adsorbent_side_px": 7,
+        "adsorbent_symbol": "GO",
+        "r_mb_px": 0.5,
+        "r_adsorbent_px": 3.5,
+        "contact_threshold_px": 4.0,
+        "adsorbent_movable": true
+      }
+    },
+    {
+      "role": "simulation_outcome",
+      "material": "GO",
+      "paths": {
+        "json": "data\\sensitivity\\homogeneous_temporal_wiam_geometry\\go\\sens_grid_sigma_1_steps_2000_seed_1.json",
+        "csv": "data\\sensitivity\\homogeneous_temporal_wiam_geometry\\go\\sens_grid_sigma_1_steps_2000_seed_1.csv"
+      },
+      "execution_parameters": {
+        "role": "injected_execution_parameter",
+        "seed": 1,
+        "sigma_px": {
+          "value": 1.0,
+          "status": "PENDIENTE"
+        },
+        "n_steps": {
+          "value": 2000,
+          "status": "PENDIENTE"
+        },
+        "p_ads": {
+          "value": null,
+          "effective": 1.0,
+          "implementation_status": "DECISI\u00d3N COMPUTACIONAL PROVISIONAL",
+          "status": "PENDIENTE"
+        }
+      },
+      "system_counts": {
+        "N_MB": 200,
+        "N_GO": 100,
+        "N_adsorbent": 100,
+        "adsorbent_symbol": "GO",
+        "status": "DECISI\u00d3N COMPUTACIONAL"
+      },
+      "outcomes": {
+        "n_adsorbed": 158,
+        "percent_adsorbed": 79.0,
+        "m_adsorbed_mg": 3.16,
+        "m_free_mg": 0.8399999999999999,
+        "qfinal_mg_g": 316.0,
+        "n_contacts": 563,
+        "mass_conservation_ok": true,
+        "result_classification": "computational_execution_not_experimental_validation"
+      },
+      "series_csv": "data\\sensitivity\\homogeneous_temporal_wiam_geometry\\go\\sens_grid_sigma_1_steps_2000_seed_1.csv",
+      "full_result_keys": [
+        "config",
+        "run",
+        "reference",
+        "summary",
+        "series",
+        "final_state"
+      ],
+      "geometry": {
+        "geometry_era": "wiam_geometry",
+        "mb_side_px": 1,
+        "adsorbent_side_px": 7,
+        "adsorbent_symbol": "GO",
+        "r_mb_px": 0.5,
+        "r_adsorbent_px": 3.5,
+        "contact_threshold_px": 4.0,
+        "adsorbent_movable": true
+      }
+    },
+    {
+      "role": "simulation_outcome",
+      "material": "GO",
+      "paths": {
+        "json": "data\\sensitivity\\homogeneous_temporal_wiam_geometry\\go\\sens_grid_sigma_1.5_steps_200_seed_1.json",
+        "csv": "data\\sensitivity\\homogeneous_temporal_wiam_geometry\\go\\sens_grid_sigma_1.5_steps_200_seed_1.csv"
+      },
+      "execution_parameters": {
+        "role": "injected_execution_parameter",
+        "seed": 1,
+        "sigma_px": {
+          "value": 1.5,
+          "status": "PENDIENTE"
+        },
+        "n_steps": {
+          "value": 200,
+          "status": "PENDIENTE"
+        },
+        "p_ads": {
+          "value": null,
+          "effective": 1.0,
+          "implementation_status": "DECISI\u00d3N COMPUTACIONAL PROVISIONAL",
+          "status": "PENDIENTE"
+        }
+      },
+      "system_counts": {
+        "N_MB": 200,
+        "N_GO": 100,
+        "N_adsorbent": 100,
+        "adsorbent_symbol": "GO",
+        "status": "DECISI\u00d3N COMPUTACIONAL"
+      },
+      "outcomes": {
+        "n_adsorbed": 91,
+        "percent_adsorbed": 45.5,
+        "m_adsorbed_mg": 1.82,
+        "m_free_mg": 2.1799999999999997,
+        "qfinal_mg_g": 182.0,
+        "n_contacts": 108,
+        "mass_conservation_ok": true,
+        "result_classification": "computational_execution_not_experimental_validation"
+      },
+      "series_csv": "data\\sensitivity\\homogeneous_temporal_wiam_geometry\\go\\sens_grid_sigma_1.5_steps_200_seed_1.csv",
+      "full_result_keys": [
+        "config",
+        "run",
+        "reference",
+        "summary",
+        "series",
+        "final_state"
+      ],
+      "geometry": {
+        "geometry_era": "wiam_geometry",
+        "mb_side_px": 1,
+        "adsorbent_side_px": 7,
+        "adsorbent_symbol": "GO",
+        "r_mb_px": 0.5,
+        "r_adsorbent_px": 3.5,
+        "contact_threshold_px": 4.0,
+        "adsorbent_movable": true
+      }
+    },
+    {
+      "role": "simulation_outcome",
+      "material": "GO",
+      "paths": {
+        "json": "data\\sensitivity\\homogeneous_temporal_wiam_geometry\\go\\sens_grid_sigma_1.5_steps_400_seed_1.json",
+        "csv": "data\\sensitivity\\homogeneous_temporal_wiam_geometry\\go\\sens_grid_sigma_1.5_steps_400_seed_1.csv"
+      },
+      "execution_parameters": {
+        "role": "injected_execution_parameter",
+        "seed": 1,
+        "sigma_px": {
+          "value": 1.5,
+          "status": "PENDIENTE"
+        },
+        "n_steps": {
+          "value": 400,
+          "status": "PENDIENTE"
+        },
+        "p_ads": {
+          "value": null,
+          "effective": 1.0,
+          "implementation_status": "DECISI\u00d3N COMPUTACIONAL PROVISIONAL",
+          "status": "PENDIENTE"
+        }
+      },
+      "system_counts": {
+        "N_MB": 200,
+        "N_GO": 100,
+        "N_adsorbent": 100,
+        "adsorbent_symbol": "GO",
+        "status": "DECISI\u00d3N COMPUTACIONAL"
+      },
+      "outcomes": {
+        "n_adsorbed": 127,
+        "percent_adsorbed": 63.5,
+        "m_adsorbed_mg": 2.54,
+        "m_free_mg": 1.46,
+        "qfinal_mg_g": 254.0,
+        "n_contacts": 225,
+        "mass_conservation_ok": true,
+        "result_classification": "computational_execution_not_experimental_validation"
+      },
+      "series_csv": "data\\sensitivity\\homogeneous_temporal_wiam_geometry\\go\\sens_grid_sigma_1.5_steps_400_seed_1.csv",
+      "full_result_keys": [
+        "config",
+        "run",
+        "reference",
+        "summary",
+        "series",
+        "final_state"
+      ],
+      "geometry": {
+        "geometry_era": "wiam_geometry",
+        "mb_side_px": 1,
+        "adsorbent_side_px": 7,
+        "adsorbent_symbol": "GO",
+        "r_mb_px": 0.5,
+        "r_adsorbent_px": 3.5,
+        "contact_threshold_px": 4.0,
+        "adsorbent_movable": true
+      }
+    },
+    {
+      "role": "simulation_outcome",
+      "material": "GO",
+      "paths": {
+        "json": "data\\sensitivity\\homogeneous_temporal_wiam_geometry\\go\\sens_grid_sigma_1.5_steps_600_seed_1.json",
+        "csv": "data\\sensitivity\\homogeneous_temporal_wiam_geometry\\go\\sens_grid_sigma_1.5_steps_600_seed_1.csv"
+      },
+      "execution_parameters": {
+        "role": "injected_execution_parameter",
+        "seed": 1,
+        "sigma_px": {
+          "value": 1.5,
+          "status": "PENDIENTE"
+        },
+        "n_steps": {
+          "value": 600,
+          "status": "PENDIENTE"
+        },
+        "p_ads": {
+          "value": null,
+          "effective": 1.0,
+          "implementation_status": "DECISI\u00d3N COMPUTACIONAL PROVISIONAL",
+          "status": "PENDIENTE"
+        }
+      },
+      "system_counts": {
+        "N_MB": 200,
+        "N_GO": 100,
+        "N_adsorbent": 100,
+        "adsorbent_symbol": "GO",
+        "status": "DECISI\u00d3N COMPUTACIONAL"
+      },
+      "outcomes": {
+        "n_adsorbed": 140,
+        "percent_adsorbed": 70.0,
+        "m_adsorbed_mg": 2.8000000000000003,
+        "m_free_mg": 1.1999999999999997,
+        "qfinal_mg_g": 280.0,
+        "n_contacts": 295,
+        "mass_conservation_ok": true,
+        "result_classification": "computational_execution_not_experimental_validation"
+      },
+      "series_csv": "data\\sensitivity\\homogeneous_temporal_wiam_geometry\\go\\sens_grid_sigma_1.5_steps_600_seed_1.csv",
+      "full_result_keys": [
+        "config",
+        "run",
+        "reference",
+        "summary",
+        "series",
+        "final_state"
+      ],
+      "geometry": {
+        "geometry_era": "wiam_geometry",
+        "mb_side_px": 1,
+        "adsorbent_side_px": 7,
+        "adsorbent_symbol": "GO",
+        "r_mb_px": 0.5,
+        "r_adsorbent_px": 3.5,
+        "contact_threshold_px": 4.0,
+        "adsorbent_movable": true
+      }
+    },
+    {
+      "role": "simulation_outcome",
+      "material": "GO",
+      "paths": {
+        "json": "data\\sensitivity\\homogeneous_temporal_wiam_geometry\\go\\sens_grid_sigma_1.5_steps_800_seed_1.json",
+        "csv": "data\\sensitivity\\homogeneous_temporal_wiam_geometry\\go\\sens_grid_sigma_1.5_steps_800_seed_1.csv"
+      },
+      "execution_parameters": {
+        "role": "injected_execution_parameter",
+        "seed": 1,
+        "sigma_px": {
+          "value": 1.5,
+          "status": "PENDIENTE"
+        },
+        "n_steps": {
+          "value": 800,
+          "status": "PENDIENTE"
+        },
+        "p_ads": {
+          "value": null,
+          "effective": 1.0,
+          "implementation_status": "DECISI\u00d3N COMPUTACIONAL PROVISIONAL",
+          "status": "PENDIENTE"
+        }
+      },
+      "system_counts": {
+        "N_MB": 200,
+        "N_GO": 100,
+        "N_adsorbent": 100,
+        "adsorbent_symbol": "GO",
+        "status": "DECISI\u00d3N COMPUTACIONAL"
+      },
+      "outcomes": {
+        "n_adsorbed": 154,
+        "percent_adsorbed": 77.0,
+        "m_adsorbed_mg": 3.08,
+        "m_free_mg": 0.9199999999999999,
+        "qfinal_mg_g": 308.0,
+        "n_contacts": 359,
+        "mass_conservation_ok": true,
+        "result_classification": "computational_execution_not_experimental_validation"
+      },
+      "series_csv": "data\\sensitivity\\homogeneous_temporal_wiam_geometry\\go\\sens_grid_sigma_1.5_steps_800_seed_1.csv",
+      "full_result_keys": [
+        "config",
+        "run",
+        "reference",
+        "summary",
+        "series",
+        "final_state"
+      ],
+      "geometry": {
+        "geometry_era": "wiam_geometry",
+        "mb_side_px": 1,
+        "adsorbent_side_px": 7,
+        "adsorbent_symbol": "GO",
+        "r_mb_px": 0.5,
+        "r_adsorbent_px": 3.5,
+        "contact_threshold_px": 4.0,
+        "adsorbent_movable": true
+      }
+    },
+    {
+      "role": "simulation_outcome",
+      "material": "GO",
+      "paths": {
+        "json": "data\\sensitivity\\homogeneous_temporal_wiam_geometry\\go\\sens_grid_sigma_1.5_steps_1000_seed_1.json",
+        "csv": "data\\sensitivity\\homogeneous_temporal_wiam_geometry\\go\\sens_grid_sigma_1.5_steps_1000_seed_1.csv"
+      },
+      "execution_parameters": {
+        "role": "injected_execution_parameter",
+        "seed": 1,
+        "sigma_px": {
+          "value": 1.5,
+          "status": "PENDIENTE"
+        },
+        "n_steps": {
+          "value": 1000,
+          "status": "PENDIENTE"
+        },
+        "p_ads": {
+          "value": null,
+          "effective": 1.0,
+          "implementation_status": "DECISI\u00d3N COMPUTACIONAL PROVISIONAL",
+          "status": "PENDIENTE"
+        }
+      },
+      "system_counts": {
+        "N_MB": 200,
+        "N_GO": 100,
+        "N_adsorbent": 100,
+        "adsorbent_symbol": "GO",
+        "status": "DECISI\u00d3N COMPUTACIONAL"
+      },
+      "outcomes": {
+        "n_adsorbed": 162,
+        "percent_adsorbed": 81.0,
+        "m_adsorbed_mg": 3.24,
+        "m_free_mg": 0.7599999999999998,
+        "qfinal_mg_g": 324.0,
+        "n_contacts": 452,
+        "mass_conservation_ok": true,
+        "result_classification": "computational_execution_not_experimental_validation"
+      },
+      "series_csv": "data\\sensitivity\\homogeneous_temporal_wiam_geometry\\go\\sens_grid_sigma_1.5_steps_1000_seed_1.csv",
+      "full_result_keys": [
+        "config",
+        "run",
+        "reference",
+        "summary",
+        "series",
+        "final_state"
+      ],
+      "geometry": {
+        "geometry_era": "wiam_geometry",
+        "mb_side_px": 1,
+        "adsorbent_side_px": 7,
+        "adsorbent_symbol": "GO",
+        "r_mb_px": 0.5,
+        "r_adsorbent_px": 3.5,
+        "contact_threshold_px": 4.0,
+        "adsorbent_movable": true
+      }
+    },
+    {
+      "role": "simulation_outcome",
+      "material": "GO",
+      "paths": {
+        "json": "data\\sensitivity\\homogeneous_temporal_wiam_geometry\\go\\sens_grid_sigma_1.5_steps_1500_seed_1.json",
+        "csv": "data\\sensitivity\\homogeneous_temporal_wiam_geometry\\go\\sens_grid_sigma_1.5_steps_1500_seed_1.csv"
+      },
+      "execution_parameters": {
+        "role": "injected_execution_parameter",
+        "seed": 1,
+        "sigma_px": {
+          "value": 1.5,
+          "status": "PENDIENTE"
+        },
+        "n_steps": {
+          "value": 1500,
+          "status": "PENDIENTE"
+        },
+        "p_ads": {
+          "value": null,
+          "effective": 1.0,
+          "implementation_status": "DECISI\u00d3N COMPUTACIONAL PROVISIONAL",
+          "status": "PENDIENTE"
+        }
+      },
+      "system_counts": {
+        "N_MB": 200,
+        "N_GO": 100,
+        "N_adsorbent": 100,
+        "adsorbent_symbol": "GO",
+        "status": "DECISI\u00d3N COMPUTACIONAL"
+      },
+      "outcomes": {
+        "n_adsorbed": 178,
+        "percent_adsorbed": 89.0,
+        "m_adsorbed_mg": 3.56,
+        "m_free_mg": 0.43999999999999995,
+        "qfinal_mg_g": 356.0,
+        "n_contacts": 569,
+        "mass_conservation_ok": true,
+        "result_classification": "computational_execution_not_experimental_validation"
+      },
+      "series_csv": "data\\sensitivity\\homogeneous_temporal_wiam_geometry\\go\\sens_grid_sigma_1.5_steps_1500_seed_1.csv",
+      "full_result_keys": [
+        "config",
+        "run",
+        "reference",
+        "summary",
+        "series",
+        "final_state"
+      ],
+      "geometry": {
+        "geometry_era": "wiam_geometry",
+        "mb_side_px": 1,
+        "adsorbent_side_px": 7,
+        "adsorbent_symbol": "GO",
+        "r_mb_px": 0.5,
+        "r_adsorbent_px": 3.5,
+        "contact_threshold_px": 4.0,
+        "adsorbent_movable": true
+      }
+    },
+    {
+      "role": "simulation_outcome",
+      "material": "GO",
+      "paths": {
+        "json": "data\\sensitivity\\homogeneous_temporal_wiam_geometry\\go\\sens_grid_sigma_1.5_steps_2000_seed_1.json",
+        "csv": "data\\sensitivity\\homogeneous_temporal_wiam_geometry\\go\\sens_grid_sigma_1.5_steps_2000_seed_1.csv"
+      },
+      "execution_parameters": {
+        "role": "injected_execution_parameter",
+        "seed": 1,
+        "sigma_px": {
+          "value": 1.5,
+          "status": "PENDIENTE"
+        },
+        "n_steps": {
+          "value": 2000,
+          "status": "PENDIENTE"
+        },
+        "p_ads": {
+          "value": null,
+          "effective": 1.0,
+          "implementation_status": "DECISI\u00d3N COMPUTACIONAL PROVISIONAL",
+          "status": "PENDIENTE"
+        }
+      },
+      "system_counts": {
+        "N_MB": 200,
+        "N_GO": 100,
+        "N_adsorbent": 100,
+        "adsorbent_symbol": "GO",
+        "status": "DECISI\u00d3N COMPUTACIONAL"
+      },
+      "outcomes": {
+        "n_adsorbed": 185,
+        "percent_adsorbed": 92.5,
+        "m_adsorbed_mg": 3.7,
+        "m_free_mg": 0.2999999999999998,
+        "qfinal_mg_g": 370.0,
+        "n_contacts": 614,
+        "mass_conservation_ok": true,
+        "result_classification": "computational_execution_not_experimental_validation"
+      },
+      "series_csv": "data\\sensitivity\\homogeneous_temporal_wiam_geometry\\go\\sens_grid_sigma_1.5_steps_2000_seed_1.csv",
+      "full_result_keys": [
+        "config",
+        "run",
+        "reference",
+        "summary",
+        "series",
+        "final_state"
+      ],
+      "geometry": {
+        "geometry_era": "wiam_geometry",
+        "mb_side_px": 1,
+        "adsorbent_side_px": 7,
+        "adsorbent_symbol": "GO",
+        "r_mb_px": 0.5,
+        "r_adsorbent_px": 3.5,
+        "contact_threshold_px": 4.0,
+        "adsorbent_movable": true
+      }
+    },
+    {
+      "role": "simulation_outcome",
+      "material": "GO",
+      "paths": {
+        "json": "data\\sensitivity\\homogeneous_temporal_wiam_geometry\\go\\sens_grid_sigma_1_steps_200_seed_2.json",
+        "csv": "data\\sensitivity\\homogeneous_temporal_wiam_geometry\\go\\sens_grid_sigma_1_steps_200_seed_2.csv"
+      },
+      "execution_parameters": {
+        "role": "injected_execution_parameter",
+        "seed": 2,
+        "sigma_px": {
+          "value": 1.0,
+          "status": "PENDIENTE"
+        },
+        "n_steps": {
+          "value": 200,
+          "status": "PENDIENTE"
+        },
+        "p_ads": {
+          "value": null,
+          "effective": 1.0,
+          "implementation_status": "DECISI\u00d3N COMPUTACIONAL PROVISIONAL",
+          "status": "PENDIENTE"
+        }
+      },
+      "system_counts": {
+        "N_MB": 200,
+        "N_GO": 100,
+        "N_adsorbent": 100,
+        "adsorbent_symbol": "GO",
+        "status": "DECISI\u00d3N COMPUTACIONAL"
+      },
+      "outcomes": {
+        "n_adsorbed": 78,
+        "percent_adsorbed": 39.0,
+        "m_adsorbed_mg": 1.56,
+        "m_free_mg": 2.44,
+        "qfinal_mg_g": 156.0,
+        "n_contacts": 80,
+        "mass_conservation_ok": true,
+        "result_classification": "computational_execution_not_experimental_validation"
+      },
+      "series_csv": "data\\sensitivity\\homogeneous_temporal_wiam_geometry\\go\\sens_grid_sigma_1_steps_200_seed_2.csv",
+      "full_result_keys": [
+        "config",
+        "run",
+        "reference",
+        "summary",
+        "series",
+        "final_state"
+      ],
+      "geometry": {
+        "geometry_era": "wiam_geometry",
+        "mb_side_px": 1,
+        "adsorbent_side_px": 7,
+        "adsorbent_symbol": "GO",
+        "r_mb_px": 0.5,
+        "r_adsorbent_px": 3.5,
+        "contact_threshold_px": 4.0,
+        "adsorbent_movable": true
+      }
+    },
+    {
+      "role": "simulation_outcome",
+      "material": "GO",
+      "paths": {
+        "json": "data\\sensitivity\\homogeneous_temporal_wiam_geometry\\go\\sens_grid_sigma_1_steps_400_seed_2.json",
+        "csv": "data\\sensitivity\\homogeneous_temporal_wiam_geometry\\go\\sens_grid_sigma_1_steps_400_seed_2.csv"
+      },
+      "execution_parameters": {
+        "role": "injected_execution_parameter",
+        "seed": 2,
+        "sigma_px": {
+          "value": 1.0,
+          "status": "PENDIENTE"
+        },
+        "n_steps": {
+          "value": 400,
+          "status": "PENDIENTE"
+        },
+        "p_ads": {
+          "value": null,
+          "effective": 1.0,
+          "implementation_status": "DECISI\u00d3N COMPUTACIONAL PROVISIONAL",
+          "status": "PENDIENTE"
+        }
+      },
+      "system_counts": {
+        "N_MB": 200,
+        "N_GO": 100,
+        "N_adsorbent": 100,
+        "adsorbent_symbol": "GO",
+        "status": "DECISI\u00d3N COMPUTACIONAL"
+      },
+      "outcomes": {
+        "n_adsorbed": 110,
+        "percent_adsorbed": 55.00000000000001,
+        "m_adsorbed_mg": 2.2,
+        "m_free_mg": 1.7999999999999998,
+        "qfinal_mg_g": 220.0,
+        "n_contacts": 222,
+        "mass_conservation_ok": true,
+        "result_classification": "computational_execution_not_experimental_validation"
+      },
+      "series_csv": "data\\sensitivity\\homogeneous_temporal_wiam_geometry\\go\\sens_grid_sigma_1_steps_400_seed_2.csv",
+      "full_result_keys": [
+        "config",
+        "run",
+        "reference",
+        "summary",
+        "series",
+        "final_state"
+      ],
+      "geometry": {
+        "geometry_era": "wiam_geometry",
+        "mb_side_px": 1,
+        "adsorbent_side_px": 7,
+        "adsorbent_symbol": "GO",
+        "r_mb_px": 0.5,
+        "r_adsorbent_px": 3.5,
+        "contact_threshold_px": 4.0,
+        "adsorbent_movable": true
+      }
+    },
+    {
+      "role": "simulation_outcome",
+      "material": "GO",
+      "paths": {
+        "json": "data\\sensitivity\\homogeneous_temporal_wiam_geometry\\go\\sens_grid_sigma_1_steps_600_seed_2.json",
+        "csv": "data\\sensitivity\\homogeneous_temporal_wiam_geometry\\go\\sens_grid_sigma_1_steps_600_seed_2.csv"
+      },
+      "execution_parameters": {
+        "role": "injected_execution_parameter",
+        "seed": 2,
+        "sigma_px": {
+          "value": 1.0,
+          "status": "PENDIENTE"
+        },
+        "n_steps": {
+          "value": 600,
+          "status": "PENDIENTE"
+        },
+        "p_ads": {
+          "value": null,
+          "effective": 1.0,
+          "implementation_status": "DECISI\u00d3N COMPUTACIONAL PROVISIONAL",
+          "status": "PENDIENTE"
+        }
+      },
+      "system_counts": {
+        "N_MB": 200,
+        "N_GO": 100,
+        "N_adsorbent": 100,
+        "adsorbent_symbol": "GO",
+        "status": "DECISI\u00d3N COMPUTACIONAL"
+      },
+      "outcomes": {
+        "n_adsorbed": 126,
+        "percent_adsorbed": 63.0,
+        "m_adsorbed_mg": 2.52,
+        "m_free_mg": 1.48,
+        "qfinal_mg_g": 252.0,
+        "n_contacts": 261,
+        "mass_conservation_ok": true,
+        "result_classification": "computational_execution_not_experimental_validation"
+      },
+      "series_csv": "data\\sensitivity\\homogeneous_temporal_wiam_geometry\\go\\sens_grid_sigma_1_steps_600_seed_2.csv",
+      "full_result_keys": [
+        "config",
+        "run",
+        "reference",
+        "summary",
+        "series",
+        "final_state"
+      ],
+      "geometry": {
+        "geometry_era": "wiam_geometry",
+        "mb_side_px": 1,
+        "adsorbent_side_px": 7,
+        "adsorbent_symbol": "GO",
+        "r_mb_px": 0.5,
+        "r_adsorbent_px": 3.5,
+        "contact_threshold_px": 4.0,
+        "adsorbent_movable": true
+      }
+    },
+    {
+      "role": "simulation_outcome",
+      "material": "GO",
+      "paths": {
+        "json": "data\\sensitivity\\homogeneous_temporal_wiam_geometry\\go\\sens_grid_sigma_1_steps_800_seed_2.json",
+        "csv": "data\\sensitivity\\homogeneous_temporal_wiam_geometry\\go\\sens_grid_sigma_1_steps_800_seed_2.csv"
+      },
+      "execution_parameters": {
+        "role": "injected_execution_parameter",
+        "seed": 2,
+        "sigma_px": {
+          "value": 1.0,
+          "status": "PENDIENTE"
+        },
+        "n_steps": {
+          "value": 800,
+          "status": "PENDIENTE"
+        },
+        "p_ads": {
+          "value": null,
+          "effective": 1.0,
+          "implementation_status": "DECISI\u00d3N COMPUTACIONAL PROVISIONAL",
+          "status": "PENDIENTE"
+        }
+      },
+      "system_counts": {
+        "N_MB": 200,
+        "N_GO": 100,
+        "N_adsorbent": 100,
+        "adsorbent_symbol": "GO",
+        "status": "DECISI\u00d3N COMPUTACIONAL"
+      },
+      "outcomes": {
+        "n_adsorbed": 135,
+        "percent_adsorbed": 67.5,
+        "m_adsorbed_mg": 2.7,
+        "m_free_mg": 1.2999999999999998,
+        "qfinal_mg_g": 270.0,
+        "n_contacts": 298,
+        "mass_conservation_ok": true,
+        "result_classification": "computational_execution_not_experimental_validation"
+      },
+      "series_csv": "data\\sensitivity\\homogeneous_temporal_wiam_geometry\\go\\sens_grid_sigma_1_steps_800_seed_2.csv",
+      "full_result_keys": [
+        "config",
+        "run",
+        "reference",
+        "summary",
+        "series",
+        "final_state"
+      ],
+      "geometry": {
+        "geometry_era": "wiam_geometry",
+        "mb_side_px": 1,
+        "adsorbent_side_px": 7,
+        "adsorbent_symbol": "GO",
+        "r_mb_px": 0.5,
+        "r_adsorbent_px": 3.5,
+        "contact_threshold_px": 4.0,
+        "adsorbent_movable": true
+      }
+    },
+    {
+      "role": "simulation_outcome",
+      "material": "GO",
+      "paths": {
+        "json": "data\\sensitivity\\homogeneous_temporal_wiam_geometry\\go\\sens_grid_sigma_1_steps_1000_seed_2.json",
+        "csv": "data\\sensitivity\\homogeneous_temporal_wiam_geometry\\go\\sens_grid_sigma_1_steps_1000_seed_2.csv"
+      },
+      "execution_parameters": {
+        "role": "injected_execution_parameter",
+        "seed": 2,
+        "sigma_px": {
+          "value": 1.0,
+          "status": "PENDIENTE"
+        },
+        "n_steps": {
+          "value": 1000,
+          "status": "PENDIENTE"
+        },
+        "p_ads": {
+          "value": null,
+          "effective": 1.0,
+          "implementation_status": "DECISI\u00d3N COMPUTACIONAL PROVISIONAL",
+          "status": "PENDIENTE"
+        }
+      },
+      "system_counts": {
+        "N_MB": 200,
+        "N_GO": 100,
+        "N_adsorbent": 100,
+        "adsorbent_symbol": "GO",
+        "status": "DECISI\u00d3N COMPUTACIONAL"
+      },
+      "outcomes": {
+        "n_adsorbed": 144,
+        "percent_adsorbed": 72.0,
+        "m_adsorbed_mg": 2.88,
+        "m_free_mg": 1.12,
+        "qfinal_mg_g": 288.0,
+        "n_contacts": 341,
+        "mass_conservation_ok": true,
+        "result_classification": "computational_execution_not_experimental_validation"
+      },
+      "series_csv": "data\\sensitivity\\homogeneous_temporal_wiam_geometry\\go\\sens_grid_sigma_1_steps_1000_seed_2.csv",
+      "full_result_keys": [
+        "config",
+        "run",
+        "reference",
+        "summary",
+        "series",
+        "final_state"
+      ],
+      "geometry": {
+        "geometry_era": "wiam_geometry",
+        "mb_side_px": 1,
+        "adsorbent_side_px": 7,
+        "adsorbent_symbol": "GO",
+        "r_mb_px": 0.5,
+        "r_adsorbent_px": 3.5,
+        "contact_threshold_px": 4.0,
+        "adsorbent_movable": true
+      }
+    },
+    {
+      "role": "simulation_outcome",
+      "material": "GO",
+      "paths": {
+        "json": "data\\sensitivity\\homogeneous_temporal_wiam_geometry\\go\\sens_grid_sigma_1_steps_1500_seed_2.json",
+        "csv": "data\\sensitivity\\homogeneous_temporal_wiam_geometry\\go\\sens_grid_sigma_1_steps_1500_seed_2.csv"
+      },
+      "execution_parameters": {
+        "role": "injected_execution_parameter",
+        "seed": 2,
+        "sigma_px": {
+          "value": 1.0,
+          "status": "PENDIENTE"
+        },
+        "n_steps": {
+          "value": 1500,
+          "status": "PENDIENTE"
+        },
+        "p_ads": {
+          "value": null,
+          "effective": 1.0,
+          "implementation_status": "DECISI\u00d3N COMPUTACIONAL PROVISIONAL",
+          "status": "PENDIENTE"
+        }
+      },
+      "system_counts": {
+        "N_MB": 200,
+        "N_GO": 100,
+        "N_adsorbent": 100,
+        "adsorbent_symbol": "GO",
+        "status": "DECISI\u00d3N COMPUTACIONAL"
+      },
+      "outcomes": {
+        "n_adsorbed": 160,
+        "percent_adsorbed": 80.0,
+        "m_adsorbed_mg": 3.2,
+        "m_free_mg": 0.7999999999999998,
+        "qfinal_mg_g": 320.0,
+        "n_contacts": 560,
+        "mass_conservation_ok": true,
+        "result_classification": "computational_execution_not_experimental_validation"
+      },
+      "series_csv": "data\\sensitivity\\homogeneous_temporal_wiam_geometry\\go\\sens_grid_sigma_1_steps_1500_seed_2.csv",
+      "full_result_keys": [
+        "config",
+        "run",
+        "reference",
+        "summary",
+        "series",
+        "final_state"
+      ],
+      "geometry": {
+        "geometry_era": "wiam_geometry",
+        "mb_side_px": 1,
+        "adsorbent_side_px": 7,
+        "adsorbent_symbol": "GO",
+        "r_mb_px": 0.5,
+        "r_adsorbent_px": 3.5,
+        "contact_threshold_px": 4.0,
+        "adsorbent_movable": true
+      }
+    },
+    {
+      "role": "simulation_outcome",
+      "material": "GO",
+      "paths": {
+        "json": "data\\sensitivity\\homogeneous_temporal_wiam_geometry\\go\\sens_grid_sigma_1_steps_2000_seed_2.json",
+        "csv": "data\\sensitivity\\homogeneous_temporal_wiam_geometry\\go\\sens_grid_sigma_1_steps_2000_seed_2.csv"
+      },
+      "execution_parameters": {
+        "role": "injected_execution_parameter",
+        "seed": 2,
+        "sigma_px": {
+          "value": 1.0,
+          "status": "PENDIENTE"
+        },
+        "n_steps": {
+          "value": 2000,
+          "status": "PENDIENTE"
+        },
+        "p_ads": {
+          "value": null,
+          "effective": 1.0,
+          "implementation_status": "DECISI\u00d3N COMPUTACIONAL PROVISIONAL",
+          "status": "PENDIENTE"
+        }
+      },
+      "system_counts": {
+        "N_MB": 200,
+        "N_GO": 100,
+        "N_adsorbent": 100,
+        "adsorbent_symbol": "GO",
+        "status": "DECISI\u00d3N COMPUTACIONAL"
+      },
+      "outcomes": {
+        "n_adsorbed": 166,
+        "percent_adsorbed": 83.0,
+        "m_adsorbed_mg": 3.3200000000000003,
+        "m_free_mg": 0.6799999999999997,
+        "qfinal_mg_g": 332.0,
+        "n_contacts": 761,
+        "mass_conservation_ok": true,
+        "result_classification": "computational_execution_not_experimental_validation"
+      },
+      "series_csv": "data\\sensitivity\\homogeneous_temporal_wiam_geometry\\go\\sens_grid_sigma_1_steps_2000_seed_2.csv",
+      "full_result_keys": [
+        "config",
+        "run",
+        "reference",
+        "summary",
+        "series",
+        "final_state"
+      ],
+      "geometry": {
+        "geometry_era": "wiam_geometry",
+        "mb_side_px": 1,
+        "adsorbent_side_px": 7,
+        "adsorbent_symbol": "GO",
+        "r_mb_px": 0.5,
+        "r_adsorbent_px": 3.5,
+        "contact_threshold_px": 4.0,
+        "adsorbent_movable": true
+      }
+    },
+    {
+      "role": "simulation_outcome",
+      "material": "GO",
+      "paths": {
+        "json": "data\\sensitivity\\homogeneous_temporal_wiam_geometry\\go\\sens_grid_sigma_1.5_steps_200_seed_2.json",
+        "csv": "data\\sensitivity\\homogeneous_temporal_wiam_geometry\\go\\sens_grid_sigma_1.5_steps_200_seed_2.csv"
+      },
+      "execution_parameters": {
+        "role": "injected_execution_parameter",
+        "seed": 2,
+        "sigma_px": {
+          "value": 1.5,
+          "status": "PENDIENTE"
+        },
+        "n_steps": {
+          "value": 200,
+          "status": "PENDIENTE"
+        },
+        "p_ads": {
+          "value": null,
+          "effective": 1.0,
+          "implementation_status": "DECISI\u00d3N COMPUTACIONAL PROVISIONAL",
+          "status": "PENDIENTE"
+        }
+      },
+      "system_counts": {
+        "N_MB": 200,
+        "N_GO": 100,
+        "N_adsorbent": 100,
+        "adsorbent_symbol": "GO",
+        "status": "DECISI\u00d3N COMPUTACIONAL"
+      },
+      "outcomes": {
+        "n_adsorbed": 102,
+        "percent_adsorbed": 51.0,
+        "m_adsorbed_mg": 2.04,
+        "m_free_mg": 1.96,
+        "qfinal_mg_g": 204.0,
+        "n_contacts": 131,
+        "mass_conservation_ok": true,
+        "result_classification": "computational_execution_not_experimental_validation"
+      },
+      "series_csv": "data\\sensitivity\\homogeneous_temporal_wiam_geometry\\go\\sens_grid_sigma_1.5_steps_200_seed_2.csv",
+      "full_result_keys": [
+        "config",
+        "run",
+        "reference",
+        "summary",
+        "series",
+        "final_state"
+      ],
+      "geometry": {
+        "geometry_era": "wiam_geometry",
+        "mb_side_px": 1,
+        "adsorbent_side_px": 7,
+        "adsorbent_symbol": "GO",
+        "r_mb_px": 0.5,
+        "r_adsorbent_px": 3.5,
+        "contact_threshold_px": 4.0,
+        "adsorbent_movable": true
+      }
+    },
+    {
+      "role": "simulation_outcome",
+      "material": "GO",
+      "paths": {
+        "json": "data\\sensitivity\\homogeneous_temporal_wiam_geometry\\go\\sens_grid_sigma_1.5_steps_400_seed_2.json",
+        "csv": "data\\sensitivity\\homogeneous_temporal_wiam_geometry\\go\\sens_grid_sigma_1.5_steps_400_seed_2.csv"
+      },
+      "execution_parameters": {
+        "role": "injected_execution_parameter",
+        "seed": 2,
+        "sigma_px": {
+          "value": 1.5,
+          "status": "PENDIENTE"
+        },
+        "n_steps": {
+          "value": 400,
+          "status": "PENDIENTE"
+        },
+        "p_ads": {
+          "value": null,
+          "effective": 1.0,
+          "implementation_status": "DECISI\u00d3N COMPUTACIONAL PROVISIONAL",
+          "status": "PENDIENTE"
+        }
+      },
+      "system_counts": {
+        "N_MB": 200,
+        "N_GO": 100,
+        "N_adsorbent": 100,
+        "adsorbent_symbol": "GO",
+        "status": "DECISI\u00d3N COMPUTACIONAL"
+      },
+      "outcomes": {
+        "n_adsorbed": 124,
+        "percent_adsorbed": 62.0,
+        "m_adsorbed_mg": 2.48,
+        "m_free_mg": 1.52,
+        "qfinal_mg_g": 248.0,
+        "n_contacts": 210,
+        "mass_conservation_ok": true,
+        "result_classification": "computational_execution_not_experimental_validation"
+      },
+      "series_csv": "data\\sensitivity\\homogeneous_temporal_wiam_geometry\\go\\sens_grid_sigma_1.5_steps_400_seed_2.csv",
+      "full_result_keys": [
+        "config",
+        "run",
+        "reference",
+        "summary",
+        "series",
+        "final_state"
+      ],
+      "geometry": {
+        "geometry_era": "wiam_geometry",
+        "mb_side_px": 1,
+        "adsorbent_side_px": 7,
+        "adsorbent_symbol": "GO",
+        "r_mb_px": 0.5,
+        "r_adsorbent_px": 3.5,
+        "contact_threshold_px": 4.0,
+        "adsorbent_movable": true
+      }
+    },
+    {
+      "role": "simulation_outcome",
+      "material": "GO",
+      "paths": {
+        "json": "data\\sensitivity\\homogeneous_temporal_wiam_geometry\\go\\sens_grid_sigma_1.5_steps_600_seed_2.json",
+        "csv": "data\\sensitivity\\homogeneous_temporal_wiam_geometry\\go\\sens_grid_sigma_1.5_steps_600_seed_2.csv"
+      },
+      "execution_parameters": {
+        "role": "injected_execution_parameter",
+        "seed": 2,
+        "sigma_px": {
+          "value": 1.5,
+          "status": "PENDIENTE"
+        },
+        "n_steps": {
+          "value": 600,
+          "status": "PENDIENTE"
+        },
+        "p_ads": {
+          "value": null,
+          "effective": 1.0,
+          "implementation_status": "DECISI\u00d3N COMPUTACIONAL PROVISIONAL",
+          "status": "PENDIENTE"
+        }
+      },
+      "system_counts": {
+        "N_MB": 200,
+        "N_GO": 100,
+        "N_adsorbent": 100,
+        "adsorbent_symbol": "GO",
+        "status": "DECISI\u00d3N COMPUTACIONAL"
+      },
+      "outcomes": {
+        "n_adsorbed": 144,
+        "percent_adsorbed": 72.0,
+        "m_adsorbed_mg": 2.88,
+        "m_free_mg": 1.12,
+        "qfinal_mg_g": 288.0,
+        "n_contacts": 257,
+        "mass_conservation_ok": true,
+        "result_classification": "computational_execution_not_experimental_validation"
+      },
+      "series_csv": "data\\sensitivity\\homogeneous_temporal_wiam_geometry\\go\\sens_grid_sigma_1.5_steps_600_seed_2.csv",
+      "full_result_keys": [
+        "config",
+        "run",
+        "reference",
+        "summary",
+        "series",
+        "final_state"
+      ],
+      "geometry": {
+        "geometry_era": "wiam_geometry",
+        "mb_side_px": 1,
+        "adsorbent_side_px": 7,
+        "adsorbent_symbol": "GO",
+        "r_mb_px": 0.5,
+        "r_adsorbent_px": 3.5,
+        "contact_threshold_px": 4.0,
+        "adsorbent_movable": true
+      }
+    },
+    {
+      "role": "simulation_outcome",
+      "material": "GO",
+      "paths": {
+        "json": "data\\sensitivity\\homogeneous_temporal_wiam_geometry\\go\\sens_grid_sigma_1.5_steps_800_seed_2.json",
+        "csv": "data\\sensitivity\\homogeneous_temporal_wiam_geometry\\go\\sens_grid_sigma_1.5_steps_800_seed_2.csv"
+      },
+      "execution_parameters": {
+        "role": "injected_execution_parameter",
+        "seed": 2,
+        "sigma_px": {
+          "value": 1.5,
+          "status": "PENDIENTE"
+        },
+        "n_steps": {
+          "value": 800,
+          "status": "PENDIENTE"
+        },
+        "p_ads": {
+          "value": null,
+          "effective": 1.0,
+          "implementation_status": "DECISI\u00d3N COMPUTACIONAL PROVISIONAL",
+          "status": "PENDIENTE"
+        }
+      },
+      "system_counts": {
+        "N_MB": 200,
+        "N_GO": 100,
+        "N_adsorbent": 100,
+        "adsorbent_symbol": "GO",
+        "status": "DECISI\u00d3N COMPUTACIONAL"
+      },
+      "outcomes": {
+        "n_adsorbed": 157,
+        "percent_adsorbed": 78.5,
+        "m_adsorbed_mg": 3.14,
+        "m_free_mg": 0.8599999999999999,
+        "qfinal_mg_g": 314.0,
+        "n_contacts": 349,
+        "mass_conservation_ok": true,
+        "result_classification": "computational_execution_not_experimental_validation"
+      },
+      "series_csv": "data\\sensitivity\\homogeneous_temporal_wiam_geometry\\go\\sens_grid_sigma_1.5_steps_800_seed_2.csv",
+      "full_result_keys": [
+        "config",
+        "run",
+        "reference",
+        "summary",
+        "series",
+        "final_state"
+      ],
+      "geometry": {
+        "geometry_era": "wiam_geometry",
+        "mb_side_px": 1,
+        "adsorbent_side_px": 7,
+        "adsorbent_symbol": "GO",
+        "r_mb_px": 0.5,
+        "r_adsorbent_px": 3.5,
+        "contact_threshold_px": 4.0,
+        "adsorbent_movable": true
+      }
+    },
+    {
+      "role": "simulation_outcome",
+      "material": "GO",
+      "paths": {
+        "json": "data\\sensitivity\\homogeneous_temporal_wiam_geometry\\go\\sens_grid_sigma_1.5_steps_1000_seed_2.json",
+        "csv": "data\\sensitivity\\homogeneous_temporal_wiam_geometry\\go\\sens_grid_sigma_1.5_steps_1000_seed_2.csv"
+      },
+      "execution_parameters": {
+        "role": "injected_execution_parameter",
+        "seed": 2,
+        "sigma_px": {
+          "value": 1.5,
+          "status": "PENDIENTE"
+        },
+        "n_steps": {
+          "value": 1000,
+          "status": "PENDIENTE"
+        },
+        "p_ads": {
+          "value": null,
+          "effective": 1.0,
+          "implementation_status": "DECISI\u00d3N COMPUTACIONAL PROVISIONAL",
+          "status": "PENDIENTE"
+        }
+      },
+      "system_counts": {
+        "N_MB": 200,
+        "N_GO": 100,
+        "N_adsorbent": 100,
+        "adsorbent_symbol": "GO",
+        "status": "DECISI\u00d3N COMPUTACIONAL"
+      },
+      "outcomes": {
+        "n_adsorbed": 167,
+        "percent_adsorbed": 83.5,
+        "m_adsorbed_mg": 3.34,
+        "m_free_mg": 0.6600000000000001,
+        "qfinal_mg_g": 334.0,
+        "n_contacts": 404,
+        "mass_conservation_ok": true,
+        "result_classification": "computational_execution_not_experimental_validation"
+      },
+      "series_csv": "data\\sensitivity\\homogeneous_temporal_wiam_geometry\\go\\sens_grid_sigma_1.5_steps_1000_seed_2.csv",
+      "full_result_keys": [
+        "config",
+        "run",
+        "reference",
+        "summary",
+        "series",
+        "final_state"
+      ],
+      "geometry": {
+        "geometry_era": "wiam_geometry",
+        "mb_side_px": 1,
+        "adsorbent_side_px": 7,
+        "adsorbent_symbol": "GO",
+        "r_mb_px": 0.5,
+        "r_adsorbent_px": 3.5,
+        "contact_threshold_px": 4.0,
+        "adsorbent_movable": true
+      }
+    },
+    {
+      "role": "simulation_outcome",
+      "material": "GO",
+      "paths": {
+        "json": "data\\sensitivity\\homogeneous_temporal_wiam_geometry\\go\\sens_grid_sigma_1.5_steps_1500_seed_2.json",
+        "csv": "data\\sensitivity\\homogeneous_temporal_wiam_geometry\\go\\sens_grid_sigma_1.5_steps_1500_seed_2.csv"
+      },
+      "execution_parameters": {
+        "role": "injected_execution_parameter",
+        "seed": 2,
+        "sigma_px": {
+          "value": 1.5,
+          "status": "PENDIENTE"
+        },
+        "n_steps": {
+          "value": 1500,
+          "status": "PENDIENTE"
+        },
+        "p_ads": {
+          "value": null,
+          "effective": 1.0,
+          "implementation_status": "DECISI\u00d3N COMPUTACIONAL PROVISIONAL",
+          "status": "PENDIENTE"
+        }
+      },
+      "system_counts": {
+        "N_MB": 200,
+        "N_GO": 100,
+        "N_adsorbent": 100,
+        "adsorbent_symbol": "GO",
+        "status": "DECISI\u00d3N COMPUTACIONAL"
+      },
+      "outcomes": {
+        "n_adsorbed": 179,
+        "percent_adsorbed": 89.5,
+        "m_adsorbed_mg": 3.58,
+        "m_free_mg": 0.41999999999999993,
+        "qfinal_mg_g": 358.0,
+        "n_contacts": 512,
+        "mass_conservation_ok": true,
+        "result_classification": "computational_execution_not_experimental_validation"
+      },
+      "series_csv": "data\\sensitivity\\homogeneous_temporal_wiam_geometry\\go\\sens_grid_sigma_1.5_steps_1500_seed_2.csv",
+      "full_result_keys": [
+        "config",
+        "run",
+        "reference",
+        "summary",
+        "series",
+        "final_state"
+      ],
+      "geometry": {
+        "geometry_era": "wiam_geometry",
+        "mb_side_px": 1,
+        "adsorbent_side_px": 7,
+        "adsorbent_symbol": "GO",
+        "r_mb_px": 0.5,
+        "r_adsorbent_px": 3.5,
+        "contact_threshold_px": 4.0,
+        "adsorbent_movable": true
+      }
+    },
+    {
+      "role": "simulation_outcome",
+      "material": "GO",
+      "paths": {
+        "json": "data\\sensitivity\\homogeneous_temporal_wiam_geometry\\go\\sens_grid_sigma_1.5_steps_2000_seed_2.json",
+        "csv": "data\\sensitivity\\homogeneous_temporal_wiam_geometry\\go\\sens_grid_sigma_1.5_steps_2000_seed_2.csv"
+      },
+      "execution_parameters": {
+        "role": "injected_execution_parameter",
+        "seed": 2,
+        "sigma_px": {
+          "value": 1.5,
+          "status": "PENDIENTE"
+        },
+        "n_steps": {
+          "value": 2000,
+          "status": "PENDIENTE"
+        },
+        "p_ads": {
+          "value": null,
+          "effective": 1.0,
+          "implementation_status": "DECISI\u00d3N COMPUTACIONAL PROVISIONAL",
+          "status": "PENDIENTE"
+        }
+      },
+      "system_counts": {
+        "N_MB": 200,
+        "N_GO": 100,
+        "N_adsorbent": 100,
+        "adsorbent_symbol": "GO",
+        "status": "DECISI\u00d3N COMPUTACIONAL"
+      },
+      "outcomes": {
+        "n_adsorbed": 186,
+        "percent_adsorbed": 93.0,
+        "m_adsorbed_mg": 3.72,
+        "m_free_mg": 0.2799999999999998,
+        "qfinal_mg_g": 372.0,
+        "n_contacts": 619,
+        "mass_conservation_ok": true,
+        "result_classification": "computational_execution_not_experimental_validation"
+      },
+      "series_csv": "data\\sensitivity\\homogeneous_temporal_wiam_geometry\\go\\sens_grid_sigma_1.5_steps_2000_seed_2.csv",
+      "full_result_keys": [
+        "config",
+        "run",
+        "reference",
+        "summary",
+        "series",
+        "final_state"
+      ],
+      "geometry": {
+        "geometry_era": "wiam_geometry",
+        "mb_side_px": 1,
+        "adsorbent_side_px": 7,
+        "adsorbent_symbol": "GO",
+        "r_mb_px": 0.5,
+        "r_adsorbent_px": 3.5,
+        "contact_threshold_px": 4.0,
+        "adsorbent_movable": true
+      }
+    },
+    {
+      "role": "simulation_outcome",
+      "material": "GO",
+      "paths": {
+        "json": "data\\sensitivity\\homogeneous_temporal_wiam_geometry\\go\\sens_grid_sigma_1_steps_200_seed_3.json",
+        "csv": "data\\sensitivity\\homogeneous_temporal_wiam_geometry\\go\\sens_grid_sigma_1_steps_200_seed_3.csv"
+      },
+      "execution_parameters": {
+        "role": "injected_execution_parameter",
+        "seed": 3,
+        "sigma_px": {
+          "value": 1.0,
+          "status": "PENDIENTE"
+        },
+        "n_steps": {
+          "value": 200,
+          "status": "PENDIENTE"
+        },
+        "p_ads": {
+          "value": null,
+          "effective": 1.0,
+          "implementation_status": "DECISI\u00d3N COMPUTACIONAL PROVISIONAL",
+          "status": "PENDIENTE"
+        }
+      },
+      "system_counts": {
+        "N_MB": 200,
+        "N_GO": 100,
+        "N_adsorbent": 100,
+        "adsorbent_symbol": "GO",
+        "status": "DECISI\u00d3N COMPUTACIONAL"
+      },
+      "outcomes": {
+        "n_adsorbed": 59,
+        "percent_adsorbed": 29.5,
+        "m_adsorbed_mg": 1.18,
+        "m_free_mg": 2.8200000000000003,
+        "qfinal_mg_g": 117.99999999999999,
+        "n_contacts": 59,
+        "mass_conservation_ok": true,
+        "result_classification": "computational_execution_not_experimental_validation"
+      },
+      "series_csv": "data\\sensitivity\\homogeneous_temporal_wiam_geometry\\go\\sens_grid_sigma_1_steps_200_seed_3.csv",
+      "full_result_keys": [
+        "config",
+        "run",
+        "reference",
+        "summary",
+        "series",
+        "final_state"
+      ],
+      "geometry": {
+        "geometry_era": "wiam_geometry",
+        "mb_side_px": 1,
+        "adsorbent_side_px": 7,
+        "adsorbent_symbol": "GO",
+        "r_mb_px": 0.5,
+        "r_adsorbent_px": 3.5,
+        "contact_threshold_px": 4.0,
+        "adsorbent_movable": true
+      }
+    },
+    {
+      "role": "simulation_outcome",
+      "material": "GO",
+      "paths": {
+        "json": "data\\sensitivity\\homogeneous_temporal_wiam_geometry\\go\\sens_grid_sigma_1_steps_400_seed_3.json",
+        "csv": "data\\sensitivity\\homogeneous_temporal_wiam_geometry\\go\\sens_grid_sigma_1_steps_400_seed_3.csv"
+      },
+      "execution_parameters": {
+        "role": "injected_execution_parameter",
+        "seed": 3,
+        "sigma_px": {
+          "value": 1.0,
+          "status": "PENDIENTE"
+        },
+        "n_steps": {
+          "value": 400,
+          "status": "PENDIENTE"
+        },
+        "p_ads": {
+          "value": null,
+          "effective": 1.0,
+          "implementation_status": "DECISI\u00d3N COMPUTACIONAL PROVISIONAL",
+          "status": "PENDIENTE"
+        }
+      },
+      "system_counts": {
+        "N_MB": 200,
+        "N_GO": 100,
+        "N_adsorbent": 100,
+        "adsorbent_symbol": "GO",
+        "status": "DECISI\u00d3N COMPUTACIONAL"
+      },
+      "outcomes": {
+        "n_adsorbed": 94,
+        "percent_adsorbed": 47.0,
+        "m_adsorbed_mg": 1.8800000000000001,
+        "m_free_mg": 2.12,
+        "qfinal_mg_g": 188.0,
+        "n_contacts": 112,
+        "mass_conservation_ok": true,
+        "result_classification": "computational_execution_not_experimental_validation"
+      },
+      "series_csv": "data\\sensitivity\\homogeneous_temporal_wiam_geometry\\go\\sens_grid_sigma_1_steps_400_seed_3.csv",
+      "full_result_keys": [
+        "config",
+        "run",
+        "reference",
+        "summary",
+        "series",
+        "final_state"
+      ],
+      "geometry": {
+        "geometry_era": "wiam_geometry",
+        "mb_side_px": 1,
+        "adsorbent_side_px": 7,
+        "adsorbent_symbol": "GO",
+        "r_mb_px": 0.5,
+        "r_adsorbent_px": 3.5,
+        "contact_threshold_px": 4.0,
+        "adsorbent_movable": true
+      }
+    },
+    {
+      "role": "simulation_outcome",
+      "material": "GO",
+      "paths": {
+        "json": "data\\sensitivity\\homogeneous_temporal_wiam_geometry\\go\\sens_grid_sigma_1_steps_600_seed_3.json",
+        "csv": "data\\sensitivity\\homogeneous_temporal_wiam_geometry\\go\\sens_grid_sigma_1_steps_600_seed_3.csv"
+      },
+      "execution_parameters": {
+        "role": "injected_execution_parameter",
+        "seed": 3,
+        "sigma_px": {
+          "value": 1.0,
+          "status": "PENDIENTE"
+        },
+        "n_steps": {
+          "value": 600,
+          "status": "PENDIENTE"
+        },
+        "p_ads": {
+          "value": null,
+          "effective": 1.0,
+          "implementation_status": "DECISI\u00d3N COMPUTACIONAL PROVISIONAL",
+          "status": "PENDIENTE"
+        }
+      },
+      "system_counts": {
+        "N_MB": 200,
+        "N_GO": 100,
+        "N_adsorbent": 100,
+        "adsorbent_symbol": "GO",
+        "status": "DECISI\u00d3N COMPUTACIONAL"
+      },
+      "outcomes": {
+        "n_adsorbed": 114,
+        "percent_adsorbed": 56.99999999999999,
+        "m_adsorbed_mg": 2.2800000000000002,
+        "m_free_mg": 1.7199999999999998,
+        "qfinal_mg_g": 228.00000000000003,
+        "n_contacts": 161,
+        "mass_conservation_ok": true,
+        "result_classification": "computational_execution_not_experimental_validation"
+      },
+      "series_csv": "data\\sensitivity\\homogeneous_temporal_wiam_geometry\\go\\sens_grid_sigma_1_steps_600_seed_3.csv",
+      "full_result_keys": [
+        "config",
+        "run",
+        "reference",
+        "summary",
+        "series",
+        "final_state"
+      ],
+      "geometry": {
+        "geometry_era": "wiam_geometry",
+        "mb_side_px": 1,
+        "adsorbent_side_px": 7,
+        "adsorbent_symbol": "GO",
+        "r_mb_px": 0.5,
+        "r_adsorbent_px": 3.5,
+        "contact_threshold_px": 4.0,
+        "adsorbent_movable": true
+      }
+    },
+    {
+      "role": "simulation_outcome",
+      "material": "GO",
+      "paths": {
+        "json": "data\\sensitivity\\homogeneous_temporal_wiam_geometry\\go\\sens_grid_sigma_1_steps_800_seed_3.json",
+        "csv": "data\\sensitivity\\homogeneous_temporal_wiam_geometry\\go\\sens_grid_sigma_1_steps_800_seed_3.csv"
+      },
+      "execution_parameters": {
+        "role": "injected_execution_parameter",
+        "seed": 3,
+        "sigma_px": {
+          "value": 1.0,
+          "status": "PENDIENTE"
+        },
+        "n_steps": {
+          "value": 800,
+          "status": "PENDIENTE"
+        },
+        "p_ads": {
+          "value": null,
+          "effective": 1.0,
+          "implementation_status": "DECISI\u00d3N COMPUTACIONAL PROVISIONAL",
+          "status": "PENDIENTE"
+        }
+      },
+      "system_counts": {
+        "N_MB": 200,
+        "N_GO": 100,
+        "N_adsorbent": 100,
+        "adsorbent_symbol": "GO",
+        "status": "DECISI\u00d3N COMPUTACIONAL"
+      },
+      "outcomes": {
+        "n_adsorbed": 128,
+        "percent_adsorbed": 64.0,
+        "m_adsorbed_mg": 2.56,
+        "m_free_mg": 1.44,
+        "qfinal_mg_g": 256.0,
+        "n_contacts": 187,
+        "mass_conservation_ok": true,
+        "result_classification": "computational_execution_not_experimental_validation"
+      },
+      "series_csv": "data\\sensitivity\\homogeneous_temporal_wiam_geometry\\go\\sens_grid_sigma_1_steps_800_seed_3.csv",
+      "full_result_keys": [
+        "config",
+        "run",
+        "reference",
+        "summary",
+        "series",
+        "final_state"
+      ],
+      "geometry": {
+        "geometry_era": "wiam_geometry",
+        "mb_side_px": 1,
+        "adsorbent_side_px": 7,
+        "adsorbent_symbol": "GO",
+        "r_mb_px": 0.5,
+        "r_adsorbent_px": 3.5,
+        "contact_threshold_px": 4.0,
+        "adsorbent_movable": true
+      }
+    },
+    {
+      "role": "simulation_outcome",
+      "material": "GO",
+      "paths": {
+        "json": "data\\sensitivity\\homogeneous_temporal_wiam_geometry\\go\\sens_grid_sigma_1_steps_1000_seed_3.json",
+        "csv": "data\\sensitivity\\homogeneous_temporal_wiam_geometry\\go\\sens_grid_sigma_1_steps_1000_seed_3.csv"
+      },
+      "execution_parameters": {
+        "role": "injected_execution_parameter",
+        "seed": 3,
+        "sigma_px": {
+          "value": 1.0,
+          "status": "PENDIENTE"
+        },
+        "n_steps": {
+          "value": 1000,
+          "status": "PENDIENTE"
+        },
+        "p_ads": {
+          "value": null,
+          "effective": 1.0,
+          "implementation_status": "DECISI\u00d3N COMPUTACIONAL PROVISIONAL",
+          "status": "PENDIENTE"
+        }
+      },
+      "system_counts": {
+        "N_MB": 200,
+        "N_GO": 100,
+        "N_adsorbent": 100,
+        "adsorbent_symbol": "GO",
+        "status": "DECISI\u00d3N COMPUTACIONAL"
+      },
+      "outcomes": {
+        "n_adsorbed": 141,
+        "percent_adsorbed": 70.5,
+        "m_adsorbed_mg": 2.82,
+        "m_free_mg": 1.1800000000000002,
+        "qfinal_mg_g": 282.0,
+        "n_contacts": 270,
+        "mass_conservation_ok": true,
+        "result_classification": "computational_execution_not_experimental_validation"
+      },
+      "series_csv": "data\\sensitivity\\homogeneous_temporal_wiam_geometry\\go\\sens_grid_sigma_1_steps_1000_seed_3.csv",
+      "full_result_keys": [
+        "config",
+        "run",
+        "reference",
+        "summary",
+        "series",
+        "final_state"
+      ],
+      "geometry": {
+        "geometry_era": "wiam_geometry",
+        "mb_side_px": 1,
+        "adsorbent_side_px": 7,
+        "adsorbent_symbol": "GO",
+        "r_mb_px": 0.5,
+        "r_adsorbent_px": 3.5,
+        "contact_threshold_px": 4.0,
+        "adsorbent_movable": true
+      }
+    },
+    {
+      "role": "simulation_outcome",
+      "material": "GO",
+      "paths": {
+        "json": "data\\sensitivity\\homogeneous_temporal_wiam_geometry\\go\\sens_grid_sigma_1_steps_1500_seed_3.json",
+        "csv": "data\\sensitivity\\homogeneous_temporal_wiam_geometry\\go\\sens_grid_sigma_1_steps_1500_seed_3.csv"
+      },
+      "execution_parameters": {
+        "role": "injected_execution_parameter",
+        "seed": 3,
+        "sigma_px": {
+          "value": 1.0,
+          "status": "PENDIENTE"
+        },
+        "n_steps": {
+          "value": 1500,
+          "status": "PENDIENTE"
+        },
+        "p_ads": {
+          "value": null,
+          "effective": 1.0,
+          "implementation_status": "DECISI\u00d3N COMPUTACIONAL PROVISIONAL",
+          "status": "PENDIENTE"
+        }
+      },
+      "system_counts": {
+        "N_MB": 200,
+        "N_GO": 100,
+        "N_adsorbent": 100,
+        "adsorbent_symbol": "GO",
+        "status": "DECISI\u00d3N COMPUTACIONAL"
+      },
+      "outcomes": {
+        "n_adsorbed": 157,
+        "percent_adsorbed": 78.5,
+        "m_adsorbed_mg": 3.14,
+        "m_free_mg": 0.8599999999999999,
+        "qfinal_mg_g": 314.0,
+        "n_contacts": 321,
+        "mass_conservation_ok": true,
+        "result_classification": "computational_execution_not_experimental_validation"
+      },
+      "series_csv": "data\\sensitivity\\homogeneous_temporal_wiam_geometry\\go\\sens_grid_sigma_1_steps_1500_seed_3.csv",
+      "full_result_keys": [
+        "config",
+        "run",
+        "reference",
+        "summary",
+        "series",
+        "final_state"
+      ],
+      "geometry": {
+        "geometry_era": "wiam_geometry",
+        "mb_side_px": 1,
+        "adsorbent_side_px": 7,
+        "adsorbent_symbol": "GO",
+        "r_mb_px": 0.5,
+        "r_adsorbent_px": 3.5,
+        "contact_threshold_px": 4.0,
+        "adsorbent_movable": true
+      }
+    },
+    {
+      "role": "simulation_outcome",
+      "material": "GO",
+      "paths": {
+        "json": "data\\sensitivity\\homogeneous_temporal_wiam_geometry\\go\\sens_grid_sigma_1_steps_2000_seed_3.json",
+        "csv": "data\\sensitivity\\homogeneous_temporal_wiam_geometry\\go\\sens_grid_sigma_1_steps_2000_seed_3.csv"
+      },
+      "execution_parameters": {
+        "role": "injected_execution_parameter",
+        "seed": 3,
+        "sigma_px": {
+          "value": 1.0,
+          "status": "PENDIENTE"
+        },
+        "n_steps": {
+          "value": 2000,
+          "status": "PENDIENTE"
+        },
+        "p_ads": {
+          "value": null,
+          "effective": 1.0,
+          "implementation_status": "DECISI\u00d3N COMPUTACIONAL PROVISIONAL",
+          "status": "PENDIENTE"
+        }
+      },
+      "system_counts": {
+        "N_MB": 200,
+        "N_GO": 100,
+        "N_adsorbent": 100,
+        "adsorbent_symbol": "GO",
+        "status": "DECISI\u00d3N COMPUTACIONAL"
+      },
+      "outcomes": {
+        "n_adsorbed": 167,
+        "percent_adsorbed": 83.5,
+        "m_adsorbed_mg": 3.34,
+        "m_free_mg": 0.6600000000000001,
+        "qfinal_mg_g": 334.0,
+        "n_contacts": 361,
+        "mass_conservation_ok": true,
+        "result_classification": "computational_execution_not_experimental_validation"
+      },
+      "series_csv": "data\\sensitivity\\homogeneous_temporal_wiam_geometry\\go\\sens_grid_sigma_1_steps_2000_seed_3.csv",
+      "full_result_keys": [
+        "config",
+        "run",
+        "reference",
+        "summary",
+        "series",
+        "final_state"
+      ],
+      "geometry": {
+        "geometry_era": "wiam_geometry",
+        "mb_side_px": 1,
+        "adsorbent_side_px": 7,
+        "adsorbent_symbol": "GO",
+        "r_mb_px": 0.5,
+        "r_adsorbent_px": 3.5,
+        "contact_threshold_px": 4.0,
+        "adsorbent_movable": true
+      }
+    },
+    {
+      "role": "simulation_outcome",
+      "material": "GO",
+      "paths": {
+        "json": "data\\sensitivity\\homogeneous_temporal_wiam_geometry\\go\\sens_grid_sigma_1.5_steps_200_seed_3.json",
+        "csv": "data\\sensitivity\\homogeneous_temporal_wiam_geometry\\go\\sens_grid_sigma_1.5_steps_200_seed_3.csv"
+      },
+      "execution_parameters": {
+        "role": "injected_execution_parameter",
+        "seed": 3,
+        "sigma_px": {
+          "value": 1.5,
+          "status": "PENDIENTE"
+        },
+        "n_steps": {
+          "value": 200,
+          "status": "PENDIENTE"
+        },
+        "p_ads": {
+          "value": null,
+          "effective": 1.0,
+          "implementation_status": "DECISI\u00d3N COMPUTACIONAL PROVISIONAL",
+          "status": "PENDIENTE"
+        }
+      },
+      "system_counts": {
+        "N_MB": 200,
+        "N_GO": 100,
+        "N_adsorbent": 100,
+        "adsorbent_symbol": "GO",
+        "status": "DECISI\u00d3N COMPUTACIONAL"
+      },
+      "outcomes": {
+        "n_adsorbed": 101,
+        "percent_adsorbed": 50.5,
+        "m_adsorbed_mg": 2.02,
+        "m_free_mg": 1.98,
+        "qfinal_mg_g": 202.0,
+        "n_contacts": 113,
+        "mass_conservation_ok": true,
+        "result_classification": "computational_execution_not_experimental_validation"
+      },
+      "series_csv": "data\\sensitivity\\homogeneous_temporal_wiam_geometry\\go\\sens_grid_sigma_1.5_steps_200_seed_3.csv",
+      "full_result_keys": [
+        "config",
+        "run",
+        "reference",
+        "summary",
+        "series",
+        "final_state"
+      ],
+      "geometry": {
+        "geometry_era": "wiam_geometry",
+        "mb_side_px": 1,
+        "adsorbent_side_px": 7,
+        "adsorbent_symbol": "GO",
+        "r_mb_px": 0.5,
+        "r_adsorbent_px": 3.5,
+        "contact_threshold_px": 4.0,
+        "adsorbent_movable": true
+      }
+    },
+    {
+      "role": "simulation_outcome",
+      "material": "GO",
+      "paths": {
+        "json": "data\\sensitivity\\homogeneous_temporal_wiam_geometry\\go\\sens_grid_sigma_1.5_steps_400_seed_3.json",
+        "csv": "data\\sensitivity\\homogeneous_temporal_wiam_geometry\\go\\sens_grid_sigma_1.5_steps_400_seed_3.csv"
+      },
+      "execution_parameters": {
+        "role": "injected_execution_parameter",
+        "seed": 3,
+        "sigma_px": {
+          "value": 1.5,
+          "status": "PENDIENTE"
+        },
+        "n_steps": {
+          "value": 400,
+          "status": "PENDIENTE"
+        },
+        "p_ads": {
+          "value": null,
+          "effective": 1.0,
+          "implementation_status": "DECISI\u00d3N COMPUTACIONAL PROVISIONAL",
+          "status": "PENDIENTE"
+        }
+      },
+      "system_counts": {
+        "N_MB": 200,
+        "N_GO": 100,
+        "N_adsorbent": 100,
+        "adsorbent_symbol": "GO",
+        "status": "DECISI\u00d3N COMPUTACIONAL"
+      },
+      "outcomes": {
+        "n_adsorbed": 128,
+        "percent_adsorbed": 64.0,
+        "m_adsorbed_mg": 2.56,
+        "m_free_mg": 1.44,
+        "qfinal_mg_g": 256.0,
+        "n_contacts": 192,
+        "mass_conservation_ok": true,
+        "result_classification": "computational_execution_not_experimental_validation"
+      },
+      "series_csv": "data\\sensitivity\\homogeneous_temporal_wiam_geometry\\go\\sens_grid_sigma_1.5_steps_400_seed_3.csv",
+      "full_result_keys": [
+        "config",
+        "run",
+        "reference",
+        "summary",
+        "series",
+        "final_state"
+      ],
+      "geometry": {
+        "geometry_era": "wiam_geometry",
+        "mb_side_px": 1,
+        "adsorbent_side_px": 7,
+        "adsorbent_symbol": "GO",
+        "r_mb_px": 0.5,
+        "r_adsorbent_px": 3.5,
+        "contact_threshold_px": 4.0,
+        "adsorbent_movable": true
+      }
+    },
+    {
+      "role": "simulation_outcome",
+      "material": "GO",
+      "paths": {
+        "json": "data\\sensitivity\\homogeneous_temporal_wiam_geometry\\go\\sens_grid_sigma_1.5_steps_600_seed_3.json",
+        "csv": "data\\sensitivity\\homogeneous_temporal_wiam_geometry\\go\\sens_grid_sigma_1.5_steps_600_seed_3.csv"
+      },
+      "execution_parameters": {
+        "role": "injected_execution_parameter",
+        "seed": 3,
+        "sigma_px": {
+          "value": 1.5,
+          "status": "PENDIENTE"
+        },
+        "n_steps": {
+          "value": 600,
+          "status": "PENDIENTE"
+        },
+        "p_ads": {
+          "value": null,
+          "effective": 1.0,
+          "implementation_status": "DECISI\u00d3N COMPUTACIONAL PROVISIONAL",
+          "status": "PENDIENTE"
+        }
+      },
+      "system_counts": {
+        "N_MB": 200,
+        "N_GO": 100,
+        "N_adsorbent": 100,
+        "adsorbent_symbol": "GO",
+        "status": "DECISI\u00d3N COMPUTACIONAL"
+      },
+      "outcomes": {
+        "n_adsorbed": 152,
+        "percent_adsorbed": 76.0,
+        "m_adsorbed_mg": 3.04,
+        "m_free_mg": 0.96,
+        "qfinal_mg_g": 304.0,
+        "n_contacts": 314,
+        "mass_conservation_ok": true,
+        "result_classification": "computational_execution_not_experimental_validation"
+      },
+      "series_csv": "data\\sensitivity\\homogeneous_temporal_wiam_geometry\\go\\sens_grid_sigma_1.5_steps_600_seed_3.csv",
+      "full_result_keys": [
+        "config",
+        "run",
+        "reference",
+        "summary",
+        "series",
+        "final_state"
+      ],
+      "geometry": {
+        "geometry_era": "wiam_geometry",
+        "mb_side_px": 1,
+        "adsorbent_side_px": 7,
+        "adsorbent_symbol": "GO",
+        "r_mb_px": 0.5,
+        "r_adsorbent_px": 3.5,
+        "contact_threshold_px": 4.0,
+        "adsorbent_movable": true
+      }
+    },
+    {
+      "role": "simulation_outcome",
+      "material": "GO",
+      "paths": {
+        "json": "data\\sensitivity\\homogeneous_temporal_wiam_geometry\\go\\sens_grid_sigma_1.5_steps_800_seed_3.json",
+        "csv": "data\\sensitivity\\homogeneous_temporal_wiam_geometry\\go\\sens_grid_sigma_1.5_steps_800_seed_3.csv"
+      },
+      "execution_parameters": {
+        "role": "injected_execution_parameter",
+        "seed": 3,
+        "sigma_px": {
+          "value": 1.5,
+          "status": "PENDIENTE"
+        },
+        "n_steps": {
+          "value": 800,
+          "status": "PENDIENTE"
+        },
+        "p_ads": {
+          "value": null,
+          "effective": 1.0,
+          "implementation_status": "DECISI\u00d3N COMPUTACIONAL PROVISIONAL",
+          "status": "PENDIENTE"
+        }
+      },
+      "system_counts": {
+        "N_MB": 200,
+        "N_GO": 100,
+        "N_adsorbent": 100,
+        "adsorbent_symbol": "GO",
+        "status": "DECISI\u00d3N COMPUTACIONAL"
+      },
+      "outcomes": {
+        "n_adsorbed": 159,
+        "percent_adsorbed": 79.5,
+        "m_adsorbed_mg": 3.18,
+        "m_free_mg": 0.8199999999999998,
+        "qfinal_mg_g": 318.0,
+        "n_contacts": 354,
+        "mass_conservation_ok": true,
+        "result_classification": "computational_execution_not_experimental_validation"
+      },
+      "series_csv": "data\\sensitivity\\homogeneous_temporal_wiam_geometry\\go\\sens_grid_sigma_1.5_steps_800_seed_3.csv",
+      "full_result_keys": [
+        "config",
+        "run",
+        "reference",
+        "summary",
+        "series",
+        "final_state"
+      ],
+      "geometry": {
+        "geometry_era": "wiam_geometry",
+        "mb_side_px": 1,
+        "adsorbent_side_px": 7,
+        "adsorbent_symbol": "GO",
+        "r_mb_px": 0.5,
+        "r_adsorbent_px": 3.5,
+        "contact_threshold_px": 4.0,
+        "adsorbent_movable": true
+      }
+    },
+    {
+      "role": "simulation_outcome",
+      "material": "GO",
+      "paths": {
+        "json": "data\\sensitivity\\homogeneous_temporal_wiam_geometry\\go\\sens_grid_sigma_1.5_steps_1000_seed_3.json",
+        "csv": "data\\sensitivity\\homogeneous_temporal_wiam_geometry\\go\\sens_grid_sigma_1.5_steps_1000_seed_3.csv"
+      },
+      "execution_parameters": {
+        "role": "injected_execution_parameter",
+        "seed": 3,
+        "sigma_px": {
+          "value": 1.5,
+          "status": "PENDIENTE"
+        },
+        "n_steps": {
+          "value": 1000,
+          "status": "PENDIENTE"
+        },
+        "p_ads": {
+          "value": null,
+          "effective": 1.0,
+          "implementation_status": "DECISI\u00d3N COMPUTACIONAL PROVISIONAL",
+          "status": "PENDIENTE"
+        }
+      },
+      "system_counts": {
+        "N_MB": 200,
+        "N_GO": 100,
+        "N_adsorbent": 100,
+        "adsorbent_symbol": "GO",
+        "status": "DECISI\u00d3N COMPUTACIONAL"
+      },
+      "outcomes": {
+        "n_adsorbed": 166,
+        "percent_adsorbed": 83.0,
+        "m_adsorbed_mg": 3.3200000000000003,
+        "m_free_mg": 0.6799999999999997,
+        "qfinal_mg_g": 332.0,
+        "n_contacts": 384,
+        "mass_conservation_ok": true,
+        "result_classification": "computational_execution_not_experimental_validation"
+      },
+      "series_csv": "data\\sensitivity\\homogeneous_temporal_wiam_geometry\\go\\sens_grid_sigma_1.5_steps_1000_seed_3.csv",
+      "full_result_keys": [
+        "config",
+        "run",
+        "reference",
+        "summary",
+        "series",
+        "final_state"
+      ],
+      "geometry": {
+        "geometry_era": "wiam_geometry",
+        "mb_side_px": 1,
+        "adsorbent_side_px": 7,
+        "adsorbent_symbol": "GO",
+        "r_mb_px": 0.5,
+        "r_adsorbent_px": 3.5,
+        "contact_threshold_px": 4.0,
+        "adsorbent_movable": true
+      }
+    },
+    {
+      "role": "simulation_outcome",
+      "material": "GO",
+      "paths": {
+        "json": "data\\sensitivity\\homogeneous_temporal_wiam_geometry\\go\\sens_grid_sigma_1.5_steps_1500_seed_3.json",
+        "csv": "data\\sensitivity\\homogeneous_temporal_wiam_geometry\\go\\sens_grid_sigma_1.5_steps_1500_seed_3.csv"
+      },
+      "execution_parameters": {
+        "role": "injected_execution_parameter",
+        "seed": 3,
+        "sigma_px": {
+          "value": 1.5,
+          "status": "PENDIENTE"
+        },
+        "n_steps": {
+          "value": 1500,
+          "status": "PENDIENTE"
+        },
+        "p_ads": {
+          "value": null,
+          "effective": 1.0,
+          "implementation_status": "DECISI\u00d3N COMPUTACIONAL PROVISIONAL",
+          "status": "PENDIENTE"
+        }
+      },
+      "system_counts": {
+        "N_MB": 200,
+        "N_GO": 100,
+        "N_adsorbent": 100,
+        "adsorbent_symbol": "GO",
+        "status": "DECISI\u00d3N COMPUTACIONAL"
+      },
+      "outcomes": {
+        "n_adsorbed": 176,
+        "percent_adsorbed": 88.0,
+        "m_adsorbed_mg": 3.52,
+        "m_free_mg": 0.48,
+        "qfinal_mg_g": 352.0,
+        "n_contacts": 475,
+        "mass_conservation_ok": true,
+        "result_classification": "computational_execution_not_experimental_validation"
+      },
+      "series_csv": "data\\sensitivity\\homogeneous_temporal_wiam_geometry\\go\\sens_grid_sigma_1.5_steps_1500_seed_3.csv",
+      "full_result_keys": [
+        "config",
+        "run",
+        "reference",
+        "summary",
+        "series",
+        "final_state"
+      ],
+      "geometry": {
+        "geometry_era": "wiam_geometry",
+        "mb_side_px": 1,
+        "adsorbent_side_px": 7,
+        "adsorbent_symbol": "GO",
+        "r_mb_px": 0.5,
+        "r_adsorbent_px": 3.5,
+        "contact_threshold_px": 4.0,
+        "adsorbent_movable": true
+      }
+    },
+    {
+      "role": "simulation_outcome",
+      "material": "GO",
+      "paths": {
+        "json": "data\\sensitivity\\homogeneous_temporal_wiam_geometry\\go\\sens_grid_sigma_1.5_steps_2000_seed_3.json",
+        "csv": "data\\sensitivity\\homogeneous_temporal_wiam_geometry\\go\\sens_grid_sigma_1.5_steps_2000_seed_3.csv"
+      },
+      "execution_parameters": {
+        "role": "injected_execution_parameter",
+        "seed": 3,
+        "sigma_px": {
+          "value": 1.5,
+          "status": "PENDIENTE"
+        },
+        "n_steps": {
+          "value": 2000,
+          "status": "PENDIENTE"
+        },
+        "p_ads": {
+          "value": null,
+          "effective": 1.0,
+          "implementation_status": "DECISI\u00d3N COMPUTACIONAL PROVISIONAL",
+          "status": "PENDIENTE"
+        }
+      },
+      "system_counts": {
+        "N_MB": 200,
+        "N_GO": 100,
+        "N_adsorbent": 100,
+        "adsorbent_symbol": "GO",
+        "status": "DECISI\u00d3N COMPUTACIONAL"
+      },
+      "outcomes": {
+        "n_adsorbed": 182,
+        "percent_adsorbed": 91.0,
+        "m_adsorbed_mg": 3.64,
+        "m_free_mg": 0.3599999999999999,
+        "qfinal_mg_g": 364.0,
+        "n_contacts": 564,
+        "mass_conservation_ok": true,
+        "result_classification": "computational_execution_not_experimental_validation"
+      },
+      "series_csv": "data\\sensitivity\\homogeneous_temporal_wiam_geometry\\go\\sens_grid_sigma_1.5_steps_2000_seed_3.csv",
+      "full_result_keys": [
+        "config",
+        "run",
+        "reference",
+        "summary",
+        "series",
+        "final_state"
+      ],
+      "geometry": {
+        "geometry_era": "wiam_geometry",
+        "mb_side_px": 1,
+        "adsorbent_side_px": 7,
+        "adsorbent_symbol": "GO",
+        "r_mb_px": 0.5,
+        "r_adsorbent_px": 3.5,
+        "contact_threshold_px": 4.0,
+        "adsorbent_movable": true
+      }
+    },
+    {
+      "role": "simulation_outcome",
+      "material": "GO",
+      "paths": {
+        "json": "data\\sensitivity\\homogeneous_temporal_wiam_geometry\\go\\sens_grid_sigma_1_steps_200_seed_4.json",
+        "csv": "data\\sensitivity\\homogeneous_temporal_wiam_geometry\\go\\sens_grid_sigma_1_steps_200_seed_4.csv"
+      },
+      "execution_parameters": {
+        "role": "injected_execution_parameter",
+        "seed": 4,
+        "sigma_px": {
+          "value": 1.0,
+          "status": "PENDIENTE"
+        },
+        "n_steps": {
+          "value": 200,
+          "status": "PENDIENTE"
+        },
+        "p_ads": {
+          "value": null,
+          "effective": 1.0,
+          "implementation_status": "DECISI\u00d3N COMPUTACIONAL PROVISIONAL",
+          "status": "PENDIENTE"
+        }
+      },
+      "system_counts": {
+        "N_MB": 200,
+        "N_GO": 100,
+        "N_adsorbent": 100,
+        "adsorbent_symbol": "GO",
+        "status": "DECISI\u00d3N COMPUTACIONAL"
+      },
+      "outcomes": {
+        "n_adsorbed": 59,
+        "percent_adsorbed": 29.5,
+        "m_adsorbed_mg": 1.18,
+        "m_free_mg": 2.8200000000000003,
+        "qfinal_mg_g": 117.99999999999999,
+        "n_contacts": 73,
+        "mass_conservation_ok": true,
+        "result_classification": "computational_execution_not_experimental_validation"
+      },
+      "series_csv": "data\\sensitivity\\homogeneous_temporal_wiam_geometry\\go\\sens_grid_sigma_1_steps_200_seed_4.csv",
+      "full_result_keys": [
+        "config",
+        "run",
+        "reference",
+        "summary",
+        "series",
+        "final_state"
+      ],
+      "geometry": {
+        "geometry_era": "wiam_geometry",
+        "mb_side_px": 1,
+        "adsorbent_side_px": 7,
+        "adsorbent_symbol": "GO",
+        "r_mb_px": 0.5,
+        "r_adsorbent_px": 3.5,
+        "contact_threshold_px": 4.0,
+        "adsorbent_movable": true
+      }
+    },
+    {
+      "role": "simulation_outcome",
+      "material": "GO",
+      "paths": {
+        "json": "data\\sensitivity\\homogeneous_temporal_wiam_geometry\\go\\sens_grid_sigma_1_steps_400_seed_4.json",
+        "csv": "data\\sensitivity\\homogeneous_temporal_wiam_geometry\\go\\sens_grid_sigma_1_steps_400_seed_4.csv"
+      },
+      "execution_parameters": {
+        "role": "injected_execution_parameter",
+        "seed": 4,
+        "sigma_px": {
+          "value": 1.0,
+          "status": "PENDIENTE"
+        },
+        "n_steps": {
+          "value": 400,
+          "status": "PENDIENTE"
+        },
+        "p_ads": {
+          "value": null,
+          "effective": 1.0,
+          "implementation_status": "DECISI\u00d3N COMPUTACIONAL PROVISIONAL",
+          "status": "PENDIENTE"
+        }
+      },
+      "system_counts": {
+        "N_MB": 200,
+        "N_GO": 100,
+        "N_adsorbent": 100,
+        "adsorbent_symbol": "GO",
+        "status": "DECISI\u00d3N COMPUTACIONAL"
+      },
+      "outcomes": {
+        "n_adsorbed": 80,
+        "percent_adsorbed": 40.0,
+        "m_adsorbed_mg": 1.6,
+        "m_free_mg": 2.4,
+        "qfinal_mg_g": 160.0,
+        "n_contacts": 128,
+        "mass_conservation_ok": true,
+        "result_classification": "computational_execution_not_experimental_validation"
+      },
+      "series_csv": "data\\sensitivity\\homogeneous_temporal_wiam_geometry\\go\\sens_grid_sigma_1_steps_400_seed_4.csv",
+      "full_result_keys": [
+        "config",
+        "run",
+        "reference",
+        "summary",
+        "series",
+        "final_state"
+      ],
+      "geometry": {
+        "geometry_era": "wiam_geometry",
+        "mb_side_px": 1,
+        "adsorbent_side_px": 7,
+        "adsorbent_symbol": "GO",
+        "r_mb_px": 0.5,
+        "r_adsorbent_px": 3.5,
+        "contact_threshold_px": 4.0,
+        "adsorbent_movable": true
+      }
+    },
+    {
+      "role": "simulation_outcome",
+      "material": "GO",
+      "paths": {
+        "json": "data\\sensitivity\\homogeneous_temporal_wiam_geometry\\go\\sens_grid_sigma_1_steps_600_seed_4.json",
+        "csv": "data\\sensitivity\\homogeneous_temporal_wiam_geometry\\go\\sens_grid_sigma_1_steps_600_seed_4.csv"
+      },
+      "execution_parameters": {
+        "role": "injected_execution_parameter",
+        "seed": 4,
+        "sigma_px": {
+          "value": 1.0,
+          "status": "PENDIENTE"
+        },
+        "n_steps": {
+          "value": 600,
+          "status": "PENDIENTE"
+        },
+        "p_ads": {
+          "value": null,
+          "effective": 1.0,
+          "implementation_status": "DECISI\u00d3N COMPUTACIONAL PROVISIONAL",
+          "status": "PENDIENTE"
+        }
+      },
+      "system_counts": {
+        "N_MB": 200,
+        "N_GO": 100,
+        "N_adsorbent": 100,
+        "adsorbent_symbol": "GO",
+        "status": "DECISI\u00d3N COMPUTACIONAL"
+      },
+      "outcomes": {
+        "n_adsorbed": 104,
+        "percent_adsorbed": 52.0,
+        "m_adsorbed_mg": 2.08,
+        "m_free_mg": 1.92,
+        "qfinal_mg_g": 208.0,
+        "n_contacts": 191,
+        "mass_conservation_ok": true,
+        "result_classification": "computational_execution_not_experimental_validation"
+      },
+      "series_csv": "data\\sensitivity\\homogeneous_temporal_wiam_geometry\\go\\sens_grid_sigma_1_steps_600_seed_4.csv",
+      "full_result_keys": [
+        "config",
+        "run",
+        "reference",
+        "summary",
+        "series",
+        "final_state"
+      ],
+      "geometry": {
+        "geometry_era": "wiam_geometry",
+        "mb_side_px": 1,
+        "adsorbent_side_px": 7,
+        "adsorbent_symbol": "GO",
+        "r_mb_px": 0.5,
+        "r_adsorbent_px": 3.5,
+        "contact_threshold_px": 4.0,
+        "adsorbent_movable": true
+      }
+    },
+    {
+      "role": "simulation_outcome",
+      "material": "GO",
+      "paths": {
+        "json": "data\\sensitivity\\homogeneous_temporal_wiam_geometry\\go\\sens_grid_sigma_1_steps_800_seed_4.json",
+        "csv": "data\\sensitivity\\homogeneous_temporal_wiam_geometry\\go\\sens_grid_sigma_1_steps_800_seed_4.csv"
+      },
+      "execution_parameters": {
+        "role": "injected_execution_parameter",
+        "seed": 4,
+        "sigma_px": {
+          "value": 1.0,
+          "status": "PENDIENTE"
+        },
+        "n_steps": {
+          "value": 800,
+          "status": "PENDIENTE"
+        },
+        "p_ads": {
+          "value": null,
+          "effective": 1.0,
+          "implementation_status": "DECISI\u00d3N COMPUTACIONAL PROVISIONAL",
+          "status": "PENDIENTE"
+        }
+      },
+      "system_counts": {
+        "N_MB": 200,
+        "N_GO": 100,
+        "N_adsorbent": 100,
+        "adsorbent_symbol": "GO",
+        "status": "DECISI\u00d3N COMPUTACIONAL"
+      },
+      "outcomes": {
+        "n_adsorbed": 118,
+        "percent_adsorbed": 59.0,
+        "m_adsorbed_mg": 2.36,
+        "m_free_mg": 1.6400000000000001,
+        "qfinal_mg_g": 235.99999999999997,
+        "n_contacts": 270,
+        "mass_conservation_ok": true,
+        "result_classification": "computational_execution_not_experimental_validation"
+      },
+      "series_csv": "data\\sensitivity\\homogeneous_temporal_wiam_geometry\\go\\sens_grid_sigma_1_steps_800_seed_4.csv",
+      "full_result_keys": [
+        "config",
+        "run",
+        "reference",
+        "summary",
+        "series",
+        "final_state"
+      ],
+      "geometry": {
+        "geometry_era": "wiam_geometry",
+        "mb_side_px": 1,
+        "adsorbent_side_px": 7,
+        "adsorbent_symbol": "GO",
+        "r_mb_px": 0.5,
+        "r_adsorbent_px": 3.5,
+        "contact_threshold_px": 4.0,
+        "adsorbent_movable": true
+      }
+    },
+    {
+      "role": "simulation_outcome",
+      "material": "GO",
+      "paths": {
+        "json": "data\\sensitivity\\homogeneous_temporal_wiam_geometry\\go\\sens_grid_sigma_1_steps_1000_seed_4.json",
+        "csv": "data\\sensitivity\\homogeneous_temporal_wiam_geometry\\go\\sens_grid_sigma_1_steps_1000_seed_4.csv"
+      },
+      "execution_parameters": {
+        "role": "injected_execution_parameter",
+        "seed": 4,
+        "sigma_px": {
+          "value": 1.0,
+          "status": "PENDIENTE"
+        },
+        "n_steps": {
+          "value": 1000,
+          "status": "PENDIENTE"
+        },
+        "p_ads": {
+          "value": null,
+          "effective": 1.0,
+          "implementation_status": "DECISI\u00d3N COMPUTACIONAL PROVISIONAL",
+          "status": "PENDIENTE"
+        }
+      },
+      "system_counts": {
+        "N_MB": 200,
+        "N_GO": 100,
+        "N_adsorbent": 100,
+        "adsorbent_symbol": "GO",
+        "status": "DECISI\u00d3N COMPUTACIONAL"
+      },
+      "outcomes": {
+        "n_adsorbed": 129,
+        "percent_adsorbed": 64.5,
+        "m_adsorbed_mg": 2.58,
+        "m_free_mg": 1.42,
+        "qfinal_mg_g": 258.0,
+        "n_contacts": 330,
+        "mass_conservation_ok": true,
+        "result_classification": "computational_execution_not_experimental_validation"
+      },
+      "series_csv": "data\\sensitivity\\homogeneous_temporal_wiam_geometry\\go\\sens_grid_sigma_1_steps_1000_seed_4.csv",
+      "full_result_keys": [
+        "config",
+        "run",
+        "reference",
+        "summary",
+        "series",
+        "final_state"
+      ],
+      "geometry": {
+        "geometry_era": "wiam_geometry",
+        "mb_side_px": 1,
+        "adsorbent_side_px": 7,
+        "adsorbent_symbol": "GO",
+        "r_mb_px": 0.5,
+        "r_adsorbent_px": 3.5,
+        "contact_threshold_px": 4.0,
+        "adsorbent_movable": true
+      }
+    },
+    {
+      "role": "simulation_outcome",
+      "material": "GO",
+      "paths": {
+        "json": "data\\sensitivity\\homogeneous_temporal_wiam_geometry\\go\\sens_grid_sigma_1_steps_1500_seed_4.json",
+        "csv": "data\\sensitivity\\homogeneous_temporal_wiam_geometry\\go\\sens_grid_sigma_1_steps_1500_seed_4.csv"
+      },
+      "execution_parameters": {
+        "role": "injected_execution_parameter",
+        "seed": 4,
+        "sigma_px": {
+          "value": 1.0,
+          "status": "PENDIENTE"
+        },
+        "n_steps": {
+          "value": 1500,
+          "status": "PENDIENTE"
+        },
+        "p_ads": {
+          "value": null,
+          "effective": 1.0,
+          "implementation_status": "DECISI\u00d3N COMPUTACIONAL PROVISIONAL",
+          "status": "PENDIENTE"
+        }
+      },
+      "system_counts": {
+        "N_MB": 200,
+        "N_GO": 100,
+        "N_adsorbent": 100,
+        "adsorbent_symbol": "GO",
+        "status": "DECISI\u00d3N COMPUTACIONAL"
+      },
+      "outcomes": {
+        "n_adsorbed": 150,
+        "percent_adsorbed": 75.0,
+        "m_adsorbed_mg": 3.0,
+        "m_free_mg": 1.0,
+        "qfinal_mg_g": 300.0,
+        "n_contacts": 479,
+        "mass_conservation_ok": true,
+        "result_classification": "computational_execution_not_experimental_validation"
+      },
+      "series_csv": "data\\sensitivity\\homogeneous_temporal_wiam_geometry\\go\\sens_grid_sigma_1_steps_1500_seed_4.csv",
+      "full_result_keys": [
+        "config",
+        "run",
+        "reference",
+        "summary",
+        "series",
+        "final_state"
+      ],
+      "geometry": {
+        "geometry_era": "wiam_geometry",
+        "mb_side_px": 1,
+        "adsorbent_side_px": 7,
+        "adsorbent_symbol": "GO",
+        "r_mb_px": 0.5,
+        "r_adsorbent_px": 3.5,
+        "contact_threshold_px": 4.0,
+        "adsorbent_movable": true
+      }
+    },
+    {
+      "role": "simulation_outcome",
+      "material": "GO",
+      "paths": {
+        "json": "data\\sensitivity\\homogeneous_temporal_wiam_geometry\\go\\sens_grid_sigma_1_steps_2000_seed_4.json",
+        "csv": "data\\sensitivity\\homogeneous_temporal_wiam_geometry\\go\\sens_grid_sigma_1_steps_2000_seed_4.csv"
+      },
+      "execution_parameters": {
+        "role": "injected_execution_parameter",
+        "seed": 4,
+        "sigma_px": {
+          "value": 1.0,
+          "status": "PENDIENTE"
+        },
+        "n_steps": {
+          "value": 2000,
+          "status": "PENDIENTE"
+        },
+        "p_ads": {
+          "value": null,
+          "effective": 1.0,
+          "implementation_status": "DECISI\u00d3N COMPUTACIONAL PROVISIONAL",
+          "status": "PENDIENTE"
+        }
+      },
+      "system_counts": {
+        "N_MB": 200,
+        "N_GO": 100,
+        "N_adsorbent": 100,
+        "adsorbent_symbol": "GO",
+        "status": "DECISI\u00d3N COMPUTACIONAL"
+      },
+      "outcomes": {
+        "n_adsorbed": 163,
+        "percent_adsorbed": 81.5,
+        "m_adsorbed_mg": 3.2600000000000002,
+        "m_free_mg": 0.7399999999999998,
+        "qfinal_mg_g": 326.0,
+        "n_contacts": 572,
+        "mass_conservation_ok": true,
+        "result_classification": "computational_execution_not_experimental_validation"
+      },
+      "series_csv": "data\\sensitivity\\homogeneous_temporal_wiam_geometry\\go\\sens_grid_sigma_1_steps_2000_seed_4.csv",
+      "full_result_keys": [
+        "config",
+        "run",
+        "reference",
+        "summary",
+        "series",
+        "final_state"
+      ],
+      "geometry": {
+        "geometry_era": "wiam_geometry",
+        "mb_side_px": 1,
+        "adsorbent_side_px": 7,
+        "adsorbent_symbol": "GO",
+        "r_mb_px": 0.5,
+        "r_adsorbent_px": 3.5,
+        "contact_threshold_px": 4.0,
+        "adsorbent_movable": true
+      }
+    },
+    {
+      "role": "simulation_outcome",
+      "material": "GO",
+      "paths": {
+        "json": "data\\sensitivity\\homogeneous_temporal_wiam_geometry\\go\\sens_grid_sigma_1.5_steps_200_seed_4.json",
+        "csv": "data\\sensitivity\\homogeneous_temporal_wiam_geometry\\go\\sens_grid_sigma_1.5_steps_200_seed_4.csv"
+      },
+      "execution_parameters": {
+        "role": "injected_execution_parameter",
+        "seed": 4,
+        "sigma_px": {
+          "value": 1.5,
+          "status": "PENDIENTE"
+        },
+        "n_steps": {
+          "value": 200,
+          "status": "PENDIENTE"
+        },
+        "p_ads": {
+          "value": null,
+          "effective": 1.0,
+          "implementation_status": "DECISI\u00d3N COMPUTACIONAL PROVISIONAL",
+          "status": "PENDIENTE"
+        }
+      },
+      "system_counts": {
+        "N_MB": 200,
+        "N_GO": 100,
+        "N_adsorbent": 100,
+        "adsorbent_symbol": "GO",
+        "status": "DECISI\u00d3N COMPUTACIONAL"
+      },
+      "outcomes": {
+        "n_adsorbed": 98,
+        "percent_adsorbed": 49.0,
+        "m_adsorbed_mg": 1.96,
+        "m_free_mg": 2.04,
+        "qfinal_mg_g": 196.0,
+        "n_contacts": 109,
+        "mass_conservation_ok": true,
+        "result_classification": "computational_execution_not_experimental_validation"
+      },
+      "series_csv": "data\\sensitivity\\homogeneous_temporal_wiam_geometry\\go\\sens_grid_sigma_1.5_steps_200_seed_4.csv",
+      "full_result_keys": [
+        "config",
+        "run",
+        "reference",
+        "summary",
+        "series",
+        "final_state"
+      ],
+      "geometry": {
+        "geometry_era": "wiam_geometry",
+        "mb_side_px": 1,
+        "adsorbent_side_px": 7,
+        "adsorbent_symbol": "GO",
+        "r_mb_px": 0.5,
+        "r_adsorbent_px": 3.5,
+        "contact_threshold_px": 4.0,
+        "adsorbent_movable": true
+      }
+    },
+    {
+      "role": "simulation_outcome",
+      "material": "GO",
+      "paths": {
+        "json": "data\\sensitivity\\homogeneous_temporal_wiam_geometry\\go\\sens_grid_sigma_1.5_steps_400_seed_4.json",
+        "csv": "data\\sensitivity\\homogeneous_temporal_wiam_geometry\\go\\sens_grid_sigma_1.5_steps_400_seed_4.csv"
+      },
+      "execution_parameters": {
+        "role": "injected_execution_parameter",
+        "seed": 4,
+        "sigma_px": {
+          "value": 1.5,
+          "status": "PENDIENTE"
+        },
+        "n_steps": {
+          "value": 400,
+          "status": "PENDIENTE"
+        },
+        "p_ads": {
+          "value": null,
+          "effective": 1.0,
+          "implementation_status": "DECISI\u00d3N COMPUTACIONAL PROVISIONAL",
+          "status": "PENDIENTE"
+        }
+      },
+      "system_counts": {
+        "N_MB": 200,
+        "N_GO": 100,
+        "N_adsorbent": 100,
+        "adsorbent_symbol": "GO",
+        "status": "DECISI\u00d3N COMPUTACIONAL"
+      },
+      "outcomes": {
+        "n_adsorbed": 137,
+        "percent_adsorbed": 68.5,
+        "m_adsorbed_mg": 2.74,
+        "m_free_mg": 1.2599999999999998,
+        "qfinal_mg_g": 274.0,
+        "n_contacts": 154,
+        "mass_conservation_ok": true,
+        "result_classification": "computational_execution_not_experimental_validation"
+      },
+      "series_csv": "data\\sensitivity\\homogeneous_temporal_wiam_geometry\\go\\sens_grid_sigma_1.5_steps_400_seed_4.csv",
+      "full_result_keys": [
+        "config",
+        "run",
+        "reference",
+        "summary",
+        "series",
+        "final_state"
+      ],
+      "geometry": {
+        "geometry_era": "wiam_geometry",
+        "mb_side_px": 1,
+        "adsorbent_side_px": 7,
+        "adsorbent_symbol": "GO",
+        "r_mb_px": 0.5,
+        "r_adsorbent_px": 3.5,
+        "contact_threshold_px": 4.0,
+        "adsorbent_movable": true
+      }
+    },
+    {
+      "role": "simulation_outcome",
+      "material": "GO",
+      "paths": {
+        "json": "data\\sensitivity\\homogeneous_temporal_wiam_geometry\\go\\sens_grid_sigma_1.5_steps_600_seed_4.json",
+        "csv": "data\\sensitivity\\homogeneous_temporal_wiam_geometry\\go\\sens_grid_sigma_1.5_steps_600_seed_4.csv"
+      },
+      "execution_parameters": {
+        "role": "injected_execution_parameter",
+        "seed": 4,
+        "sigma_px": {
+          "value": 1.5,
+          "status": "PENDIENTE"
+        },
+        "n_steps": {
+          "value": 600,
+          "status": "PENDIENTE"
+        },
+        "p_ads": {
+          "value": null,
+          "effective": 1.0,
+          "implementation_status": "DECISI\u00d3N COMPUTACIONAL PROVISIONAL",
+          "status": "PENDIENTE"
+        }
+      },
+      "system_counts": {
+        "N_MB": 200,
+        "N_GO": 100,
+        "N_adsorbent": 100,
+        "adsorbent_symbol": "GO",
+        "status": "DECISI\u00d3N COMPUTACIONAL"
+      },
+      "outcomes": {
+        "n_adsorbed": 152,
+        "percent_adsorbed": 76.0,
+        "m_adsorbed_mg": 3.04,
+        "m_free_mg": 0.96,
+        "qfinal_mg_g": 304.0,
+        "n_contacts": 204,
+        "mass_conservation_ok": true,
+        "result_classification": "computational_execution_not_experimental_validation"
+      },
+      "series_csv": "data\\sensitivity\\homogeneous_temporal_wiam_geometry\\go\\sens_grid_sigma_1.5_steps_600_seed_4.csv",
+      "full_result_keys": [
+        "config",
+        "run",
+        "reference",
+        "summary",
+        "series",
+        "final_state"
+      ],
+      "geometry": {
+        "geometry_era": "wiam_geometry",
+        "mb_side_px": 1,
+        "adsorbent_side_px": 7,
+        "adsorbent_symbol": "GO",
+        "r_mb_px": 0.5,
+        "r_adsorbent_px": 3.5,
+        "contact_threshold_px": 4.0,
+        "adsorbent_movable": true
+      }
+    },
+    {
+      "role": "simulation_outcome",
+      "material": "GO",
+      "paths": {
+        "json": "data\\sensitivity\\homogeneous_temporal_wiam_geometry\\go\\sens_grid_sigma_1.5_steps_800_seed_4.json",
+        "csv": "data\\sensitivity\\homogeneous_temporal_wiam_geometry\\go\\sens_grid_sigma_1.5_steps_800_seed_4.csv"
+      },
+      "execution_parameters": {
+        "role": "injected_execution_parameter",
+        "seed": 4,
+        "sigma_px": {
+          "value": 1.5,
+          "status": "PENDIENTE"
+        },
+        "n_steps": {
+          "value": 800,
+          "status": "PENDIENTE"
+        },
+        "p_ads": {
+          "value": null,
+          "effective": 1.0,
+          "implementation_status": "DECISI\u00d3N COMPUTACIONAL PROVISIONAL",
+          "status": "PENDIENTE"
+        }
+      },
+      "system_counts": {
+        "N_MB": 200,
+        "N_GO": 100,
+        "N_adsorbent": 100,
+        "adsorbent_symbol": "GO",
+        "status": "DECISI\u00d3N COMPUTACIONAL"
+      },
+      "outcomes": {
+        "n_adsorbed": 165,
+        "percent_adsorbed": 82.5,
+        "m_adsorbed_mg": 3.3000000000000003,
+        "m_free_mg": 0.6999999999999997,
+        "qfinal_mg_g": 330.0,
+        "n_contacts": 257,
+        "mass_conservation_ok": true,
+        "result_classification": "computational_execution_not_experimental_validation"
+      },
+      "series_csv": "data\\sensitivity\\homogeneous_temporal_wiam_geometry\\go\\sens_grid_sigma_1.5_steps_800_seed_4.csv",
+      "full_result_keys": [
+        "config",
+        "run",
+        "reference",
+        "summary",
+        "series",
+        "final_state"
+      ],
+      "geometry": {
+        "geometry_era": "wiam_geometry",
+        "mb_side_px": 1,
+        "adsorbent_side_px": 7,
+        "adsorbent_symbol": "GO",
+        "r_mb_px": 0.5,
+        "r_adsorbent_px": 3.5,
+        "contact_threshold_px": 4.0,
+        "adsorbent_movable": true
+      }
+    },
+    {
+      "role": "simulation_outcome",
+      "material": "GO",
+      "paths": {
+        "json": "data\\sensitivity\\homogeneous_temporal_wiam_geometry\\go\\sens_grid_sigma_1.5_steps_1000_seed_4.json",
+        "csv": "data\\sensitivity\\homogeneous_temporal_wiam_geometry\\go\\sens_grid_sigma_1.5_steps_1000_seed_4.csv"
+      },
+      "execution_parameters": {
+        "role": "injected_execution_parameter",
+        "seed": 4,
+        "sigma_px": {
+          "value": 1.5,
+          "status": "PENDIENTE"
+        },
+        "n_steps": {
+          "value": 1000,
+          "status": "PENDIENTE"
+        },
+        "p_ads": {
+          "value": null,
+          "effective": 1.0,
+          "implementation_status": "DECISI\u00d3N COMPUTACIONAL PROVISIONAL",
+          "status": "PENDIENTE"
+        }
+      },
+      "system_counts": {
+        "N_MB": 200,
+        "N_GO": 100,
+        "N_adsorbent": 100,
+        "adsorbent_symbol": "GO",
+        "status": "DECISI\u00d3N COMPUTACIONAL"
+      },
+      "outcomes": {
+        "n_adsorbed": 171,
+        "percent_adsorbed": 85.5,
+        "m_adsorbed_mg": 3.42,
+        "m_free_mg": 0.5800000000000001,
+        "qfinal_mg_g": 342.0,
+        "n_contacts": 376,
+        "mass_conservation_ok": true,
+        "result_classification": "computational_execution_not_experimental_validation"
+      },
+      "series_csv": "data\\sensitivity\\homogeneous_temporal_wiam_geometry\\go\\sens_grid_sigma_1.5_steps_1000_seed_4.csv",
+      "full_result_keys": [
+        "config",
+        "run",
+        "reference",
+        "summary",
+        "series",
+        "final_state"
+      ],
+      "geometry": {
+        "geometry_era": "wiam_geometry",
+        "mb_side_px": 1,
+        "adsorbent_side_px": 7,
+        "adsorbent_symbol": "GO",
+        "r_mb_px": 0.5,
+        "r_adsorbent_px": 3.5,
+        "contact_threshold_px": 4.0,
+        "adsorbent_movable": true
+      }
+    },
+    {
+      "role": "simulation_outcome",
+      "material": "GO",
+      "paths": {
+        "json": "data\\sensitivity\\homogeneous_temporal_wiam_geometry\\go\\sens_grid_sigma_1.5_steps_1500_seed_4.json",
+        "csv": "data\\sensitivity\\homogeneous_temporal_wiam_geometry\\go\\sens_grid_sigma_1.5_steps_1500_seed_4.csv"
+      },
+      "execution_parameters": {
+        "role": "injected_execution_parameter",
+        "seed": 4,
+        "sigma_px": {
+          "value": 1.5,
+          "status": "PENDIENTE"
+        },
+        "n_steps": {
+          "value": 1500,
+          "status": "PENDIENTE"
+        },
+        "p_ads": {
+          "value": null,
+          "effective": 1.0,
+          "implementation_status": "DECISI\u00d3N COMPUTACIONAL PROVISIONAL",
+          "status": "PENDIENTE"
+        }
+      },
+      "system_counts": {
+        "N_MB": 200,
+        "N_GO": 100,
+        "N_adsorbent": 100,
+        "adsorbent_symbol": "GO",
+        "status": "DECISI\u00d3N COMPUTACIONAL"
+      },
+      "outcomes": {
+        "n_adsorbed": 180,
+        "percent_adsorbed": 90.0,
+        "m_adsorbed_mg": 3.6,
+        "m_free_mg": 0.3999999999999999,
+        "qfinal_mg_g": 360.0,
+        "n_contacts": 512,
+        "mass_conservation_ok": true,
+        "result_classification": "computational_execution_not_experimental_validation"
+      },
+      "series_csv": "data\\sensitivity\\homogeneous_temporal_wiam_geometry\\go\\sens_grid_sigma_1.5_steps_1500_seed_4.csv",
+      "full_result_keys": [
+        "config",
+        "run",
+        "reference",
+        "summary",
+        "series",
+        "final_state"
+      ],
+      "geometry": {
+        "geometry_era": "wiam_geometry",
+        "mb_side_px": 1,
+        "adsorbent_side_px": 7,
+        "adsorbent_symbol": "GO",
+        "r_mb_px": 0.5,
+        "r_adsorbent_px": 3.5,
+        "contact_threshold_px": 4.0,
+        "adsorbent_movable": true
+      }
+    },
+    {
+      "role": "simulation_outcome",
+      "material": "GO",
+      "paths": {
+        "json": "data\\sensitivity\\homogeneous_temporal_wiam_geometry\\go\\sens_grid_sigma_1.5_steps_2000_seed_4.json",
+        "csv": "data\\sensitivity\\homogeneous_temporal_wiam_geometry\\go\\sens_grid_sigma_1.5_steps_2000_seed_4.csv"
+      },
+      "execution_parameters": {
+        "role": "injected_execution_parameter",
+        "seed": 4,
+        "sigma_px": {
+          "value": 1.5,
+          "status": "PENDIENTE"
+        },
+        "n_steps": {
+          "value": 2000,
+          "status": "PENDIENTE"
+        },
+        "p_ads": {
+          "value": null,
+          "effective": 1.0,
+          "implementation_status": "DECISI\u00d3N COMPUTACIONAL PROVISIONAL",
+          "status": "PENDIENTE"
+        }
+      },
+      "system_counts": {
+        "N_MB": 200,
+        "N_GO": 100,
+        "N_adsorbent": 100,
+        "adsorbent_symbol": "GO",
+        "status": "DECISI\u00d3N COMPUTACIONAL"
+      },
+      "outcomes": {
+        "n_adsorbed": 187,
+        "percent_adsorbed": 93.5,
+        "m_adsorbed_mg": 3.74,
+        "m_free_mg": 0.2599999999999998,
+        "qfinal_mg_g": 374.0,
+        "n_contacts": 623,
+        "mass_conservation_ok": true,
+        "result_classification": "computational_execution_not_experimental_validation"
+      },
+      "series_csv": "data\\sensitivity\\homogeneous_temporal_wiam_geometry\\go\\sens_grid_sigma_1.5_steps_2000_seed_4.csv",
+      "full_result_keys": [
+        "config",
+        "run",
+        "reference",
+        "summary",
+        "series",
+        "final_state"
+      ],
+      "geometry": {
+        "geometry_era": "wiam_geometry",
+        "mb_side_px": 1,
+        "adsorbent_side_px": 7,
+        "adsorbent_symbol": "GO",
+        "r_mb_px": 0.5,
+        "r_adsorbent_px": 3.5,
+        "contact_threshold_px": 4.0,
+        "adsorbent_movable": true
+      }
+    },
+    {
+      "role": "simulation_outcome",
+      "material": "GO",
+      "paths": {
+        "json": "data\\sensitivity\\homogeneous_temporal_wiam_geometry\\go\\sens_grid_sigma_1_steps_200_seed_5.json",
+        "csv": "data\\sensitivity\\homogeneous_temporal_wiam_geometry\\go\\sens_grid_sigma_1_steps_200_seed_5.csv"
+      },
+      "execution_parameters": {
+        "role": "injected_execution_parameter",
+        "seed": 5,
+        "sigma_px": {
+          "value": 1.0,
+          "status": "PENDIENTE"
+        },
+        "n_steps": {
+          "value": 200,
+          "status": "PENDIENTE"
+        },
+        "p_ads": {
+          "value": null,
+          "effective": 1.0,
+          "implementation_status": "DECISI\u00d3N COMPUTACIONAL PROVISIONAL",
+          "status": "PENDIENTE"
+        }
+      },
+      "system_counts": {
+        "N_MB": 200,
+        "N_GO": 100,
+        "N_adsorbent": 100,
+        "adsorbent_symbol": "GO",
+        "status": "DECISI\u00d3N COMPUTACIONAL"
+      },
+      "outcomes": {
+        "n_adsorbed": 80,
+        "percent_adsorbed": 40.0,
+        "m_adsorbed_mg": 1.6,
+        "m_free_mg": 2.4,
+        "qfinal_mg_g": 160.0,
+        "n_contacts": 80,
+        "mass_conservation_ok": true,
+        "result_classification": "computational_execution_not_experimental_validation"
+      },
+      "series_csv": "data\\sensitivity\\homogeneous_temporal_wiam_geometry\\go\\sens_grid_sigma_1_steps_200_seed_5.csv",
+      "full_result_keys": [
+        "config",
+        "run",
+        "reference",
+        "summary",
+        "series",
+        "final_state"
+      ],
+      "geometry": {
+        "geometry_era": "wiam_geometry",
+        "mb_side_px": 1,
+        "adsorbent_side_px": 7,
+        "adsorbent_symbol": "GO",
+        "r_mb_px": 0.5,
+        "r_adsorbent_px": 3.5,
+        "contact_threshold_px": 4.0,
+        "adsorbent_movable": true
+      }
+    },
+    {
+      "role": "simulation_outcome",
+      "material": "GO",
+      "paths": {
+        "json": "data\\sensitivity\\homogeneous_temporal_wiam_geometry\\go\\sens_grid_sigma_1_steps_400_seed_5.json",
+        "csv": "data\\sensitivity\\homogeneous_temporal_wiam_geometry\\go\\sens_grid_sigma_1_steps_400_seed_5.csv"
+      },
+      "execution_parameters": {
+        "role": "injected_execution_parameter",
+        "seed": 5,
+        "sigma_px": {
+          "value": 1.0,
+          "status": "PENDIENTE"
+        },
+        "n_steps": {
+          "value": 400,
+          "status": "PENDIENTE"
+        },
+        "p_ads": {
+          "value": null,
+          "effective": 1.0,
+          "implementation_status": "DECISI\u00d3N COMPUTACIONAL PROVISIONAL",
+          "status": "PENDIENTE"
+        }
+      },
+      "system_counts": {
+        "N_MB": 200,
+        "N_GO": 100,
+        "N_adsorbent": 100,
+        "adsorbent_symbol": "GO",
+        "status": "DECISI\u00d3N COMPUTACIONAL"
+      },
+      "outcomes": {
+        "n_adsorbed": 110,
+        "percent_adsorbed": 55.00000000000001,
+        "m_adsorbed_mg": 2.2,
+        "m_free_mg": 1.7999999999999998,
+        "qfinal_mg_g": 220.0,
+        "n_contacts": 155,
+        "mass_conservation_ok": true,
+        "result_classification": "computational_execution_not_experimental_validation"
+      },
+      "series_csv": "data\\sensitivity\\homogeneous_temporal_wiam_geometry\\go\\sens_grid_sigma_1_steps_400_seed_5.csv",
+      "full_result_keys": [
+        "config",
+        "run",
+        "reference",
+        "summary",
+        "series",
+        "final_state"
+      ],
+      "geometry": {
+        "geometry_era": "wiam_geometry",
+        "mb_side_px": 1,
+        "adsorbent_side_px": 7,
+        "adsorbent_symbol": "GO",
+        "r_mb_px": 0.5,
+        "r_adsorbent_px": 3.5,
+        "contact_threshold_px": 4.0,
+        "adsorbent_movable": true
+      }
+    },
+    {
+      "role": "simulation_outcome",
+      "material": "GO",
+      "paths": {
+        "json": "data\\sensitivity\\homogeneous_temporal_wiam_geometry\\go\\sens_grid_sigma_1_steps_600_seed_5.json",
+        "csv": "data\\sensitivity\\homogeneous_temporal_wiam_geometry\\go\\sens_grid_sigma_1_steps_600_seed_5.csv"
+      },
+      "execution_parameters": {
+        "role": "injected_execution_parameter",
+        "seed": 5,
+        "sigma_px": {
+          "value": 1.0,
+          "status": "PENDIENTE"
+        },
+        "n_steps": {
+          "value": 600,
+          "status": "PENDIENTE"
+        },
+        "p_ads": {
+          "value": null,
+          "effective": 1.0,
+          "implementation_status": "DECISI\u00d3N COMPUTACIONAL PROVISIONAL",
+          "status": "PENDIENTE"
+        }
+      },
+      "system_counts": {
+        "N_MB": 200,
+        "N_GO": 100,
+        "N_adsorbent": 100,
+        "adsorbent_symbol": "GO",
+        "status": "DECISI\u00d3N COMPUTACIONAL"
+      },
+      "outcomes": {
+        "n_adsorbed": 124,
+        "percent_adsorbed": 62.0,
+        "m_adsorbed_mg": 2.48,
+        "m_free_mg": 1.52,
+        "qfinal_mg_g": 248.0,
+        "n_contacts": 249,
+        "mass_conservation_ok": true,
+        "result_classification": "computational_execution_not_experimental_validation"
+      },
+      "series_csv": "data\\sensitivity\\homogeneous_temporal_wiam_geometry\\go\\sens_grid_sigma_1_steps_600_seed_5.csv",
+      "full_result_keys": [
+        "config",
+        "run",
+        "reference",
+        "summary",
+        "series",
+        "final_state"
+      ],
+      "geometry": {
+        "geometry_era": "wiam_geometry",
+        "mb_side_px": 1,
+        "adsorbent_side_px": 7,
+        "adsorbent_symbol": "GO",
+        "r_mb_px": 0.5,
+        "r_adsorbent_px": 3.5,
+        "contact_threshold_px": 4.0,
+        "adsorbent_movable": true
+      }
+    },
+    {
+      "role": "simulation_outcome",
+      "material": "GO",
+      "paths": {
+        "json": "data\\sensitivity\\homogeneous_temporal_wiam_geometry\\go\\sens_grid_sigma_1_steps_800_seed_5.json",
+        "csv": "data\\sensitivity\\homogeneous_temporal_wiam_geometry\\go\\sens_grid_sigma_1_steps_800_seed_5.csv"
+      },
+      "execution_parameters": {
+        "role": "injected_execution_parameter",
+        "seed": 5,
+        "sigma_px": {
+          "value": 1.0,
+          "status": "PENDIENTE"
+        },
+        "n_steps": {
+          "value": 800,
+          "status": "PENDIENTE"
+        },
+        "p_ads": {
+          "value": null,
+          "effective": 1.0,
+          "implementation_status": "DECISI\u00d3N COMPUTACIONAL PROVISIONAL",
+          "status": "PENDIENTE"
+        }
+      },
+      "system_counts": {
+        "N_MB": 200,
+        "N_GO": 100,
+        "N_adsorbent": 100,
+        "adsorbent_symbol": "GO",
+        "status": "DECISI\u00d3N COMPUTACIONAL"
+      },
+      "outcomes": {
+        "n_adsorbed": 140,
+        "percent_adsorbed": 70.0,
+        "m_adsorbed_mg": 2.8000000000000003,
+        "m_free_mg": 1.1999999999999997,
+        "qfinal_mg_g": 280.0,
+        "n_contacts": 342,
+        "mass_conservation_ok": true,
+        "result_classification": "computational_execution_not_experimental_validation"
+      },
+      "series_csv": "data\\sensitivity\\homogeneous_temporal_wiam_geometry\\go\\sens_grid_sigma_1_steps_800_seed_5.csv",
+      "full_result_keys": [
+        "config",
+        "run",
+        "reference",
+        "summary",
+        "series",
+        "final_state"
+      ],
+      "geometry": {
+        "geometry_era": "wiam_geometry",
+        "mb_side_px": 1,
+        "adsorbent_side_px": 7,
+        "adsorbent_symbol": "GO",
+        "r_mb_px": 0.5,
+        "r_adsorbent_px": 3.5,
+        "contact_threshold_px": 4.0,
+        "adsorbent_movable": true
+      }
+    },
+    {
+      "role": "simulation_outcome",
+      "material": "GO",
+      "paths": {
+        "json": "data\\sensitivity\\homogeneous_temporal_wiam_geometry\\go\\sens_grid_sigma_1_steps_1000_seed_5.json",
+        "csv": "data\\sensitivity\\homogeneous_temporal_wiam_geometry\\go\\sens_grid_sigma_1_steps_1000_seed_5.csv"
+      },
+      "execution_parameters": {
+        "role": "injected_execution_parameter",
+        "seed": 5,
+        "sigma_px": {
+          "value": 1.0,
+          "status": "PENDIENTE"
+        },
+        "n_steps": {
+          "value": 1000,
+          "status": "PENDIENTE"
+        },
+        "p_ads": {
+          "value": null,
+          "effective": 1.0,
+          "implementation_status": "DECISI\u00d3N COMPUTACIONAL PROVISIONAL",
+          "status": "PENDIENTE"
+        }
+      },
+      "system_counts": {
+        "N_MB": 200,
+        "N_GO": 100,
+        "N_adsorbent": 100,
+        "adsorbent_symbol": "GO",
+        "status": "DECISI\u00d3N COMPUTACIONAL"
+      },
+      "outcomes": {
+        "n_adsorbed": 155,
+        "percent_adsorbed": 77.5,
+        "m_adsorbed_mg": 3.1,
+        "m_free_mg": 0.8999999999999999,
+        "qfinal_mg_g": 310.0,
+        "n_contacts": 395,
+        "mass_conservation_ok": true,
+        "result_classification": "computational_execution_not_experimental_validation"
+      },
+      "series_csv": "data\\sensitivity\\homogeneous_temporal_wiam_geometry\\go\\sens_grid_sigma_1_steps_1000_seed_5.csv",
+      "full_result_keys": [
+        "config",
+        "run",
+        "reference",
+        "summary",
+        "series",
+        "final_state"
+      ],
+      "geometry": {
+        "geometry_era": "wiam_geometry",
+        "mb_side_px": 1,
+        "adsorbent_side_px": 7,
+        "adsorbent_symbol": "GO",
+        "r_mb_px": 0.5,
+        "r_adsorbent_px": 3.5,
+        "contact_threshold_px": 4.0,
+        "adsorbent_movable": true
+      }
+    },
+    {
+      "role": "simulation_outcome",
+      "material": "GO",
+      "paths": {
+        "json": "data\\sensitivity\\homogeneous_temporal_wiam_geometry\\go\\sens_grid_sigma_1_steps_1500_seed_5.json",
+        "csv": "data\\sensitivity\\homogeneous_temporal_wiam_geometry\\go\\sens_grid_sigma_1_steps_1500_seed_5.csv"
+      },
+      "execution_parameters": {
+        "role": "injected_execution_parameter",
+        "seed": 5,
+        "sigma_px": {
+          "value": 1.0,
+          "status": "PENDIENTE"
+        },
+        "n_steps": {
+          "value": 1500,
+          "status": "PENDIENTE"
+        },
+        "p_ads": {
+          "value": null,
+          "effective": 1.0,
+          "implementation_status": "DECISI\u00d3N COMPUTACIONAL PROVISIONAL",
+          "status": "PENDIENTE"
+        }
+      },
+      "system_counts": {
+        "N_MB": 200,
+        "N_GO": 100,
+        "N_adsorbent": 100,
+        "adsorbent_symbol": "GO",
+        "status": "DECISI\u00d3N COMPUTACIONAL"
+      },
+      "outcomes": {
+        "n_adsorbed": 171,
+        "percent_adsorbed": 85.5,
+        "m_adsorbed_mg": 3.42,
+        "m_free_mg": 0.5800000000000001,
+        "qfinal_mg_g": 342.0,
+        "n_contacts": 585,
+        "mass_conservation_ok": true,
+        "result_classification": "computational_execution_not_experimental_validation"
+      },
+      "series_csv": "data\\sensitivity\\homogeneous_temporal_wiam_geometry\\go\\sens_grid_sigma_1_steps_1500_seed_5.csv",
+      "full_result_keys": [
+        "config",
+        "run",
+        "reference",
+        "summary",
+        "series",
+        "final_state"
+      ],
+      "geometry": {
+        "geometry_era": "wiam_geometry",
+        "mb_side_px": 1,
+        "adsorbent_side_px": 7,
+        "adsorbent_symbol": "GO",
+        "r_mb_px": 0.5,
+        "r_adsorbent_px": 3.5,
+        "contact_threshold_px": 4.0,
+        "adsorbent_movable": true
+      }
+    },
+    {
+      "role": "simulation_outcome",
+      "material": "GO",
+      "paths": {
+        "json": "data\\sensitivity\\homogeneous_temporal_wiam_geometry\\go\\sens_grid_sigma_1_steps_2000_seed_5.json",
+        "csv": "data\\sensitivity\\homogeneous_temporal_wiam_geometry\\go\\sens_grid_sigma_1_steps_2000_seed_5.csv"
+      },
+      "execution_parameters": {
+        "role": "injected_execution_parameter",
+        "seed": 5,
+        "sigma_px": {
+          "value": 1.0,
+          "status": "PENDIENTE"
+        },
+        "n_steps": {
+          "value": 2000,
+          "status": "PENDIENTE"
+        },
+        "p_ads": {
+          "value": null,
+          "effective": 1.0,
+          "implementation_status": "DECISI\u00d3N COMPUTACIONAL PROVISIONAL",
+          "status": "PENDIENTE"
+        }
+      },
+      "system_counts": {
+        "N_MB": 200,
+        "N_GO": 100,
+        "N_adsorbent": 100,
+        "adsorbent_symbol": "GO",
+        "status": "DECISI\u00d3N COMPUTACIONAL"
+      },
+      "outcomes": {
+        "n_adsorbed": 175,
+        "percent_adsorbed": 87.5,
+        "m_adsorbed_mg": 3.5,
+        "m_free_mg": 0.5,
+        "qfinal_mg_g": 350.0,
+        "n_contacts": 724,
+        "mass_conservation_ok": true,
+        "result_classification": "computational_execution_not_experimental_validation"
+      },
+      "series_csv": "data\\sensitivity\\homogeneous_temporal_wiam_geometry\\go\\sens_grid_sigma_1_steps_2000_seed_5.csv",
+      "full_result_keys": [
+        "config",
+        "run",
+        "reference",
+        "summary",
+        "series",
+        "final_state"
+      ],
+      "geometry": {
+        "geometry_era": "wiam_geometry",
+        "mb_side_px": 1,
+        "adsorbent_side_px": 7,
+        "adsorbent_symbol": "GO",
+        "r_mb_px": 0.5,
+        "r_adsorbent_px": 3.5,
+        "contact_threshold_px": 4.0,
+        "adsorbent_movable": true
+      }
+    },
+    {
+      "role": "simulation_outcome",
+      "material": "GO",
+      "paths": {
+        "json": "data\\sensitivity\\homogeneous_temporal_wiam_geometry\\go\\sens_grid_sigma_1.5_steps_200_seed_5.json",
+        "csv": "data\\sensitivity\\homogeneous_temporal_wiam_geometry\\go\\sens_grid_sigma_1.5_steps_200_seed_5.csv"
+      },
+      "execution_parameters": {
+        "role": "injected_execution_parameter",
+        "seed": 5,
+        "sigma_px": {
+          "value": 1.5,
+          "status": "PENDIENTE"
+        },
+        "n_steps": {
+          "value": 200,
+          "status": "PENDIENTE"
+        },
+        "p_ads": {
+          "value": null,
+          "effective": 1.0,
+          "implementation_status": "DECISI\u00d3N COMPUTACIONAL PROVISIONAL",
+          "status": "PENDIENTE"
+        }
+      },
+      "system_counts": {
+        "N_MB": 200,
+        "N_GO": 100,
+        "N_adsorbent": 100,
+        "adsorbent_symbol": "GO",
+        "status": "DECISI\u00d3N COMPUTACIONAL"
+      },
+      "outcomes": {
+        "n_adsorbed": 103,
+        "percent_adsorbed": 51.5,
+        "m_adsorbed_mg": 2.06,
+        "m_free_mg": 1.94,
+        "qfinal_mg_g": 206.0,
+        "n_contacts": 104,
+        "mass_conservation_ok": true,
+        "result_classification": "computational_execution_not_experimental_validation"
+      },
+      "series_csv": "data\\sensitivity\\homogeneous_temporal_wiam_geometry\\go\\sens_grid_sigma_1.5_steps_200_seed_5.csv",
+      "full_result_keys": [
+        "config",
+        "run",
+        "reference",
+        "summary",
+        "series",
+        "final_state"
+      ],
+      "geometry": {
+        "geometry_era": "wiam_geometry",
+        "mb_side_px": 1,
+        "adsorbent_side_px": 7,
+        "adsorbent_symbol": "GO",
+        "r_mb_px": 0.5,
+        "r_adsorbent_px": 3.5,
+        "contact_threshold_px": 4.0,
+        "adsorbent_movable": true
+      }
+    },
+    {
+      "role": "simulation_outcome",
+      "material": "GO",
+      "paths": {
+        "json": "data\\sensitivity\\homogeneous_temporal_wiam_geometry\\go\\sens_grid_sigma_1.5_steps_400_seed_5.json",
+        "csv": "data\\sensitivity\\homogeneous_temporal_wiam_geometry\\go\\sens_grid_sigma_1.5_steps_400_seed_5.csv"
+      },
+      "execution_parameters": {
+        "role": "injected_execution_parameter",
+        "seed": 5,
+        "sigma_px": {
+          "value": 1.5,
+          "status": "PENDIENTE"
+        },
+        "n_steps": {
+          "value": 400,
+          "status": "PENDIENTE"
+        },
+        "p_ads": {
+          "value": null,
+          "effective": 1.0,
+          "implementation_status": "DECISI\u00d3N COMPUTACIONAL PROVISIONAL",
+          "status": "PENDIENTE"
+        }
+      },
+      "system_counts": {
+        "N_MB": 200,
+        "N_GO": 100,
+        "N_adsorbent": 100,
+        "adsorbent_symbol": "GO",
+        "status": "DECISI\u00d3N COMPUTACIONAL"
+      },
+      "outcomes": {
+        "n_adsorbed": 134,
+        "percent_adsorbed": 67.0,
+        "m_adsorbed_mg": 2.68,
+        "m_free_mg": 1.3199999999999998,
+        "qfinal_mg_g": 268.0,
+        "n_contacts": 200,
+        "mass_conservation_ok": true,
+        "result_classification": "computational_execution_not_experimental_validation"
+      },
+      "series_csv": "data\\sensitivity\\homogeneous_temporal_wiam_geometry\\go\\sens_grid_sigma_1.5_steps_400_seed_5.csv",
+      "full_result_keys": [
+        "config",
+        "run",
+        "reference",
+        "summary",
+        "series",
+        "final_state"
+      ],
+      "geometry": {
+        "geometry_era": "wiam_geometry",
+        "mb_side_px": 1,
+        "adsorbent_side_px": 7,
+        "adsorbent_symbol": "GO",
+        "r_mb_px": 0.5,
+        "r_adsorbent_px": 3.5,
+        "contact_threshold_px": 4.0,
+        "adsorbent_movable": true
+      }
+    },
+    {
+      "role": "simulation_outcome",
+      "material": "GO",
+      "paths": {
+        "json": "data\\sensitivity\\homogeneous_temporal_wiam_geometry\\go\\sens_grid_sigma_1.5_steps_600_seed_5.json",
+        "csv": "data\\sensitivity\\homogeneous_temporal_wiam_geometry\\go\\sens_grid_sigma_1.5_steps_600_seed_5.csv"
+      },
+      "execution_parameters": {
+        "role": "injected_execution_parameter",
+        "seed": 5,
+        "sigma_px": {
+          "value": 1.5,
+          "status": "PENDIENTE"
+        },
+        "n_steps": {
+          "value": 600,
+          "status": "PENDIENTE"
+        },
+        "p_ads": {
+          "value": null,
+          "effective": 1.0,
+          "implementation_status": "DECISI\u00d3N COMPUTACIONAL PROVISIONAL",
+          "status": "PENDIENTE"
+        }
+      },
+      "system_counts": {
+        "N_MB": 200,
+        "N_GO": 100,
+        "N_adsorbent": 100,
+        "adsorbent_symbol": "GO",
+        "status": "DECISI\u00d3N COMPUTACIONAL"
+      },
+      "outcomes": {
+        "n_adsorbed": 154,
+        "percent_adsorbed": 77.0,
+        "m_adsorbed_mg": 3.08,
+        "m_free_mg": 0.9199999999999999,
+        "qfinal_mg_g": 308.0,
+        "n_contacts": 272,
+        "mass_conservation_ok": true,
+        "result_classification": "computational_execution_not_experimental_validation"
+      },
+      "series_csv": "data\\sensitivity\\homogeneous_temporal_wiam_geometry\\go\\sens_grid_sigma_1.5_steps_600_seed_5.csv",
+      "full_result_keys": [
+        "config",
+        "run",
+        "reference",
+        "summary",
+        "series",
+        "final_state"
+      ],
+      "geometry": {
+        "geometry_era": "wiam_geometry",
+        "mb_side_px": 1,
+        "adsorbent_side_px": 7,
+        "adsorbent_symbol": "GO",
+        "r_mb_px": 0.5,
+        "r_adsorbent_px": 3.5,
+        "contact_threshold_px": 4.0,
+        "adsorbent_movable": true
+      }
+    },
+    {
+      "role": "simulation_outcome",
+      "material": "GO",
+      "paths": {
+        "json": "data\\sensitivity\\homogeneous_temporal_wiam_geometry\\go\\sens_grid_sigma_1.5_steps_800_seed_5.json",
+        "csv": "data\\sensitivity\\homogeneous_temporal_wiam_geometry\\go\\sens_grid_sigma_1.5_steps_800_seed_5.csv"
+      },
+      "execution_parameters": {
+        "role": "injected_execution_parameter",
+        "seed": 5,
+        "sigma_px": {
+          "value": 1.5,
+          "status": "PENDIENTE"
+        },
+        "n_steps": {
+          "value": 800,
+          "status": "PENDIENTE"
+        },
+        "p_ads": {
+          "value": null,
+          "effective": 1.0,
+          "implementation_status": "DECISI\u00d3N COMPUTACIONAL PROVISIONAL",
+          "status": "PENDIENTE"
+        }
+      },
+      "system_counts": {
+        "N_MB": 200,
+        "N_GO": 100,
+        "N_adsorbent": 100,
+        "adsorbent_symbol": "GO",
+        "status": "DECISI\u00d3N COMPUTACIONAL"
+      },
+      "outcomes": {
+        "n_adsorbed": 163,
+        "percent_adsorbed": 81.5,
+        "m_adsorbed_mg": 3.2600000000000002,
+        "m_free_mg": 0.7399999999999998,
+        "qfinal_mg_g": 326.0,
+        "n_contacts": 303,
+        "mass_conservation_ok": true,
+        "result_classification": "computational_execution_not_experimental_validation"
+      },
+      "series_csv": "data\\sensitivity\\homogeneous_temporal_wiam_geometry\\go\\sens_grid_sigma_1.5_steps_800_seed_5.csv",
+      "full_result_keys": [
+        "config",
+        "run",
+        "reference",
+        "summary",
+        "series",
+        "final_state"
+      ],
+      "geometry": {
+        "geometry_era": "wiam_geometry",
+        "mb_side_px": 1,
+        "adsorbent_side_px": 7,
+        "adsorbent_symbol": "GO",
+        "r_mb_px": 0.5,
+        "r_adsorbent_px": 3.5,
+        "contact_threshold_px": 4.0,
+        "adsorbent_movable": true
+      }
+    },
+    {
+      "role": "simulation_outcome",
+      "material": "GO",
+      "paths": {
+        "json": "data\\sensitivity\\homogeneous_temporal_wiam_geometry\\go\\sens_grid_sigma_1.5_steps_1000_seed_5.json",
+        "csv": "data\\sensitivity\\homogeneous_temporal_wiam_geometry\\go\\sens_grid_sigma_1.5_steps_1000_seed_5.csv"
+      },
+      "execution_parameters": {
+        "role": "injected_execution_parameter",
+        "seed": 5,
+        "sigma_px": {
+          "value": 1.5,
+          "status": "PENDIENTE"
+        },
+        "n_steps": {
+          "value": 1000,
+          "status": "PENDIENTE"
+        },
+        "p_ads": {
+          "value": null,
+          "effective": 1.0,
+          "implementation_status": "DECISI\u00d3N COMPUTACIONAL PROVISIONAL",
+          "status": "PENDIENTE"
+        }
+      },
+      "system_counts": {
+        "N_MB": 200,
+        "N_GO": 100,
+        "N_adsorbent": 100,
+        "adsorbent_symbol": "GO",
+        "status": "DECISI\u00d3N COMPUTACIONAL"
+      },
+      "outcomes": {
+        "n_adsorbed": 170,
+        "percent_adsorbed": 85.0,
+        "m_adsorbed_mg": 3.4,
+        "m_free_mg": 0.6000000000000001,
+        "qfinal_mg_g": 340.0,
+        "n_contacts": 342,
+        "mass_conservation_ok": true,
+        "result_classification": "computational_execution_not_experimental_validation"
+      },
+      "series_csv": "data\\sensitivity\\homogeneous_temporal_wiam_geometry\\go\\sens_grid_sigma_1.5_steps_1000_seed_5.csv",
+      "full_result_keys": [
+        "config",
+        "run",
+        "reference",
+        "summary",
+        "series",
+        "final_state"
+      ],
+      "geometry": {
+        "geometry_era": "wiam_geometry",
+        "mb_side_px": 1,
+        "adsorbent_side_px": 7,
+        "adsorbent_symbol": "GO",
+        "r_mb_px": 0.5,
+        "r_adsorbent_px": 3.5,
+        "contact_threshold_px": 4.0,
+        "adsorbent_movable": true
+      }
+    },
+    {
+      "role": "simulation_outcome",
+      "material": "GO",
+      "paths": {
+        "json": "data\\sensitivity\\homogeneous_temporal_wiam_geometry\\go\\sens_grid_sigma_1.5_steps_1500_seed_5.json",
+        "csv": "data\\sensitivity\\homogeneous_temporal_wiam_geometry\\go\\sens_grid_sigma_1.5_steps_1500_seed_5.csv"
+      },
+      "execution_parameters": {
+        "role": "injected_execution_parameter",
+        "seed": 5,
+        "sigma_px": {
+          "value": 1.5,
+          "status": "PENDIENTE"
+        },
+        "n_steps": {
+          "value": 1500,
+          "status": "PENDIENTE"
+        },
+        "p_ads": {
+          "value": null,
+          "effective": 1.0,
+          "implementation_status": "DECISI\u00d3N COMPUTACIONAL PROVISIONAL",
+          "status": "PENDIENTE"
+        }
+      },
+      "system_counts": {
+        "N_MB": 200,
+        "N_GO": 100,
+        "N_adsorbent": 100,
+        "adsorbent_symbol": "GO",
+        "status": "DECISI\u00d3N COMPUTACIONAL"
+      },
+      "outcomes": {
+        "n_adsorbed": 185,
+        "percent_adsorbed": 92.5,
+        "m_adsorbed_mg": 3.7,
+        "m_free_mg": 0.2999999999999998,
+        "qfinal_mg_g": 370.0,
+        "n_contacts": 425,
+        "mass_conservation_ok": true,
+        "result_classification": "computational_execution_not_experimental_validation"
+      },
+      "series_csv": "data\\sensitivity\\homogeneous_temporal_wiam_geometry\\go\\sens_grid_sigma_1.5_steps_1500_seed_5.csv",
+      "full_result_keys": [
+        "config",
+        "run",
+        "reference",
+        "summary",
+        "series",
+        "final_state"
+      ],
+      "geometry": {
+        "geometry_era": "wiam_geometry",
+        "mb_side_px": 1,
+        "adsorbent_side_px": 7,
+        "adsorbent_symbol": "GO",
+        "r_mb_px": 0.5,
+        "r_adsorbent_px": 3.5,
+        "contact_threshold_px": 4.0,
+        "adsorbent_movable": true
+      }
+    },
+    {
+      "role": "simulation_outcome",
+      "material": "GO",
+      "paths": {
+        "json": "data\\sensitivity\\homogeneous_temporal_wiam_geometry\\go\\sens_grid_sigma_1.5_steps_2000_seed_5.json",
+        "csv": "data\\sensitivity\\homogeneous_temporal_wiam_geometry\\go\\sens_grid_sigma_1.5_steps_2000_seed_5.csv"
+      },
+      "execution_parameters": {
+        "role": "injected_execution_parameter",
+        "seed": 5,
+        "sigma_px": {
+          "value": 1.5,
+          "status": "PENDIENTE"
+        },
+        "n_steps": {
+          "value": 2000,
+          "status": "PENDIENTE"
+        },
+        "p_ads": {
+          "value": null,
+          "effective": 1.0,
+          "implementation_status": "DECISI\u00d3N COMPUTACIONAL PROVISIONAL",
+          "status": "PENDIENTE"
+        }
+      },
+      "system_counts": {
+        "N_MB": 200,
+        "N_GO": 100,
+        "N_adsorbent": 100,
+        "adsorbent_symbol": "GO",
+        "status": "DECISI\u00d3N COMPUTACIONAL"
+      },
+      "outcomes": {
+        "n_adsorbed": 191,
+        "percent_adsorbed": 95.5,
+        "m_adsorbed_mg": 3.8200000000000003,
+        "m_free_mg": 0.17999999999999972,
+        "qfinal_mg_g": 382.0,
+        "n_contacts": 517,
+        "mass_conservation_ok": true,
+        "result_classification": "computational_execution_not_experimental_validation"
+      },
+      "series_csv": "data\\sensitivity\\homogeneous_temporal_wiam_geometry\\go\\sens_grid_sigma_1.5_steps_2000_seed_5.csv",
+      "full_result_keys": [
+        "config",
+        "run",
+        "reference",
+        "summary",
+        "series",
+        "final_state"
+      ],
+      "geometry": {
+        "geometry_era": "wiam_geometry",
+        "mb_side_px": 1,
+        "adsorbent_side_px": 7,
+        "adsorbent_symbol": "GO",
+        "r_mb_px": 0.5,
+        "r_adsorbent_px": 3.5,
+        "contact_threshold_px": 4.0,
+        "adsorbent_movable": true
+      }
+    }
+  ],
+  "analysis": {
+    "purpose": "Caracterizar sensibilidad del modelo computacional. No es validaci\u00f3n experimental ni selecci\u00f3n autom\u00e1tica de \u03c3 o P.",
+    "rows": [
+      {
+        "seed": 1,
+        "sigma_px": 1.0,
+        "n_steps": 200,
+        "n_adsorbed": 64,
+        "percent_adsorbed": 32.0,
+        "qfinal_mg_g": 128.0,
+        "n_contacts": 64,
+        "mass_conservation_ok": true
+      },
+      {
+        "seed": 1,
+        "sigma_px": 1.0,
+        "n_steps": 400,
+        "n_adsorbed": 93,
+        "percent_adsorbed": 46.5,
+        "qfinal_mg_g": 186.0,
+        "n_contacts": 101,
+        "mass_conservation_ok": true
+      },
+      {
+        "seed": 1,
+        "sigma_px": 1.0,
+        "n_steps": 600,
+        "n_adsorbed": 110,
+        "percent_adsorbed": 55.00000000000001,
+        "qfinal_mg_g": 220.0,
+        "n_contacts": 178,
+        "mass_conservation_ok": true
+      },
+      {
+        "seed": 1,
+        "sigma_px": 1.0,
+        "n_steps": 800,
+        "n_adsorbed": 126,
+        "percent_adsorbed": 63.0,
+        "qfinal_mg_g": 252.0,
+        "n_contacts": 249,
+        "mass_conservation_ok": true
+      },
+      {
+        "seed": 1,
+        "sigma_px": 1.0,
+        "n_steps": 1000,
+        "n_adsorbed": 133,
+        "percent_adsorbed": 66.5,
+        "qfinal_mg_g": 266.0,
+        "n_contacts": 342,
+        "mass_conservation_ok": true
+      },
+      {
+        "seed": 1,
+        "sigma_px": 1.0,
+        "n_steps": 1500,
+        "n_adsorbed": 149,
+        "percent_adsorbed": 74.5,
+        "qfinal_mg_g": 298.0,
+        "n_contacts": 438,
+        "mass_conservation_ok": true
+      },
+      {
+        "seed": 1,
+        "sigma_px": 1.0,
+        "n_steps": 2000,
+        "n_adsorbed": 158,
+        "percent_adsorbed": 79.0,
+        "qfinal_mg_g": 316.0,
+        "n_contacts": 563,
+        "mass_conservation_ok": true
+      },
+      {
+        "seed": 1,
+        "sigma_px": 1.5,
+        "n_steps": 200,
+        "n_adsorbed": 91,
+        "percent_adsorbed": 45.5,
+        "qfinal_mg_g": 182.0,
+        "n_contacts": 108,
+        "mass_conservation_ok": true
+      },
+      {
+        "seed": 1,
+        "sigma_px": 1.5,
+        "n_steps": 400,
+        "n_adsorbed": 127,
+        "percent_adsorbed": 63.5,
+        "qfinal_mg_g": 254.0,
+        "n_contacts": 225,
+        "mass_conservation_ok": true
+      },
+      {
+        "seed": 1,
+        "sigma_px": 1.5,
+        "n_steps": 600,
+        "n_adsorbed": 140,
+        "percent_adsorbed": 70.0,
+        "qfinal_mg_g": 280.0,
+        "n_contacts": 295,
+        "mass_conservation_ok": true
+      },
+      {
+        "seed": 1,
+        "sigma_px": 1.5,
+        "n_steps": 800,
+        "n_adsorbed": 154,
+        "percent_adsorbed": 77.0,
+        "qfinal_mg_g": 308.0,
+        "n_contacts": 359,
+        "mass_conservation_ok": true
+      },
+      {
+        "seed": 1,
+        "sigma_px": 1.5,
+        "n_steps": 1000,
+        "n_adsorbed": 162,
+        "percent_adsorbed": 81.0,
+        "qfinal_mg_g": 324.0,
+        "n_contacts": 452,
+        "mass_conservation_ok": true
+      },
+      {
+        "seed": 1,
+        "sigma_px": 1.5,
+        "n_steps": 1500,
+        "n_adsorbed": 178,
+        "percent_adsorbed": 89.0,
+        "qfinal_mg_g": 356.0,
+        "n_contacts": 569,
+        "mass_conservation_ok": true
+      },
+      {
+        "seed": 1,
+        "sigma_px": 1.5,
+        "n_steps": 2000,
+        "n_adsorbed": 185,
+        "percent_adsorbed": 92.5,
+        "qfinal_mg_g": 370.0,
+        "n_contacts": 614,
+        "mass_conservation_ok": true
+      },
+      {
+        "seed": 2,
+        "sigma_px": 1.0,
+        "n_steps": 200,
+        "n_adsorbed": 78,
+        "percent_adsorbed": 39.0,
+        "qfinal_mg_g": 156.0,
+        "n_contacts": 80,
+        "mass_conservation_ok": true
+      },
+      {
+        "seed": 2,
+        "sigma_px": 1.0,
+        "n_steps": 400,
+        "n_adsorbed": 110,
+        "percent_adsorbed": 55.00000000000001,
+        "qfinal_mg_g": 220.0,
+        "n_contacts": 222,
+        "mass_conservation_ok": true
+      },
+      {
+        "seed": 2,
+        "sigma_px": 1.0,
+        "n_steps": 600,
+        "n_adsorbed": 126,
+        "percent_adsorbed": 63.0,
+        "qfinal_mg_g": 252.0,
+        "n_contacts": 261,
+        "mass_conservation_ok": true
+      },
+      {
+        "seed": 2,
+        "sigma_px": 1.0,
+        "n_steps": 800,
+        "n_adsorbed": 135,
+        "percent_adsorbed": 67.5,
+        "qfinal_mg_g": 270.0,
+        "n_contacts": 298,
+        "mass_conservation_ok": true
+      },
+      {
+        "seed": 2,
+        "sigma_px": 1.0,
+        "n_steps": 1000,
+        "n_adsorbed": 144,
+        "percent_adsorbed": 72.0,
+        "qfinal_mg_g": 288.0,
+        "n_contacts": 341,
+        "mass_conservation_ok": true
+      },
+      {
+        "seed": 2,
+        "sigma_px": 1.0,
+        "n_steps": 1500,
+        "n_adsorbed": 160,
+        "percent_adsorbed": 80.0,
+        "qfinal_mg_g": 320.0,
+        "n_contacts": 560,
+        "mass_conservation_ok": true
+      },
+      {
+        "seed": 2,
+        "sigma_px": 1.0,
+        "n_steps": 2000,
+        "n_adsorbed": 166,
+        "percent_adsorbed": 83.0,
+        "qfinal_mg_g": 332.0,
+        "n_contacts": 761,
+        "mass_conservation_ok": true
+      },
+      {
+        "seed": 2,
+        "sigma_px": 1.5,
+        "n_steps": 200,
+        "n_adsorbed": 102,
+        "percent_adsorbed": 51.0,
+        "qfinal_mg_g": 204.0,
+        "n_contacts": 131,
+        "mass_conservation_ok": true
+      },
+      {
+        "seed": 2,
+        "sigma_px": 1.5,
+        "n_steps": 400,
+        "n_adsorbed": 124,
+        "percent_adsorbed": 62.0,
+        "qfinal_mg_g": 248.0,
+        "n_contacts": 210,
+        "mass_conservation_ok": true
+      },
+      {
+        "seed": 2,
+        "sigma_px": 1.5,
+        "n_steps": 600,
+        "n_adsorbed": 144,
+        "percent_adsorbed": 72.0,
+        "qfinal_mg_g": 288.0,
+        "n_contacts": 257,
+        "mass_conservation_ok": true
+      },
+      {
+        "seed": 2,
+        "sigma_px": 1.5,
+        "n_steps": 800,
+        "n_adsorbed": 157,
+        "percent_adsorbed": 78.5,
+        "qfinal_mg_g": 314.0,
+        "n_contacts": 349,
+        "mass_conservation_ok": true
+      },
+      {
+        "seed": 2,
+        "sigma_px": 1.5,
+        "n_steps": 1000,
+        "n_adsorbed": 167,
+        "percent_adsorbed": 83.5,
+        "qfinal_mg_g": 334.0,
+        "n_contacts": 404,
+        "mass_conservation_ok": true
+      },
+      {
+        "seed": 2,
+        "sigma_px": 1.5,
+        "n_steps": 1500,
+        "n_adsorbed": 179,
+        "percent_adsorbed": 89.5,
+        "qfinal_mg_g": 358.0,
+        "n_contacts": 512,
+        "mass_conservation_ok": true
+      },
+      {
+        "seed": 2,
+        "sigma_px": 1.5,
+        "n_steps": 2000,
+        "n_adsorbed": 186,
+        "percent_adsorbed": 93.0,
+        "qfinal_mg_g": 372.0,
+        "n_contacts": 619,
+        "mass_conservation_ok": true
+      },
+      {
+        "seed": 3,
+        "sigma_px": 1.0,
+        "n_steps": 200,
+        "n_adsorbed": 59,
+        "percent_adsorbed": 29.5,
+        "qfinal_mg_g": 117.99999999999999,
+        "n_contacts": 59,
+        "mass_conservation_ok": true
+      },
+      {
+        "seed": 3,
+        "sigma_px": 1.0,
+        "n_steps": 400,
+        "n_adsorbed": 94,
+        "percent_adsorbed": 47.0,
+        "qfinal_mg_g": 188.0,
+        "n_contacts": 112,
+        "mass_conservation_ok": true
+      },
+      {
+        "seed": 3,
+        "sigma_px": 1.0,
+        "n_steps": 600,
+        "n_adsorbed": 114,
+        "percent_adsorbed": 56.99999999999999,
+        "qfinal_mg_g": 228.00000000000003,
+        "n_contacts": 161,
+        "mass_conservation_ok": true
+      },
+      {
+        "seed": 3,
+        "sigma_px": 1.0,
+        "n_steps": 800,
+        "n_adsorbed": 128,
+        "percent_adsorbed": 64.0,
+        "qfinal_mg_g": 256.0,
+        "n_contacts": 187,
+        "mass_conservation_ok": true
+      },
+      {
+        "seed": 3,
+        "sigma_px": 1.0,
+        "n_steps": 1000,
+        "n_adsorbed": 141,
+        "percent_adsorbed": 70.5,
+        "qfinal_mg_g": 282.0,
+        "n_contacts": 270,
+        "mass_conservation_ok": true
+      },
+      {
+        "seed": 3,
+        "sigma_px": 1.0,
+        "n_steps": 1500,
+        "n_adsorbed": 157,
+        "percent_adsorbed": 78.5,
+        "qfinal_mg_g": 314.0,
+        "n_contacts": 321,
+        "mass_conservation_ok": true
+      },
+      {
+        "seed": 3,
+        "sigma_px": 1.0,
+        "n_steps": 2000,
+        "n_adsorbed": 167,
+        "percent_adsorbed": 83.5,
+        "qfinal_mg_g": 334.0,
+        "n_contacts": 361,
+        "mass_conservation_ok": true
+      },
+      {
+        "seed": 3,
+        "sigma_px": 1.5,
+        "n_steps": 200,
+        "n_adsorbed": 101,
+        "percent_adsorbed": 50.5,
+        "qfinal_mg_g": 202.0,
+        "n_contacts": 113,
+        "mass_conservation_ok": true
+      },
+      {
+        "seed": 3,
+        "sigma_px": 1.5,
+        "n_steps": 400,
+        "n_adsorbed": 128,
+        "percent_adsorbed": 64.0,
+        "qfinal_mg_g": 256.0,
+        "n_contacts": 192,
+        "mass_conservation_ok": true
+      },
+      {
+        "seed": 3,
+        "sigma_px": 1.5,
+        "n_steps": 600,
+        "n_adsorbed": 152,
+        "percent_adsorbed": 76.0,
+        "qfinal_mg_g": 304.0,
+        "n_contacts": 314,
+        "mass_conservation_ok": true
+      },
+      {
+        "seed": 3,
+        "sigma_px": 1.5,
+        "n_steps": 800,
+        "n_adsorbed": 159,
+        "percent_adsorbed": 79.5,
+        "qfinal_mg_g": 318.0,
+        "n_contacts": 354,
+        "mass_conservation_ok": true
+      },
+      {
+        "seed": 3,
+        "sigma_px": 1.5,
+        "n_steps": 1000,
+        "n_adsorbed": 166,
+        "percent_adsorbed": 83.0,
+        "qfinal_mg_g": 332.0,
+        "n_contacts": 384,
+        "mass_conservation_ok": true
+      },
+      {
+        "seed": 3,
+        "sigma_px": 1.5,
+        "n_steps": 1500,
+        "n_adsorbed": 176,
+        "percent_adsorbed": 88.0,
+        "qfinal_mg_g": 352.0,
+        "n_contacts": 475,
+        "mass_conservation_ok": true
+      },
+      {
+        "seed": 3,
+        "sigma_px": 1.5,
+        "n_steps": 2000,
+        "n_adsorbed": 182,
+        "percent_adsorbed": 91.0,
+        "qfinal_mg_g": 364.0,
+        "n_contacts": 564,
+        "mass_conservation_ok": true
+      },
+      {
+        "seed": 4,
+        "sigma_px": 1.0,
+        "n_steps": 200,
+        "n_adsorbed": 59,
+        "percent_adsorbed": 29.5,
+        "qfinal_mg_g": 117.99999999999999,
+        "n_contacts": 73,
+        "mass_conservation_ok": true
+      },
+      {
+        "seed": 4,
+        "sigma_px": 1.0,
+        "n_steps": 400,
+        "n_adsorbed": 80,
+        "percent_adsorbed": 40.0,
+        "qfinal_mg_g": 160.0,
+        "n_contacts": 128,
+        "mass_conservation_ok": true
+      },
+      {
+        "seed": 4,
+        "sigma_px": 1.0,
+        "n_steps": 600,
+        "n_adsorbed": 104,
+        "percent_adsorbed": 52.0,
+        "qfinal_mg_g": 208.0,
+        "n_contacts": 191,
+        "mass_conservation_ok": true
+      },
+      {
+        "seed": 4,
+        "sigma_px": 1.0,
+        "n_steps": 800,
+        "n_adsorbed": 118,
+        "percent_adsorbed": 59.0,
+        "qfinal_mg_g": 235.99999999999997,
+        "n_contacts": 270,
+        "mass_conservation_ok": true
+      },
+      {
+        "seed": 4,
+        "sigma_px": 1.0,
+        "n_steps": 1000,
+        "n_adsorbed": 129,
+        "percent_adsorbed": 64.5,
+        "qfinal_mg_g": 258.0,
+        "n_contacts": 330,
+        "mass_conservation_ok": true
+      },
+      {
+        "seed": 4,
+        "sigma_px": 1.0,
+        "n_steps": 1500,
+        "n_adsorbed": 150,
+        "percent_adsorbed": 75.0,
+        "qfinal_mg_g": 300.0,
+        "n_contacts": 479,
+        "mass_conservation_ok": true
+      },
+      {
+        "seed": 4,
+        "sigma_px": 1.0,
+        "n_steps": 2000,
+        "n_adsorbed": 163,
+        "percent_adsorbed": 81.5,
+        "qfinal_mg_g": 326.0,
+        "n_contacts": 572,
+        "mass_conservation_ok": true
+      },
+      {
+        "seed": 4,
+        "sigma_px": 1.5,
+        "n_steps": 200,
+        "n_adsorbed": 98,
+        "percent_adsorbed": 49.0,
+        "qfinal_mg_g": 196.0,
+        "n_contacts": 109,
+        "mass_conservation_ok": true
+      },
+      {
+        "seed": 4,
+        "sigma_px": 1.5,
+        "n_steps": 400,
+        "n_adsorbed": 137,
+        "percent_adsorbed": 68.5,
+        "qfinal_mg_g": 274.0,
+        "n_contacts": 154,
+        "mass_conservation_ok": true
+      },
+      {
+        "seed": 4,
+        "sigma_px": 1.5,
+        "n_steps": 600,
+        "n_adsorbed": 152,
+        "percent_adsorbed": 76.0,
+        "qfinal_mg_g": 304.0,
+        "n_contacts": 204,
+        "mass_conservation_ok": true
+      },
+      {
+        "seed": 4,
+        "sigma_px": 1.5,
+        "n_steps": 800,
+        "n_adsorbed": 165,
+        "percent_adsorbed": 82.5,
+        "qfinal_mg_g": 330.0,
+        "n_contacts": 257,
+        "mass_conservation_ok": true
+      },
+      {
+        "seed": 4,
+        "sigma_px": 1.5,
+        "n_steps": 1000,
+        "n_adsorbed": 171,
+        "percent_adsorbed": 85.5,
+        "qfinal_mg_g": 342.0,
+        "n_contacts": 376,
+        "mass_conservation_ok": true
+      },
+      {
+        "seed": 4,
+        "sigma_px": 1.5,
+        "n_steps": 1500,
+        "n_adsorbed": 180,
+        "percent_adsorbed": 90.0,
+        "qfinal_mg_g": 360.0,
+        "n_contacts": 512,
+        "mass_conservation_ok": true
+      },
+      {
+        "seed": 4,
+        "sigma_px": 1.5,
+        "n_steps": 2000,
+        "n_adsorbed": 187,
+        "percent_adsorbed": 93.5,
+        "qfinal_mg_g": 374.0,
+        "n_contacts": 623,
+        "mass_conservation_ok": true
+      },
+      {
+        "seed": 5,
+        "sigma_px": 1.0,
+        "n_steps": 200,
+        "n_adsorbed": 80,
+        "percent_adsorbed": 40.0,
+        "qfinal_mg_g": 160.0,
+        "n_contacts": 80,
+        "mass_conservation_ok": true
+      },
+      {
+        "seed": 5,
+        "sigma_px": 1.0,
+        "n_steps": 400,
+        "n_adsorbed": 110,
+        "percent_adsorbed": 55.00000000000001,
+        "qfinal_mg_g": 220.0,
+        "n_contacts": 155,
+        "mass_conservation_ok": true
+      },
+      {
+        "seed": 5,
+        "sigma_px": 1.0,
+        "n_steps": 600,
+        "n_adsorbed": 124,
+        "percent_adsorbed": 62.0,
+        "qfinal_mg_g": 248.0,
+        "n_contacts": 249,
+        "mass_conservation_ok": true
+      },
+      {
+        "seed": 5,
+        "sigma_px": 1.0,
+        "n_steps": 800,
+        "n_adsorbed": 140,
+        "percent_adsorbed": 70.0,
+        "qfinal_mg_g": 280.0,
+        "n_contacts": 342,
+        "mass_conservation_ok": true
+      },
+      {
+        "seed": 5,
+        "sigma_px": 1.0,
+        "n_steps": 1000,
+        "n_adsorbed": 155,
+        "percent_adsorbed": 77.5,
+        "qfinal_mg_g": 310.0,
+        "n_contacts": 395,
+        "mass_conservation_ok": true
+      },
+      {
+        "seed": 5,
+        "sigma_px": 1.0,
+        "n_steps": 1500,
+        "n_adsorbed": 171,
+        "percent_adsorbed": 85.5,
+        "qfinal_mg_g": 342.0,
+        "n_contacts": 585,
+        "mass_conservation_ok": true
+      },
+      {
+        "seed": 5,
+        "sigma_px": 1.0,
+        "n_steps": 2000,
+        "n_adsorbed": 175,
+        "percent_adsorbed": 87.5,
+        "qfinal_mg_g": 350.0,
+        "n_contacts": 724,
+        "mass_conservation_ok": true
+      },
+      {
+        "seed": 5,
+        "sigma_px": 1.5,
+        "n_steps": 200,
+        "n_adsorbed": 103,
+        "percent_adsorbed": 51.5,
+        "qfinal_mg_g": 206.0,
+        "n_contacts": 104,
+        "mass_conservation_ok": true
+      },
+      {
+        "seed": 5,
+        "sigma_px": 1.5,
+        "n_steps": 400,
+        "n_adsorbed": 134,
+        "percent_adsorbed": 67.0,
+        "qfinal_mg_g": 268.0,
+        "n_contacts": 200,
+        "mass_conservation_ok": true
+      },
+      {
+        "seed": 5,
+        "sigma_px": 1.5,
+        "n_steps": 600,
+        "n_adsorbed": 154,
+        "percent_adsorbed": 77.0,
+        "qfinal_mg_g": 308.0,
+        "n_contacts": 272,
+        "mass_conservation_ok": true
+      },
+      {
+        "seed": 5,
+        "sigma_px": 1.5,
+        "n_steps": 800,
+        "n_adsorbed": 163,
+        "percent_adsorbed": 81.5,
+        "qfinal_mg_g": 326.0,
+        "n_contacts": 303,
+        "mass_conservation_ok": true
+      },
+      {
+        "seed": 5,
+        "sigma_px": 1.5,
+        "n_steps": 1000,
+        "n_adsorbed": 170,
+        "percent_adsorbed": 85.0,
+        "qfinal_mg_g": 340.0,
+        "n_contacts": 342,
+        "mass_conservation_ok": true
+      },
+      {
+        "seed": 5,
+        "sigma_px": 1.5,
+        "n_steps": 1500,
+        "n_adsorbed": 185,
+        "percent_adsorbed": 92.5,
+        "qfinal_mg_g": 370.0,
+        "n_contacts": 425,
+        "mass_conservation_ok": true
+      },
+      {
+        "seed": 5,
+        "sigma_px": 1.5,
+        "n_steps": 2000,
+        "n_adsorbed": 191,
+        "percent_adsorbed": 95.5,
+        "qfinal_mg_g": 382.0,
+        "n_contacts": 517,
+        "mass_conservation_ok": true
+      }
+    ],
+    "by_configuration": [
+      {
+        "sigma_px": 1.0,
+        "n_steps": 200,
+        "n_seeds": 5,
+        "n_adsorbed_mean": 68.0,
+        "n_adsorbed_min": 59,
+        "n_adsorbed_max": 80,
+        "percent_adsorbed_mean": 34.0,
+        "qfinal_mg_g_mean": 136.0,
+        "n_contacts_mean": 71.2,
+        "all_mass_conserved": true
+      },
+      {
+        "sigma_px": 1.0,
+        "n_steps": 400,
+        "n_seeds": 5,
+        "n_adsorbed_mean": 97.4,
+        "n_adsorbed_min": 80,
+        "n_adsorbed_max": 110,
+        "percent_adsorbed_mean": 48.7,
+        "qfinal_mg_g_mean": 194.8,
+        "n_contacts_mean": 143.6,
+        "all_mass_conserved": true
+      },
+      {
+        "sigma_px": 1.0,
+        "n_steps": 600,
+        "n_seeds": 5,
+        "n_adsorbed_mean": 115.6,
+        "n_adsorbed_min": 104,
+        "n_adsorbed_max": 126,
+        "percent_adsorbed_mean": 57.8,
+        "qfinal_mg_g_mean": 231.2,
+        "n_contacts_mean": 208.0,
+        "all_mass_conserved": true
+      },
+      {
+        "sigma_px": 1.0,
+        "n_steps": 800,
+        "n_seeds": 5,
+        "n_adsorbed_mean": 129.4,
+        "n_adsorbed_min": 118,
+        "n_adsorbed_max": 140,
+        "percent_adsorbed_mean": 64.7,
+        "qfinal_mg_g_mean": 258.8,
+        "n_contacts_mean": 269.2,
+        "all_mass_conserved": true
+      },
+      {
+        "sigma_px": 1.0,
+        "n_steps": 1000,
+        "n_seeds": 5,
+        "n_adsorbed_mean": 140.4,
+        "n_adsorbed_min": 129,
+        "n_adsorbed_max": 155,
+        "percent_adsorbed_mean": 70.2,
+        "qfinal_mg_g_mean": 280.8,
+        "n_contacts_mean": 335.6,
+        "all_mass_conserved": true
+      },
+      {
+        "sigma_px": 1.0,
+        "n_steps": 1500,
+        "n_seeds": 5,
+        "n_adsorbed_mean": 157.4,
+        "n_adsorbed_min": 149,
+        "n_adsorbed_max": 171,
+        "percent_adsorbed_mean": 78.7,
+        "qfinal_mg_g_mean": 314.8,
+        "n_contacts_mean": 476.6,
+        "all_mass_conserved": true
+      },
+      {
+        "sigma_px": 1.0,
+        "n_steps": 2000,
+        "n_seeds": 5,
+        "n_adsorbed_mean": 165.8,
+        "n_adsorbed_min": 158,
+        "n_adsorbed_max": 175,
+        "percent_adsorbed_mean": 82.9,
+        "qfinal_mg_g_mean": 331.6,
+        "n_contacts_mean": 596.2,
+        "all_mass_conserved": true
+      },
+      {
+        "sigma_px": 1.5,
+        "n_steps": 200,
+        "n_seeds": 5,
+        "n_adsorbed_mean": 99.0,
+        "n_adsorbed_min": 91,
+        "n_adsorbed_max": 103,
+        "percent_adsorbed_mean": 49.5,
+        "qfinal_mg_g_mean": 198.0,
+        "n_contacts_mean": 113.0,
+        "all_mass_conserved": true
+      },
+      {
+        "sigma_px": 1.5,
+        "n_steps": 400,
+        "n_seeds": 5,
+        "n_adsorbed_mean": 130.0,
+        "n_adsorbed_min": 124,
+        "n_adsorbed_max": 137,
+        "percent_adsorbed_mean": 65.0,
+        "qfinal_mg_g_mean": 260.0,
+        "n_contacts_mean": 196.2,
+        "all_mass_conserved": true
+      },
+      {
+        "sigma_px": 1.5,
+        "n_steps": 600,
+        "n_seeds": 5,
+        "n_adsorbed_mean": 148.4,
+        "n_adsorbed_min": 140,
+        "n_adsorbed_max": 154,
+        "percent_adsorbed_mean": 74.2,
+        "qfinal_mg_g_mean": 296.8,
+        "n_contacts_mean": 268.4,
+        "all_mass_conserved": true
+      },
+      {
+        "sigma_px": 1.5,
+        "n_steps": 800,
+        "n_seeds": 5,
+        "n_adsorbed_mean": 159.6,
+        "n_adsorbed_min": 154,
+        "n_adsorbed_max": 165,
+        "percent_adsorbed_mean": 79.8,
+        "qfinal_mg_g_mean": 319.2,
+        "n_contacts_mean": 324.4,
+        "all_mass_conserved": true
+      },
+      {
+        "sigma_px": 1.5,
+        "n_steps": 1000,
+        "n_seeds": 5,
+        "n_adsorbed_mean": 167.2,
+        "n_adsorbed_min": 162,
+        "n_adsorbed_max": 171,
+        "percent_adsorbed_mean": 83.6,
+        "qfinal_mg_g_mean": 334.4,
+        "n_contacts_mean": 391.6,
+        "all_mass_conserved": true
+      },
+      {
+        "sigma_px": 1.5,
+        "n_steps": 1500,
+        "n_seeds": 5,
+        "n_adsorbed_mean": 179.6,
+        "n_adsorbed_min": 176,
+        "n_adsorbed_max": 185,
+        "percent_adsorbed_mean": 89.8,
+        "qfinal_mg_g_mean": 359.2,
+        "n_contacts_mean": 498.6,
+        "all_mass_conserved": true
+      },
+      {
+        "sigma_px": 1.5,
+        "n_steps": 2000,
+        "n_seeds": 5,
+        "n_adsorbed_mean": 186.2,
+        "n_adsorbed_min": 182,
+        "n_adsorbed_max": 191,
+        "percent_adsorbed_mean": 93.1,
+        "qfinal_mg_g_mean": 372.4,
+        "n_contacts_mean": 587.4,
+        "all_mass_conserved": true
+      }
+    ],
+    "seed_variability": [
+      {
+        "sigma_px": 1.0,
+        "n_steps": 200,
+        "seeds": [
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "n_adsorbed_values": [
+          64,
+          78,
+          59,
+          59,
+          80
+        ],
+        "n_adsorbed_spread": 21
+      },
+      {
+        "sigma_px": 1.0,
+        "n_steps": 400,
+        "seeds": [
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "n_adsorbed_values": [
+          93,
+          110,
+          94,
+          80,
+          110
+        ],
+        "n_adsorbed_spread": 30
+      },
+      {
+        "sigma_px": 1.0,
+        "n_steps": 600,
+        "seeds": [
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "n_adsorbed_values": [
+          110,
+          126,
+          114,
+          104,
+          124
+        ],
+        "n_adsorbed_spread": 22
+      },
+      {
+        "sigma_px": 1.0,
+        "n_steps": 800,
+        "seeds": [
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "n_adsorbed_values": [
+          126,
+          135,
+          128,
+          118,
+          140
+        ],
+        "n_adsorbed_spread": 22
+      },
+      {
+        "sigma_px": 1.0,
+        "n_steps": 1000,
+        "seeds": [
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "n_adsorbed_values": [
+          133,
+          144,
+          141,
+          129,
+          155
+        ],
+        "n_adsorbed_spread": 26
+      },
+      {
+        "sigma_px": 1.0,
+        "n_steps": 1500,
+        "seeds": [
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "n_adsorbed_values": [
+          149,
+          160,
+          157,
+          150,
+          171
+        ],
+        "n_adsorbed_spread": 22
+      },
+      {
+        "sigma_px": 1.0,
+        "n_steps": 2000,
+        "seeds": [
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "n_adsorbed_values": [
+          158,
+          166,
+          167,
+          163,
+          175
+        ],
+        "n_adsorbed_spread": 17
+      },
+      {
+        "sigma_px": 1.5,
+        "n_steps": 200,
+        "seeds": [
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "n_adsorbed_values": [
+          91,
+          102,
+          101,
+          98,
+          103
+        ],
+        "n_adsorbed_spread": 12
+      },
+      {
+        "sigma_px": 1.5,
+        "n_steps": 400,
+        "seeds": [
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "n_adsorbed_values": [
+          127,
+          124,
+          128,
+          137,
+          134
+        ],
+        "n_adsorbed_spread": 13
+      },
+      {
+        "sigma_px": 1.5,
+        "n_steps": 600,
+        "seeds": [
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "n_adsorbed_values": [
+          140,
+          144,
+          152,
+          152,
+          154
+        ],
+        "n_adsorbed_spread": 14
+      },
+      {
+        "sigma_px": 1.5,
+        "n_steps": 800,
+        "seeds": [
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "n_adsorbed_values": [
+          154,
+          157,
+          159,
+          165,
+          163
+        ],
+        "n_adsorbed_spread": 11
+      },
+      {
+        "sigma_px": 1.5,
+        "n_steps": 1000,
+        "seeds": [
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "n_adsorbed_values": [
+          162,
+          167,
+          166,
+          171,
+          170
+        ],
+        "n_adsorbed_spread": 9
+      },
+      {
+        "sigma_px": 1.5,
+        "n_steps": 1500,
+        "seeds": [
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "n_adsorbed_values": [
+          178,
+          179,
+          176,
+          180,
+          185
+        ],
+        "n_adsorbed_spread": 9
+      },
+      {
+        "sigma_px": 1.5,
+        "n_steps": 2000,
+        "seeds": [
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "n_adsorbed_values": [
+          185,
+          186,
+          182,
+          187,
+          191
+        ],
+        "n_adsorbed_spread": 9
+      }
+    ]
+  }
+}

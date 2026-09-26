@@ -19,6 +19,7 @@ class SimulationState:
     go_capacity_mg: np.ndarray
     step: int = 0
     n_contacts: int = 0
+    n_adsorption_events: int = 0
     rng_state: dict[str, object] = field(default_factory=dict)
 
     @property

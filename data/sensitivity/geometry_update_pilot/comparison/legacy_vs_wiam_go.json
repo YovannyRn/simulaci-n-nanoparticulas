@@ -1,0 +1,131 @@
+[
+  {
+    "material": "GO",
+    "seed": 1,
+    "sigma_px": 1.0,
+    "n_steps": 200,
+    "new_geometry": {
+      "geometry_era": "wiam_aligned",
+      "seed": 1,
+      "sigma_px": 1.0,
+      "n_steps": 200,
+      "n_adsorbed": 64,
+      "percent_adsorbed": 32.0,
+      "qfinal_mg_g": 128.0,
+      "n_contacts": 64,
+      "m_adsorbed_mg": 1.28,
+      "m_free_mg": 2.7199999999999998,
+      "mass_conservation_ok": true,
+      "paths": {
+        "json": "data\\sensitivity\\geometry_update_pilot\\go\\sens_grid_sigma_1_steps_200_seed_1.json",
+        "csv": "data\\sensitivity\\geometry_update_pilot\\go\\sens_grid_sigma_1_steps_200_seed_1.csv"
+      }
+    },
+    "legacy_geometry": {
+      "source": "data\\sensitivity\\homogeneous_temporal\\go\\sens_grid_sigma_1_steps_200_seed_1.json",
+      "geometry_era": "legacy_homogeneous_mb5_ads7",
+      "seed": 1,
+      "sigma_px": 1.0,
+      "n_steps": 200,
+      "mb_size_px": 5,
+      "adsorbent_size_px": 7,
+      "n_adsorbed": 77,
+      "percent_adsorbed": 38.5,
+      "qfinal_mg_g": 154.0,
+      "n_contacts": 79,
+      "m_adsorbed_mg": 1.54,
+      "m_free_mg": 2.46,
+      "mass_conservation_ok": true
+    },
+    "delta_n_adsorbed": -13,
+    "delta_percent": -6.5,
+    "delta_qt_mg_g": -26.0,
+    "delta_contacts": -15
+  },
+  {
+    "material": "GO",
+    "seed": 2,
+    "sigma_px": 1.0,
+    "n_steps": 200,
+    "new_geometry": {
+      "geometry_era": "wiam_aligned",
+      "seed": 2,
+      "sigma_px": 1.0,
+      "n_steps": 200,
+      "n_adsorbed": 78,
+      "percent_adsorbed": 39.0,
+      "qfinal_mg_g": 156.0,
+      "n_contacts": 80,
+      "m_adsorbed_mg": 1.56,
+      "m_free_mg": 2.44,
+      "mass_conservation_ok": true,
+      "paths": {
+        "json": "data\\sensitivity\\geometry_update_pilot\\go\\sens_grid_sigma_1_steps_200_seed_2.json",
+        "csv": "data\\sensitivity\\geometry_update_pilot\\go\\sens_grid_sigma_1_steps_200_seed_2.csv"
+      }
+    },
+    "legacy_geometry": {
+      "source": "data\\sensitivity\\homogeneous_temporal\\go\\sens_grid_sigma_1_steps_200_seed_2.json",
+      "geometry_era": "legacy_homogeneous_mb5_ads7",
+      "seed": 2,
+      "sigma_px": 1.0,
+      "n_steps": 200,
+      "mb_size_px": 5,
+      "adsorbent_size_px": 7,
+      "n_adsorbed": 97,
+      "percent_adsorbed": 48.5,
+      "qfinal_mg_g": 194.0,
+      "n_contacts": 97,
+      "m_adsorbed_mg": 1.94,
+      "m_free_mg": 2.06,
+      "mass_conservation_ok": true
+    },
+    "delta_n_adsorbed": -19,
+    "delta_percent": -9.5,
+    "delta_qt_mg_g": -38.0,
+    "delta_contacts": -17
+  },
+  {
+    "material": "GO",
+    "seed": 3,
+    "sigma_px": 1.0,
+    "n_steps": 200,
+    "new_geometry": {
+      "geometry_era": "wiam_aligned",
+      "seed": 3,
+      "sigma_px": 1.0,
+      "n_steps": 200,
+      "n_adsorbed": 59,
+      "percent_adsorbed": 29.5,
+      "qfinal_mg_g": 117.99999999999999,
+      "n_contacts": 59,
+      "m_adsorbed_mg": 1.18,
+      "m_free_mg": 2.8200000000000003,
+      "mass_conservation_ok": true,
+      "paths": {
+        "json": "data\\sensitivity\\geometry_update_pilot\\go\\sens_grid_sigma_1_steps_200_seed_3.json",
+        "csv": "data\\sensitivity\\geometry_update_pilot\\go\\sens_grid_sigma_1_steps_200_seed_3.csv"
+      }
+    },
+    "legacy_geometry": {
+      "source": "data\\sensitivity\\homogeneous_temporal\\go\\sens_grid_sigma_1_steps_200_seed_3.json",
+      "geometry_era": "legacy_homogeneous_mb5_ads7",
+      "seed": 3,
+      "sigma_px": 1.0,
+      "n_steps": 200,
+      "mb_size_px": 5,
+      "adsorbent_size_px": 7,
+      "n_adsorbed": 76,
+      "percent_adsorbed": 38.0,
+      "qfinal_mg_g": 152.0,
+      "n_contacts": 76,
+      "m_adsorbed_mg": 1.52,
+      "m_free_mg": 2.48,
+      "mass_conservation_ok": true
+    },
+    "delta_n_adsorbed": -17,
+    "delta_percent": -8.5,
+    "delta_qt_mg_g": -34.000000000000014,
+    "delta_contacts": -17
+  }
+]

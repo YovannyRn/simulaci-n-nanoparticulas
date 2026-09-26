@@ -1,0 +1,4880 @@
+{
+  "provenance": {
+    "study_classification": "computational_sensitivity_not_experimental_validation",
+    "not_experimental_validation": true,
+    "no_langmuir_optimization": true,
+    "steps_are_not_minutes": true,
+    "pending_parameters": {
+      "D_sigma": "PENDIENTE",
+      "P_steps": "PENDIENTE",
+      "P_ads_physical": "PENDIENTE",
+      "k2_unified": "PENDIENTE",
+      "Nrep": "PENDIENTE",
+      "CA": "PENDIENTE",
+      "alpha_min_per_step": "PENDIENTE"
+    },
+    "computational_decisions": {
+      "p_ads_default": "DECISI\u00d3N COMPUTACIONAL PROVISIONAL (equivalente P_ads=1 tras contacto+capacidad)",
+      "contact_radii_px": "c\u00edrculos inscritos 2.5 y 3.5",
+      "bounce": "reflexi\u00f3n por eje + recorte"
+    },
+    "bibliographic_reference_only": "Langmuir y PSO aparecen en reference/ de cada corrida como referencia macrosc\u00f3pica; no se usan como objetivo de barrido ni condici\u00f3n de parada.",
+    "k2_note": "k2 ejemplo 0.0002 y k2 tabla 0.001 siguen PENDIENTES de unificaci\u00f3n. Curvas PSO en reference usan k2_example con etiqueta expl\u00edcita.",
+    "material": "AC",
+    "stage_label": "Caracterizaci\u00f3n AC + visualizaci\u00f3n inicial",
+    "homogeneous_temporal_classification": "homogeneous_temporal_characterization_not_experimental_validation",
+    "symmetric_design": {
+      "sigma_px": [
+        1.0,
+        1.5
+      ],
+      "n_steps": [
+        200,
+        400,
+        600,
+        800,
+        1000,
+        1500,
+        2000
+      ],
+      "seeds": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "materials": [
+        "GO",
+        "AC"
+      ],
+      "runs_per_material": 70
+    },
+    "wiam_documentation_pending": {
+      "go_visual_px": "7\u00d77 (Wiam)",
+      "ac_visual_px": "2\u00d72 aprox. (Wiam)",
+      "mb_visual_px": "1\u00d71 (Wiam); motor usa 5\u00d75 hasta confirmaci\u00f3n",
+      "px_scale_um": "77,4 \u00b5m/px; 5990,76 \u00b5m\u00b2/px\u00b2",
+      "go_dose_wiam_g_l": "0,25 g/L (documentado; no confundir con Co MB)"
+    },
+    "geometry_in_this_campaign": "Tama\u00f1os px del motor sin cambiar en esta etapa (MB 5\u00d75, adsorbente 7\u00d77). Wiam comunic\u00f3 GO 7\u00d77, AC 2\u00d72, MB 1\u00d71 \u2014 pendiente confirmaci\u00f3n antes de cambiar geometr\u00eda.",
+    "concentration_note": "Co operativo del motor: 4 mg / 0,04 L = 100 mg/L. Wiam: dosis GO 0,25 g/L; unidad/frase \u00ab100 mg/g\u00bb para MB pendiente de confirmar. No se alter\u00f3 Co en esta campa\u00f1a.",
+    "homogeneous_temporal": true
+  },
+  "study": {
+    "kind": "homogeneous_temporal_grid",
+    "classification": "computational_sensitivity_not_experimental_validation",
+    "material": "AC",
+    "fixed_parameters": {
+      "p_ads": null,
+      "seeds": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ]
+    },
+    "swept_parameters": {
+      "sigma_px": [
+        1.0,
+        1.5
+      ],
+      "n_steps": [
+        200,
+        400,
+        600,
+        800,
+        1000,
+        1500,
+        2000
+      ]
+    },
+    "n_runs": 70
+  },
+  "runs": [
+    {
+      "role": "simulation_outcome",
+      "material": "AC",
+      "paths": {
+        "json": "data\\sensitivity\\homogeneous_temporal\\ac\\ac_sens_grid_sigma_1_steps_200_seed_1.json",
+        "csv": "data\\sensitivity\\homogeneous_temporal\\ac\\ac_sens_grid_sigma_1_steps_200_seed_1.csv"
+      },
+      "execution_parameters": {
+        "role": "injected_execution_parameter",
+        "seed": 1,
+        "sigma_px": {
+          "value": 1.0,
+          "status": "PENDIENTE"
+        },
+        "n_steps": {
+          "value": 200,
+          "status": "PENDIENTE"
+        },
+        "p_ads": {
+          "value": null,
+          "effective": 1.0,
+          "implementation_status": "DECISI\u00d3N COMPUTACIONAL PROVISIONAL",
+          "status": "PENDIENTE"
+        }
+      },
+      "system_counts": {
+        "N_MB": 200,
+        "N_GO": 100,
+        "N_adsorbent": 100,
+        "adsorbent_symbol": "AC",
+        "status": "DECISI\u00d3N COMPUTACIONAL"
+      },
+      "outcomes": {
+        "n_adsorbed": 56,
+        "percent_adsorbed": 28.000000000000004,
+        "m_adsorbed_mg": 1.12,
+        "m_free_mg": 2.88,
+        "qfinal_mg_g": 112.00000000000001,
+        "n_contacts": 64,
+        "mass_conservation_ok": true,
+        "result_classification": "computational_execution_not_experimental_validation"
+      },
+      "series_csv": "data\\sensitivity\\homogeneous_temporal\\ac\\ac_sens_grid_sigma_1_steps_200_seed_1.csv",
+      "full_result_keys": [
+        "config",
+        "run",
+        "reference",
+        "summary",
+        "series",
+        "final_state"
+      ]
+    },
+    {
+      "role": "simulation_outcome",
+      "material": "AC",
+      "paths": {
+        "json": "data\\sensitivity\\homogeneous_temporal\\ac\\ac_sens_grid_sigma_1_steps_400_seed_1.json",
+        "csv": "data\\sensitivity\\homogeneous_temporal\\ac\\ac_sens_grid_sigma_1_steps_400_seed_1.csv"
+      },
+      "execution_parameters": {
+        "role": "injected_execution_parameter",
+        "seed": 1,
+        "sigma_px": {
+          "value": 1.0,
+          "status": "PENDIENTE"
+        },
+        "n_steps": {
+          "value": 400,
+          "status": "PENDIENTE"
+        },
+        "p_ads": {
+          "value": null,
+          "effective": 1.0,
+          "implementation_status": "DECISI\u00d3N COMPUTACIONAL PROVISIONAL",
+          "status": "PENDIENTE"
+        }
+      },
+      "system_counts": {
+        "N_MB": 200,
+        "N_GO": 100,
+        "N_adsorbent": 100,
+        "adsorbent_symbol": "AC",
+        "status": "DECISI\u00d3N COMPUTACIONAL"
+      },
+      "outcomes": {
+        "n_adsorbed": 71,
+        "percent_adsorbed": 35.5,
+        "m_adsorbed_mg": 1.42,
+        "m_free_mg": 2.58,
+        "qfinal_mg_g": 142.0,
+        "n_contacts": 293,
+        "mass_conservation_ok": true,
+        "result_classification": "computational_execution_not_experimental_validation"
+      },
+      "series_csv": "data\\sensitivity\\homogeneous_temporal\\ac\\ac_sens_grid_sigma_1_steps_400_seed_1.csv",
+      "full_result_keys": [
+        "config",
+        "run",
+        "reference",
+        "summary",
+        "series",
+        "final_state"
+      ]
+    },
+    {
+      "role": "simulation_outcome",
+      "material": "AC",
+      "paths": {
+        "json": "data\\sensitivity\\homogeneous_temporal\\ac\\ac_sens_grid_sigma_1_steps_600_seed_1.json",
+        "csv": "data\\sensitivity\\homogeneous_temporal\\ac\\ac_sens_grid_sigma_1_steps_600_seed_1.csv"
+      },
+      "execution_parameters": {
+        "role": "injected_execution_parameter",
+        "seed": 1,
+        "sigma_px": {
+          "value": 1.0,
+          "status": "PENDIENTE"
+        },
+        "n_steps": {
+          "value": 600,
+          "status": "PENDIENTE"
+        },
+        "p_ads": {
+          "value": null,
+          "effective": 1.0,
+          "implementation_status": "DECISI\u00d3N COMPUTACIONAL PROVISIONAL",
+          "status": "PENDIENTE"
+        }
+      },
+      "system_counts": {
+        "N_MB": 200,
+        "N_GO": 100,
+        "N_adsorbent": 100,
+        "adsorbent_symbol": "AC",
+        "status": "DECISI\u00d3N COMPUTACIONAL"
+      },
+      "outcomes": {
+        "n_adsorbed": 86,
+        "percent_adsorbed": 43.0,
+        "m_adsorbed_mg": 1.72,
+        "m_free_mg": 2.2800000000000002,
+        "qfinal_mg_g": 172.0,
+        "n_contacts": 478,
+        "mass_conservation_ok": true,
+        "result_classification": "computational_execution_not_experimental_validation"
+      },
+      "series_csv": "data\\sensitivity\\homogeneous_temporal\\ac\\ac_sens_grid_sigma_1_steps_600_seed_1.csv",
+      "full_result_keys": [
+        "config",
+        "run",
+        "reference",
+        "summary",
+        "series",
+        "final_state"
+      ]
+    },
+    {
+      "role": "simulation_outcome",
+      "material": "AC",
+      "paths": {
+        "json": "data\\sensitivity\\homogeneous_temporal\\ac\\ac_sens_grid_sigma_1_steps_800_seed_1.json",
+        "csv": "data\\sensitivity\\homogeneous_temporal\\ac\\ac_sens_grid_sigma_1_steps_800_seed_1.csv"
+      },
+      "execution_parameters": {
+        "role": "injected_execution_parameter",
+        "seed": 1,
+        "sigma_px": {
+          "value": 1.0,
+          "status": "PENDIENTE"
+        },
+        "n_steps": {
+          "value": 800,
+          "status": "PENDIENTE"
+        },
+        "p_ads": {
+          "value": null,
+          "effective": 1.0,
+          "implementation_status": "DECISI\u00d3N COMPUTACIONAL PROVISIONAL",
+          "status": "PENDIENTE"
+        }
+      },
+      "system_counts": {
+        "N_MB": 200,
+        "N_GO": 100,
+        "N_adsorbent": 100,
+        "adsorbent_symbol": "AC",
+        "status": "DECISI\u00d3N COMPUTACIONAL"
+      },
+      "outcomes": {
+        "n_adsorbed": 96,
+        "percent_adsorbed": 48.0,
+        "m_adsorbed_mg": 1.92,
+        "m_free_mg": 2.08,
+        "qfinal_mg_g": 192.0,
+        "n_contacts": 853,
+        "mass_conservation_ok": true,
+        "result_classification": "computational_execution_not_experimental_validation"
+      },
+      "series_csv": "data\\sensitivity\\homogeneous_temporal\\ac\\ac_sens_grid_sigma_1_steps_800_seed_1.csv",
+      "full_result_keys": [
+        "config",
+        "run",
+        "reference",
+        "summary",
+        "series",
+        "final_state"
+      ]
+    },
+    {
+      "role": "simulation_outcome",
+      "material": "AC",
+      "paths": {
+        "json": "data\\sensitivity\\homogeneous_temporal\\ac\\ac_sens_grid_sigma_1_steps_1000_seed_1.json",
+        "csv": "data\\sensitivity\\homogeneous_temporal\\ac\\ac_sens_grid_sigma_1_steps_1000_seed_1.csv"
+      },
+      "execution_parameters": {
+        "role": "injected_execution_parameter",
+        "seed": 1,
+        "sigma_px": {
+          "value": 1.0,
+          "status": "PENDIENTE"
+        },
+        "n_steps": {
+          "value": 1000,
+          "status": "PENDIENTE"
+        },
+        "p_ads": {
+          "value": null,
+          "effective": 1.0,
+          "implementation_status": "DECISI\u00d3N COMPUTACIONAL PROVISIONAL",
+          "status": "PENDIENTE"
+        }
+      },
+      "system_counts": {
+        "N_MB": 200,
+        "N_GO": 100,
+        "N_adsorbent": 100,
+        "adsorbent_symbol": "AC",
+        "status": "DECISI\u00d3N COMPUTACIONAL"
+      },
+      "outcomes": {
+        "n_adsorbed": 109,
+        "percent_adsorbed": 54.50000000000001,
+        "m_adsorbed_mg": 2.18,
+        "m_free_mg": 1.8199999999999998,
+        "qfinal_mg_g": 218.0,
+        "n_contacts": 1189,
+        "mass_conservation_ok": true,
+        "result_classification": "computational_execution_not_experimental_validation"
+      },
+      "series_csv": "data\\sensitivity\\homogeneous_temporal\\ac\\ac_sens_grid_sigma_1_steps_1000_seed_1.csv",
+      "full_result_keys": [
+        "config",
+        "run",
+        "reference",
+        "summary",
+        "series",
+        "final_state"
+      ]
+    },
+    {
+      "role": "simulation_outcome",
+      "material": "AC",
+      "paths": {
+        "json": "data\\sensitivity\\homogeneous_temporal\\ac\\ac_sens_grid_sigma_1_steps_1500_seed_1.json",
+        "csv": "data\\sensitivity\\homogeneous_temporal\\ac\\ac_sens_grid_sigma_1_steps_1500_seed_1.csv"
+      },
+      "execution_parameters": {
+        "role": "injected_execution_parameter",
+        "seed": 1,
+        "sigma_px": {
+          "value": 1.0,
+          "status": "PENDIENTE"
+        },
+        "n_steps": {
+          "value": 1500,
+          "status": "PENDIENTE"
+        },
+        "p_ads": {
+          "value": null,
+          "effective": 1.0,
+          "implementation_status": "DECISI\u00d3N COMPUTACIONAL PROVISIONAL",
+          "status": "PENDIENTE"
+        }
+      },
+      "system_counts": {
+        "N_MB": 200,
+        "N_GO": 100,
+        "N_adsorbent": 100,
+        "adsorbent_symbol": "AC",
+        "status": "DECISI\u00d3N COMPUTACIONAL"
+      },
+      "outcomes": {
+        "n_adsorbed": 125,
+        "percent_adsorbed": 62.5,
+        "m_adsorbed_mg": 2.5,
+        "m_free_mg": 1.5,
+        "qfinal_mg_g": 250.0,
+        "n_contacts": 1707,
+        "mass_conservation_ok": true,
+        "result_classification": "computational_execution_not_experimental_validation"
+      },
+      "series_csv": "data\\sensitivity\\homogeneous_temporal\\ac\\ac_sens_grid_sigma_1_steps_1500_seed_1.csv",
+      "full_result_keys": [
+        "config",
+        "run",
+        "reference",
+        "summary",
+        "series",
+        "final_state"
+      ]
+    },
+    {
+      "role": "simulation_outcome",
+      "material": "AC",
+      "paths": {
+        "json": "data\\sensitivity\\homogeneous_temporal\\ac\\ac_sens_grid_sigma_1_steps_2000_seed_1.json",
+        "csv": "data\\sensitivity\\homogeneous_temporal\\ac\\ac_sens_grid_sigma_1_steps_2000_seed_1.csv"
+      },
+      "execution_parameters": {
+        "role": "injected_execution_parameter",
+        "seed": 1,
+        "sigma_px": {
+          "value": 1.0,
+          "status": "PENDIENTE"
+        },
+        "n_steps": {
+          "value": 2000,
+          "status": "PENDIENTE"
+        },
+        "p_ads": {
+          "value": null,
+          "effective": 1.0,
+          "implementation_status": "DECISI\u00d3N COMPUTACIONAL PROVISIONAL",
+          "status": "PENDIENTE"
+        }
+      },
+      "system_counts": {
+        "N_MB": 200,
+        "N_GO": 100,
+        "N_adsorbent": 100,
+        "adsorbent_symbol": "AC",
+        "status": "DECISI\u00d3N COMPUTACIONAL"
+      },
+      "outcomes": {
+        "n_adsorbed": 132,
+        "percent_adsorbed": 66.0,
+        "m_adsorbed_mg": 2.64,
+        "m_free_mg": 1.3599999999999999,
+        "qfinal_mg_g": 264.0,
+        "n_contacts": 2330,
+        "mass_conservation_ok": true,
+        "result_classification": "computational_execution_not_experimental_validation"
+      },
+      "series_csv": "data\\sensitivity\\homogeneous_temporal\\ac\\ac_sens_grid_sigma_1_steps_2000_seed_1.csv",
+      "full_result_keys": [
+        "config",
+        "run",
+        "reference",
+        "summary",
+        "series",
+        "final_state"
+      ]
+    },
+    {
+      "role": "simulation_outcome",
+      "material": "AC",
+      "paths": {
+        "json": "data\\sensitivity\\homogeneous_temporal\\ac\\ac_sens_grid_sigma_1.5_steps_200_seed_1.json",
+        "csv": "data\\sensitivity\\homogeneous_temporal\\ac\\ac_sens_grid_sigma_1.5_steps_200_seed_1.csv"
+      },
+      "execution_parameters": {
+        "role": "injected_execution_parameter",
+        "seed": 1,
+        "sigma_px": {
+          "value": 1.5,
+          "status": "PENDIENTE"
+        },
+        "n_steps": {
+          "value": 200,
+          "status": "PENDIENTE"
+        },
+        "p_ads": {
+          "value": null,
+          "effective": 1.0,
+          "implementation_status": "DECISI\u00d3N COMPUTACIONAL PROVISIONAL",
+          "status": "PENDIENTE"
+        }
+      },
+      "system_counts": {
+        "N_MB": 200,
+        "N_GO": 100,
+        "N_adsorbent": 100,
+        "adsorbent_symbol": "AC",
+        "status": "DECISI\u00d3N COMPUTACIONAL"
+      },
+      "outcomes": {
+        "n_adsorbed": 76,
+        "percent_adsorbed": 38.0,
+        "m_adsorbed_mg": 1.52,
+        "m_free_mg": 2.48,
+        "qfinal_mg_g": 152.0,
+        "n_contacts": 155,
+        "mass_conservation_ok": true,
+        "result_classification": "computational_execution_not_experimental_validation"
+      },
+      "series_csv": "data\\sensitivity\\homogeneous_temporal\\ac\\ac_sens_grid_sigma_1.5_steps_200_seed_1.csv",
+      "full_result_keys": [
+        "config",
+        "run",
+        "reference",
+        "summary",
+        "series",
+        "final_state"
+      ]
+    },
+    {
+      "role": "simulation_outcome",
+      "material": "AC",
+      "paths": {
+        "json": "data\\sensitivity\\homogeneous_temporal\\ac\\ac_sens_grid_sigma_1.5_steps_400_seed_1.json",
+        "csv": "data\\sensitivity\\homogeneous_temporal\\ac\\ac_sens_grid_sigma_1.5_steps_400_seed_1.csv"
+      },
+      "execution_parameters": {
+        "role": "injected_execution_parameter",
+        "seed": 1,
+        "sigma_px": {
+          "value": 1.5,
+          "status": "PENDIENTE"
+        },
+        "n_steps": {
+          "value": 400,
+          "status": "PENDIENTE"
+        },
+        "p_ads": {
+          "value": null,
+          "effective": 1.0,
+          "implementation_status": "DECISI\u00d3N COMPUTACIONAL PROVISIONAL",
+          "status": "PENDIENTE"
+        }
+      },
+      "system_counts": {
+        "N_MB": 200,
+        "N_GO": 100,
+        "N_adsorbent": 100,
+        "adsorbent_symbol": "AC",
+        "status": "DECISI\u00d3N COMPUTACIONAL"
+      },
+      "outcomes": {
+        "n_adsorbed": 96,
+        "percent_adsorbed": 48.0,
+        "m_adsorbed_mg": 1.92,
+        "m_free_mg": 2.08,
+        "qfinal_mg_g": 192.0,
+        "n_contacts": 432,
+        "mass_conservation_ok": true,
+        "result_classification": "computational_execution_not_experimental_validation"
+      },
+      "series_csv": "data\\sensitivity\\homogeneous_temporal\\ac\\ac_sens_grid_sigma_1.5_steps_400_seed_1.csv",
+      "full_result_keys": [
+        "config",
+        "run",
+        "reference",
+        "summary",
+        "series",
+        "final_state"
+      ]
+    },
+    {
+      "role": "simulation_outcome",
+      "material": "AC",
+      "paths": {
+        "json": "data\\sensitivity\\homogeneous_temporal\\ac\\ac_sens_grid_sigma_1.5_steps_600_seed_1.json",
+        "csv": "data\\sensitivity\\homogeneous_temporal\\ac\\ac_sens_grid_sigma_1.5_steps_600_seed_1.csv"
+      },
+      "execution_parameters": {
+        "role": "injected_execution_parameter",
+        "seed": 1,
+        "sigma_px": {
+          "value": 1.5,
+          "status": "PENDIENTE"
+        },
+        "n_steps": {
+          "value": 600,
+          "status": "PENDIENTE"
+        },
+        "p_ads": {
+          "value": null,
+          "effective": 1.0,
+          "implementation_status": "DECISI\u00d3N COMPUTACIONAL PROVISIONAL",
+          "status": "PENDIENTE"
+        }
+      },
+      "system_counts": {
+        "N_MB": 200,
+        "N_GO": 100,
+        "N_adsorbent": 100,
+        "adsorbent_symbol": "AC",
+        "status": "DECISI\u00d3N COMPUTACIONAL"
+      },
+      "outcomes": {
+        "n_adsorbed": 116,
+        "percent_adsorbed": 57.99999999999999,
+        "m_adsorbed_mg": 2.32,
+        "m_free_mg": 1.6800000000000002,
+        "qfinal_mg_g": 231.99999999999997,
+        "n_contacts": 702,
+        "mass_conservation_ok": true,
+        "result_classification": "computational_execution_not_experimental_validation"
+      },
+      "series_csv": "data\\sensitivity\\homogeneous_temporal\\ac\\ac_sens_grid_sigma_1.5_steps_600_seed_1.csv",
+      "full_result_keys": [
+        "config",
+        "run",
+        "reference",
+        "summary",
+        "series",
+        "final_state"
+      ]
+    },
+    {
+      "role": "simulation_outcome",
+      "material": "AC",
+      "paths": {
+        "json": "data\\sensitivity\\homogeneous_temporal\\ac\\ac_sens_grid_sigma_1.5_steps_800_seed_1.json",
+        "csv": "data\\sensitivity\\homogeneous_temporal\\ac\\ac_sens_grid_sigma_1.5_steps_800_seed_1.csv"
+      },
+      "execution_parameters": {
+        "role": "injected_execution_parameter",
+        "seed": 1,
+        "sigma_px": {
+          "value": 1.5,
+          "status": "PENDIENTE"
+        },
+        "n_steps": {
+          "value": 800,
+          "status": "PENDIENTE"
+        },
+        "p_ads": {
+          "value": null,
+          "effective": 1.0,
+          "implementation_status": "DECISI\u00d3N COMPUTACIONAL PROVISIONAL",
+          "status": "PENDIENTE"
+        }
+      },
+      "system_counts": {
+        "N_MB": 200,
+        "N_GO": 100,
+        "N_adsorbent": 100,
+        "adsorbent_symbol": "AC",
+        "status": "DECISI\u00d3N COMPUTACIONAL"
+      },
+      "outcomes": {
+        "n_adsorbed": 125,
+        "percent_adsorbed": 62.5,
+        "m_adsorbed_mg": 2.5,
+        "m_free_mg": 1.5,
+        "qfinal_mg_g": 250.0,
+        "n_contacts": 930,
+        "mass_conservation_ok": true,
+        "result_classification": "computational_execution_not_experimental_validation"
+      },
+      "series_csv": "data\\sensitivity\\homogeneous_temporal\\ac\\ac_sens_grid_sigma_1.5_steps_800_seed_1.csv",
+      "full_result_keys": [
+        "config",
+        "run",
+        "reference",
+        "summary",
+        "series",
+        "final_state"
+      ]
+    },
+    {
+      "role": "simulation_outcome",
+      "material": "AC",
+      "paths": {
+        "json": "data\\sensitivity\\homogeneous_temporal\\ac\\ac_sens_grid_sigma_1.5_steps_1000_seed_1.json",
+        "csv": "data\\sensitivity\\homogeneous_temporal\\ac\\ac_sens_grid_sigma_1.5_steps_1000_seed_1.csv"
+      },
+      "execution_parameters": {
+        "role": "injected_execution_parameter",
+        "seed": 1,
+        "sigma_px": {
+          "value": 1.5,
+          "status": "PENDIENTE"
+        },
+        "n_steps": {
+          "value": 1000,
+          "status": "PENDIENTE"
+        },
+        "p_ads": {
+          "value": null,
+          "effective": 1.0,
+          "implementation_status": "DECISI\u00d3N COMPUTACIONAL PROVISIONAL",
+          "status": "PENDIENTE"
+        }
+      },
+      "system_counts": {
+        "N_MB": 200,
+        "N_GO": 100,
+        "N_adsorbent": 100,
+        "adsorbent_symbol": "AC",
+        "status": "DECISI\u00d3N COMPUTACIONAL"
+      },
+      "outcomes": {
+        "n_adsorbed": 131,
+        "percent_adsorbed": 65.5,
+        "m_adsorbed_mg": 2.62,
+        "m_free_mg": 1.38,
+        "qfinal_mg_g": 262.0,
+        "n_contacts": 1146,
+        "mass_conservation_ok": true,
+        "result_classification": "computational_execution_not_experimental_validation"
+      },
+      "series_csv": "data\\sensitivity\\homogeneous_temporal\\ac\\ac_sens_grid_sigma_1.5_steps_1000_seed_1.csv",
+      "full_result_keys": [
+        "config",
+        "run",
+        "reference",
+        "summary",
+        "series",
+        "final_state"
+      ]
+    },
+    {
+      "role": "simulation_outcome",
+      "material": "AC",
+      "paths": {
+        "json": "data\\sensitivity\\homogeneous_temporal\\ac\\ac_sens_grid_sigma_1.5_steps_1500_seed_1.json",
+        "csv": "data\\sensitivity\\homogeneous_temporal\\ac\\ac_sens_grid_sigma_1.5_steps_1500_seed_1.csv"
+      },
+      "execution_parameters": {
+        "role": "injected_execution_parameter",
+        "seed": 1,
+        "sigma_px": {
+          "value": 1.5,
+          "status": "PENDIENTE"
+        },
+        "n_steps": {
+          "value": 1500,
+          "status": "PENDIENTE"
+        },
+        "p_ads": {
+          "value": null,
+          "effective": 1.0,
+          "implementation_status": "DECISI\u00d3N COMPUTACIONAL PROVISIONAL",
+          "status": "PENDIENTE"
+        }
+      },
+      "system_counts": {
+        "N_MB": 200,
+        "N_GO": 100,
+        "N_adsorbent": 100,
+        "adsorbent_symbol": "AC",
+        "status": "DECISI\u00d3N COMPUTACIONAL"
+      },
+      "outcomes": {
+        "n_adsorbed": 148,
+        "percent_adsorbed": 74.0,
+        "m_adsorbed_mg": 2.96,
+        "m_free_mg": 1.04,
+        "qfinal_mg_g": 296.0,
+        "n_contacts": 2072,
+        "mass_conservation_ok": true,
+        "result_classification": "computational_execution_not_experimental_validation"
+      },
+      "series_csv": "data\\sensitivity\\homogeneous_temporal\\ac\\ac_sens_grid_sigma_1.5_steps_1500_seed_1.csv",
+      "full_result_keys": [
+        "config",
+        "run",
+        "reference",
+        "summary",
+        "series",
+        "final_state"
+      ]
+    },
+    {
+      "role": "simulation_outcome",
+      "material": "AC",
+      "paths": {
+        "json": "data\\sensitivity\\homogeneous_temporal\\ac\\ac_sens_grid_sigma_1.5_steps_2000_seed_1.json",
+        "csv": "data\\sensitivity\\homogeneous_temporal\\ac\\ac_sens_grid_sigma_1.5_steps_2000_seed_1.csv"
+      },
+      "execution_parameters": {
+        "role": "injected_execution_parameter",
+        "seed": 1,
+        "sigma_px": {
+          "value": 1.5,
+          "status": "PENDIENTE"
+        },
+        "n_steps": {
+          "value": 2000,
+          "status": "PENDIENTE"
+        },
+        "p_ads": {
+          "value": null,
+          "effective": 1.0,
+          "implementation_status": "DECISI\u00d3N COMPUTACIONAL PROVISIONAL",
+          "status": "PENDIENTE"
+        }
+      },
+      "system_counts": {
+        "N_MB": 200,
+        "N_GO": 100,
+        "N_adsorbent": 100,
+        "adsorbent_symbol": "AC",
+        "status": "DECISI\u00d3N COMPUTACIONAL"
+      },
+      "outcomes": {
+        "n_adsorbed": 155,
+        "percent_adsorbed": 77.5,
+        "m_adsorbed_mg": 3.1,
+        "m_free_mg": 0.8999999999999999,
+        "qfinal_mg_g": 310.0,
+        "n_contacts": 2593,
+        "mass_conservation_ok": true,
+        "result_classification": "computational_execution_not_experimental_validation"
+      },
+      "series_csv": "data\\sensitivity\\homogeneous_temporal\\ac\\ac_sens_grid_sigma_1.5_steps_2000_seed_1.csv",
+      "full_result_keys": [
+        "config",
+        "run",
+        "reference",
+        "summary",
+        "series",
+        "final_state"
+      ]
+    },
+    {
+      "role": "simulation_outcome",
+      "material": "AC",
+      "paths": {
+        "json": "data\\sensitivity\\homogeneous_temporal\\ac\\ac_sens_grid_sigma_1_steps_200_seed_2.json",
+        "csv": "data\\sensitivity\\homogeneous_temporal\\ac\\ac_sens_grid_sigma_1_steps_200_seed_2.csv"
+      },
+      "execution_parameters": {
+        "role": "injected_execution_parameter",
+        "seed": 2,
+        "sigma_px": {
+          "value": 1.0,
+          "status": "PENDIENTE"
+        },
+        "n_steps": {
+          "value": 200,
+          "status": "PENDIENTE"
+        },
+        "p_ads": {
+          "value": null,
+          "effective": 1.0,
+          "implementation_status": "DECISI\u00d3N COMPUTACIONAL PROVISIONAL",
+          "status": "PENDIENTE"
+        }
+      },
+      "system_counts": {
+        "N_MB": 200,
+        "N_GO": 100,
+        "N_adsorbent": 100,
+        "adsorbent_symbol": "AC",
+        "status": "DECISI\u00d3N COMPUTACIONAL"
+      },
+      "outcomes": {
+        "n_adsorbed": 67,
+        "percent_adsorbed": 33.5,
+        "m_adsorbed_mg": 1.34,
+        "m_free_mg": 2.66,
+        "qfinal_mg_g": 134.0,
+        "n_contacts": 137,
+        "mass_conservation_ok": true,
+        "result_classification": "computational_execution_not_experimental_validation"
+      },
+      "series_csv": "data\\sensitivity\\homogeneous_temporal\\ac\\ac_sens_grid_sigma_1_steps_200_seed_2.csv",
+      "full_result_keys": [
+        "config",
+        "run",
+        "reference",
+        "summary",
+        "series",
+        "final_state"
+      ]
+    },
+    {
+      "role": "simulation_outcome",
+      "material": "AC",
+      "paths": {
+        "json": "data\\sensitivity\\homogeneous_temporal\\ac\\ac_sens_grid_sigma_1_steps_400_seed_2.json",
+        "csv": "data\\sensitivity\\homogeneous_temporal\\ac\\ac_sens_grid_sigma_1_steps_400_seed_2.csv"
+      },
+      "execution_parameters": {
+        "role": "injected_execution_parameter",
+        "seed": 2,
+        "sigma_px": {
+          "value": 1.0,
+          "status": "PENDIENTE"
+        },
+        "n_steps": {
+          "value": 400,
+          "status": "PENDIENTE"
+        },
+        "p_ads": {
+          "value": null,
+          "effective": 1.0,
+          "implementation_status": "DECISI\u00d3N COMPUTACIONAL PROVISIONAL",
+          "status": "PENDIENTE"
+        }
+      },
+      "system_counts": {
+        "N_MB": 200,
+        "N_GO": 100,
+        "N_adsorbent": 100,
+        "adsorbent_symbol": "AC",
+        "status": "DECISI\u00d3N COMPUTACIONAL"
+      },
+      "outcomes": {
+        "n_adsorbed": 83,
+        "percent_adsorbed": 41.5,
+        "m_adsorbed_mg": 1.6600000000000001,
+        "m_free_mg": 2.34,
+        "qfinal_mg_g": 166.0,
+        "n_contacts": 342,
+        "mass_conservation_ok": true,
+        "result_classification": "computational_execution_not_experimental_validation"
+      },
+      "series_csv": "data\\sensitivity\\homogeneous_temporal\\ac\\ac_sens_grid_sigma_1_steps_400_seed_2.csv",
+      "full_result_keys": [
+        "config",
+        "run",
+        "reference",
+        "summary",
+        "series",
+        "final_state"
+      ]
+    },
+    {
+      "role": "simulation_outcome",
+      "material": "AC",
+      "paths": {
+        "json": "data\\sensitivity\\homogeneous_temporal\\ac\\ac_sens_grid_sigma_1_steps_600_seed_2.json",
+        "csv": "data\\sensitivity\\homogeneous_temporal\\ac\\ac_sens_grid_sigma_1_steps_600_seed_2.csv"
+      },
+      "execution_parameters": {
+        "role": "injected_execution_parameter",
+        "seed": 2,
+        "sigma_px": {
+          "value": 1.0,
+          "status": "PENDIENTE"
+        },
+        "n_steps": {
+          "value": 600,
+          "status": "PENDIENTE"
+        },
+        "p_ads": {
+          "value": null,
+          "effective": 1.0,
+          "implementation_status": "DECISI\u00d3N COMPUTACIONAL PROVISIONAL",
+          "status": "PENDIENTE"
+        }
+      },
+      "system_counts": {
+        "N_MB": 200,
+        "N_GO": 100,
+        "N_adsorbent": 100,
+        "adsorbent_symbol": "AC",
+        "status": "DECISI\u00d3N COMPUTACIONAL"
+      },
+      "outcomes": {
+        "n_adsorbed": 96,
+        "percent_adsorbed": 48.0,
+        "m_adsorbed_mg": 1.92,
+        "m_free_mg": 2.08,
+        "qfinal_mg_g": 192.0,
+        "n_contacts": 602,
+        "mass_conservation_ok": true,
+        "result_classification": "computational_execution_not_experimental_validation"
+      },
+      "series_csv": "data\\sensitivity\\homogeneous_temporal\\ac\\ac_sens_grid_sigma_1_steps_600_seed_2.csv",
+      "full_result_keys": [
+        "config",
+        "run",
+        "reference",
+        "summary",
+        "series",
+        "final_state"
+      ]
+    },
+    {
+      "role": "simulation_outcome",
+      "material": "AC",
+      "paths": {
+        "json": "data\\sensitivity\\homogeneous_temporal\\ac\\ac_sens_grid_sigma_1_steps_800_seed_2.json",
+        "csv": "data\\sensitivity\\homogeneous_temporal\\ac\\ac_sens_grid_sigma_1_steps_800_seed_2.csv"
+      },
+      "execution_parameters": {
+        "role": "injected_execution_parameter",
+        "seed": 2,
+        "sigma_px": {
+          "value": 1.0,
+          "status": "PENDIENTE"
+        },
+        "n_steps": {
+          "value": 800,
+          "status": "PENDIENTE"
+        },
+        "p_ads": {
+          "value": null,
+          "effective": 1.0,
+          "implementation_status": "DECISI\u00d3N COMPUTACIONAL PROVISIONAL",
+          "status": "PENDIENTE"
+        }
+      },
+      "system_counts": {
+        "N_MB": 200,
+        "N_GO": 100,
+        "N_adsorbent": 100,
+        "adsorbent_symbol": "AC",
+        "status": "DECISI\u00d3N COMPUTACIONAL"
+      },
+      "outcomes": {
+        "n_adsorbed": 105,
+        "percent_adsorbed": 52.5,
+        "m_adsorbed_mg": 2.1,
+        "m_free_mg": 1.9,
+        "qfinal_mg_g": 210.0,
+        "n_contacts": 965,
+        "mass_conservation_ok": true,
+        "result_classification": "computational_execution_not_experimental_validation"
+      },
+      "series_csv": "data\\sensitivity\\homogeneous_temporal\\ac\\ac_sens_grid_sigma_1_steps_800_seed_2.csv",
+      "full_result_keys": [
+        "config",
+        "run",
+        "reference",
+        "summary",
+        "series",
+        "final_state"
+      ]
+    },
+    {
+      "role": "simulation_outcome",
+      "material": "AC",
+      "paths": {
+        "json": "data\\sensitivity\\homogeneous_temporal\\ac\\ac_sens_grid_sigma_1_steps_1000_seed_2.json",
+        "csv": "data\\sensitivity\\homogeneous_temporal\\ac\\ac_sens_grid_sigma_1_steps_1000_seed_2.csv"
+      },
+      "execution_parameters": {
+        "role": "injected_execution_parameter",
+        "seed": 2,
+        "sigma_px": {
+          "value": 1.0,
+          "status": "PENDIENTE"
+        },
+        "n_steps": {
+          "value": 1000,
+          "status": "PENDIENTE"
+        },
+        "p_ads": {
+          "value": null,
+          "effective": 1.0,
+          "implementation_status": "DECISI\u00d3N COMPUTACIONAL PROVISIONAL",
+          "status": "PENDIENTE"
+        }
+      },
+      "system_counts": {
+        "N_MB": 200,
+        "N_GO": 100,
+        "N_adsorbent": 100,
+        "adsorbent_symbol": "AC",
+        "status": "DECISI\u00d3N COMPUTACIONAL"
+      },
+      "outcomes": {
+        "n_adsorbed": 112,
+        "percent_adsorbed": 56.00000000000001,
+        "m_adsorbed_mg": 2.24,
+        "m_free_mg": 1.7599999999999998,
+        "qfinal_mg_g": 224.00000000000003,
+        "n_contacts": 1480,
+        "mass_conservation_ok": true,
+        "result_classification": "computational_execution_not_experimental_validation"
+      },
+      "series_csv": "data\\sensitivity\\homogeneous_temporal\\ac\\ac_sens_grid_sigma_1_steps_1000_seed_2.csv",
+      "full_result_keys": [
+        "config",
+        "run",
+        "reference",
+        "summary",
+        "series",
+        "final_state"
+      ]
+    },
+    {
+      "role": "simulation_outcome",
+      "material": "AC",
+      "paths": {
+        "json": "data\\sensitivity\\homogeneous_temporal\\ac\\ac_sens_grid_sigma_1_steps_1500_seed_2.json",
+        "csv": "data\\sensitivity\\homogeneous_temporal\\ac\\ac_sens_grid_sigma_1_steps_1500_seed_2.csv"
+      },
+      "execution_parameters": {
+        "role": "injected_execution_parameter",
+        "seed": 2,
+        "sigma_px": {
+          "value": 1.0,
+          "status": "PENDIENTE"
+        },
+        "n_steps": {
+          "value": 1500,
+          "status": "PENDIENTE"
+        },
+        "p_ads": {
+          "value": null,
+          "effective": 1.0,
+          "implementation_status": "DECISI\u00d3N COMPUTACIONAL PROVISIONAL",
+          "status": "PENDIENTE"
+        }
+      },
+      "system_counts": {
+        "N_MB": 200,
+        "N_GO": 100,
+        "N_adsorbent": 100,
+        "adsorbent_symbol": "AC",
+        "status": "DECISI\u00d3N COMPUTACIONAL"
+      },
+      "outcomes": {
+        "n_adsorbed": 121,
+        "percent_adsorbed": 60.5,
+        "m_adsorbed_mg": 2.42,
+        "m_free_mg": 1.58,
+        "qfinal_mg_g": 242.0,
+        "n_contacts": 2864,
+        "mass_conservation_ok": true,
+        "result_classification": "computational_execution_not_experimental_validation"
+      },
+      "series_csv": "data\\sensitivity\\homogeneous_temporal\\ac\\ac_sens_grid_sigma_1_steps_1500_seed_2.csv",
+      "full_result_keys": [
+        "config",
+        "run",
+        "reference",
+        "summary",
+        "series",
+        "final_state"
+      ]
+    },
+    {
+      "role": "simulation_outcome",
+      "material": "AC",
+      "paths": {
+        "json": "data\\sensitivity\\homogeneous_temporal\\ac\\ac_sens_grid_sigma_1_steps_2000_seed_2.json",
+        "csv": "data\\sensitivity\\homogeneous_temporal\\ac\\ac_sens_grid_sigma_1_steps_2000_seed_2.csv"
+      },
+      "execution_parameters": {
+        "role": "injected_execution_parameter",
+        "seed": 2,
+        "sigma_px": {
+          "value": 1.0,
+          "status": "PENDIENTE"
+        },
+        "n_steps": {
+          "value": 2000,
+          "status": "PENDIENTE"
+        },
+        "p_ads": {
+          "value": null,
+          "effective": 1.0,
+          "implementation_status": "DECISI\u00d3N COMPUTACIONAL PROVISIONAL",
+          "status": "PENDIENTE"
+        }
+      },
+      "system_counts": {
+        "N_MB": 200,
+        "N_GO": 100,
+        "N_adsorbent": 100,
+        "adsorbent_symbol": "AC",
+        "status": "DECISI\u00d3N COMPUTACIONAL"
+      },
+      "outcomes": {
+        "n_adsorbed": 127,
+        "percent_adsorbed": 63.5,
+        "m_adsorbed_mg": 2.54,
+        "m_free_mg": 1.46,
+        "qfinal_mg_g": 254.0,
+        "n_contacts": 4486,
+        "mass_conservation_ok": true,
+        "result_classification": "computational_execution_not_experimental_validation"
+      },
+      "series_csv": "data\\sensitivity\\homogeneous_temporal\\ac\\ac_sens_grid_sigma_1_steps_2000_seed_2.csv",
+      "full_result_keys": [
+        "config",
+        "run",
+        "reference",
+        "summary",
+        "series",
+        "final_state"
+      ]
+    },
+    {
+      "role": "simulation_outcome",
+      "material": "AC",
+      "paths": {
+        "json": "data\\sensitivity\\homogeneous_temporal\\ac\\ac_sens_grid_sigma_1.5_steps_200_seed_2.json",
+        "csv": "data\\sensitivity\\homogeneous_temporal\\ac\\ac_sens_grid_sigma_1.5_steps_200_seed_2.csv"
+      },
+      "execution_parameters": {
+        "role": "injected_execution_parameter",
+        "seed": 2,
+        "sigma_px": {
+          "value": 1.5,
+          "status": "PENDIENTE"
+        },
+        "n_steps": {
+          "value": 200,
+          "status": "PENDIENTE"
+        },
+        "p_ads": {
+          "value": null,
+          "effective": 1.0,
+          "implementation_status": "DECISI\u00d3N COMPUTACIONAL PROVISIONAL",
+          "status": "PENDIENTE"
+        }
+      },
+      "system_counts": {
+        "N_MB": 200,
+        "N_GO": 100,
+        "N_adsorbent": 100,
+        "adsorbent_symbol": "AC",
+        "status": "DECISI\u00d3N COMPUTACIONAL"
+      },
+      "outcomes": {
+        "n_adsorbed": 88,
+        "percent_adsorbed": 44.0,
+        "m_adsorbed_mg": 1.76,
+        "m_free_mg": 2.24,
+        "qfinal_mg_g": 176.0,
+        "n_contacts": 262,
+        "mass_conservation_ok": true,
+        "result_classification": "computational_execution_not_experimental_validation"
+      },
+      "series_csv": "data\\sensitivity\\homogeneous_temporal\\ac\\ac_sens_grid_sigma_1.5_steps_200_seed_2.csv",
+      "full_result_keys": [
+        "config",
+        "run",
+        "reference",
+        "summary",
+        "series",
+        "final_state"
+      ]
+    },
+    {
+      "role": "simulation_outcome",
+      "material": "AC",
+      "paths": {
+        "json": "data\\sensitivity\\homogeneous_temporal\\ac\\ac_sens_grid_sigma_1.5_steps_400_seed_2.json",
+        "csv": "data\\sensitivity\\homogeneous_temporal\\ac\\ac_sens_grid_sigma_1.5_steps_400_seed_2.csv"
+      },
+      "execution_parameters": {
+        "role": "injected_execution_parameter",
+        "seed": 2,
+        "sigma_px": {
+          "value": 1.5,
+          "status": "PENDIENTE"
+        },
+        "n_steps": {
+          "value": 400,
+          "status": "PENDIENTE"
+        },
+        "p_ads": {
+          "value": null,
+          "effective": 1.0,
+          "implementation_status": "DECISI\u00d3N COMPUTACIONAL PROVISIONAL",
+          "status": "PENDIENTE"
+        }
+      },
+      "system_counts": {
+        "N_MB": 200,
+        "N_GO": 100,
+        "N_adsorbent": 100,
+        "adsorbent_symbol": "AC",
+        "status": "DECISI\u00d3N COMPUTACIONAL"
+      },
+      "outcomes": {
+        "n_adsorbed": 116,
+        "percent_adsorbed": 57.99999999999999,
+        "m_adsorbed_mg": 2.32,
+        "m_free_mg": 1.6800000000000002,
+        "qfinal_mg_g": 231.99999999999997,
+        "n_contacts": 601,
+        "mass_conservation_ok": true,
+        "result_classification": "computational_execution_not_experimental_validation"
+      },
+      "series_csv": "data\\sensitivity\\homogeneous_temporal\\ac\\ac_sens_grid_sigma_1.5_steps_400_seed_2.csv",
+      "full_result_keys": [
+        "config",
+        "run",
+        "reference",
+        "summary",
+        "series",
+        "final_state"
+      ]
+    },
+    {
+      "role": "simulation_outcome",
+      "material": "AC",
+      "paths": {
+        "json": "data\\sensitivity\\homogeneous_temporal\\ac\\ac_sens_grid_sigma_1.5_steps_600_seed_2.json",
+        "csv": "data\\sensitivity\\homogeneous_temporal\\ac\\ac_sens_grid_sigma_1.5_steps_600_seed_2.csv"
+      },
+      "execution_parameters": {
+        "role": "injected_execution_parameter",
+        "seed": 2,
+        "sigma_px": {
+          "value": 1.5,
+          "status": "PENDIENTE"
+        },
+        "n_steps": {
+          "value": 600,
+          "status": "PENDIENTE"
+        },
+        "p_ads": {
+          "value": null,
+          "effective": 1.0,
+          "implementation_status": "DECISI\u00d3N COMPUTACIONAL PROVISIONAL",
+          "status": "PENDIENTE"
+        }
+      },
+      "system_counts": {
+        "N_MB": 200,
+        "N_GO": 100,
+        "N_adsorbent": 100,
+        "adsorbent_symbol": "AC",
+        "status": "DECISI\u00d3N COMPUTACIONAL"
+      },
+      "outcomes": {
+        "n_adsorbed": 127,
+        "percent_adsorbed": 63.5,
+        "m_adsorbed_mg": 2.54,
+        "m_free_mg": 1.46,
+        "qfinal_mg_g": 254.0,
+        "n_contacts": 1095,
+        "mass_conservation_ok": true,
+        "result_classification": "computational_execution_not_experimental_validation"
+      },
+      "series_csv": "data\\sensitivity\\homogeneous_temporal\\ac\\ac_sens_grid_sigma_1.5_steps_600_seed_2.csv",
+      "full_result_keys": [
+        "config",
+        "run",
+        "reference",
+        "summary",
+        "series",
+        "final_state"
+      ]
+    },
+    {
+      "role": "simulation_outcome",
+      "material": "AC",
+      "paths": {
+        "json": "data\\sensitivity\\homogeneous_temporal\\ac\\ac_sens_grid_sigma_1.5_steps_800_seed_2.json",
+        "csv": "data\\sensitivity\\homogeneous_temporal\\ac\\ac_sens_grid_sigma_1.5_steps_800_seed_2.csv"
+      },
+      "execution_parameters": {
+        "role": "injected_execution_parameter",
+        "seed": 2,
+        "sigma_px": {
+          "value": 1.5,
+          "status": "PENDIENTE"
+        },
+        "n_steps": {
+          "value": 800,
+          "status": "PENDIENTE"
+        },
+        "p_ads": {
+          "value": null,
+          "effective": 1.0,
+          "implementation_status": "DECISI\u00d3N COMPUTACIONAL PROVISIONAL",
+          "status": "PENDIENTE"
+        }
+      },
+      "system_counts": {
+        "N_MB": 200,
+        "N_GO": 100,
+        "N_adsorbent": 100,
+        "adsorbent_symbol": "AC",
+        "status": "DECISI\u00d3N COMPUTACIONAL"
+      },
+      "outcomes": {
+        "n_adsorbed": 134,
+        "percent_adsorbed": 67.0,
+        "m_adsorbed_mg": 2.68,
+        "m_free_mg": 1.3199999999999998,
+        "qfinal_mg_g": 268.0,
+        "n_contacts": 1514,
+        "mass_conservation_ok": true,
+        "result_classification": "computational_execution_not_experimental_validation"
+      },
+      "series_csv": "data\\sensitivity\\homogeneous_temporal\\ac\\ac_sens_grid_sigma_1.5_steps_800_seed_2.csv",
+      "full_result_keys": [
+        "config",
+        "run",
+        "reference",
+        "summary",
+        "series",
+        "final_state"
+      ]
+    },
+    {
+      "role": "simulation_outcome",
+      "material": "AC",
+      "paths": {
+        "json": "data\\sensitivity\\homogeneous_temporal\\ac\\ac_sens_grid_sigma_1.5_steps_1000_seed_2.json",
+        "csv": "data\\sensitivity\\homogeneous_temporal\\ac\\ac_sens_grid_sigma_1.5_steps_1000_seed_2.csv"
+      },
+      "execution_parameters": {
+        "role": "injected_execution_parameter",
+        "seed": 2,
+        "sigma_px": {
+          "value": 1.5,
+          "status": "PENDIENTE"
+        },
+        "n_steps": {
+          "value": 1000,
+          "status": "PENDIENTE"
+        },
+        "p_ads": {
+          "value": null,
+          "effective": 1.0,
+          "implementation_status": "DECISI\u00d3N COMPUTACIONAL PROVISIONAL",
+          "status": "PENDIENTE"
+        }
+      },
+      "system_counts": {
+        "N_MB": 200,
+        "N_GO": 100,
+        "N_adsorbent": 100,
+        "adsorbent_symbol": "AC",
+        "status": "DECISI\u00d3N COMPUTACIONAL"
+      },
+      "outcomes": {
+        "n_adsorbed": 142,
+        "percent_adsorbed": 71.0,
+        "m_adsorbed_mg": 2.84,
+        "m_free_mg": 1.1600000000000001,
+        "qfinal_mg_g": 284.0,
+        "n_contacts": 1912,
+        "mass_conservation_ok": true,
+        "result_classification": "computational_execution_not_experimental_validation"
+      },
+      "series_csv": "data\\sensitivity\\homogeneous_temporal\\ac\\ac_sens_grid_sigma_1.5_steps_1000_seed_2.csv",
+      "full_result_keys": [
+        "config",
+        "run",
+        "reference",
+        "summary",
+        "series",
+        "final_state"
+      ]
+    },
+    {
+      "role": "simulation_outcome",
+      "material": "AC",
+      "paths": {
+        "json": "data\\sensitivity\\homogeneous_temporal\\ac\\ac_sens_grid_sigma_1.5_steps_1500_seed_2.json",
+        "csv": "data\\sensitivity\\homogeneous_temporal\\ac\\ac_sens_grid_sigma_1.5_steps_1500_seed_2.csv"
+      },
+      "execution_parameters": {
+        "role": "injected_execution_parameter",
+        "seed": 2,
+        "sigma_px": {
+          "value": 1.5,
+          "status": "PENDIENTE"
+        },
+        "n_steps": {
+          "value": 1500,
+          "status": "PENDIENTE"
+        },
+        "p_ads": {
+          "value": null,
+          "effective": 1.0,
+          "implementation_status": "DECISI\u00d3N COMPUTACIONAL PROVISIONAL",
+          "status": "PENDIENTE"
+        }
+      },
+      "system_counts": {
+        "N_MB": 200,
+        "N_GO": 100,
+        "N_adsorbent": 100,
+        "adsorbent_symbol": "AC",
+        "status": "DECISI\u00d3N COMPUTACIONAL"
+      },
+      "outcomes": {
+        "n_adsorbed": 153,
+        "percent_adsorbed": 76.5,
+        "m_adsorbed_mg": 3.06,
+        "m_free_mg": 0.94,
+        "qfinal_mg_g": 306.0,
+        "n_contacts": 2873,
+        "mass_conservation_ok": true,
+        "result_classification": "computational_execution_not_experimental_validation"
+      },
+      "series_csv": "data\\sensitivity\\homogeneous_temporal\\ac\\ac_sens_grid_sigma_1.5_steps_1500_seed_2.csv",
+      "full_result_keys": [
+        "config",
+        "run",
+        "reference",
+        "summary",
+        "series",
+        "final_state"
+      ]
+    },
+    {
+      "role": "simulation_outcome",
+      "material": "AC",
+      "paths": {
+        "json": "data\\sensitivity\\homogeneous_temporal\\ac\\ac_sens_grid_sigma_1.5_steps_2000_seed_2.json",
+        "csv": "data\\sensitivity\\homogeneous_temporal\\ac\\ac_sens_grid_sigma_1.5_steps_2000_seed_2.csv"
+      },
+      "execution_parameters": {
+        "role": "injected_execution_parameter",
+        "seed": 2,
+        "sigma_px": {
+          "value": 1.5,
+          "status": "PENDIENTE"
+        },
+        "n_steps": {
+          "value": 2000,
+          "status": "PENDIENTE"
+        },
+        "p_ads": {
+          "value": null,
+          "effective": 1.0,
+          "implementation_status": "DECISI\u00d3N COMPUTACIONAL PROVISIONAL",
+          "status": "PENDIENTE"
+        }
+      },
+      "system_counts": {
+        "N_MB": 200,
+        "N_GO": 100,
+        "N_adsorbent": 100,
+        "adsorbent_symbol": "AC",
+        "status": "DECISI\u00d3N COMPUTACIONAL"
+      },
+      "outcomes": {
+        "n_adsorbed": 158,
+        "percent_adsorbed": 79.0,
+        "m_adsorbed_mg": 3.16,
+        "m_free_mg": 0.8399999999999999,
+        "qfinal_mg_g": 316.0,
+        "n_contacts": 3569,
+        "mass_conservation_ok": true,
+        "result_classification": "computational_execution_not_experimental_validation"
+      },
+      "series_csv": "data\\sensitivity\\homogeneous_temporal\\ac\\ac_sens_grid_sigma_1.5_steps_2000_seed_2.csv",
+      "full_result_keys": [
+        "config",
+        "run",
+        "reference",
+        "summary",
+        "series",
+        "final_state"
+      ]
+    },
+    {
+      "role": "simulation_outcome",
+      "material": "AC",
+      "paths": {
+        "json": "data\\sensitivity\\homogeneous_temporal\\ac\\ac_sens_grid_sigma_1_steps_200_seed_3.json",
+        "csv": "data\\sensitivity\\homogeneous_temporal\\ac\\ac_sens_grid_sigma_1_steps_200_seed_3.csv"
+      },
+      "execution_parameters": {
+        "role": "injected_execution_parameter",
+        "seed": 3,
+        "sigma_px": {
+          "value": 1.0,
+          "status": "PENDIENTE"
+        },
+        "n_steps": {
+          "value": 200,
+          "status": "PENDIENTE"
+        },
+        "p_ads": {
+          "value": null,
+          "effective": 1.0,
+          "implementation_status": "DECISI\u00d3N COMPUTACIONAL PROVISIONAL",
+          "status": "PENDIENTE"
+        }
+      },
+      "system_counts": {
+        "N_MB": 200,
+        "N_GO": 100,
+        "N_adsorbent": 100,
+        "adsorbent_symbol": "AC",
+        "status": "DECISI\u00d3N COMPUTACIONAL"
+      },
+      "outcomes": {
+        "n_adsorbed": 49,
+        "percent_adsorbed": 24.5,
+        "m_adsorbed_mg": 0.98,
+        "m_free_mg": 3.02,
+        "qfinal_mg_g": 98.0,
+        "n_contacts": 49,
+        "mass_conservation_ok": true,
+        "result_classification": "computational_execution_not_experimental_validation"
+      },
+      "series_csv": "data\\sensitivity\\homogeneous_temporal\\ac\\ac_sens_grid_sigma_1_steps_200_seed_3.csv",
+      "full_result_keys": [
+        "config",
+        "run",
+        "reference",
+        "summary",
+        "series",
+        "final_state"
+      ]
+    },
+    {
+      "role": "simulation_outcome",
+      "material": "AC",
+      "paths": {
+        "json": "data\\sensitivity\\homogeneous_temporal\\ac\\ac_sens_grid_sigma_1_steps_400_seed_3.json",
+        "csv": "data\\sensitivity\\homogeneous_temporal\\ac\\ac_sens_grid_sigma_1_steps_400_seed_3.csv"
+      },
+      "execution_parameters": {
+        "role": "injected_execution_parameter",
+        "seed": 3,
+        "sigma_px": {
+          "value": 1.0,
+          "status": "PENDIENTE"
+        },
+        "n_steps": {
+          "value": 400,
+          "status": "PENDIENTE"
+        },
+        "p_ads": {
+          "value": null,
+          "effective": 1.0,
+          "implementation_status": "DECISI\u00d3N COMPUTACIONAL PROVISIONAL",
+          "status": "PENDIENTE"
+        }
+      },
+      "system_counts": {
+        "N_MB": 200,
+        "N_GO": 100,
+        "N_adsorbent": 100,
+        "adsorbent_symbol": "AC",
+        "status": "DECISI\u00d3N COMPUTACIONAL"
+      },
+      "outcomes": {
+        "n_adsorbed": 73,
+        "percent_adsorbed": 36.5,
+        "m_adsorbed_mg": 1.46,
+        "m_free_mg": 2.54,
+        "qfinal_mg_g": 146.0,
+        "n_contacts": 131,
+        "mass_conservation_ok": true,
+        "result_classification": "computational_execution_not_experimental_validation"
+      },
+      "series_csv": "data\\sensitivity\\homogeneous_temporal\\ac\\ac_sens_grid_sigma_1_steps_400_seed_3.csv",
+      "full_result_keys": [
+        "config",
+        "run",
+        "reference",
+        "summary",
+        "series",
+        "final_state"
+      ]
+    },
+    {
+      "role": "simulation_outcome",
+      "material": "AC",
+      "paths": {
+        "json": "data\\sensitivity\\homogeneous_temporal\\ac\\ac_sens_grid_sigma_1_steps_600_seed_3.json",
+        "csv": "data\\sensitivity\\homogeneous_temporal\\ac\\ac_sens_grid_sigma_1_steps_600_seed_3.csv"
+      },
+      "execution_parameters": {
+        "role": "injected_execution_parameter",
+        "seed": 3,
+        "sigma_px": {
+          "value": 1.0,
+          "status": "PENDIENTE"
+        },
+        "n_steps": {
+          "value": 600,
+          "status": "PENDIENTE"
+        },
+        "p_ads": {
+          "value": null,
+          "effective": 1.0,
+          "implementation_status": "DECISI\u00d3N COMPUTACIONAL PROVISIONAL",
+          "status": "PENDIENTE"
+        }
+      },
+      "system_counts": {
+        "N_MB": 200,
+        "N_GO": 100,
+        "N_adsorbent": 100,
+        "adsorbent_symbol": "AC",
+        "status": "DECISI\u00d3N COMPUTACIONAL"
+      },
+      "outcomes": {
+        "n_adsorbed": 85,
+        "percent_adsorbed": 42.5,
+        "m_adsorbed_mg": 1.7,
+        "m_free_mg": 2.3,
+        "qfinal_mg_g": 170.0,
+        "n_contacts": 414,
+        "mass_conservation_ok": true,
+        "result_classification": "computational_execution_not_experimental_validation"
+      },
+      "series_csv": "data\\sensitivity\\homogeneous_temporal\\ac\\ac_sens_grid_sigma_1_steps_600_seed_3.csv",
+      "full_result_keys": [
+        "config",
+        "run",
+        "reference",
+        "summary",
+        "series",
+        "final_state"
+      ]
+    },
+    {
+      "role": "simulation_outcome",
+      "material": "AC",
+      "paths": {
+        "json": "data\\sensitivity\\homogeneous_temporal\\ac\\ac_sens_grid_sigma_1_steps_800_seed_3.json",
+        "csv": "data\\sensitivity\\homogeneous_temporal\\ac\\ac_sens_grid_sigma_1_steps_800_seed_3.csv"
+      },
+      "execution_parameters": {
+        "role": "injected_execution_parameter",
+        "seed": 3,
+        "sigma_px": {
+          "value": 1.0,
+          "status": "PENDIENTE"
+        },
+        "n_steps": {
+          "value": 800,
+          "status": "PENDIENTE"
+        },
+        "p_ads": {
+          "value": null,
+          "effective": 1.0,
+          "implementation_status": "DECISI\u00d3N COMPUTACIONAL PROVISIONAL",
+          "status": "PENDIENTE"
+        }
+      },
+      "system_counts": {
+        "N_MB": 200,
+        "N_GO": 100,
+        "N_adsorbent": 100,
+        "adsorbent_symbol": "AC",
+        "status": "DECISI\u00d3N COMPUTACIONAL"
+      },
+      "outcomes": {
+        "n_adsorbed": 99,
+        "percent_adsorbed": 49.5,
+        "m_adsorbed_mg": 1.98,
+        "m_free_mg": 2.02,
+        "qfinal_mg_g": 198.0,
+        "n_contacts": 665,
+        "mass_conservation_ok": true,
+        "result_classification": "computational_execution_not_experimental_validation"
+      },
+      "series_csv": "data\\sensitivity\\homogeneous_temporal\\ac\\ac_sens_grid_sigma_1_steps_800_seed_3.csv",
+      "full_result_keys": [
+        "config",
+        "run",
+        "reference",
+        "summary",
+        "series",
+        "final_state"
+      ]
+    },
+    {
+      "role": "simulation_outcome",
+      "material": "AC",
+      "paths": {
+        "json": "data\\sensitivity\\homogeneous_temporal\\ac\\ac_sens_grid_sigma_1_steps_1000_seed_3.json",
+        "csv": "data\\sensitivity\\homogeneous_temporal\\ac\\ac_sens_grid_sigma_1_steps_1000_seed_3.csv"
+      },
+      "execution_parameters": {
+        "role": "injected_execution_parameter",
+        "seed": 3,
+        "sigma_px": {
+          "value": 1.0,
+          "status": "PENDIENTE"
+        },
+        "n_steps": {
+          "value": 1000,
+          "status": "PENDIENTE"
+        },
+        "p_ads": {
+          "value": null,
+          "effective": 1.0,
+          "implementation_status": "DECISI\u00d3N COMPUTACIONAL PROVISIONAL",
+          "status": "PENDIENTE"
+        }
+      },
+      "system_counts": {
+        "N_MB": 200,
+        "N_GO": 100,
+        "N_adsorbent": 100,
+        "adsorbent_symbol": "AC",
+        "status": "DECISI\u00d3N COMPUTACIONAL"
+      },
+      "outcomes": {
+        "n_adsorbed": 108,
+        "percent_adsorbed": 54.0,
+        "m_adsorbed_mg": 2.16,
+        "m_free_mg": 1.8399999999999999,
+        "qfinal_mg_g": 216.0,
+        "n_contacts": 1075,
+        "mass_conservation_ok": true,
+        "result_classification": "computational_execution_not_experimental_validation"
+      },
+      "series_csv": "data\\sensitivity\\homogeneous_temporal\\ac\\ac_sens_grid_sigma_1_steps_1000_seed_3.csv",
+      "full_result_keys": [
+        "config",
+        "run",
+        "reference",
+        "summary",
+        "series",
+        "final_state"
+      ]
+    },
+    {
+      "role": "simulation_outcome",
+      "material": "AC",
+      "paths": {
+        "json": "data\\sensitivity\\homogeneous_temporal\\ac\\ac_sens_grid_sigma_1_steps_1500_seed_3.json",
+        "csv": "data\\sensitivity\\homogeneous_temporal\\ac\\ac_sens_grid_sigma_1_steps_1500_seed_3.csv"
+      },
+      "execution_parameters": {
+        "role": "injected_execution_parameter",
+        "seed": 3,
+        "sigma_px": {
+          "value": 1.0,
+          "status": "PENDIENTE"
+        },
+        "n_steps": {
+          "value": 1500,
+          "status": "PENDIENTE"
+        },
+        "p_ads": {
+          "value": null,
+          "effective": 1.0,
+          "implementation_status": "DECISI\u00d3N COMPUTACIONAL PROVISIONAL",
+          "status": "PENDIENTE"
+        }
+      },
+      "system_counts": {
+        "N_MB": 200,
+        "N_GO": 100,
+        "N_adsorbent": 100,
+        "adsorbent_symbol": "AC",
+        "status": "DECISI\u00d3N COMPUTACIONAL"
+      },
+      "outcomes": {
+        "n_adsorbed": 120,
+        "percent_adsorbed": 60.0,
+        "m_adsorbed_mg": 2.4,
+        "m_free_mg": 1.6,
+        "qfinal_mg_g": 240.0,
+        "n_contacts": 2105,
+        "mass_conservation_ok": true,
+        "result_classification": "computational_execution_not_experimental_validation"
+      },
+      "series_csv": "data\\sensitivity\\homogeneous_temporal\\ac\\ac_sens_grid_sigma_1_steps_1500_seed_3.csv",
+      "full_result_keys": [
+        "config",
+        "run",
+        "reference",
+        "summary",
+        "series",
+        "final_state"
+      ]
+    },
+    {
+      "role": "simulation_outcome",
+      "material": "AC",
+      "paths": {
+        "json": "data\\sensitivity\\homogeneous_temporal\\ac\\ac_sens_grid_sigma_1_steps_2000_seed_3.json",
+        "csv": "data\\sensitivity\\homogeneous_temporal\\ac\\ac_sens_grid_sigma_1_steps_2000_seed_3.csv"
+      },
+      "execution_parameters": {
+        "role": "injected_execution_parameter",
+        "seed": 3,
+        "sigma_px": {
+          "value": 1.0,
+          "status": "PENDIENTE"
+        },
+        "n_steps": {
+          "value": 2000,
+          "status": "PENDIENTE"
+        },
+        "p_ads": {
+          "value": null,
+          "effective": 1.0,
+          "implementation_status": "DECISI\u00d3N COMPUTACIONAL PROVISIONAL",
+          "status": "PENDIENTE"
+        }
+      },
+      "system_counts": {
+        "N_MB": 200,
+        "N_GO": 100,
+        "N_adsorbent": 100,
+        "adsorbent_symbol": "AC",
+        "status": "DECISI\u00d3N COMPUTACIONAL"
+      },
+      "outcomes": {
+        "n_adsorbed": 128,
+        "percent_adsorbed": 64.0,
+        "m_adsorbed_mg": 2.56,
+        "m_free_mg": 1.44,
+        "qfinal_mg_g": 256.0,
+        "n_contacts": 2850,
+        "mass_conservation_ok": true,
+        "result_classification": "computational_execution_not_experimental_validation"
+      },
+      "series_csv": "data\\sensitivity\\homogeneous_temporal\\ac\\ac_sens_grid_sigma_1_steps_2000_seed_3.csv",
+      "full_result_keys": [
+        "config",
+        "run",
+        "reference",
+        "summary",
+        "series",
+        "final_state"
+      ]
+    },
+    {
+      "role": "simulation_outcome",
+      "material": "AC",
+      "paths": {
+        "json": "data\\sensitivity\\homogeneous_temporal\\ac\\ac_sens_grid_sigma_1.5_steps_200_seed_3.json",
+        "csv": "data\\sensitivity\\homogeneous_temporal\\ac\\ac_sens_grid_sigma_1.5_steps_200_seed_3.csv"
+      },
+      "execution_parameters": {
+        "role": "injected_execution_parameter",
+        "seed": 3,
+        "sigma_px": {
+          "value": 1.5,
+          "status": "PENDIENTE"
+        },
+        "n_steps": {
+          "value": 200,
+          "status": "PENDIENTE"
+        },
+        "p_ads": {
+          "value": null,
+          "effective": 1.0,
+          "implementation_status": "DECISI\u00d3N COMPUTACIONAL PROVISIONAL",
+          "status": "PENDIENTE"
+        }
+      },
+      "system_counts": {
+        "N_MB": 200,
+        "N_GO": 100,
+        "N_adsorbent": 100,
+        "adsorbent_symbol": "AC",
+        "status": "DECISI\u00d3N COMPUTACIONAL"
+      },
+      "outcomes": {
+        "n_adsorbed": 87,
+        "percent_adsorbed": 43.5,
+        "m_adsorbed_mg": 1.74,
+        "m_free_mg": 2.26,
+        "qfinal_mg_g": 174.0,
+        "n_contacts": 135,
+        "mass_conservation_ok": true,
+        "result_classification": "computational_execution_not_experimental_validation"
+      },
+      "series_csv": "data\\sensitivity\\homogeneous_temporal\\ac\\ac_sens_grid_sigma_1.5_steps_200_seed_3.csv",
+      "full_result_keys": [
+        "config",
+        "run",
+        "reference",
+        "summary",
+        "series",
+        "final_state"
+      ]
+    },
+    {
+      "role": "simulation_outcome",
+      "material": "AC",
+      "paths": {
+        "json": "data\\sensitivity\\homogeneous_temporal\\ac\\ac_sens_grid_sigma_1.5_steps_400_seed_3.json",
+        "csv": "data\\sensitivity\\homogeneous_temporal\\ac\\ac_sens_grid_sigma_1.5_steps_400_seed_3.csv"
+      },
+      "execution_parameters": {
+        "role": "injected_execution_parameter",
+        "seed": 3,
+        "sigma_px": {
+          "value": 1.5,
+          "status": "PENDIENTE"
+        },
+        "n_steps": {
+          "value": 400,
+          "status": "PENDIENTE"
+        },
+        "p_ads": {
+          "value": null,
+          "effective": 1.0,
+          "implementation_status": "DECISI\u00d3N COMPUTACIONAL PROVISIONAL",
+          "status": "PENDIENTE"
+        }
+      },
+      "system_counts": {
+        "N_MB": 200,
+        "N_GO": 100,
+        "N_adsorbent": 100,
+        "adsorbent_symbol": "AC",
+        "status": "DECISI\u00d3N COMPUTACIONAL"
+      },
+      "outcomes": {
+        "n_adsorbed": 108,
+        "percent_adsorbed": 54.0,
+        "m_adsorbed_mg": 2.16,
+        "m_free_mg": 1.8399999999999999,
+        "qfinal_mg_g": 216.0,
+        "n_contacts": 451,
+        "mass_conservation_ok": true,
+        "result_classification": "computational_execution_not_experimental_validation"
+      },
+      "series_csv": "data\\sensitivity\\homogeneous_temporal\\ac\\ac_sens_grid_sigma_1.5_steps_400_seed_3.csv",
+      "full_result_keys": [
+        "config",
+        "run",
+        "reference",
+        "summary",
+        "series",
+        "final_state"
+      ]
+    },
+    {
+      "role": "simulation_outcome",
+      "material": "AC",
+      "paths": {
+        "json": "data\\sensitivity\\homogeneous_temporal\\ac\\ac_sens_grid_sigma_1.5_steps_600_seed_3.json",
+        "csv": "data\\sensitivity\\homogeneous_temporal\\ac\\ac_sens_grid_sigma_1.5_steps_600_seed_3.csv"
+      },
+      "execution_parameters": {
+        "role": "injected_execution_parameter",
+        "seed": 3,
+        "sigma_px": {
+          "value": 1.5,
+          "status": "PENDIENTE"
+        },
+        "n_steps": {
+          "value": 600,
+          "status": "PENDIENTE"
+        },
+        "p_ads": {
+          "value": null,
+          "effective": 1.0,
+          "implementation_status": "DECISI\u00d3N COMPUTACIONAL PROVISIONAL",
+          "status": "PENDIENTE"
+        }
+      },
+      "system_counts": {
+        "N_MB": 200,
+        "N_GO": 100,
+        "N_adsorbent": 100,
+        "adsorbent_symbol": "AC",
+        "status": "DECISI\u00d3N COMPUTACIONAL"
+      },
+      "outcomes": {
+        "n_adsorbed": 119,
+        "percent_adsorbed": 59.5,
+        "m_adsorbed_mg": 2.38,
+        "m_free_mg": 1.62,
+        "qfinal_mg_g": 237.99999999999997,
+        "n_contacts": 689,
+        "mass_conservation_ok": true,
+        "result_classification": "computational_execution_not_experimental_validation"
+      },
+      "series_csv": "data\\sensitivity\\homogeneous_temporal\\ac\\ac_sens_grid_sigma_1.5_steps_600_seed_3.csv",
+      "full_result_keys": [
+        "config",
+        "run",
+        "reference",
+        "summary",
+        "series",
+        "final_state"
+      ]
+    },
+    {
+      "role": "simulation_outcome",
+      "material": "AC",
+      "paths": {
+        "json": "data\\sensitivity\\homogeneous_temporal\\ac\\ac_sens_grid_sigma_1.5_steps_800_seed_3.json",
+        "csv": "data\\sensitivity\\homogeneous_temporal\\ac\\ac_sens_grid_sigma_1.5_steps_800_seed_3.csv"
+      },
+      "execution_parameters": {
+        "role": "injected_execution_parameter",
+        "seed": 3,
+        "sigma_px": {
+          "value": 1.5,
+          "status": "PENDIENTE"
+        },
+        "n_steps": {
+          "value": 800,
+          "status": "PENDIENTE"
+        },
+        "p_ads": {
+          "value": null,
+          "effective": 1.0,
+          "implementation_status": "DECISI\u00d3N COMPUTACIONAL PROVISIONAL",
+          "status": "PENDIENTE"
+        }
+      },
+      "system_counts": {
+        "N_MB": 200,
+        "N_GO": 100,
+        "N_adsorbent": 100,
+        "adsorbent_symbol": "AC",
+        "status": "DECISI\u00d3N COMPUTACIONAL"
+      },
+      "outcomes": {
+        "n_adsorbed": 129,
+        "percent_adsorbed": 64.5,
+        "m_adsorbed_mg": 2.58,
+        "m_free_mg": 1.42,
+        "qfinal_mg_g": 258.0,
+        "n_contacts": 1042,
+        "mass_conservation_ok": true,
+        "result_classification": "computational_execution_not_experimental_validation"
+      },
+      "series_csv": "data\\sensitivity\\homogeneous_temporal\\ac\\ac_sens_grid_sigma_1.5_steps_800_seed_3.csv",
+      "full_result_keys": [
+        "config",
+        "run",
+        "reference",
+        "summary",
+        "series",
+        "final_state"
+      ]
+    },
+    {
+      "role": "simulation_outcome",
+      "material": "AC",
+      "paths": {
+        "json": "data\\sensitivity\\homogeneous_temporal\\ac\\ac_sens_grid_sigma_1.5_steps_1000_seed_3.json",
+        "csv": "data\\sensitivity\\homogeneous_temporal\\ac\\ac_sens_grid_sigma_1.5_steps_1000_seed_3.csv"
+      },
+      "execution_parameters": {
+        "role": "injected_execution_parameter",
+        "seed": 3,
+        "sigma_px": {
+          "value": 1.5,
+          "status": "PENDIENTE"
+        },
+        "n_steps": {
+          "value": 1000,
+          "status": "PENDIENTE"
+        },
+        "p_ads": {
+          "value": null,
+          "effective": 1.0,
+          "implementation_status": "DECISI\u00d3N COMPUTACIONAL PROVISIONAL",
+          "status": "PENDIENTE"
+        }
+      },
+      "system_counts": {
+        "N_MB": 200,
+        "N_GO": 100,
+        "N_adsorbent": 100,
+        "adsorbent_symbol": "AC",
+        "status": "DECISI\u00d3N COMPUTACIONAL"
+      },
+      "outcomes": {
+        "n_adsorbed": 136,
+        "percent_adsorbed": 68.0,
+        "m_adsorbed_mg": 2.72,
+        "m_free_mg": 1.2799999999999998,
+        "qfinal_mg_g": 272.0,
+        "n_contacts": 1679,
+        "mass_conservation_ok": true,
+        "result_classification": "computational_execution_not_experimental_validation"
+      },
+      "series_csv": "data\\sensitivity\\homogeneous_temporal\\ac\\ac_sens_grid_sigma_1.5_steps_1000_seed_3.csv",
+      "full_result_keys": [
+        "config",
+        "run",
+        "reference",
+        "summary",
+        "series",
+        "final_state"
+      ]
+    },
+    {
+      "role": "simulation_outcome",
+      "material": "AC",
+      "paths": {
+        "json": "data\\sensitivity\\homogeneous_temporal\\ac\\ac_sens_grid_sigma_1.5_steps_1500_seed_3.json",
+        "csv": "data\\sensitivity\\homogeneous_temporal\\ac\\ac_sens_grid_sigma_1.5_steps_1500_seed_3.csv"
+      },
+      "execution_parameters": {
+        "role": "injected_execution_parameter",
+        "seed": 3,
+        "sigma_px": {
+          "value": 1.5,
+          "status": "PENDIENTE"
+        },
+        "n_steps": {
+          "value": 1500,
+          "status": "PENDIENTE"
+        },
+        "p_ads": {
+          "value": null,
+          "effective": 1.0,
+          "implementation_status": "DECISI\u00d3N COMPUTACIONAL PROVISIONAL",
+          "status": "PENDIENTE"
+        }
+      },
+      "system_counts": {
+        "N_MB": 200,
+        "N_GO": 100,
+        "N_adsorbent": 100,
+        "adsorbent_symbol": "AC",
+        "status": "DECISI\u00d3N COMPUTACIONAL"
+      },
+      "outcomes": {
+        "n_adsorbed": 143,
+        "percent_adsorbed": 71.5,
+        "m_adsorbed_mg": 2.86,
+        "m_free_mg": 1.1400000000000001,
+        "qfinal_mg_g": 286.0,
+        "n_contacts": 2573,
+        "mass_conservation_ok": true,
+        "result_classification": "computational_execution_not_experimental_validation"
+      },
+      "series_csv": "data\\sensitivity\\homogeneous_temporal\\ac\\ac_sens_grid_sigma_1.5_steps_1500_seed_3.csv",
+      "full_result_keys": [
+        "config",
+        "run",
+        "reference",
+        "summary",
+        "series",
+        "final_state"
+      ]
+    },
+    {
+      "role": "simulation_outcome",
+      "material": "AC",
+      "paths": {
+        "json": "data\\sensitivity\\homogeneous_temporal\\ac\\ac_sens_grid_sigma_1.5_steps_2000_seed_3.json",
+        "csv": "data\\sensitivity\\homogeneous_temporal\\ac\\ac_sens_grid_sigma_1.5_steps_2000_seed_3.csv"
+      },
+      "execution_parameters": {
+        "role": "injected_execution_parameter",
+        "seed": 3,
+        "sigma_px": {
+          "value": 1.5,
+          "status": "PENDIENTE"
+        },
+        "n_steps": {
+          "value": 2000,
+          "status": "PENDIENTE"
+        },
+        "p_ads": {
+          "value": null,
+          "effective": 1.0,
+          "implementation_status": "DECISI\u00d3N COMPUTACIONAL PROVISIONAL",
+          "status": "PENDIENTE"
+        }
+      },
+      "system_counts": {
+        "N_MB": 200,
+        "N_GO": 100,
+        "N_adsorbent": 100,
+        "adsorbent_symbol": "AC",
+        "status": "DECISI\u00d3N COMPUTACIONAL"
+      },
+      "outcomes": {
+        "n_adsorbed": 147,
+        "percent_adsorbed": 73.5,
+        "m_adsorbed_mg": 2.94,
+        "m_free_mg": 1.06,
+        "qfinal_mg_g": 294.0,
+        "n_contacts": 3592,
+        "mass_conservation_ok": true,
+        "result_classification": "computational_execution_not_experimental_validation"
+      },
+      "series_csv": "data\\sensitivity\\homogeneous_temporal\\ac\\ac_sens_grid_sigma_1.5_steps_2000_seed_3.csv",
+      "full_result_keys": [
+        "config",
+        "run",
+        "reference",
+        "summary",
+        "series",
+        "final_state"
+      ]
+    },
+    {
+      "role": "simulation_outcome",
+      "material": "AC",
+      "paths": {
+        "json": "data\\sensitivity\\homogeneous_temporal\\ac\\ac_sens_grid_sigma_1_steps_200_seed_4.json",
+        "csv": "data\\sensitivity\\homogeneous_temporal\\ac\\ac_sens_grid_sigma_1_steps_200_seed_4.csv"
+      },
+      "execution_parameters": {
+        "role": "injected_execution_parameter",
+        "seed": 4,
+        "sigma_px": {
+          "value": 1.0,
+          "status": "PENDIENTE"
+        },
+        "n_steps": {
+          "value": 200,
+          "status": "PENDIENTE"
+        },
+        "p_ads": {
+          "value": null,
+          "effective": 1.0,
+          "implementation_status": "DECISI\u00d3N COMPUTACIONAL PROVISIONAL",
+          "status": "PENDIENTE"
+        }
+      },
+      "system_counts": {
+        "N_MB": 200,
+        "N_GO": 100,
+        "N_adsorbent": 100,
+        "adsorbent_symbol": "AC",
+        "status": "DECISI\u00d3N COMPUTACIONAL"
+      },
+      "outcomes": {
+        "n_adsorbed": 55,
+        "percent_adsorbed": 27.500000000000004,
+        "m_adsorbed_mg": 1.1,
+        "m_free_mg": 2.9,
+        "qfinal_mg_g": 110.0,
+        "n_contacts": 55,
+        "mass_conservation_ok": true,
+        "result_classification": "computational_execution_not_experimental_validation"
+      },
+      "series_csv": "data\\sensitivity\\homogeneous_temporal\\ac\\ac_sens_grid_sigma_1_steps_200_seed_4.csv",
+      "full_result_keys": [
+        "config",
+        "run",
+        "reference",
+        "summary",
+        "series",
+        "final_state"
+      ]
+    },
+    {
+      "role": "simulation_outcome",
+      "material": "AC",
+      "paths": {
+        "json": "data\\sensitivity\\homogeneous_temporal\\ac\\ac_sens_grid_sigma_1_steps_400_seed_4.json",
+        "csv": "data\\sensitivity\\homogeneous_temporal\\ac\\ac_sens_grid_sigma_1_steps_400_seed_4.csv"
+      },
+      "execution_parameters": {
+        "role": "injected_execution_parameter",
+        "seed": 4,
+        "sigma_px": {
+          "value": 1.0,
+          "status": "PENDIENTE"
+        },
+        "n_steps": {
+          "value": 400,
+          "status": "PENDIENTE"
+        },
+        "p_ads": {
+          "value": null,
+          "effective": 1.0,
+          "implementation_status": "DECISI\u00d3N COMPUTACIONAL PROVISIONAL",
+          "status": "PENDIENTE"
+        }
+      },
+      "system_counts": {
+        "N_MB": 200,
+        "N_GO": 100,
+        "N_adsorbent": 100,
+        "adsorbent_symbol": "AC",
+        "status": "DECISI\u00d3N COMPUTACIONAL"
+      },
+      "outcomes": {
+        "n_adsorbed": 82,
+        "percent_adsorbed": 41.0,
+        "m_adsorbed_mg": 1.6400000000000001,
+        "m_free_mg": 2.36,
+        "qfinal_mg_g": 164.0,
+        "n_contacts": 147,
+        "mass_conservation_ok": true,
+        "result_classification": "computational_execution_not_experimental_validation"
+      },
+      "series_csv": "data\\sensitivity\\homogeneous_temporal\\ac\\ac_sens_grid_sigma_1_steps_400_seed_4.csv",
+      "full_result_keys": [
+        "config",
+        "run",
+        "reference",
+        "summary",
+        "series",
+        "final_state"
+      ]
+    },
+    {
+      "role": "simulation_outcome",
+      "material": "AC",
+      "paths": {
+        "json": "data\\sensitivity\\homogeneous_temporal\\ac\\ac_sens_grid_sigma_1_steps_600_seed_4.json",
+        "csv": "data\\sensitivity\\homogeneous_temporal\\ac\\ac_sens_grid_sigma_1_steps_600_seed_4.csv"
+      },
+      "execution_parameters": {
+        "role": "injected_execution_parameter",
+        "seed": 4,
+        "sigma_px": {
+          "value": 1.0,
+          "status": "PENDIENTE"
+        },
+        "n_steps": {
+          "value": 600,
+          "status": "PENDIENTE"
+        },
+        "p_ads": {
+          "value": null,
+          "effective": 1.0,
+          "implementation_status": "DECISI\u00d3N COMPUTACIONAL PROVISIONAL",
+          "status": "PENDIENTE"
+        }
+      },
+      "system_counts": {
+        "N_MB": 200,
+        "N_GO": 100,
+        "N_adsorbent": 100,
+        "adsorbent_symbol": "AC",
+        "status": "DECISI\u00d3N COMPUTACIONAL"
+      },
+      "outcomes": {
+        "n_adsorbed": 98,
+        "percent_adsorbed": 49.0,
+        "m_adsorbed_mg": 1.96,
+        "m_free_mg": 2.04,
+        "qfinal_mg_g": 196.0,
+        "n_contacts": 411,
+        "mass_conservation_ok": true,
+        "result_classification": "computational_execution_not_experimental_validation"
+      },
+      "series_csv": "data\\sensitivity\\homogeneous_temporal\\ac\\ac_sens_grid_sigma_1_steps_600_seed_4.csv",
+      "full_result_keys": [
+        "config",
+        "run",
+        "reference",
+        "summary",
+        "series",
+        "final_state"
+      ]
+    },
+    {
+      "role": "simulation_outcome",
+      "material": "AC",
+      "paths": {
+        "json": "data\\sensitivity\\homogeneous_temporal\\ac\\ac_sens_grid_sigma_1_steps_800_seed_4.json",
+        "csv": "data\\sensitivity\\homogeneous_temporal\\ac\\ac_sens_grid_sigma_1_steps_800_seed_4.csv"
+      },
+      "execution_parameters": {
+        "role": "injected_execution_parameter",
+        "seed": 4,
+        "sigma_px": {
+          "value": 1.0,
+          "status": "PENDIENTE"
+        },
+        "n_steps": {
+          "value": 800,
+          "status": "PENDIENTE"
+        },
+        "p_ads": {
+          "value": null,
+          "effective": 1.0,
+          "implementation_status": "DECISI\u00d3N COMPUTACIONAL PROVISIONAL",
+          "status": "PENDIENTE"
+        }
+      },
+      "system_counts": {
+        "N_MB": 200,
+        "N_GO": 100,
+        "N_adsorbent": 100,
+        "adsorbent_symbol": "AC",
+        "status": "DECISI\u00d3N COMPUTACIONAL"
+      },
+      "outcomes": {
+        "n_adsorbed": 110,
+        "percent_adsorbed": 55.00000000000001,
+        "m_adsorbed_mg": 2.2,
+        "m_free_mg": 1.7999999999999998,
+        "qfinal_mg_g": 220.0,
+        "n_contacts": 718,
+        "mass_conservation_ok": true,
+        "result_classification": "computational_execution_not_experimental_validation"
+      },
+      "series_csv": "data\\sensitivity\\homogeneous_temporal\\ac\\ac_sens_grid_sigma_1_steps_800_seed_4.csv",
+      "full_result_keys": [
+        "config",
+        "run",
+        "reference",
+        "summary",
+        "series",
+        "final_state"
+      ]
+    },
+    {
+      "role": "simulation_outcome",
+      "material": "AC",
+      "paths": {
+        "json": "data\\sensitivity\\homogeneous_temporal\\ac\\ac_sens_grid_sigma_1_steps_1000_seed_4.json",
+        "csv": "data\\sensitivity\\homogeneous_temporal\\ac\\ac_sens_grid_sigma_1_steps_1000_seed_4.csv"
+      },
+      "execution_parameters": {
+        "role": "injected_execution_parameter",
+        "seed": 4,
+        "sigma_px": {
+          "value": 1.0,
+          "status": "PENDIENTE"
+        },
+        "n_steps": {
+          "value": 1000,
+          "status": "PENDIENTE"
+        },
+        "p_ads": {
+          "value": null,
+          "effective": 1.0,
+          "implementation_status": "DECISI\u00d3N COMPUTACIONAL PROVISIONAL",
+          "status": "PENDIENTE"
+        }
+      },
+      "system_counts": {
+        "N_MB": 200,
+        "N_GO": 100,
+        "N_adsorbent": 100,
+        "adsorbent_symbol": "AC",
+        "status": "DECISI\u00d3N COMPUTACIONAL"
+      },
+      "outcomes": {
+        "n_adsorbed": 117,
+        "percent_adsorbed": 58.5,
+        "m_adsorbed_mg": 2.34,
+        "m_free_mg": 1.6600000000000001,
+        "qfinal_mg_g": 233.99999999999997,
+        "n_contacts": 1240,
+        "mass_conservation_ok": true,
+        "result_classification": "computational_execution_not_experimental_validation"
+      },
+      "series_csv": "data\\sensitivity\\homogeneous_temporal\\ac\\ac_sens_grid_sigma_1_steps_1000_seed_4.csv",
+      "full_result_keys": [
+        "config",
+        "run",
+        "reference",
+        "summary",
+        "series",
+        "final_state"
+      ]
+    },
+    {
+      "role": "simulation_outcome",
+      "material": "AC",
+      "paths": {
+        "json": "data\\sensitivity\\homogeneous_temporal\\ac\\ac_sens_grid_sigma_1_steps_1500_seed_4.json",
+        "csv": "data\\sensitivity\\homogeneous_temporal\\ac\\ac_sens_grid_sigma_1_steps_1500_seed_4.csv"
+      },
+      "execution_parameters": {
+        "role": "injected_execution_parameter",
+        "seed": 4,
+        "sigma_px": {
+          "value": 1.0,
+          "status": "PENDIENTE"
+        },
+        "n_steps": {
+          "value": 1500,
+          "status": "PENDIENTE"
+        },
+        "p_ads": {
+          "value": null,
+          "effective": 1.0,
+          "implementation_status": "DECISI\u00d3N COMPUTACIONAL PROVISIONAL",
+          "status": "PENDIENTE"
+        }
+      },
+      "system_counts": {
+        "N_MB": 200,
+        "N_GO": 100,
+        "N_adsorbent": 100,
+        "adsorbent_symbol": "AC",
+        "status": "DECISI\u00d3N COMPUTACIONAL"
+      },
+      "outcomes": {
+        "n_adsorbed": 123,
+        "percent_adsorbed": 61.5,
+        "m_adsorbed_mg": 2.46,
+        "m_free_mg": 1.54,
+        "qfinal_mg_g": 246.0,
+        "n_contacts": 2057,
+        "mass_conservation_ok": true,
+        "result_classification": "computational_execution_not_experimental_validation"
+      },
+      "series_csv": "data\\sensitivity\\homogeneous_temporal\\ac\\ac_sens_grid_sigma_1_steps_1500_seed_4.csv",
+      "full_result_keys": [
+        "config",
+        "run",
+        "reference",
+        "summary",
+        "series",
+        "final_state"
+      ]
+    },
+    {
+      "role": "simulation_outcome",
+      "material": "AC",
+      "paths": {
+        "json": "data\\sensitivity\\homogeneous_temporal\\ac\\ac_sens_grid_sigma_1_steps_2000_seed_4.json",
+        "csv": "data\\sensitivity\\homogeneous_temporal\\ac\\ac_sens_grid_sigma_1_steps_2000_seed_4.csv"
+      },
+      "execution_parameters": {
+        "role": "injected_execution_parameter",
+        "seed": 4,
+        "sigma_px": {
+          "value": 1.0,
+          "status": "PENDIENTE"
+        },
+        "n_steps": {
+          "value": 2000,
+          "status": "PENDIENTE"
+        },
+        "p_ads": {
+          "value": null,
+          "effective": 1.0,
+          "implementation_status": "DECISI\u00d3N COMPUTACIONAL PROVISIONAL",
+          "status": "PENDIENTE"
+        }
+      },
+      "system_counts": {
+        "N_MB": 200,
+        "N_GO": 100,
+        "N_adsorbent": 100,
+        "adsorbent_symbol": "AC",
+        "status": "DECISI\u00d3N COMPUTACIONAL"
+      },
+      "outcomes": {
+        "n_adsorbed": 130,
+        "percent_adsorbed": 65.0,
+        "m_adsorbed_mg": 2.6,
+        "m_free_mg": 1.4,
+        "qfinal_mg_g": 260.0,
+        "n_contacts": 2704,
+        "mass_conservation_ok": true,
+        "result_classification": "computational_execution_not_experimental_validation"
+      },
+      "series_csv": "data\\sensitivity\\homogeneous_temporal\\ac\\ac_sens_grid_sigma_1_steps_2000_seed_4.csv",
+      "full_result_keys": [
+        "config",
+        "run",
+        "reference",
+        "summary",
+        "series",
+        "final_state"
+      ]
+    },
+    {
+      "role": "simulation_outcome",
+      "material": "AC",
+      "paths": {
+        "json": "data\\sensitivity\\homogeneous_temporal\\ac\\ac_sens_grid_sigma_1.5_steps_200_seed_4.json",
+        "csv": "data\\sensitivity\\homogeneous_temporal\\ac\\ac_sens_grid_sigma_1.5_steps_200_seed_4.csv"
+      },
+      "execution_parameters": {
+        "role": "injected_execution_parameter",
+        "seed": 4,
+        "sigma_px": {
+          "value": 1.5,
+          "status": "PENDIENTE"
+        },
+        "n_steps": {
+          "value": 200,
+          "status": "PENDIENTE"
+        },
+        "p_ads": {
+          "value": null,
+          "effective": 1.0,
+          "implementation_status": "DECISI\u00d3N COMPUTACIONAL PROVISIONAL",
+          "status": "PENDIENTE"
+        }
+      },
+      "system_counts": {
+        "N_MB": 200,
+        "N_GO": 100,
+        "N_adsorbent": 100,
+        "adsorbent_symbol": "AC",
+        "status": "DECISI\u00d3N COMPUTACIONAL"
+      },
+      "outcomes": {
+        "n_adsorbed": 87,
+        "percent_adsorbed": 43.5,
+        "m_adsorbed_mg": 1.74,
+        "m_free_mg": 2.26,
+        "qfinal_mg_g": 174.0,
+        "n_contacts": 167,
+        "mass_conservation_ok": true,
+        "result_classification": "computational_execution_not_experimental_validation"
+      },
+      "series_csv": "data\\sensitivity\\homogeneous_temporal\\ac\\ac_sens_grid_sigma_1.5_steps_200_seed_4.csv",
+      "full_result_keys": [
+        "config",
+        "run",
+        "reference",
+        "summary",
+        "series",
+        "final_state"
+      ]
+    },
+    {
+      "role": "simulation_outcome",
+      "material": "AC",
+      "paths": {
+        "json": "data\\sensitivity\\homogeneous_temporal\\ac\\ac_sens_grid_sigma_1.5_steps_400_seed_4.json",
+        "csv": "data\\sensitivity\\homogeneous_temporal\\ac\\ac_sens_grid_sigma_1.5_steps_400_seed_4.csv"
+      },
+      "execution_parameters": {
+        "role": "injected_execution_parameter",
+        "seed": 4,
+        "sigma_px": {
+          "value": 1.5,
+          "status": "PENDIENTE"
+        },
+        "n_steps": {
+          "value": 400,
+          "status": "PENDIENTE"
+        },
+        "p_ads": {
+          "value": null,
+          "effective": 1.0,
+          "implementation_status": "DECISI\u00d3N COMPUTACIONAL PROVISIONAL",
+          "status": "PENDIENTE"
+        }
+      },
+      "system_counts": {
+        "N_MB": 200,
+        "N_GO": 100,
+        "N_adsorbent": 100,
+        "adsorbent_symbol": "AC",
+        "status": "DECISI\u00d3N COMPUTACIONAL"
+      },
+      "outcomes": {
+        "n_adsorbed": 111,
+        "percent_adsorbed": 55.50000000000001,
+        "m_adsorbed_mg": 2.22,
+        "m_free_mg": 1.7799999999999998,
+        "qfinal_mg_g": 222.00000000000003,
+        "n_contacts": 377,
+        "mass_conservation_ok": true,
+        "result_classification": "computational_execution_not_experimental_validation"
+      },
+      "series_csv": "data\\sensitivity\\homogeneous_temporal\\ac\\ac_sens_grid_sigma_1.5_steps_400_seed_4.csv",
+      "full_result_keys": [
+        "config",
+        "run",
+        "reference",
+        "summary",
+        "series",
+        "final_state"
+      ]
+    },
+    {
+      "role": "simulation_outcome",
+      "material": "AC",
+      "paths": {
+        "json": "data\\sensitivity\\homogeneous_temporal\\ac\\ac_sens_grid_sigma_1.5_steps_600_seed_4.json",
+        "csv": "data\\sensitivity\\homogeneous_temporal\\ac\\ac_sens_grid_sigma_1.5_steps_600_seed_4.csv"
+      },
+      "execution_parameters": {
+        "role": "injected_execution_parameter",
+        "seed": 4,
+        "sigma_px": {
+          "value": 1.5,
+          "status": "PENDIENTE"
+        },
+        "n_steps": {
+          "value": 600,
+          "status": "PENDIENTE"
+        },
+        "p_ads": {
+          "value": null,
+          "effective": 1.0,
+          "implementation_status": "DECISI\u00d3N COMPUTACIONAL PROVISIONAL",
+          "status": "PENDIENTE"
+        }
+      },
+      "system_counts": {
+        "N_MB": 200,
+        "N_GO": 100,
+        "N_adsorbent": 100,
+        "adsorbent_symbol": "AC",
+        "status": "DECISI\u00d3N COMPUTACIONAL"
+      },
+      "outcomes": {
+        "n_adsorbed": 121,
+        "percent_adsorbed": 60.5,
+        "m_adsorbed_mg": 2.42,
+        "m_free_mg": 1.58,
+        "qfinal_mg_g": 242.0,
+        "n_contacts": 535,
+        "mass_conservation_ok": true,
+        "result_classification": "computational_execution_not_experimental_validation"
+      },
+      "series_csv": "data\\sensitivity\\homogeneous_temporal\\ac\\ac_sens_grid_sigma_1.5_steps_600_seed_4.csv",
+      "full_result_keys": [
+        "config",
+        "run",
+        "reference",
+        "summary",
+        "series",
+        "final_state"
+      ]
+    },
+    {
+      "role": "simulation_outcome",
+      "material": "AC",
+      "paths": {
+        "json": "data\\sensitivity\\homogeneous_temporal\\ac\\ac_sens_grid_sigma_1.5_steps_800_seed_4.json",
+        "csv": "data\\sensitivity\\homogeneous_temporal\\ac\\ac_sens_grid_sigma_1.5_steps_800_seed_4.csv"
+      },
+      "execution_parameters": {
+        "role": "injected_execution_parameter",
+        "seed": 4,
+        "sigma_px": {
+          "value": 1.5,
+          "status": "PENDIENTE"
+        },
+        "n_steps": {
+          "value": 800,
+          "status": "PENDIENTE"
+        },
+        "p_ads": {
+          "value": null,
+          "effective": 1.0,
+          "implementation_status": "DECISI\u00d3N COMPUTACIONAL PROVISIONAL",
+          "status": "PENDIENTE"
+        }
+      },
+      "system_counts": {
+        "N_MB": 200,
+        "N_GO": 100,
+        "N_adsorbent": 100,
+        "adsorbent_symbol": "AC",
+        "status": "DECISI\u00d3N COMPUTACIONAL"
+      },
+      "outcomes": {
+        "n_adsorbed": 129,
+        "percent_adsorbed": 64.5,
+        "m_adsorbed_mg": 2.58,
+        "m_free_mg": 1.42,
+        "qfinal_mg_g": 258.0,
+        "n_contacts": 980,
+        "mass_conservation_ok": true,
+        "result_classification": "computational_execution_not_experimental_validation"
+      },
+      "series_csv": "data\\sensitivity\\homogeneous_temporal\\ac\\ac_sens_grid_sigma_1.5_steps_800_seed_4.csv",
+      "full_result_keys": [
+        "config",
+        "run",
+        "reference",
+        "summary",
+        "series",
+        "final_state"
+      ]
+    },
+    {
+      "role": "simulation_outcome",
+      "material": "AC",
+      "paths": {
+        "json": "data\\sensitivity\\homogeneous_temporal\\ac\\ac_sens_grid_sigma_1.5_steps_1000_seed_4.json",
+        "csv": "data\\sensitivity\\homogeneous_temporal\\ac\\ac_sens_grid_sigma_1.5_steps_1000_seed_4.csv"
+      },
+      "execution_parameters": {
+        "role": "injected_execution_parameter",
+        "seed": 4,
+        "sigma_px": {
+          "value": 1.5,
+          "status": "PENDIENTE"
+        },
+        "n_steps": {
+          "value": 1000,
+          "status": "PENDIENTE"
+        },
+        "p_ads": {
+          "value": null,
+          "effective": 1.0,
+          "implementation_status": "DECISI\u00d3N COMPUTACIONAL PROVISIONAL",
+          "status": "PENDIENTE"
+        }
+      },
+      "system_counts": {
+        "N_MB": 200,
+        "N_GO": 100,
+        "N_adsorbent": 100,
+        "adsorbent_symbol": "AC",
+        "status": "DECISI\u00d3N COMPUTACIONAL"
+      },
+      "outcomes": {
+        "n_adsorbed": 133,
+        "percent_adsorbed": 66.5,
+        "m_adsorbed_mg": 2.66,
+        "m_free_mg": 1.3399999999999999,
+        "qfinal_mg_g": 266.0,
+        "n_contacts": 1672,
+        "mass_conservation_ok": true,
+        "result_classification": "computational_execution_not_experimental_validation"
+      },
+      "series_csv": "data\\sensitivity\\homogeneous_temporal\\ac\\ac_sens_grid_sigma_1.5_steps_1000_seed_4.csv",
+      "full_result_keys": [
+        "config",
+        "run",
+        "reference",
+        "summary",
+        "series",
+        "final_state"
+      ]
+    },
+    {
+      "role": "simulation_outcome",
+      "material": "AC",
+      "paths": {
+        "json": "data\\sensitivity\\homogeneous_temporal\\ac\\ac_sens_grid_sigma_1.5_steps_1500_seed_4.json",
+        "csv": "data\\sensitivity\\homogeneous_temporal\\ac\\ac_sens_grid_sigma_1.5_steps_1500_seed_4.csv"
+      },
+      "execution_parameters": {
+        "role": "injected_execution_parameter",
+        "seed": 4,
+        "sigma_px": {
+          "value": 1.5,
+          "status": "PENDIENTE"
+        },
+        "n_steps": {
+          "value": 1500,
+          "status": "PENDIENTE"
+        },
+        "p_ads": {
+          "value": null,
+          "effective": 1.0,
+          "implementation_status": "DECISI\u00d3N COMPUTACIONAL PROVISIONAL",
+          "status": "PENDIENTE"
+        }
+      },
+      "system_counts": {
+        "N_MB": 200,
+        "N_GO": 100,
+        "N_adsorbent": 100,
+        "adsorbent_symbol": "AC",
+        "status": "DECISI\u00d3N COMPUTACIONAL"
+      },
+      "outcomes": {
+        "n_adsorbed": 150,
+        "percent_adsorbed": 75.0,
+        "m_adsorbed_mg": 3.0,
+        "m_free_mg": 1.0,
+        "qfinal_mg_g": 300.0,
+        "n_contacts": 2428,
+        "mass_conservation_ok": true,
+        "result_classification": "computational_execution_not_experimental_validation"
+      },
+      "series_csv": "data\\sensitivity\\homogeneous_temporal\\ac\\ac_sens_grid_sigma_1.5_steps_1500_seed_4.csv",
+      "full_result_keys": [
+        "config",
+        "run",
+        "reference",
+        "summary",
+        "series",
+        "final_state"
+      ]
+    },
+    {
+      "role": "simulation_outcome",
+      "material": "AC",
+      "paths": {
+        "json": "data\\sensitivity\\homogeneous_temporal\\ac\\ac_sens_grid_sigma_1.5_steps_2000_seed_4.json",
+        "csv": "data\\sensitivity\\homogeneous_temporal\\ac\\ac_sens_grid_sigma_1.5_steps_2000_seed_4.csv"
+      },
+      "execution_parameters": {
+        "role": "injected_execution_parameter",
+        "seed": 4,
+        "sigma_px": {
+          "value": 1.5,
+          "status": "PENDIENTE"
+        },
+        "n_steps": {
+          "value": 2000,
+          "status": "PENDIENTE"
+        },
+        "p_ads": {
+          "value": null,
+          "effective": 1.0,
+          "implementation_status": "DECISI\u00d3N COMPUTACIONAL PROVISIONAL",
+          "status": "PENDIENTE"
+        }
+      },
+      "system_counts": {
+        "N_MB": 200,
+        "N_GO": 100,
+        "N_adsorbent": 100,
+        "adsorbent_symbol": "AC",
+        "status": "DECISI\u00d3N COMPUTACIONAL"
+      },
+      "outcomes": {
+        "n_adsorbed": 155,
+        "percent_adsorbed": 77.5,
+        "m_adsorbed_mg": 3.1,
+        "m_free_mg": 0.8999999999999999,
+        "qfinal_mg_g": 310.0,
+        "n_contacts": 3329,
+        "mass_conservation_ok": true,
+        "result_classification": "computational_execution_not_experimental_validation"
+      },
+      "series_csv": "data\\sensitivity\\homogeneous_temporal\\ac\\ac_sens_grid_sigma_1.5_steps_2000_seed_4.csv",
+      "full_result_keys": [
+        "config",
+        "run",
+        "reference",
+        "summary",
+        "series",
+        "final_state"
+      ]
+    },
+    {
+      "role": "simulation_outcome",
+      "material": "AC",
+      "paths": {
+        "json": "data\\sensitivity\\homogeneous_temporal\\ac\\ac_sens_grid_sigma_1_steps_200_seed_5.json",
+        "csv": "data\\sensitivity\\homogeneous_temporal\\ac\\ac_sens_grid_sigma_1_steps_200_seed_5.csv"
+      },
+      "execution_parameters": {
+        "role": "injected_execution_parameter",
+        "seed": 5,
+        "sigma_px": {
+          "value": 1.0,
+          "status": "PENDIENTE"
+        },
+        "n_steps": {
+          "value": 200,
+          "status": "PENDIENTE"
+        },
+        "p_ads": {
+          "value": null,
+          "effective": 1.0,
+          "implementation_status": "DECISI\u00d3N COMPUTACIONAL PROVISIONAL",
+          "status": "PENDIENTE"
+        }
+      },
+      "system_counts": {
+        "N_MB": 200,
+        "N_GO": 100,
+        "N_adsorbent": 100,
+        "adsorbent_symbol": "AC",
+        "status": "DECISI\u00d3N COMPUTACIONAL"
+      },
+      "outcomes": {
+        "n_adsorbed": 65,
+        "percent_adsorbed": 32.5,
+        "m_adsorbed_mg": 1.3,
+        "m_free_mg": 2.7,
+        "qfinal_mg_g": 130.0,
+        "n_contacts": 72,
+        "mass_conservation_ok": true,
+        "result_classification": "computational_execution_not_experimental_validation"
+      },
+      "series_csv": "data\\sensitivity\\homogeneous_temporal\\ac\\ac_sens_grid_sigma_1_steps_200_seed_5.csv",
+      "full_result_keys": [
+        "config",
+        "run",
+        "reference",
+        "summary",
+        "series",
+        "final_state"
+      ]
+    },
+    {
+      "role": "simulation_outcome",
+      "material": "AC",
+      "paths": {
+        "json": "data\\sensitivity\\homogeneous_temporal\\ac\\ac_sens_grid_sigma_1_steps_400_seed_5.json",
+        "csv": "data\\sensitivity\\homogeneous_temporal\\ac\\ac_sens_grid_sigma_1_steps_400_seed_5.csv"
+      },
+      "execution_parameters": {
+        "role": "injected_execution_parameter",
+        "seed": 5,
+        "sigma_px": {
+          "value": 1.0,
+          "status": "PENDIENTE"
+        },
+        "n_steps": {
+          "value": 400,
+          "status": "PENDIENTE"
+        },
+        "p_ads": {
+          "value": null,
+          "effective": 1.0,
+          "implementation_status": "DECISI\u00d3N COMPUTACIONAL PROVISIONAL",
+          "status": "PENDIENTE"
+        }
+      },
+      "system_counts": {
+        "N_MB": 200,
+        "N_GO": 100,
+        "N_adsorbent": 100,
+        "adsorbent_symbol": "AC",
+        "status": "DECISI\u00d3N COMPUTACIONAL"
+      },
+      "outcomes": {
+        "n_adsorbed": 90,
+        "percent_adsorbed": 45.0,
+        "m_adsorbed_mg": 1.8,
+        "m_free_mg": 2.2,
+        "qfinal_mg_g": 180.0,
+        "n_contacts": 187,
+        "mass_conservation_ok": true,
+        "result_classification": "computational_execution_not_experimental_validation"
+      },
+      "series_csv": "data\\sensitivity\\homogeneous_temporal\\ac\\ac_sens_grid_sigma_1_steps_400_seed_5.csv",
+      "full_result_keys": [
+        "config",
+        "run",
+        "reference",
+        "summary",
+        "series",
+        "final_state"
+      ]
+    },
+    {
+      "role": "simulation_outcome",
+      "material": "AC",
+      "paths": {
+        "json": "data\\sensitivity\\homogeneous_temporal\\ac\\ac_sens_grid_sigma_1_steps_600_seed_5.json",
+        "csv": "data\\sensitivity\\homogeneous_temporal\\ac\\ac_sens_grid_sigma_1_steps_600_seed_5.csv"
+      },
+      "execution_parameters": {
+        "role": "injected_execution_parameter",
+        "seed": 5,
+        "sigma_px": {
+          "value": 1.0,
+          "status": "PENDIENTE"
+        },
+        "n_steps": {
+          "value": 600,
+          "status": "PENDIENTE"
+        },
+        "p_ads": {
+          "value": null,
+          "effective": 1.0,
+          "implementation_status": "DECISI\u00d3N COMPUTACIONAL PROVISIONAL",
+          "status": "PENDIENTE"
+        }
+      },
+      "system_counts": {
+        "N_MB": 200,
+        "N_GO": 100,
+        "N_adsorbent": 100,
+        "adsorbent_symbol": "AC",
+        "status": "DECISI\u00d3N COMPUTACIONAL"
+      },
+      "outcomes": {
+        "n_adsorbed": 110,
+        "percent_adsorbed": 55.00000000000001,
+        "m_adsorbed_mg": 2.2,
+        "m_free_mg": 1.7999999999999998,
+        "qfinal_mg_g": 220.0,
+        "n_contacts": 337,
+        "mass_conservation_ok": true,
+        "result_classification": "computational_execution_not_experimental_validation"
+      },
+      "series_csv": "data\\sensitivity\\homogeneous_temporal\\ac\\ac_sens_grid_sigma_1_steps_600_seed_5.csv",
+      "full_result_keys": [
+        "config",
+        "run",
+        "reference",
+        "summary",
+        "series",
+        "final_state"
+      ]
+    },
+    {
+      "role": "simulation_outcome",
+      "material": "AC",
+      "paths": {
+        "json": "data\\sensitivity\\homogeneous_temporal\\ac\\ac_sens_grid_sigma_1_steps_800_seed_5.json",
+        "csv": "data\\sensitivity\\homogeneous_temporal\\ac\\ac_sens_grid_sigma_1_steps_800_seed_5.csv"
+      },
+      "execution_parameters": {
+        "role": "injected_execution_parameter",
+        "seed": 5,
+        "sigma_px": {
+          "value": 1.0,
+          "status": "PENDIENTE"
+        },
+        "n_steps": {
+          "value": 800,
+          "status": "PENDIENTE"
+        },
+        "p_ads": {
+          "value": null,
+          "effective": 1.0,
+          "implementation_status": "DECISI\u00d3N COMPUTACIONAL PROVISIONAL",
+          "status": "PENDIENTE"
+        }
+      },
+      "system_counts": {
+        "N_MB": 200,
+        "N_GO": 100,
+        "N_adsorbent": 100,
+        "adsorbent_symbol": "AC",
+        "status": "DECISI\u00d3N COMPUTACIONAL"
+      },
+      "outcomes": {
+        "n_adsorbed": 117,
+        "percent_adsorbed": 58.5,
+        "m_adsorbed_mg": 2.34,
+        "m_free_mg": 1.6600000000000001,
+        "qfinal_mg_g": 233.99999999999997,
+        "n_contacts": 558,
+        "mass_conservation_ok": true,
+        "result_classification": "computational_execution_not_experimental_validation"
+      },
+      "series_csv": "data\\sensitivity\\homogeneous_temporal\\ac\\ac_sens_grid_sigma_1_steps_800_seed_5.csv",
+      "full_result_keys": [
+        "config",
+        "run",
+        "reference",
+        "summary",
+        "series",
+        "final_state"
+      ]
+    },
+    {
+      "role": "simulation_outcome",
+      "material": "AC",
+      "paths": {
+        "json": "data\\sensitivity\\homogeneous_temporal\\ac\\ac_sens_grid_sigma_1_steps_1000_seed_5.json",
+        "csv": "data\\sensitivity\\homogeneous_temporal\\ac\\ac_sens_grid_sigma_1_steps_1000_seed_5.csv"
+      },
+      "execution_parameters": {
+        "role": "injected_execution_parameter",
+        "seed": 5,
+        "sigma_px": {
+          "value": 1.0,
+          "status": "PENDIENTE"
+        },
+        "n_steps": {
+          "value": 1000,
+          "status": "PENDIENTE"
+        },
+        "p_ads": {
+          "value": null,
+          "effective": 1.0,
+          "implementation_status": "DECISI\u00d3N COMPUTACIONAL PROVISIONAL",
+          "status": "PENDIENTE"
+        }
+      },
+      "system_counts": {
+        "N_MB": 200,
+        "N_GO": 100,
+        "N_adsorbent": 100,
+        "adsorbent_symbol": "AC",
+        "status": "DECISI\u00d3N COMPUTACIONAL"
+      },
+      "outcomes": {
+        "n_adsorbed": 124,
+        "percent_adsorbed": 62.0,
+        "m_adsorbed_mg": 2.48,
+        "m_free_mg": 1.52,
+        "qfinal_mg_g": 248.0,
+        "n_contacts": 765,
+        "mass_conservation_ok": true,
+        "result_classification": "computational_execution_not_experimental_validation"
+      },
+      "series_csv": "data\\sensitivity\\homogeneous_temporal\\ac\\ac_sens_grid_sigma_1_steps_1000_seed_5.csv",
+      "full_result_keys": [
+        "config",
+        "run",
+        "reference",
+        "summary",
+        "series",
+        "final_state"
+      ]
+    },
+    {
+      "role": "simulation_outcome",
+      "material": "AC",
+      "paths": {
+        "json": "data\\sensitivity\\homogeneous_temporal\\ac\\ac_sens_grid_sigma_1_steps_1500_seed_5.json",
+        "csv": "data\\sensitivity\\homogeneous_temporal\\ac\\ac_sens_grid_sigma_1_steps_1500_seed_5.csv"
+      },
+      "execution_parameters": {
+        "role": "injected_execution_parameter",
+        "seed": 5,
+        "sigma_px": {
+          "value": 1.0,
+          "status": "PENDIENTE"
+        },
+        "n_steps": {
+          "value": 1500,
+          "status": "PENDIENTE"
+        },
+        "p_ads": {
+          "value": null,
+          "effective": 1.0,
+          "implementation_status": "DECISI\u00d3N COMPUTACIONAL PROVISIONAL",
+          "status": "PENDIENTE"
+        }
+      },
+      "system_counts": {
+        "N_MB": 200,
+        "N_GO": 100,
+        "N_adsorbent": 100,
+        "adsorbent_symbol": "AC",
+        "status": "DECISI\u00d3N COMPUTACIONAL"
+      },
+      "outcomes": {
+        "n_adsorbed": 139,
+        "percent_adsorbed": 69.5,
+        "m_adsorbed_mg": 2.7800000000000002,
+        "m_free_mg": 1.2199999999999998,
+        "qfinal_mg_g": 278.0,
+        "n_contacts": 1382,
+        "mass_conservation_ok": true,
+        "result_classification": "computational_execution_not_experimental_validation"
+      },
+      "series_csv": "data\\sensitivity\\homogeneous_temporal\\ac\\ac_sens_grid_sigma_1_steps_1500_seed_5.csv",
+      "full_result_keys": [
+        "config",
+        "run",
+        "reference",
+        "summary",
+        "series",
+        "final_state"
+      ]
+    },
+    {
+      "role": "simulation_outcome",
+      "material": "AC",
+      "paths": {
+        "json": "data\\sensitivity\\homogeneous_temporal\\ac\\ac_sens_grid_sigma_1_steps_2000_seed_5.json",
+        "csv": "data\\sensitivity\\homogeneous_temporal\\ac\\ac_sens_grid_sigma_1_steps_2000_seed_5.csv"
+      },
+      "execution_parameters": {
+        "role": "injected_execution_parameter",
+        "seed": 5,
+        "sigma_px": {
+          "value": 1.0,
+          "status": "PENDIENTE"
+        },
+        "n_steps": {
+          "value": 2000,
+          "status": "PENDIENTE"
+        },
+        "p_ads": {
+          "value": null,
+          "effective": 1.0,
+          "implementation_status": "DECISI\u00d3N COMPUTACIONAL PROVISIONAL",
+          "status": "PENDIENTE"
+        }
+      },
+      "system_counts": {
+        "N_MB": 200,
+        "N_GO": 100,
+        "N_adsorbent": 100,
+        "adsorbent_symbol": "AC",
+        "status": "DECISI\u00d3N COMPUTACIONAL"
+      },
+      "outcomes": {
+        "n_adsorbed": 147,
+        "percent_adsorbed": 73.5,
+        "m_adsorbed_mg": 2.94,
+        "m_free_mg": 1.06,
+        "qfinal_mg_g": 294.0,
+        "n_contacts": 2710,
+        "mass_conservation_ok": true,
+        "result_classification": "computational_execution_not_experimental_validation"
+      },
+      "series_csv": "data\\sensitivity\\homogeneous_temporal\\ac\\ac_sens_grid_sigma_1_steps_2000_seed_5.csv",
+      "full_result_keys": [
+        "config",
+        "run",
+        "reference",
+        "summary",
+        "series",
+        "final_state"
+      ]
+    },
+    {
+      "role": "simulation_outcome",
+      "material": "AC",
+      "paths": {
+        "json": "data\\sensitivity\\homogeneous_temporal\\ac\\ac_sens_grid_sigma_1.5_steps_200_seed_5.json",
+        "csv": "data\\sensitivity\\homogeneous_temporal\\ac\\ac_sens_grid_sigma_1.5_steps_200_seed_5.csv"
+      },
+      "execution_parameters": {
+        "role": "injected_execution_parameter",
+        "seed": 5,
+        "sigma_px": {
+          "value": 1.5,
+          "status": "PENDIENTE"
+        },
+        "n_steps": {
+          "value": 200,
+          "status": "PENDIENTE"
+        },
+        "p_ads": {
+          "value": null,
+          "effective": 1.0,
+          "implementation_status": "DECISI\u00d3N COMPUTACIONAL PROVISIONAL",
+          "status": "PENDIENTE"
+        }
+      },
+      "system_counts": {
+        "N_MB": 200,
+        "N_GO": 100,
+        "N_adsorbent": 100,
+        "adsorbent_symbol": "AC",
+        "status": "DECISI\u00d3N COMPUTACIONAL"
+      },
+      "outcomes": {
+        "n_adsorbed": 83,
+        "percent_adsorbed": 41.5,
+        "m_adsorbed_mg": 1.6600000000000001,
+        "m_free_mg": 2.34,
+        "qfinal_mg_g": 166.0,
+        "n_contacts": 281,
+        "mass_conservation_ok": true,
+        "result_classification": "computational_execution_not_experimental_validation"
+      },
+      "series_csv": "data\\sensitivity\\homogeneous_temporal\\ac\\ac_sens_grid_sigma_1.5_steps_200_seed_5.csv",
+      "full_result_keys": [
+        "config",
+        "run",
+        "reference",
+        "summary",
+        "series",
+        "final_state"
+      ]
+    },
+    {
+      "role": "simulation_outcome",
+      "material": "AC",
+      "paths": {
+        "json": "data\\sensitivity\\homogeneous_temporal\\ac\\ac_sens_grid_sigma_1.5_steps_400_seed_5.json",
+        "csv": "data\\sensitivity\\homogeneous_temporal\\ac\\ac_sens_grid_sigma_1.5_steps_400_seed_5.csv"
+      },
+      "execution_parameters": {
+        "role": "injected_execution_parameter",
+        "seed": 5,
+        "sigma_px": {
+          "value": 1.5,
+          "status": "PENDIENTE"
+        },
+        "n_steps": {
+          "value": 400,
+          "status": "PENDIENTE"
+        },
+        "p_ads": {
+          "value": null,
+          "effective": 1.0,
+          "implementation_status": "DECISI\u00d3N COMPUTACIONAL PROVISIONAL",
+          "status": "PENDIENTE"
+        }
+      },
+      "system_counts": {
+        "N_MB": 200,
+        "N_GO": 100,
+        "N_adsorbent": 100,
+        "adsorbent_symbol": "AC",
+        "status": "DECISI\u00d3N COMPUTACIONAL"
+      },
+      "outcomes": {
+        "n_adsorbed": 115,
+        "percent_adsorbed": 57.49999999999999,
+        "m_adsorbed_mg": 2.3000000000000003,
+        "m_free_mg": 1.6999999999999997,
+        "qfinal_mg_g": 230.00000000000003,
+        "n_contacts": 697,
+        "mass_conservation_ok": true,
+        "result_classification": "computational_execution_not_experimental_validation"
+      },
+      "series_csv": "data\\sensitivity\\homogeneous_temporal\\ac\\ac_sens_grid_sigma_1.5_steps_400_seed_5.csv",
+      "full_result_keys": [
+        "config",
+        "run",
+        "reference",
+        "summary",
+        "series",
+        "final_state"
+      ]
+    },
+    {
+      "role": "simulation_outcome",
+      "material": "AC",
+      "paths": {
+        "json": "data\\sensitivity\\homogeneous_temporal\\ac\\ac_sens_grid_sigma_1.5_steps_600_seed_5.json",
+        "csv": "data\\sensitivity\\homogeneous_temporal\\ac\\ac_sens_grid_sigma_1.5_steps_600_seed_5.csv"
+      },
+      "execution_parameters": {
+        "role": "injected_execution_parameter",
+        "seed": 5,
+        "sigma_px": {
+          "value": 1.5,
+          "status": "PENDIENTE"
+        },
+        "n_steps": {
+          "value": 600,
+          "status": "PENDIENTE"
+        },
+        "p_ads": {
+          "value": null,
+          "effective": 1.0,
+          "implementation_status": "DECISI\u00d3N COMPUTACIONAL PROVISIONAL",
+          "status": "PENDIENTE"
+        }
+      },
+      "system_counts": {
+        "N_MB": 200,
+        "N_GO": 100,
+        "N_adsorbent": 100,
+        "adsorbent_symbol": "AC",
+        "status": "DECISI\u00d3N COMPUTACIONAL"
+      },
+      "outcomes": {
+        "n_adsorbed": 130,
+        "percent_adsorbed": 65.0,
+        "m_adsorbed_mg": 2.6,
+        "m_free_mg": 1.4,
+        "qfinal_mg_g": 260.0,
+        "n_contacts": 912,
+        "mass_conservation_ok": true,
+        "result_classification": "computational_execution_not_experimental_validation"
+      },
+      "series_csv": "data\\sensitivity\\homogeneous_temporal\\ac\\ac_sens_grid_sigma_1.5_steps_600_seed_5.csv",
+      "full_result_keys": [
+        "config",
+        "run",
+        "reference",
+        "summary",
+        "series",
+        "final_state"
+      ]
+    },
+    {
+      "role": "simulation_outcome",
+      "material": "AC",
+      "paths": {
+        "json": "data\\sensitivity\\homogeneous_temporal\\ac\\ac_sens_grid_sigma_1.5_steps_800_seed_5.json",
+        "csv": "data\\sensitivity\\homogeneous_temporal\\ac\\ac_sens_grid_sigma_1.5_steps_800_seed_5.csv"
+      },
+      "execution_parameters": {
+        "role": "injected_execution_parameter",
+        "seed": 5,
+        "sigma_px": {
+          "value": 1.5,
+          "status": "PENDIENTE"
+        },
+        "n_steps": {
+          "value": 800,
+          "status": "PENDIENTE"
+        },
+        "p_ads": {
+          "value": null,
+          "effective": 1.0,
+          "implementation_status": "DECISI\u00d3N COMPUTACIONAL PROVISIONAL",
+          "status": "PENDIENTE"
+        }
+      },
+      "system_counts": {
+        "N_MB": 200,
+        "N_GO": 100,
+        "N_adsorbent": 100,
+        "adsorbent_symbol": "AC",
+        "status": "DECISI\u00d3N COMPUTACIONAL"
+      },
+      "outcomes": {
+        "n_adsorbed": 136,
+        "percent_adsorbed": 68.0,
+        "m_adsorbed_mg": 2.72,
+        "m_free_mg": 1.2799999999999998,
+        "qfinal_mg_g": 272.0,
+        "n_contacts": 1325,
+        "mass_conservation_ok": true,
+        "result_classification": "computational_execution_not_experimental_validation"
+      },
+      "series_csv": "data\\sensitivity\\homogeneous_temporal\\ac\\ac_sens_grid_sigma_1.5_steps_800_seed_5.csv",
+      "full_result_keys": [
+        "config",
+        "run",
+        "reference",
+        "summary",
+        "series",
+        "final_state"
+      ]
+    },
+    {
+      "role": "simulation_outcome",
+      "material": "AC",
+      "paths": {
+        "json": "data\\sensitivity\\homogeneous_temporal\\ac\\ac_sens_grid_sigma_1.5_steps_1000_seed_5.json",
+        "csv": "data\\sensitivity\\homogeneous_temporal\\ac\\ac_sens_grid_sigma_1.5_steps_1000_seed_5.csv"
+      },
+      "execution_parameters": {
+        "role": "injected_execution_parameter",
+        "seed": 5,
+        "sigma_px": {
+          "value": 1.5,
+          "status": "PENDIENTE"
+        },
+        "n_steps": {
+          "value": 1000,
+          "status": "PENDIENTE"
+        },
+        "p_ads": {
+          "value": null,
+          "effective": 1.0,
+          "implementation_status": "DECISI\u00d3N COMPUTACIONAL PROVISIONAL",
+          "status": "PENDIENTE"
+        }
+      },
+      "system_counts": {
+        "N_MB": 200,
+        "N_GO": 100,
+        "N_adsorbent": 100,
+        "adsorbent_symbol": "AC",
+        "status": "DECISI\u00d3N COMPUTACIONAL"
+      },
+      "outcomes": {
+        "n_adsorbed": 141,
+        "percent_adsorbed": 70.5,
+        "m_adsorbed_mg": 2.82,
+        "m_free_mg": 1.1800000000000002,
+        "qfinal_mg_g": 282.0,
+        "n_contacts": 1642,
+        "mass_conservation_ok": true,
+        "result_classification": "computational_execution_not_experimental_validation"
+      },
+      "series_csv": "data\\sensitivity\\homogeneous_temporal\\ac\\ac_sens_grid_sigma_1.5_steps_1000_seed_5.csv",
+      "full_result_keys": [
+        "config",
+        "run",
+        "reference",
+        "summary",
+        "series",
+        "final_state"
+      ]
+    },
+    {
+      "role": "simulation_outcome",
+      "material": "AC",
+      "paths": {
+        "json": "data\\sensitivity\\homogeneous_temporal\\ac\\ac_sens_grid_sigma_1.5_steps_1500_seed_5.json",
+        "csv": "data\\sensitivity\\homogeneous_temporal\\ac\\ac_sens_grid_sigma_1.5_steps_1500_seed_5.csv"
+      },
+      "execution_parameters": {
+        "role": "injected_execution_parameter",
+        "seed": 5,
+        "sigma_px": {
+          "value": 1.5,
+          "status": "PENDIENTE"
+        },
+        "n_steps": {
+          "value": 1500,
+          "status": "PENDIENTE"
+        },
+        "p_ads": {
+          "value": null,
+          "effective": 1.0,
+          "implementation_status": "DECISI\u00d3N COMPUTACIONAL PROVISIONAL",
+          "status": "PENDIENTE"
+        }
+      },
+      "system_counts": {
+        "N_MB": 200,
+        "N_GO": 100,
+        "N_adsorbent": 100,
+        "adsorbent_symbol": "AC",
+        "status": "DECISI\u00d3N COMPUTACIONAL"
+      },
+      "outcomes": {
+        "n_adsorbed": 154,
+        "percent_adsorbed": 77.0,
+        "m_adsorbed_mg": 3.08,
+        "m_free_mg": 0.9199999999999999,
+        "qfinal_mg_g": 308.0,
+        "n_contacts": 2586,
+        "mass_conservation_ok": true,
+        "result_classification": "computational_execution_not_experimental_validation"
+      },
+      "series_csv": "data\\sensitivity\\homogeneous_temporal\\ac\\ac_sens_grid_sigma_1.5_steps_1500_seed_5.csv",
+      "full_result_keys": [
+        "config",
+        "run",
+        "reference",
+        "summary",
+        "series",
+        "final_state"
+      ]
+    },
+    {
+      "role": "simulation_outcome",
+      "material": "AC",
+      "paths": {
+        "json": "data\\sensitivity\\homogeneous_temporal\\ac\\ac_sens_grid_sigma_1.5_steps_2000_seed_5.json",
+        "csv": "data\\sensitivity\\homogeneous_temporal\\ac\\ac_sens_grid_sigma_1.5_steps_2000_seed_5.csv"
+      },
+      "execution_parameters": {
+        "role": "injected_execution_parameter",
+        "seed": 5,
+        "sigma_px": {
+          "value": 1.5,
+          "status": "PENDIENTE"
+        },
+        "n_steps": {
+          "value": 2000,
+          "status": "PENDIENTE"
+        },
+        "p_ads": {
+          "value": null,
+          "effective": 1.0,
+          "implementation_status": "DECISI\u00d3N COMPUTACIONAL PROVISIONAL",
+          "status": "PENDIENTE"
+        }
+      },
+      "system_counts": {
+        "N_MB": 200,
+        "N_GO": 100,
+        "N_adsorbent": 100,
+        "adsorbent_symbol": "AC",
+        "status": "DECISI\u00d3N COMPUTACIONAL"
+      },
+      "outcomes": {
+        "n_adsorbed": 160,
+        "percent_adsorbed": 80.0,
+        "m_adsorbed_mg": 3.2,
+        "m_free_mg": 0.7999999999999998,
+        "qfinal_mg_g": 320.0,
+        "n_contacts": 3444,
+        "mass_conservation_ok": true,
+        "result_classification": "computational_execution_not_experimental_validation"
+      },
+      "series_csv": "data\\sensitivity\\homogeneous_temporal\\ac\\ac_sens_grid_sigma_1.5_steps_2000_seed_5.csv",
+      "full_result_keys": [
+        "config",
+        "run",
+        "reference",
+        "summary",
+        "series",
+        "final_state"
+      ]
+    }
+  ],
+  "analysis": {
+    "purpose": "Caracterizar sensibilidad del modelo computacional. No es validaci\u00f3n experimental ni selecci\u00f3n autom\u00e1tica de \u03c3 o P.",
+    "rows": [
+      {
+        "seed": 1,
+        "sigma_px": 1.0,
+        "n_steps": 200,
+        "n_adsorbed": 56,
+        "percent_adsorbed": 28.000000000000004,
+        "qfinal_mg_g": 112.00000000000001,
+        "n_contacts": 64,
+        "mass_conservation_ok": true
+      },
+      {
+        "seed": 1,
+        "sigma_px": 1.0,
+        "n_steps": 400,
+        "n_adsorbed": 71,
+        "percent_adsorbed": 35.5,
+        "qfinal_mg_g": 142.0,
+        "n_contacts": 293,
+        "mass_conservation_ok": true
+      },
+      {
+        "seed": 1,
+        "sigma_px": 1.0,
+        "n_steps": 600,
+        "n_adsorbed": 86,
+        "percent_adsorbed": 43.0,
+        "qfinal_mg_g": 172.0,
+        "n_contacts": 478,
+        "mass_conservation_ok": true
+      },
+      {
+        "seed": 1,
+        "sigma_px": 1.0,
+        "n_steps": 800,
+        "n_adsorbed": 96,
+        "percent_adsorbed": 48.0,
+        "qfinal_mg_g": 192.0,
+        "n_contacts": 853,
+        "mass_conservation_ok": true
+      },
+      {
+        "seed": 1,
+        "sigma_px": 1.0,
+        "n_steps": 1000,
+        "n_adsorbed": 109,
+        "percent_adsorbed": 54.50000000000001,
+        "qfinal_mg_g": 218.0,
+        "n_contacts": 1189,
+        "mass_conservation_ok": true
+      },
+      {
+        "seed": 1,
+        "sigma_px": 1.0,
+        "n_steps": 1500,
+        "n_adsorbed": 125,
+        "percent_adsorbed": 62.5,
+        "qfinal_mg_g": 250.0,
+        "n_contacts": 1707,
+        "mass_conservation_ok": true
+      },
+      {
+        "seed": 1,
+        "sigma_px": 1.0,
+        "n_steps": 2000,
+        "n_adsorbed": 132,
+        "percent_adsorbed": 66.0,
+        "qfinal_mg_g": 264.0,
+        "n_contacts": 2330,
+        "mass_conservation_ok": true
+      },
+      {
+        "seed": 1,
+        "sigma_px": 1.5,
+        "n_steps": 200,
+        "n_adsorbed": 76,
+        "percent_adsorbed": 38.0,
+        "qfinal_mg_g": 152.0,
+        "n_contacts": 155,
+        "mass_conservation_ok": true
+      },
+      {
+        "seed": 1,
+        "sigma_px": 1.5,
+        "n_steps": 400,
+        "n_adsorbed": 96,
+        "percent_adsorbed": 48.0,
+        "qfinal_mg_g": 192.0,
+        "n_contacts": 432,
+        "mass_conservation_ok": true
+      },
+      {
+        "seed": 1,
+        "sigma_px": 1.5,
+        "n_steps": 600,
+        "n_adsorbed": 116,
+        "percent_adsorbed": 57.99999999999999,
+        "qfinal_mg_g": 231.99999999999997,
+        "n_contacts": 702,
+        "mass_conservation_ok": true
+      },
+      {
+        "seed": 1,
+        "sigma_px": 1.5,
+        "n_steps": 800,
+        "n_adsorbed": 125,
+        "percent_adsorbed": 62.5,
+        "qfinal_mg_g": 250.0,
+        "n_contacts": 930,
+        "mass_conservation_ok": true
+      },
+      {
+        "seed": 1,
+        "sigma_px": 1.5,
+        "n_steps": 1000,
+        "n_adsorbed": 131,
+        "percent_adsorbed": 65.5,
+        "qfinal_mg_g": 262.0,
+        "n_contacts": 1146,
+        "mass_conservation_ok": true
+      },
+      {
+        "seed": 1,
+        "sigma_px": 1.5,
+        "n_steps": 1500,
+        "n_adsorbed": 148,
+        "percent_adsorbed": 74.0,
+        "qfinal_mg_g": 296.0,
+        "n_contacts": 2072,
+        "mass_conservation_ok": true
+      },
+      {
+        "seed": 1,
+        "sigma_px": 1.5,
+        "n_steps": 2000,
+        "n_adsorbed": 155,
+        "percent_adsorbed": 77.5,
+        "qfinal_mg_g": 310.0,
+        "n_contacts": 2593,
+        "mass_conservation_ok": true
+      },
+      {
+        "seed": 2,
+        "sigma_px": 1.0,
+        "n_steps": 200,
+        "n_adsorbed": 67,
+        "percent_adsorbed": 33.5,
+        "qfinal_mg_g": 134.0,
+        "n_contacts": 137,
+        "mass_conservation_ok": true
+      },
+      {
+        "seed": 2,
+        "sigma_px": 1.0,
+        "n_steps": 400,
+        "n_adsorbed": 83,
+        "percent_adsorbed": 41.5,
+        "qfinal_mg_g": 166.0,
+        "n_contacts": 342,
+        "mass_conservation_ok": true
+      },
+      {
+        "seed": 2,
+        "sigma_px": 1.0,
+        "n_steps": 600,
+        "n_adsorbed": 96,
+        "percent_adsorbed": 48.0,
+        "qfinal_mg_g": 192.0,
+        "n_contacts": 602,
+        "mass_conservation_ok": true
+      },
+      {
+        "seed": 2,
+        "sigma_px": 1.0,
+        "n_steps": 800,
+        "n_adsorbed": 105,
+        "percent_adsorbed": 52.5,
+        "qfinal_mg_g": 210.0,
+        "n_contacts": 965,
+        "mass_conservation_ok": true
+      },
+      {
+        "seed": 2,
+        "sigma_px": 1.0,
+        "n_steps": 1000,
+        "n_adsorbed": 112,
+        "percent_adsorbed": 56.00000000000001,
+        "qfinal_mg_g": 224.00000000000003,
+        "n_contacts": 1480,
+        "mass_conservation_ok": true
+      },
+      {
+        "seed": 2,
+        "sigma_px": 1.0,
+        "n_steps": 1500,
+        "n_adsorbed": 121,
+        "percent_adsorbed": 60.5,
+        "qfinal_mg_g": 242.0,
+        "n_contacts": 2864,
+        "mass_conservation_ok": true
+      },
+      {
+        "seed": 2,
+        "sigma_px": 1.0,
+        "n_steps": 2000,
+        "n_adsorbed": 127,
+        "percent_adsorbed": 63.5,
+        "qfinal_mg_g": 254.0,
+        "n_contacts": 4486,
+        "mass_conservation_ok": true
+      },
+      {
+        "seed": 2,
+        "sigma_px": 1.5,
+        "n_steps": 200,
+        "n_adsorbed": 88,
+        "percent_adsorbed": 44.0,
+        "qfinal_mg_g": 176.0,
+        "n_contacts": 262,
+        "mass_conservation_ok": true
+      },
+      {
+        "seed": 2,
+        "sigma_px": 1.5,
+        "n_steps": 400,
+        "n_adsorbed": 116,
+        "percent_adsorbed": 57.99999999999999,
+        "qfinal_mg_g": 231.99999999999997,
+        "n_contacts": 601,
+        "mass_conservation_ok": true
+      },
+      {
+        "seed": 2,
+        "sigma_px": 1.5,
+        "n_steps": 600,
+        "n_adsorbed": 127,
+        "percent_adsorbed": 63.5,
+        "qfinal_mg_g": 254.0,
+        "n_contacts": 1095,
+        "mass_conservation_ok": true
+      },
+      {
+        "seed": 2,
+        "sigma_px": 1.5,
+        "n_steps": 800,
+        "n_adsorbed": 134,
+        "percent_adsorbed": 67.0,
+        "qfinal_mg_g": 268.0,
+        "n_contacts": 1514,
+        "mass_conservation_ok": true
+      },
+      {
+        "seed": 2,
+        "sigma_px": 1.5,
+        "n_steps": 1000,
+        "n_adsorbed": 142,
+        "percent_adsorbed": 71.0,
+        "qfinal_mg_g": 284.0,
+        "n_contacts": 1912,
+        "mass_conservation_ok": true
+      },
+      {
+        "seed": 2,
+        "sigma_px": 1.5,
+        "n_steps": 1500,
+        "n_adsorbed": 153,
+        "percent_adsorbed": 76.5,
+        "qfinal_mg_g": 306.0,
+        "n_contacts": 2873,
+        "mass_conservation_ok": true
+      },
+      {
+        "seed": 2,
+        "sigma_px": 1.5,
+        "n_steps": 2000,
+        "n_adsorbed": 158,
+        "percent_adsorbed": 79.0,
+        "qfinal_mg_g": 316.0,
+        "n_contacts": 3569,
+        "mass_conservation_ok": true
+      },
+      {
+        "seed": 3,
+        "sigma_px": 1.0,
+        "n_steps": 200,
+        "n_adsorbed": 49,
+        "percent_adsorbed": 24.5,
+        "qfinal_mg_g": 98.0,
+        "n_contacts": 49,
+        "mass_conservation_ok": true
+      },
+      {
+        "seed": 3,
+        "sigma_px": 1.0,
+        "n_steps": 400,
+        "n_adsorbed": 73,
+        "percent_adsorbed": 36.5,
+        "qfinal_mg_g": 146.0,
+        "n_contacts": 131,
+        "mass_conservation_ok": true
+      },
+      {
+        "seed": 3,
+        "sigma_px": 1.0,
+        "n_steps": 600,
+        "n_adsorbed": 85,
+        "percent_adsorbed": 42.5,
+        "qfinal_mg_g": 170.0,
+        "n_contacts": 414,
+        "mass_conservation_ok": true
+      },
+      {
+        "seed": 3,
+        "sigma_px": 1.0,
+        "n_steps": 800,
+        "n_adsorbed": 99,
+        "percent_adsorbed": 49.5,
+        "qfinal_mg_g": 198.0,
+        "n_contacts": 665,
+        "mass_conservation_ok": true
+      },
+      {
+        "seed": 3,
+        "sigma_px": 1.0,
+        "n_steps": 1000,
+        "n_adsorbed": 108,
+        "percent_adsorbed": 54.0,
+        "qfinal_mg_g": 216.0,
+        "n_contacts": 1075,
+        "mass_conservation_ok": true
+      },
+      {
+        "seed": 3,
+        "sigma_px": 1.0,
+        "n_steps": 1500,
+        "n_adsorbed": 120,
+        "percent_adsorbed": 60.0,
+        "qfinal_mg_g": 240.0,
+        "n_contacts": 2105,
+        "mass_conservation_ok": true
+      },
+      {
+        "seed": 3,
+        "sigma_px": 1.0,
+        "n_steps": 2000,
+        "n_adsorbed": 128,
+        "percent_adsorbed": 64.0,
+        "qfinal_mg_g": 256.0,
+        "n_contacts": 2850,
+        "mass_conservation_ok": true
+      },
+      {
+        "seed": 3,
+        "sigma_px": 1.5,
+        "n_steps": 200,
+        "n_adsorbed": 87,
+        "percent_adsorbed": 43.5,
+        "qfinal_mg_g": 174.0,
+        "n_contacts": 135,
+        "mass_conservation_ok": true
+      },
+      {
+        "seed": 3,
+        "sigma_px": 1.5,
+        "n_steps": 400,
+        "n_adsorbed": 108,
+        "percent_adsorbed": 54.0,
+        "qfinal_mg_g": 216.0,
+        "n_contacts": 451,
+        "mass_conservation_ok": true
+      },
+      {
+        "seed": 3,
+        "sigma_px": 1.5,
+        "n_steps": 600,
+        "n_adsorbed": 119,
+        "percent_adsorbed": 59.5,
+        "qfinal_mg_g": 237.99999999999997,
+        "n_contacts": 689,
+        "mass_conservation_ok": true
+      },
+      {
+        "seed": 3,
+        "sigma_px": 1.5,
+        "n_steps": 800,
+        "n_adsorbed": 129,
+        "percent_adsorbed": 64.5,
+        "qfinal_mg_g": 258.0,
+        "n_contacts": 1042,
+        "mass_conservation_ok": true
+      },
+      {
+        "seed": 3,
+        "sigma_px": 1.5,
+        "n_steps": 1000,
+        "n_adsorbed": 136,
+        "percent_adsorbed": 68.0,
+        "qfinal_mg_g": 272.0,
+        "n_contacts": 1679,
+        "mass_conservation_ok": true
+      },
+      {
+        "seed": 3,
+        "sigma_px": 1.5,
+        "n_steps": 1500,
+        "n_adsorbed": 143,
+        "percent_adsorbed": 71.5,
+        "qfinal_mg_g": 286.0,
+        "n_contacts": 2573,
+        "mass_conservation_ok": true
+      },
+      {
+        "seed": 3,
+        "sigma_px": 1.5,
+        "n_steps": 2000,
+        "n_adsorbed": 147,
+        "percent_adsorbed": 73.5,
+        "qfinal_mg_g": 294.0,
+        "n_contacts": 3592,
+        "mass_conservation_ok": true
+      },
+      {
+        "seed": 4,
+        "sigma_px": 1.0,
+        "n_steps": 200,
+        "n_adsorbed": 55,
+        "percent_adsorbed": 27.500000000000004,
+        "qfinal_mg_g": 110.0,
+        "n_contacts": 55,
+        "mass_conservation_ok": true
+      },
+      {
+        "seed": 4,
+        "sigma_px": 1.0,
+        "n_steps": 400,
+        "n_adsorbed": 82,
+        "percent_adsorbed": 41.0,
+        "qfinal_mg_g": 164.0,
+        "n_contacts": 147,
+        "mass_conservation_ok": true
+      },
+      {
+        "seed": 4,
+        "sigma_px": 1.0,
+        "n_steps": 600,
+        "n_adsorbed": 98,
+        "percent_adsorbed": 49.0,
+        "qfinal_mg_g": 196.0,
+        "n_contacts": 411,
+        "mass_conservation_ok": true
+      },
+      {
+        "seed": 4,
+        "sigma_px": 1.0,
+        "n_steps": 800,
+        "n_adsorbed": 110,
+        "percent_adsorbed": 55.00000000000001,
+        "qfinal_mg_g": 220.0,
+        "n_contacts": 718,
+        "mass_conservation_ok": true
+      },
+      {
+        "seed": 4,
+        "sigma_px": 1.0,
+        "n_steps": 1000,
+        "n_adsorbed": 117,
+        "percent_adsorbed": 58.5,
+        "qfinal_mg_g": 233.99999999999997,
+        "n_contacts": 1240,
+        "mass_conservation_ok": true
+      },
+      {
+        "seed": 4,
+        "sigma_px": 1.0,
+        "n_steps": 1500,
+        "n_adsorbed": 123,
+        "percent_adsorbed": 61.5,
+        "qfinal_mg_g": 246.0,
+        "n_contacts": 2057,
+        "mass_conservation_ok": true
+      },
+      {
+        "seed": 4,
+        "sigma_px": 1.0,
+        "n_steps": 2000,
+        "n_adsorbed": 130,
+        "percent_adsorbed": 65.0,
+        "qfinal_mg_g": 260.0,
+        "n_contacts": 2704,
+        "mass_conservation_ok": true
+      },
+      {
+        "seed": 4,
+        "sigma_px": 1.5,
+        "n_steps": 200,
+        "n_adsorbed": 87,
+        "percent_adsorbed": 43.5,
+        "qfinal_mg_g": 174.0,
+        "n_contacts": 167,
+        "mass_conservation_ok": true
+      },
+      {
+        "seed": 4,
+        "sigma_px": 1.5,
+        "n_steps": 400,
+        "n_adsorbed": 111,
+        "percent_adsorbed": 55.50000000000001,
+        "qfinal_mg_g": 222.00000000000003,
+        "n_contacts": 377,
+        "mass_conservation_ok": true
+      },
+      {
+        "seed": 4,
+        "sigma_px": 1.5,
+        "n_steps": 600,
+        "n_adsorbed": 121,
+        "percent_adsorbed": 60.5,
+        "qfinal_mg_g": 242.0,
+        "n_contacts": 535,
+        "mass_conservation_ok": true
+      },
+      {
+        "seed": 4,
+        "sigma_px": 1.5,
+        "n_steps": 800,
+        "n_adsorbed": 129,
+        "percent_adsorbed": 64.5,
+        "qfinal_mg_g": 258.0,
+        "n_contacts": 980,
+        "mass_conservation_ok": true
+      },
+      {
+        "seed": 4,
+        "sigma_px": 1.5,
+        "n_steps": 1000,
+        "n_adsorbed": 133,
+        "percent_adsorbed": 66.5,
+        "qfinal_mg_g": 266.0,
+        "n_contacts": 1672,
+        "mass_conservation_ok": true
+      },
+      {
+        "seed": 4,
+        "sigma_px": 1.5,
+        "n_steps": 1500,
+        "n_adsorbed": 150,
+        "percent_adsorbed": 75.0,
+        "qfinal_mg_g": 300.0,
+        "n_contacts": 2428,
+        "mass_conservation_ok": true
+      },
+      {
+        "seed": 4,
+        "sigma_px": 1.5,
+        "n_steps": 2000,
+        "n_adsorbed": 155,
+        "percent_adsorbed": 77.5,
+        "qfinal_mg_g": 310.0,
+        "n_contacts": 3329,
+        "mass_conservation_ok": true
+      },
+      {
+        "seed": 5,
+        "sigma_px": 1.0,
+        "n_steps": 200,
+        "n_adsorbed": 65,
+        "percent_adsorbed": 32.5,
+        "qfinal_mg_g": 130.0,
+        "n_contacts": 72,
+        "mass_conservation_ok": true
+      },
+      {
+        "seed": 5,
+        "sigma_px": 1.0,
+        "n_steps": 400,
+        "n_adsorbed": 90,
+        "percent_adsorbed": 45.0,
+        "qfinal_mg_g": 180.0,
+        "n_contacts": 187,
+        "mass_conservation_ok": true
+      },
+      {
+        "seed": 5,
+        "sigma_px": 1.0,
+        "n_steps": 600,
+        "n_adsorbed": 110,
+        "percent_adsorbed": 55.00000000000001,
+        "qfinal_mg_g": 220.0,
+        "n_contacts": 337,
+        "mass_conservation_ok": true
+      },
+      {
+        "seed": 5,
+        "sigma_px": 1.0,
+        "n_steps": 800,
+        "n_adsorbed": 117,
+        "percent_adsorbed": 58.5,
+        "qfinal_mg_g": 233.99999999999997,
+        "n_contacts": 558,
+        "mass_conservation_ok": true
+      },
+      {
+        "seed": 5,
+        "sigma_px": 1.0,
+        "n_steps": 1000,
+        "n_adsorbed": 124,
+        "percent_adsorbed": 62.0,
+        "qfinal_mg_g": 248.0,
+        "n_contacts": 765,
+        "mass_conservation_ok": true
+      },
+      {
+        "seed": 5,
+        "sigma_px": 1.0,
+        "n_steps": 1500,
+        "n_adsorbed": 139,
+        "percent_adsorbed": 69.5,
+        "qfinal_mg_g": 278.0,
+        "n_contacts": 1382,
+        "mass_conservation_ok": true
+      },
+      {
+        "seed": 5,
+        "sigma_px": 1.0,
+        "n_steps": 2000,
+        "n_adsorbed": 147,
+        "percent_adsorbed": 73.5,
+        "qfinal_mg_g": 294.0,
+        "n_contacts": 2710,
+        "mass_conservation_ok": true
+      },
+      {
+        "seed": 5,
+        "sigma_px": 1.5,
+        "n_steps": 200,
+        "n_adsorbed": 83,
+        "percent_adsorbed": 41.5,
+        "qfinal_mg_g": 166.0,
+        "n_contacts": 281,
+        "mass_conservation_ok": true
+      },
+      {
+        "seed": 5,
+        "sigma_px": 1.5,
+        "n_steps": 400,
+        "n_adsorbed": 115,
+        "percent_adsorbed": 57.49999999999999,
+        "qfinal_mg_g": 230.00000000000003,
+        "n_contacts": 697,
+        "mass_conservation_ok": true
+      },
+      {
+        "seed": 5,
+        "sigma_px": 1.5,
+        "n_steps": 600,
+        "n_adsorbed": 130,
+        "percent_adsorbed": 65.0,
+        "qfinal_mg_g": 260.0,
+        "n_contacts": 912,
+        "mass_conservation_ok": true
+      },
+      {
+        "seed": 5,
+        "sigma_px": 1.5,
+        "n_steps": 800,
+        "n_adsorbed": 136,
+        "percent_adsorbed": 68.0,
+        "qfinal_mg_g": 272.0,
+        "n_contacts": 1325,
+        "mass_conservation_ok": true
+      },
+      {
+        "seed": 5,
+        "sigma_px": 1.5,
+        "n_steps": 1000,
+        "n_adsorbed": 141,
+        "percent_adsorbed": 70.5,
+        "qfinal_mg_g": 282.0,
+        "n_contacts": 1642,
+        "mass_conservation_ok": true
+      },
+      {
+        "seed": 5,
+        "sigma_px": 1.5,
+        "n_steps": 1500,
+        "n_adsorbed": 154,
+        "percent_adsorbed": 77.0,
+        "qfinal_mg_g": 308.0,
+        "n_contacts": 2586,
+        "mass_conservation_ok": true
+      },
+      {
+        "seed": 5,
+        "sigma_px": 1.5,
+        "n_steps": 2000,
+        "n_adsorbed": 160,
+        "percent_adsorbed": 80.0,
+        "qfinal_mg_g": 320.0,
+        "n_contacts": 3444,
+        "mass_conservation_ok": true
+      }
+    ],
+    "by_configuration": [
+      {
+        "sigma_px": 1.0,
+        "n_steps": 200,
+        "n_seeds": 5,
+        "n_adsorbed_mean": 58.4,
+        "n_adsorbed_min": 49,
+        "n_adsorbed_max": 67,
+        "percent_adsorbed_mean": 29.2,
+        "qfinal_mg_g_mean": 116.8,
+        "n_contacts_mean": 75.4,
+        "all_mass_conserved": true
+      },
+      {
+        "sigma_px": 1.0,
+        "n_steps": 400,
+        "n_seeds": 5,
+        "n_adsorbed_mean": 79.8,
+        "n_adsorbed_min": 71,
+        "n_adsorbed_max": 90,
+        "percent_adsorbed_mean": 39.9,
+        "qfinal_mg_g_mean": 159.6,
+        "n_contacts_mean": 220.0,
+        "all_mass_conserved": true
+      },
+      {
+        "sigma_px": 1.0,
+        "n_steps": 600,
+        "n_seeds": 5,
+        "n_adsorbed_mean": 95.0,
+        "n_adsorbed_min": 85,
+        "n_adsorbed_max": 110,
+        "percent_adsorbed_mean": 47.5,
+        "qfinal_mg_g_mean": 190.0,
+        "n_contacts_mean": 448.4,
+        "all_mass_conserved": true
+      },
+      {
+        "sigma_px": 1.0,
+        "n_steps": 800,
+        "n_seeds": 5,
+        "n_adsorbed_mean": 105.4,
+        "n_adsorbed_min": 96,
+        "n_adsorbed_max": 117,
+        "percent_adsorbed_mean": 52.7,
+        "qfinal_mg_g_mean": 210.8,
+        "n_contacts_mean": 751.8,
+        "all_mass_conserved": true
+      },
+      {
+        "sigma_px": 1.0,
+        "n_steps": 1000,
+        "n_seeds": 5,
+        "n_adsorbed_mean": 114.0,
+        "n_adsorbed_min": 108,
+        "n_adsorbed_max": 124,
+        "percent_adsorbed_mean": 57.0,
+        "qfinal_mg_g_mean": 228.0,
+        "n_contacts_mean": 1149.8,
+        "all_mass_conserved": true
+      },
+      {
+        "sigma_px": 1.0,
+        "n_steps": 1500,
+        "n_seeds": 5,
+        "n_adsorbed_mean": 125.6,
+        "n_adsorbed_min": 120,
+        "n_adsorbed_max": 139,
+        "percent_adsorbed_mean": 62.8,
+        "qfinal_mg_g_mean": 251.2,
+        "n_contacts_mean": 2023.0,
+        "all_mass_conserved": true
+      },
+      {
+        "sigma_px": 1.0,
+        "n_steps": 2000,
+        "n_seeds": 5,
+        "n_adsorbed_mean": 132.8,
+        "n_adsorbed_min": 127,
+        "n_adsorbed_max": 147,
+        "percent_adsorbed_mean": 66.4,
+        "qfinal_mg_g_mean": 265.6,
+        "n_contacts_mean": 3016.0,
+        "all_mass_conserved": true
+      },
+      {
+        "sigma_px": 1.5,
+        "n_steps": 200,
+        "n_seeds": 5,
+        "n_adsorbed_mean": 84.2,
+        "n_adsorbed_min": 76,
+        "n_adsorbed_max": 88,
+        "percent_adsorbed_mean": 42.1,
+        "qfinal_mg_g_mean": 168.4,
+        "n_contacts_mean": 200.0,
+        "all_mass_conserved": true
+      },
+      {
+        "sigma_px": 1.5,
+        "n_steps": 400,
+        "n_seeds": 5,
+        "n_adsorbed_mean": 109.2,
+        "n_adsorbed_min": 96,
+        "n_adsorbed_max": 116,
+        "percent_adsorbed_mean": 54.6,
+        "qfinal_mg_g_mean": 218.4,
+        "n_contacts_mean": 511.6,
+        "all_mass_conserved": true
+      },
+      {
+        "sigma_px": 1.5,
+        "n_steps": 600,
+        "n_seeds": 5,
+        "n_adsorbed_mean": 122.6,
+        "n_adsorbed_min": 116,
+        "n_adsorbed_max": 130,
+        "percent_adsorbed_mean": 61.3,
+        "qfinal_mg_g_mean": 245.2,
+        "n_contacts_mean": 786.6,
+        "all_mass_conserved": true
+      },
+      {
+        "sigma_px": 1.5,
+        "n_steps": 800,
+        "n_seeds": 5,
+        "n_adsorbed_mean": 130.6,
+        "n_adsorbed_min": 125,
+        "n_adsorbed_max": 136,
+        "percent_adsorbed_mean": 65.3,
+        "qfinal_mg_g_mean": 261.2,
+        "n_contacts_mean": 1158.2,
+        "all_mass_conserved": true
+      },
+      {
+        "sigma_px": 1.5,
+        "n_steps": 1000,
+        "n_seeds": 5,
+        "n_adsorbed_mean": 136.6,
+        "n_adsorbed_min": 131,
+        "n_adsorbed_max": 142,
+        "percent_adsorbed_mean": 68.3,
+        "qfinal_mg_g_mean": 273.2,
+        "n_contacts_mean": 1610.2,
+        "all_mass_conserved": true
+      },
+      {
+        "sigma_px": 1.5,
+        "n_steps": 1500,
+        "n_seeds": 5,
+        "n_adsorbed_mean": 149.6,
+        "n_adsorbed_min": 143,
+        "n_adsorbed_max": 154,
+        "percent_adsorbed_mean": 74.8,
+        "qfinal_mg_g_mean": 299.2,
+        "n_contacts_mean": 2506.4,
+        "all_mass_conserved": true
+      },
+      {
+        "sigma_px": 1.5,
+        "n_steps": 2000,
+        "n_seeds": 5,
+        "n_adsorbed_mean": 155.0,
+        "n_adsorbed_min": 147,
+        "n_adsorbed_max": 160,
+        "percent_adsorbed_mean": 77.5,
+        "qfinal_mg_g_mean": 310.0,
+        "n_contacts_mean": 3305.4,
+        "all_mass_conserved": true
+      }
+    ],
+    "seed_variability": [
+      {
+        "sigma_px": 1.0,
+        "n_steps": 200,
+        "seeds": [
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "n_adsorbed_values": [
+          56,
+          67,
+          49,
+          55,
+          65
+        ],
+        "n_adsorbed_spread": 18
+      },
+      {
+        "sigma_px": 1.0,
+        "n_steps": 400,
+        "seeds": [
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "n_adsorbed_values": [
+          71,
+          83,
+          73,
+          82,
+          90
+        ],
+        "n_adsorbed_spread": 19
+      },
+      {
+        "sigma_px": 1.0,
+        "n_steps": 600,
+        "seeds": [
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "n_adsorbed_values": [
+          86,
+          96,
+          85,
+          98,
+          110
+        ],
+        "n_adsorbed_spread": 25
+      },
+      {
+        "sigma_px": 1.0,
+        "n_steps": 800,
+        "seeds": [
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "n_adsorbed_values": [
+          96,
+          105,
+          99,
+          110,
+          117
+        ],
+        "n_adsorbed_spread": 21
+      },
+      {
+        "sigma_px": 1.0,
+        "n_steps": 1000,
+        "seeds": [
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "n_adsorbed_values": [
+          109,
+          112,
+          108,
+          117,
+          124
+        ],
+        "n_adsorbed_spread": 16
+      },
+      {
+        "sigma_px": 1.0,
+        "n_steps": 1500,
+        "seeds": [
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "n_adsorbed_values": [
+          125,
+          121,
+          120,
+          123,
+          139
+        ],
+        "n_adsorbed_spread": 19
+      },
+      {
+        "sigma_px": 1.0,
+        "n_steps": 2000,
+        "seeds": [
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "n_adsorbed_values": [
+          132,
+          127,
+          128,
+          130,
+          147
+        ],
+        "n_adsorbed_spread": 20
+      },
+      {
+        "sigma_px": 1.5,
+        "n_steps": 200,
+        "seeds": [
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "n_adsorbed_values": [
+          76,
+          88,
+          87,
+          87,
+          83
+        ],
+        "n_adsorbed_spread": 12
+      },
+      {
+        "sigma_px": 1.5,
+        "n_steps": 400,
+        "seeds": [
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "n_adsorbed_values": [
+          96,
+          116,
+          108,
+          111,
+          115
+        ],
+        "n_adsorbed_spread": 20
+      },
+      {
+        "sigma_px": 1.5,
+        "n_steps": 600,
+        "seeds": [
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "n_adsorbed_values": [
+          116,
+          127,
+          119,
+          121,
+          130
+        ],
+        "n_adsorbed_spread": 14
+      },
+      {
+        "sigma_px": 1.5,
+        "n_steps": 800,
+        "seeds": [
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "n_adsorbed_values": [
+          125,
+          134,
+          129,
+          129,
+          136
+        ],
+        "n_adsorbed_spread": 11
+      },
+      {
+        "sigma_px": 1.5,
+        "n_steps": 1000,
+        "seeds": [
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "n_adsorbed_values": [
+          131,
+          142,
+          136,
+          133,
+          141
+        ],
+        "n_adsorbed_spread": 11
+      },
+      {
+        "sigma_px": 1.5,
+        "n_steps": 1500,
+        "seeds": [
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "n_adsorbed_values": [
+          148,
+          153,
+          143,
+          150,
+          154
+        ],
+        "n_adsorbed_spread": 11
+      },
+      {
+        "sigma_px": 1.5,
+        "n_steps": 2000,
+        "seeds": [
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "n_adsorbed_values": [
+          155,
+          158,
+          147,
+          155,
+          160
+        ],
+        "n_adsorbed_spread": 13
+      }
+    ]
+  }
+}

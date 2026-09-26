@@ -1,0 +1,3 @@
+material,metric,mean_sigma_1_0,mean_sigma_1_5,absolute_delta,relative_delta_percent,qt_delta_mean,contacts_delta_mean,cv_percent_sigma_1_0_nads,cv_percent_sigma_1_5_nads,note
+GO,n_adsorbed,165.8,186.2,20.399999999999977,12.303980699638103,40.799999999999955,-8.800000000000068,3.7520702086841466,1.75675910137445,Descriptivo σ=1.5 vs σ=1.0; no ranking automático.
+AC,n_adsorbed,105.4,139.2,33.79999999999998,32.0683111954459,67.59999999999997,90.20000000000002,5.947790519414602,2.659016598178412,Descriptivo σ=1.5 vs σ=1.0; no ranking automático.

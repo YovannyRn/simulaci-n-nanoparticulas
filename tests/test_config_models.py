@@ -26,9 +26,9 @@ def test_pixel_geometry() -> None:
     assert cfg.n_pixels == 195364
     assert abs(cfg.pixel_area_um2 - 5990.76) < 1e-9
     assert abs(cfg.vessel_area_cm2 - 11.6964) < 1e-9
-    assert cfg.mb_size_px == 5
+    assert cfg.mb_size_px == 1
     assert cfg.go_size_px == 7
-    assert cfg.mb_area_px2 == 5000
+    assert cfg.mb_area_px2 == 200
     assert cfg.go_area_px2 == 4900
 
 

@@ -1,0 +1,786 @@
+[
+  {
+    "material": "AC",
+    "sigma_px": 1.0,
+    "p_ads": 0.25,
+    "n_seeds": 5,
+    "n_adsorbed": {
+      "mean": 88.4,
+      "std": 2.4083189157584592,
+      "min": 85.0,
+      "max": 91.0,
+      "cv_percent": 2.724342664885135
+    },
+    "percent_adsorbed": {
+      "mean": 44.2,
+      "std": 1.2041594578792296,
+      "min": 42.5,
+      "max": 45.5,
+      "cv_percent": 2.724342664885135
+    },
+    "qfinal_mg_g": {
+      "mean": 176.8,
+      "std": 4.8166378315169185,
+      "min": 170.0,
+      "max": 182.0,
+      "cv_percent": 2.724342664885135
+    },
+    "n_contacts": {
+      "mean": 448.4,
+      "std": 50.2324596252264,
+      "min": 394.0,
+      "max": 527.0,
+      "cv_percent": 11.202600273244068
+    },
+    "n_adsorption_events": {
+      "mean": 88.4,
+      "std": 2.4083189157584592,
+      "min": 85.0,
+      "max": 91.0,
+      "cv_percent": 2.724342664885135
+    },
+    "contact_to_adsorption_efficiency": {
+      "mean": 0.19921446030940965,
+      "std": 0.023271743777351472,
+      "min": 0.16129032258064516,
+      "max": 0.22081218274111675,
+      "cv_percent": 11.681754296955651
+    },
+    "mass_conservation_ok_all_seeds": true
+  },
+  {
+    "material": "AC",
+    "sigma_px": 1.0,
+    "p_ads": 0.5,
+    "n_seeds": 5,
+    "n_adsorbed": {
+      "mean": 97.6,
+      "std": 7.893034904268446,
+      "min": 88.0,
+      "max": 109.0,
+      "cv_percent": 8.087125926504555
+    },
+    "percent_adsorbed": {
+      "mean": 48.800000000000004,
+      "std": 3.9465174521342257,
+      "min": 44.0,
+      "max": 54.50000000000001,
+      "cv_percent": 8.08712592650456
+    },
+    "qfinal_mg_g": {
+      "mean": 195.2,
+      "std": 15.786069808536892,
+      "min": 176.0,
+      "max": 218.0,
+      "cv_percent": 8.087125926504555
+    },
+    "n_contacts": {
+      "mean": 296.0,
+      "std": 22.83637449333847,
+      "min": 271.0,
+      "max": 327.0,
+      "cv_percent": 7.714991382884619
+    },
+    "n_adsorption_events": {
+      "mean": 97.6,
+      "std": 7.893034904268446,
+      "min": 88.0,
+      "max": 109.0,
+      "cv_percent": 8.087125926504555
+    },
+    "contact_to_adsorption_efficiency": {
+      "mean": 0.33021048359351324,
+      "std": 0.021277794763347405,
+      "min": 0.2996941896024465,
+      "max": 0.35855263157894735,
+      "cv_percent": 6.443706611550293
+    },
+    "mass_conservation_ok_all_seeds": true
+  },
+  {
+    "material": "AC",
+    "sigma_px": 1.0,
+    "p_ads": 0.75,
+    "n_seeds": 5,
+    "n_adsorbed": {
+      "mean": 101.6,
+      "std": 4.159326868617084,
+      "min": 97.0,
+      "max": 108.0,
+      "cv_percent": 4.093825658087681
+    },
+    "percent_adsorbed": {
+      "mean": 50.8,
+      "std": 2.079663434308542,
+      "min": 48.5,
+      "max": 54.0,
+      "cv_percent": 4.093825658087681
+    },
+    "qfinal_mg_g": {
+      "mean": 203.2,
+      "std": 8.318653737234168,
+      "min": 194.0,
+      "max": 216.0,
+      "cv_percent": 4.093825658087681
+    },
+    "n_contacts": {
+      "mean": 228.6,
+      "std": 47.45840283869654,
+      "min": 161.0,
+      "max": 287.0,
+      "cv_percent": 20.760456184906626
+    },
+    "n_adsorption_events": {
+      "mean": 101.6,
+      "std": 4.159326868617084,
+      "min": 97.0,
+      "max": 108.0,
+      "cv_percent": 4.093825658087681
+    },
+    "contact_to_adsorption_efficiency": {
+      "mean": 0.4590942474080146,
+      "std": 0.0901269356182906,
+      "min": 0.3588850174216028,
+      "max": 0.6024844720496895,
+      "cv_percent": 19.631466986819234
+    },
+    "mass_conservation_ok_all_seeds": true
+  },
+  {
+    "material": "AC",
+    "sigma_px": 1.0,
+    "p_ads": 1.0,
+    "n_seeds": 5,
+    "n_adsorbed": {
+      "mean": 105.4,
+      "std": 6.268971207462991,
+      "min": 96.0,
+      "max": 111.0,
+      "cv_percent": 5.947790519414602
+    },
+    "percent_adsorbed": {
+      "mean": 52.7,
+      "std": 3.1344856037314996,
+      "min": 48.0,
+      "max": 55.50000000000001,
+      "cv_percent": 5.94779051941461
+    },
+    "qfinal_mg_g": {
+      "mean": 210.8,
+      "std": 12.53794241492599,
+      "min": 192.0,
+      "max": 222.00000000000003,
+      "cv_percent": 5.947790519414606
+    },
+    "n_contacts": {
+      "mean": 237.4,
+      "std": 65.48129503911785,
+      "min": 163.0,
+      "max": 306.0,
+      "cv_percent": 27.582685357673903
+    },
+    "n_adsorption_events": {
+      "mean": 105.4,
+      "std": 6.268971207462991,
+      "min": 96.0,
+      "max": 111.0,
+      "cv_percent": 5.947790519414602
+    },
+    "contact_to_adsorption_efficiency": {
+      "mean": 0.47387808613569654,
+      "std": 0.14138387420282023,
+      "min": 0.3562091503267974,
+      "max": 0.6809815950920245,
+      "cv_percent": 29.835495318163858
+    },
+    "mass_conservation_ok_all_seeds": true
+  },
+  {
+    "material": "AC",
+    "sigma_px": 1.5,
+    "p_ads": 0.25,
+    "n_seeds": 5,
+    "n_adsorbed": {
+      "mean": 109.8,
+      "std": 3.492849839314596,
+      "min": 104.0,
+      "max": 112.0,
+      "cv_percent": 3.181101857299268
+    },
+    "percent_adsorbed": {
+      "mean": 54.900000000000006,
+      "std": 1.746424919657301,
+      "min": 52.0,
+      "max": 56.00000000000001,
+      "cv_percent": 3.1811018572992724
+    },
+    "qfinal_mg_g": {
+      "mean": 219.60000000000002,
+      "std": 6.985699678629206,
+      "min": 208.0,
+      "max": 224.00000000000003,
+      "cv_percent": 3.1811018572992733
+    },
+    "n_contacts": {
+      "mean": 571.0,
+      "std": 44.73812691653507,
+      "min": 522.0,
+      "max": 639.0,
+      "cv_percent": 7.835048496766213
+    },
+    "n_adsorption_events": {
+      "mean": 109.8,
+      "std": 3.492849839314596,
+      "min": 104.0,
+      "max": 112.0,
+      "cv_percent": 3.181101857299268
+    },
+    "contact_to_adsorption_efficiency": {
+      "mean": 0.19307965134341856,
+      "std": 0.013911838839075102,
+      "min": 0.1752738654147105,
+      "max": 0.20881226053639848,
+      "cv_percent": 7.205233043605923
+    },
+    "mass_conservation_ok_all_seeds": true
+  },
+  {
+    "material": "AC",
+    "sigma_px": 1.5,
+    "p_ads": 0.5,
+    "n_seeds": 5,
+    "n_adsorbed": {
+      "mean": 126.2,
+      "std": 3.63318042491699,
+      "min": 122.0,
+      "max": 132.0,
+      "cv_percent": 2.8789068343240807
+    },
+    "percent_adsorbed": {
+      "mean": 63.1,
+      "std": 1.816590212458495,
+      "min": 61.0,
+      "max": 66.0,
+      "cv_percent": 2.8789068343240807
+    },
+    "qfinal_mg_g": {
+      "mean": 252.4,
+      "std": 7.26636084983398,
+      "min": 244.0,
+      "max": 264.0,
+      "cv_percent": 2.8789068343240807
+    },
+    "n_contacts": {
+      "mean": 402.6,
+      "std": 24.825390228554312,
+      "min": 377.0,
+      "max": 433.0,
+      "cv_percent": 6.1662668227904405
+    },
+    "n_adsorption_events": {
+      "mean": 126.2,
+      "std": 3.63318042491699,
+      "min": 122.0,
+      "max": 132.0,
+      "cv_percent": 2.8789068343240807
+    },
+    "contact_to_adsorption_efficiency": {
+      "mean": 0.3144482314336034,
+      "std": 0.022054366479615974,
+      "min": 0.2909930715935335,
+      "max": 0.34464751958224543,
+      "cv_percent": 7.013671655606947
+    },
+    "mass_conservation_ok_all_seeds": true
+  },
+  {
+    "material": "AC",
+    "sigma_px": 1.5,
+    "p_ads": 0.75,
+    "n_seeds": 5,
+    "n_adsorbed": {
+      "mean": 133.8,
+      "std": 4.024922359499621,
+      "min": 128.0,
+      "max": 138.0,
+      "cv_percent": 3.0081631984302097
+    },
+    "percent_adsorbed": {
+      "mean": 66.9,
+      "std": 2.0124611797498106,
+      "min": 64.0,
+      "max": 69.0,
+      "cv_percent": 3.0081631984302097
+    },
+    "qfinal_mg_g": {
+      "mean": 267.6,
+      "std": 8.049844718999243,
+      "min": 256.0,
+      "max": 276.0,
+      "cv_percent": 3.0081631984302097
+    },
+    "n_contacts": {
+      "mean": 344.0,
+      "std": 36.47601951967895,
+      "min": 293.0,
+      "max": 384.0,
+      "cv_percent": 10.6034940464183
+    },
+    "n_adsorption_events": {
+      "mean": 133.8,
+      "std": 4.024922359499621,
+      "min": 128.0,
+      "max": 138.0,
+      "cv_percent": 3.0081631984302097
+    },
+    "contact_to_adsorption_efficiency": {
+      "mean": 0.39288913209428866,
+      "std": 0.04698547453842125,
+      "min": 0.3333333333333333,
+      "max": 0.45051194539249145,
+      "cv_percent": 11.958965188974812
+    },
+    "mass_conservation_ok_all_seeds": true
+  },
+  {
+    "material": "AC",
+    "sigma_px": 1.5,
+    "p_ads": 1.0,
+    "n_seeds": 5,
+    "n_adsorbed": {
+      "mean": 139.2,
+      "std": 3.7013511046643495,
+      "min": 135.0,
+      "max": 144.0,
+      "cv_percent": 2.659016598178412
+    },
+    "percent_adsorbed": {
+      "mean": 69.6,
+      "std": 1.8506755523321747,
+      "min": 67.5,
+      "max": 72.0,
+      "cv_percent": 2.659016598178412
+    },
+    "qfinal_mg_g": {
+      "mean": 278.4,
+      "std": 7.402702209328699,
+      "min": 270.0,
+      "max": 288.0,
+      "cv_percent": 2.659016598178412
+    },
+    "n_contacts": {
+      "mean": 327.6,
+      "std": 39.39923857132267,
+      "min": 276.0,
+      "max": 365.0,
+      "cv_percent": 12.026629600525844
+    },
+    "n_adsorption_events": {
+      "mean": 139.2,
+      "std": 3.7013511046643495,
+      "min": 135.0,
+      "max": 144.0,
+      "cv_percent": 2.659016598178412
+    },
+    "contact_to_adsorption_efficiency": {
+      "mean": 0.4297982643228153,
+      "std": 0.051638956981550216,
+      "min": 0.3698630136986301,
+      "max": 0.4927536231884058,
+      "cv_percent": 12.01469649090182
+    },
+    "mass_conservation_ok_all_seeds": true
+  },
+  {
+    "material": "GO",
+    "sigma_px": 1.0,
+    "p_ads": 0.25,
+    "n_seeds": 5,
+    "n_adsorbed": {
+      "mean": 160.4,
+      "std": 6.387487769068525,
+      "min": 151.0,
+      "max": 169.0,
+      "cv_percent": 3.982224294930502
+    },
+    "percent_adsorbed": {
+      "mean": 80.2,
+      "std": 3.1937438845342623,
+      "min": 75.5,
+      "max": 84.5,
+      "cv_percent": 3.982224294930502
+    },
+    "qfinal_mg_g": {
+      "mean": 320.8,
+      "std": 12.77497553813705,
+      "min": 302.0,
+      "max": 338.0,
+      "cv_percent": 3.982224294930502
+    },
+    "n_contacts": {
+      "mean": 1015.4,
+      "std": 46.34975728091788,
+      "min": 958.0,
+      "max": 1073.0,
+      "cv_percent": 4.56467966130765
+    },
+    "n_adsorption_events": {
+      "mean": 160.4,
+      "std": 6.387487769068525,
+      "min": 151.0,
+      "max": 169.0,
+      "cv_percent": 3.982224294930502
+    },
+    "contact_to_adsorption_efficiency": {
+      "mean": 0.15837377718108903,
+      "std": 0.012314184413366491,
+      "min": 0.14603481624758222,
+      "max": 0.17640918580375783,
+      "cv_percent": 7.775393523187938
+    },
+    "mass_conservation_ok_all_seeds": true
+  },
+  {
+    "material": "GO",
+    "sigma_px": 1.0,
+    "p_ads": 0.5,
+    "n_seeds": 5,
+    "n_adsorbed": {
+      "mean": 163.4,
+      "std": 1.949358868961793,
+      "min": 162.0,
+      "max": 166.0,
+      "cv_percent": 1.1929980838199465
+    },
+    "percent_adsorbed": {
+      "mean": 81.7,
+      "std": 0.9746794344808964,
+      "min": 81.0,
+      "max": 83.0,
+      "cv_percent": 1.1929980838199465
+    },
+    "qfinal_mg_g": {
+      "mean": 326.8,
+      "std": 3.898717737923586,
+      "min": 324.0,
+      "max": 332.0,
+      "cv_percent": 1.1929980838199465
+    },
+    "n_contacts": {
+      "mean": 793.8,
+      "std": 132.43942011349944,
+      "min": 632.0,
+      "max": 985.0,
+      "cv_percent": 16.684230299004717
+    },
+    "n_adsorption_events": {
+      "mean": 163.4,
+      "std": 1.949358868961793,
+      "min": 162.0,
+      "max": 166.0,
+      "cv_percent": 1.1929980838199465
+    },
+    "contact_to_adsorption_efficiency": {
+      "mean": 0.21029023669961444,
+      "std": 0.033838514178516424,
+      "min": 0.16852791878172588,
+      "max": 0.2563291139240506,
+      "cv_percent": 16.091338670588158
+    },
+    "mass_conservation_ok_all_seeds": true
+  },
+  {
+    "material": "GO",
+    "sigma_px": 1.0,
+    "p_ads": 0.75,
+    "n_seeds": 5,
+    "n_adsorbed": {
+      "mean": 170.2,
+      "std": 3.8340579025361627,
+      "min": 166.0,
+      "max": 175.0,
+      "cv_percent": 2.2526779685876397
+    },
+    "percent_adsorbed": {
+      "mean": 85.1,
+      "std": 1.9170289512680814,
+      "min": 83.0,
+      "max": 87.5,
+      "cv_percent": 2.2526779685876397
+    },
+    "qfinal_mg_g": {
+      "mean": 340.4,
+      "std": 7.6681158050723255,
+      "min": 332.0,
+      "max": 350.0,
+      "cv_percent": 2.2526779685876397
+    },
+    "n_contacts": {
+      "mean": 588.0,
+      "std": 131.4096647891623,
+      "min": 430.0,
+      "max": 735.0,
+      "cv_percent": 22.348582447136444
+    },
+    "n_adsorption_events": {
+      "mean": 170.2,
+      "std": 3.8340579025361627,
+      "min": 166.0,
+      "max": 175.0,
+      "cv_percent": 2.2526779685876397
+    },
+    "contact_to_adsorption_efficiency": {
+      "mean": 0.3028020355010932,
+      "std": 0.07582294285295302,
+      "min": 0.2272108843537415,
+      "max": 0.4069767441860465,
+      "cv_percent": 25.040433670624807
+    },
+    "mass_conservation_ok_all_seeds": true
+  },
+  {
+    "material": "GO",
+    "sigma_px": 1.0,
+    "p_ads": 1.0,
+    "n_seeds": 5,
+    "n_adsorbed": {
+      "mean": 165.8,
+      "std": 6.220932405998316,
+      "min": 158.0,
+      "max": 175.0,
+      "cv_percent": 3.7520702086841466
+    },
+    "percent_adsorbed": {
+      "mean": 82.9,
+      "std": 3.110466202999158,
+      "min": 79.0,
+      "max": 87.5,
+      "cv_percent": 3.7520702086841466
+    },
+    "qfinal_mg_g": {
+      "mean": 331.6,
+      "std": 12.441864811996632,
+      "min": 316.0,
+      "max": 350.0,
+      "cv_percent": 3.7520702086841466
+    },
+    "n_contacts": {
+      "mean": 596.2,
+      "std": 158.5077285182019,
+      "min": 361.0,
+      "max": 761.0,
+      "cv_percent": 26.58633487390169
+    },
+    "n_adsorption_events": {
+      "mean": 165.8,
+      "std": 6.220932405998316,
+      "min": 158.0,
+      "max": 175.0,
+      "cv_percent": 3.7520702086841466
+    },
+    "contact_to_adsorption_efficiency": {
+      "mean": 0.2976110172091223,
+      "std": 0.0963221309361948,
+      "min": 0.21813403416557162,
+      "max": 0.4626038781163435,
+      "cv_percent": 32.36510927567985
+    },
+    "mass_conservation_ok_all_seeds": true
+  },
+  {
+    "material": "GO",
+    "sigma_px": 1.5,
+    "p_ads": 0.25,
+    "n_seeds": 5,
+    "n_adsorbed": {
+      "mean": 181.8,
+      "std": 6.220932405998316,
+      "min": 171.0,
+      "max": 186.0,
+      "cv_percent": 3.421855008799954
+    },
+    "percent_adsorbed": {
+      "mean": 90.9,
+      "std": 3.110466202999158,
+      "min": 85.5,
+      "max": 93.0,
+      "cv_percent": 3.421855008799954
+    },
+    "qfinal_mg_g": {
+      "mean": 363.6,
+      "std": 12.441864811996632,
+      "min": 342.0,
+      "max": 372.0,
+      "cv_percent": 3.421855008799954
+    },
+    "n_contacts": {
+      "mean": 1166.6,
+      "std": 151.64530985164032,
+      "min": 931.0,
+      "max": 1305.0,
+      "cv_percent": 12.998912210838363
+    },
+    "n_adsorption_events": {
+      "mean": 181.8,
+      "std": 6.220932405998316,
+      "min": 171.0,
+      "max": 186.0,
+      "cv_percent": 3.421855008799954
+    },
+    "contact_to_adsorption_efficiency": {
+      "mean": 0.15843802011728886,
+      "std": 0.02555272385976725,
+      "min": 0.13768115942028986,
+      "max": 0.19871106337271752,
+      "cv_percent": 16.12789899851754
+    },
+    "mass_conservation_ok_all_seeds": true
+  },
+  {
+    "material": "GO",
+    "sigma_px": 1.5,
+    "p_ads": 0.5,
+    "n_seeds": 5,
+    "n_adsorbed": {
+      "mean": 187.0,
+      "std": 6.6332495807108,
+      "min": 181.0,
+      "max": 198.0,
+      "cv_percent": 3.5471922891501606
+    },
+    "percent_adsorbed": {
+      "mean": 93.5,
+      "std": 3.3166247903554,
+      "min": 90.5,
+      "max": 99.0,
+      "cv_percent": 3.5471922891501606
+    },
+    "qfinal_mg_g": {
+      "mean": 374.0,
+      "std": 13.2664991614216,
+      "min": 362.0,
+      "max": 396.0,
+      "cv_percent": 3.5471922891501606
+    },
+    "n_contacts": {
+      "mean": 729.6,
+      "std": 156.11950550780003,
+      "min": 544.0,
+      "max": 935.0,
+      "cv_percent": 21.397958539994523
+    },
+    "n_adsorption_events": {
+      "mean": 187.0,
+      "std": 6.6332495807108,
+      "min": 181.0,
+      "max": 198.0,
+      "cv_percent": 3.5471922891501606
+    },
+    "contact_to_adsorption_efficiency": {
+      "mean": 0.26707702483681783,
+      "std": 0.06402446163171226,
+      "min": 0.19679144385026737,
+      "max": 0.34558823529411764,
+      "cv_percent": 23.972283527881423
+    },
+    "mass_conservation_ok_all_seeds": true
+  },
+  {
+    "material": "GO",
+    "sigma_px": 1.5,
+    "p_ads": 0.75,
+    "n_seeds": 5,
+    "n_adsorbed": {
+      "mean": 186.2,
+      "std": 1.7888543819998317,
+      "min": 184.0,
+      "max": 189.0,
+      "cv_percent": 0.9607166390976539
+    },
+    "percent_adsorbed": {
+      "mean": 93.1,
+      "std": 0.8944271909999159,
+      "min": 92.0,
+      "max": 94.5,
+      "cv_percent": 0.9607166390976539
+    },
+    "qfinal_mg_g": {
+      "mean": 372.4,
+      "std": 3.5777087639996634,
+      "min": 368.0,
+      "max": 378.0,
+      "cv_percent": 0.9607166390976539
+    },
+    "n_contacts": {
+      "mean": 763.4,
+      "std": 165.60736698589227,
+      "min": 552.0,
+      "max": 1005.0,
+      "cv_percent": 21.693393631895766
+    },
+    "n_adsorption_events": {
+      "mean": 186.2,
+      "std": 1.7888543819998317,
+      "min": 184.0,
+      "max": 189.0,
+      "cv_percent": 0.9607166390976539
+    },
+    "contact_to_adsorption_efficiency": {
+      "mean": 0.2534029455399413,
+      "std": 0.055938369699194836,
+      "min": 0.18507462686567164,
+      "max": 0.33695652173913043,
+      "cv_percent": 22.074869563967972
+    },
+    "mass_conservation_ok_all_seeds": true
+  },
+  {
+    "material": "GO",
+    "sigma_px": 1.5,
+    "p_ads": 1.0,
+    "n_seeds": 5,
+    "n_adsorbed": {
+      "mean": 186.2,
+      "std": 3.2710854467592254,
+      "min": 182.0,
+      "max": 191.0,
+      "cv_percent": 1.75675910137445
+    },
+    "percent_adsorbed": {
+      "mean": 93.1,
+      "std": 1.6355427233796127,
+      "min": 91.0,
+      "max": 95.5,
+      "cv_percent": 1.75675910137445
+    },
+    "qfinal_mg_g": {
+      "mean": 372.4,
+      "std": 6.542170893518451,
+      "min": 364.0,
+      "max": 382.0,
+      "cv_percent": 1.75675910137445
+    },
+    "n_contacts": {
+      "mean": 587.4,
+      "std": 46.035855591049895,
+      "min": 517.0,
+      "max": 623.0,
+      "cv_percent": 7.837224308997258
+    },
+    "n_adsorption_events": {
+      "mean": 186.2,
+      "std": 3.2710854467592254,
+      "min": 182.0,
+      "max": 191.0,
+      "cv_percent": 1.75675910137445
+    },
+    "contact_to_adsorption_efficiency": {
+      "mean": 0.31881644098661294,
+      "std": 0.02986852574698011,
+      "min": 0.3001605136436597,
+      "max": 0.3694390715667311,
+      "cv_percent": 9.368565076050857
+    },
+    "mass_conservation_ok_all_seeds": true
+  }
+]

@@ -1,0 +1,338 @@
+{
+  "provenance": {
+    "study_classification": "computational_sensitivity_not_experimental_validation",
+    "not_experimental_validation": true,
+    "no_langmuir_optimization": true,
+    "steps_are_not_minutes": true,
+    "pending_parameters": {
+      "D_sigma": "PENDIENTE",
+      "P_steps": "PENDIENTE",
+      "P_ads_physical": "PENDIENTE",
+      "k2_unified": "PENDIENTE",
+      "Nrep": "PENDIENTE",
+      "CA": "PENDIENTE",
+      "alpha_min_per_step": "PENDIENTE"
+    },
+    "computational_decisions": {
+      "p_ads_default": "DECISI\u00d3N COMPUTACIONAL PROVISIONAL (equivalente P_ads=1 tras contacto+capacidad)",
+      "contact_radii_px": "c\u00edrculos inscritos 2.5 y 3.5",
+      "bounce": "reflexi\u00f3n por eje + recorte"
+    },
+    "bibliographic_reference_only": "Langmuir y PSO aparecen en reference/ de cada corrida como referencia macrosc\u00f3pica; no se usan como objetivo de barrido ni condici\u00f3n de parada.",
+    "k2_note": "k2 ejemplo 0.0002 y k2 tabla 0.001 siguen PENDIENTES de unificaci\u00f3n. Curvas PSO en reference usan k2_example con etiqueta expl\u00edcita."
+  },
+  "study": {
+    "kind": "sigma_sweep",
+    "classification": "computational_sensitivity_not_experimental_validation",
+    "fixed_parameters": {
+      "n_steps": 400,
+      "p_ads": null,
+      "seeds": [
+        1
+      ]
+    },
+    "swept_parameters": {
+      "sigma_px": [
+        0.5,
+        1.0,
+        1.5,
+        2.0
+      ]
+    },
+    "n_runs": 4
+  },
+  "runs": [
+    {
+      "role": "simulation_outcome",
+      "paths": {
+        "json": "data\\sensitivity\\sigma\\sens_sigma_0.5_steps_400_seed_1.json",
+        "csv": "data\\sensitivity\\sigma\\sens_sigma_0.5_steps_400_seed_1.csv"
+      },
+      "execution_parameters": {
+        "role": "injected_execution_parameter",
+        "seed": 1,
+        "sigma_px": {
+          "value": 0.5,
+          "status": "PENDIENTE"
+        },
+        "n_steps": {
+          "value": 400,
+          "status": "PENDIENTE"
+        },
+        "p_ads": {
+          "value": null,
+          "effective": 1.0,
+          "implementation_status": "DECISI\u00d3N COMPUTACIONAL PROVISIONAL",
+          "status": "PENDIENTE"
+        }
+      },
+      "system_counts": {
+        "N_MB": 200,
+        "N_GO": 100,
+        "status": "DECISI\u00d3N COMPUTACIONAL"
+      },
+      "outcomes": {
+        "n_adsorbed": 60,
+        "percent_adsorbed": 30.0,
+        "m_adsorbed_mg": 1.2,
+        "m_free_mg": 2.8,
+        "qfinal_mg_g": 120.0,
+        "n_contacts": 116,
+        "mass_conservation_ok": true,
+        "result_classification": "computational_execution_not_experimental_validation"
+      },
+      "series_csv": "data\\sensitivity\\sigma\\sens_sigma_0.5_steps_400_seed_1.csv",
+      "full_result_keys": [
+        "config",
+        "run",
+        "reference",
+        "summary",
+        "series",
+        "final_state"
+      ]
+    },
+    {
+      "role": "simulation_outcome",
+      "paths": {
+        "json": "data\\sensitivity\\sigma\\sens_sigma_1_steps_400_seed_1.json",
+        "csv": "data\\sensitivity\\sigma\\sens_sigma_1_steps_400_seed_1.csv"
+      },
+      "execution_parameters": {
+        "role": "injected_execution_parameter",
+        "seed": 1,
+        "sigma_px": {
+          "value": 1.0,
+          "status": "PENDIENTE"
+        },
+        "n_steps": {
+          "value": 400,
+          "status": "PENDIENTE"
+        },
+        "p_ads": {
+          "value": null,
+          "effective": 1.0,
+          "implementation_status": "DECISI\u00d3N COMPUTACIONAL PROVISIONAL",
+          "status": "PENDIENTE"
+        }
+      },
+      "system_counts": {
+        "N_MB": 200,
+        "N_GO": 100,
+        "status": "DECISI\u00d3N COMPUTACIONAL"
+      },
+      "outcomes": {
+        "n_adsorbed": 109,
+        "percent_adsorbed": 54.50000000000001,
+        "m_adsorbed_mg": 2.18,
+        "m_free_mg": 1.8199999999999998,
+        "qfinal_mg_g": 218.0,
+        "n_contacts": 174,
+        "mass_conservation_ok": true,
+        "result_classification": "computational_execution_not_experimental_validation"
+      },
+      "series_csv": "data\\sensitivity\\sigma\\sens_sigma_1_steps_400_seed_1.csv",
+      "full_result_keys": [
+        "config",
+        "run",
+        "reference",
+        "summary",
+        "series",
+        "final_state"
+      ]
+    },
+    {
+      "role": "simulation_outcome",
+      "paths": {
+        "json": "data\\sensitivity\\sigma\\sens_sigma_1.5_steps_400_seed_1.json",
+        "csv": "data\\sensitivity\\sigma\\sens_sigma_1.5_steps_400_seed_1.csv"
+      },
+      "execution_parameters": {
+        "role": "injected_execution_parameter",
+        "seed": 1,
+        "sigma_px": {
+          "value": 1.5,
+          "status": "PENDIENTE"
+        },
+        "n_steps": {
+          "value": 400,
+          "status": "PENDIENTE"
+        },
+        "p_ads": {
+          "value": null,
+          "effective": 1.0,
+          "implementation_status": "DECISI\u00d3N COMPUTACIONAL PROVISIONAL",
+          "status": "PENDIENTE"
+        }
+      },
+      "system_counts": {
+        "N_MB": 200,
+        "N_GO": 100,
+        "status": "DECISI\u00d3N COMPUTACIONAL"
+      },
+      "outcomes": {
+        "n_adsorbed": 146,
+        "percent_adsorbed": 73.0,
+        "m_adsorbed_mg": 2.92,
+        "m_free_mg": 1.08,
+        "qfinal_mg_g": 292.0,
+        "n_contacts": 385,
+        "mass_conservation_ok": true,
+        "result_classification": "computational_execution_not_experimental_validation"
+      },
+      "series_csv": "data\\sensitivity\\sigma\\sens_sigma_1.5_steps_400_seed_1.csv",
+      "full_result_keys": [
+        "config",
+        "run",
+        "reference",
+        "summary",
+        "series",
+        "final_state"
+      ]
+    },
+    {
+      "role": "simulation_outcome",
+      "paths": {
+        "json": "data\\sensitivity\\sigma\\sens_sigma_2_steps_400_seed_1.json",
+        "csv": "data\\sensitivity\\sigma\\sens_sigma_2_steps_400_seed_1.csv"
+      },
+      "execution_parameters": {
+        "role": "injected_execution_parameter",
+        "seed": 1,
+        "sigma_px": {
+          "value": 2.0,
+          "status": "PENDIENTE"
+        },
+        "n_steps": {
+          "value": 400,
+          "status": "PENDIENTE"
+        },
+        "p_ads": {
+          "value": null,
+          "effective": 1.0,
+          "implementation_status": "DECISI\u00d3N COMPUTACIONAL PROVISIONAL",
+          "status": "PENDIENTE"
+        }
+      },
+      "system_counts": {
+        "N_MB": 200,
+        "N_GO": 100,
+        "status": "DECISI\u00d3N COMPUTACIONAL"
+      },
+      "outcomes": {
+        "n_adsorbed": 167,
+        "percent_adsorbed": 83.5,
+        "m_adsorbed_mg": 3.34,
+        "m_free_mg": 0.6600000000000001,
+        "qfinal_mg_g": 334.0,
+        "n_contacts": 259,
+        "mass_conservation_ok": true,
+        "result_classification": "computational_execution_not_experimental_validation"
+      },
+      "series_csv": "data\\sensitivity\\sigma\\sens_sigma_2_steps_400_seed_1.csv",
+      "full_result_keys": [
+        "config",
+        "run",
+        "reference",
+        "summary",
+        "series",
+        "final_state"
+      ]
+    }
+  ],
+  "analysis": {
+    "purpose": "Caracterizar sensibilidad del modelo computacional. No es validaci\u00f3n experimental ni selecci\u00f3n autom\u00e1tica de \u03c3 o P.",
+    "rows": [
+      {
+        "seed": 1,
+        "sigma_px": 0.5,
+        "n_steps": 400,
+        "n_adsorbed": 60,
+        "percent_adsorbed": 30.0,
+        "qfinal_mg_g": 120.0,
+        "n_contacts": 116,
+        "mass_conservation_ok": true
+      },
+      {
+        "seed": 1,
+        "sigma_px": 1.0,
+        "n_steps": 400,
+        "n_adsorbed": 109,
+        "percent_adsorbed": 54.50000000000001,
+        "qfinal_mg_g": 218.0,
+        "n_contacts": 174,
+        "mass_conservation_ok": true
+      },
+      {
+        "seed": 1,
+        "sigma_px": 1.5,
+        "n_steps": 400,
+        "n_adsorbed": 146,
+        "percent_adsorbed": 73.0,
+        "qfinal_mg_g": 292.0,
+        "n_contacts": 385,
+        "mass_conservation_ok": true
+      },
+      {
+        "seed": 1,
+        "sigma_px": 2.0,
+        "n_steps": 400,
+        "n_adsorbed": 167,
+        "percent_adsorbed": 83.5,
+        "qfinal_mg_g": 334.0,
+        "n_contacts": 259,
+        "mass_conservation_ok": true
+      }
+    ],
+    "by_configuration": [
+      {
+        "sigma_px": 0.5,
+        "n_steps": 400,
+        "n_seeds": 1,
+        "n_adsorbed_mean": 60.0,
+        "n_adsorbed_min": 60,
+        "n_adsorbed_max": 60,
+        "percent_adsorbed_mean": 30.0,
+        "qfinal_mg_g_mean": 120.0,
+        "n_contacts_mean": 116.0,
+        "all_mass_conserved": true
+      },
+      {
+        "sigma_px": 1.0,
+        "n_steps": 400,
+        "n_seeds": 1,
+        "n_adsorbed_mean": 109.0,
+        "n_adsorbed_min": 109,
+        "n_adsorbed_max": 109,
+        "percent_adsorbed_mean": 54.50000000000001,
+        "qfinal_mg_g_mean": 218.0,
+        "n_contacts_mean": 174.0,
+        "all_mass_conserved": true
+      },
+      {
+        "sigma_px": 1.5,
+        "n_steps": 400,
+        "n_seeds": 1,
+        "n_adsorbed_mean": 146.0,
+        "n_adsorbed_min": 146,
+        "n_adsorbed_max": 146,
+        "percent_adsorbed_mean": 73.0,
+        "qfinal_mg_g_mean": 292.0,
+        "n_contacts_mean": 385.0,
+        "all_mass_conserved": true
+      },
+      {
+        "sigma_px": 2.0,
+        "n_steps": 400,
+        "n_seeds": 1,
+        "n_adsorbed_mean": 167.0,
+        "n_adsorbed_min": 167,
+        "n_adsorbed_max": 167,
+        "percent_adsorbed_mean": 83.5,
+        "qfinal_mg_g_mean": 334.0,
+        "n_contacts_mean": 259.0,
+        "all_mass_conserved": true
+      }
+    ],
+    "seed_variability": []
+  }
+}

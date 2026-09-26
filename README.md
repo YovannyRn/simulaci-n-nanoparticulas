@@ -38,6 +38,42 @@ Graficar un resultado ya guardado (Matplotlib no forma parte del motor):
 PYTHONPATH=src python3 -m go_mb.cli plot --input data/results/go_seed_1.json --out figures
 ```
 
+## Calibración y sensibilidad (no validación experimental)
+
+Los barridos **no** optimizan hacia qe Langmuir. σ y pasos se listan por CLI; no hay defaults científicos en el código.
+
+Barrido de σ (pasos fijos):
+
+```bash
+PYTHONPATH=src python3 -m go_mb.cli sensitivity sigma --seed 1 --steps 100 --sigmas 0.5,1.0,1.5 --out data/sensitivity --plot
+```
+
+Barrido de pasos (σ fijo, misma semilla):
+
+```bash
+PYTHONPATH=src python3 -m go_mb.cli sensitivity steps --seed 1 --sigma 1.5 --steps-list 50,100,200 --out data/sensitivity --plot
+```
+
+Matriz σ × pasos:
+
+```bash
+PYTHONPATH=src python3 -m go_mb.cli sensitivity grid --seed 1 --sigmas 0.5,1.5 --steps-list 50,100 --out data/sensitivity --plot
+```
+
+Variabilidad entre semillas (opcional):
+
+```bash
+PYTHONPATH=src python3 -m go_mb.cli sensitivity grid --seed 1 --seeds 1,2,3 --sigmas 1.0 --steps-list 80 --out data/sensitivity
+```
+
+Graficar un estudio ya guardado:
+
+```bash
+PYTHONPATH=src python3 -m go_mb.cli sensitivity plot --input data/sensitivity/study_sigma_steps_grid.json --out figures/sensitivity
+```
+
+Cada corrida del barrido guarda JSON+CSV individual y el estudio agrega `study_*.json` con análisis descriptivo y procedencia.
+
 ## Tests
 
 ```bash
