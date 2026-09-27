@@ -12,6 +12,13 @@ Una corrida del motor **no** es validación experimental.
 python3 -m pip install -r requirements.txt
 ```
 
+## Abrir la GUI (sin escribir comandos cada día)
+
+- **Windows:** doble clic en `Iniciar_Simulacion.bat` o `Iniciar_Simulacion.vbs`.
+- **macOS:** doble clic en `Iniciar_Simulacion.command` (primera vez: crear `.venv`, instalar `requirements.txt` y, si hace falta, `chmod +x Iniciar_Simulacion.command`).
+
+Instrucciones detalladas para Wiam: [`docs/GUI_WIAM.md`](docs/GUI_WIAM.md).
+
 ## Motor (sin interfaz)
 
 `--sigma` (D) y `--steps` (P) son **PENDIENTE** en el documento: hay que inyectarlos. Los números de los ejemplos siguientes son **parámetros de ejecución/prueba**, no D ni P científicos de [1]/[2].

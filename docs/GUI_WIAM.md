@@ -1,5 +1,54 @@
 # Guía para Wiam — simulación con ventana
 
+## Inicio rápido por sistema
+
+| Sistema | Qué hacer cada vez |
+|--------|---------------------|
+| **Windows** | Doble clic en **`Iniciar_Simulacion.bat`** o **`Iniciar_Simulacion.vbs`** (misma GUI, sin consola negra). |
+| **macOS** | Doble clic en **`Iniciar_Simulacion.command`** (se abre una ventana de Terminal breve y la GUI). |
+
+En ambos casos el programa ejecuta lo mismo que en desarrollo: `PYTHONPATH=src` y `python -m go_mb` (interfaz de presentación).
+
+## macOS (MacBook) — primera vez y problemas frecuentes
+
+### Primera vez (solo una vez, después del `git clone`)
+
+1. Instalar **Python 3.12** desde [python.org](https://www.python.org/downloads/) (instalador oficial para Mac).
+2. Abrir **Terminal**, ir a la carpeta del proyecto y ejecutar:
+
+   ```bash
+   cd ruta/donde/clonaste/simulaci-n-nanoparticulas
+   python3.12 -m venv .venv
+   source .venv/bin/activate
+   pip install -r requirements.txt
+   ```
+
+3. Dar permiso de ejecución al lanzador (**único paso extra** si el doble clic no funciona):
+
+   ```bash
+   chmod +x Iniciar_Simulacion.command
+   ```
+
+4. A partir de ahí: **doble clic** en **`Iniciar_Simulacion.command`** en Finder.
+
+### Si macOS dice que no puede abrir el archivo
+
+- **Clic derecho** (o Control + clic) sobre **`Iniciar_Simulacion.command`** → **Abrir** → confirmar **Abrir**.
+- Solo hace falta la primera vez; después el doble clic normal suele bastar.
+
+### Si aparece «No se encontró el entorno .venv»
+
+El lanzador **no** crea el entorno ni instala paquetes solo. Hay que completar los pasos de la **primera vez** (venv + `pip install -r requirements.txt`).
+
+### Si macOS bloquea por cuarentena (archivo descargado de internet)
+
+En Terminal, dentro de la carpeta del proyecto:
+
+```bash
+xattr -d com.apple.quarantine Iniciar_Simulacion.command
+chmod +x Iniciar_Simulacion.command
+```
+
 ## Cómo ejecutar (ordenador de Wiam, sin instalar Python)
 
 1. Copie el archivo `Simulacion_GO_AC.exe` al ordenador.
