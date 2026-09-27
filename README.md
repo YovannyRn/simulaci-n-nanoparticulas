@@ -15,7 +15,8 @@ python3 -m pip install -r requirements.txt
 ## Abrir la GUI (sin escribir comandos cada día)
 
 - **Windows:** doble clic en `Iniciar_Simulacion.bat` o `Iniciar_Simulacion.vbs`.
-- **macOS:** doble clic en `Iniciar_Simulacion.command` (primera vez: crear `.venv`, instalar `requirements.txt` y, si hace falta, `chmod +x Iniciar_Simulacion.command`).
+- **macOS (primera vez):** doble clic en `Instalar_y_abrir.command`.
+- **macOS (después):** doble clic en `Iniciar_Simulacion.command`.
 
 Instrucciones detalladas para Wiam: [`docs/GUI_WIAM.md`](docs/GUI_WIAM.md).
 

@@ -5,49 +5,42 @@
 | Sistema | Qué hacer cada vez |
 |--------|---------------------|
 | **Windows** | Doble clic en **`Iniciar_Simulacion.bat`** o **`Iniciar_Simulacion.vbs`** (misma GUI, sin consola negra). |
-| **macOS** | Doble clic en **`Iniciar_Simulacion.command`** (se abre una ventana de Terminal breve y la GUI). |
+| **macOS (cada día)** | Doble clic en **`Iniciar_Simulacion.command`**. |
+| **macOS (primera vez)** | Doble clic en **`Instalar_y_abrir.command`** (instala y abre la GUI). |
 
 En ambos casos el programa ejecuta lo mismo que en desarrollo: `PYTHONPATH=src` y `python -m go_mb` (interfaz de presentación).
 
-## macOS (MacBook) — primera vez y problemas frecuentes
+## macOS (MacBook) — instalación sin Terminal
 
-### Primera vez (solo una vez, después del `git clone`)
+### Pasos para Wiam
 
-1. Instalar **Python 3.12** desde [python.org](https://www.python.org/downloads/) (instalador oficial para Mac).
-2. Abrir **Terminal**, ir a la carpeta del proyecto y ejecutar:
+1. **Clonar** el repositorio desde GitHub (como ya hizo) y abrir la carpeta del proyecto en Finder.
+2. Si aún **no tiene Python 3.12**, instálelo una vez desde [python.org/downloads](https://www.python.org/downloads/) (instalador oficial para Mac). No hace falta escribir comandos para instalar Python.
+3. **Doble clic** en **`Instalar_y_abrir.command`**.  
+   El Mac puede pedir confirmación la primera vez (véase abajo). El script crea `.venv`, instala lo necesario si falta y **abre la simulación**.
+4. **A partir de entonces**, cada vez que quiera usar el programa: **doble clic** en **`Iniciar_Simulacion.command`**.
 
-   ```bash
-   cd ruta/donde/clonaste/simulaci-n-nanoparticulas
-   python3.12 -m venv .venv
-   source .venv/bin/activate
-   pip install -r requirements.txt
-   ```
+No hace falta activar `.venv` a mano ni repetir `pip install` si ya funcionó una vez.
 
-3. Dar permiso de ejecución al lanzador (**único paso extra** si el doble clic no funciona):
+### Si macOS dice que no puede abrir el archivo (seguridad)
 
-   ```bash
-   chmod +x Iniciar_Simulacion.command
-   ```
+Puede pasar con archivos `.command` la primera vez:
 
-4. A partir de ahí: **doble clic** en **`Iniciar_Simulacion.command`** en Finder.
+1. **Clic derecho** (o Control + clic) sobre **`Instalar_y_abrir.command`** o **`Iniciar_Simulacion.command`**.
+2. Elija **Abrir**.
+3. Confirme **Abrir** en el aviso.
 
-### Si macOS dice que no puede abrir el archivo
+Solo suele hacer falta **una vez por archivo**. Después el doble clic normal funciona.
 
-- **Clic derecho** (o Control + clic) sobre **`Iniciar_Simulacion.command`** → **Abrir** → confirmar **Abrir**.
-- Solo hace falta la primera vez; después el doble clic normal suele bastar.
+Si el Mac dice que el archivo viene de internet y sigue bloqueado: clic derecho → **Abrir** otra vez. No hace falta usar la Terminal en el uso normal.
 
-### Si aparece «No se encontró el entorno .venv»
+### Si falta Python 3.12
 
-El lanzador **no** crea el entorno ni instala paquetes solo. Hay que completar los pasos de la **primera vez** (venv + `pip install -r requirements.txt`).
+Aparecerá un mensaje claro. Instale Python 3.12 desde [python.org](https://www.python.org/downloads/) y vuelva a hacer doble clic en **`Instalar_y_abrir.command`**.
 
-### Si macOS bloquea por cuarentena (archivo descargado de internet)
+### Si `Iniciar_Simulacion.command` dice que falta `.venv`
 
-En Terminal, dentro de la carpeta del proyecto:
-
-```bash
-xattr -d com.apple.quarantine Iniciar_Simulacion.command
-chmod +x Iniciar_Simulacion.command
-```
+Significa que aún no se ha ejecutado la instalación. Haga doble clic en **`Instalar_y_abrir.command`**.
 
 ## Cómo ejecutar (ordenador de Wiam, sin instalar Python)
 
