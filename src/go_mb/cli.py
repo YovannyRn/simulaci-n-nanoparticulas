@@ -255,6 +255,11 @@ def main(argv: list[str] | None = None) -> int:
     cmp_p.add_argument("--plot", action="store_true", default=True)
     cmp_p.add_argument("--no-plot", action="store_false", dest="plot")
 
+    present_p = sub.add_parser(
+        "present",
+        help="Interfaz gráfica para presentación (configuración + simulación)",
+    )
+
     view_p = sub.add_parser("view", help="Visualización interactiva 2D (capa sobre el motor)")
     view_p.add_argument("--material", choices=["GO", "AC"], default="GO")
     view_p.add_argument("--seed", type=int, default=1)
@@ -383,6 +388,12 @@ def main(argv: list[str] | None = None) -> int:
             plot=args.plot,
         )
         print(json.dumps({k: result[k] for k in ("json", "csv", "figures")}, indent=2))
+        return 0
+
+    if args.cmd == "present":
+        from go_mb.launcher_ui import run_presentation_app
+
+        run_presentation_app()
         return 0
 
     if args.cmd == "view":

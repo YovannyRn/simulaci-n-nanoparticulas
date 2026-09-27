@@ -37,7 +37,12 @@ El Python embebido `.tools/python312` sirve para **pytest**, pero **no** suele i
    ```
    Debe terminar en `[OK] Entorno listo para visualizar.`
 
-6. **Lanzar la simulación con ventana**:
+6. **Lanzar la simulación con ventana** (recomendado para presentación):
+
+   **Doble clic** en `Iniciar_Simulacion.bat` en la raíz del proyecto,  
+   o ver **`docs/GUI_WIAM.md`**.
+
+   Modo técnico (sin pantalla de configuración):
    ```powershell
    $env:PYTHONPATH = "src"
    python -m go_mb.cli view --material AC --seed 1 --sigma 1.5 --steps 400

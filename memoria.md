@@ -38,6 +38,7 @@ Simulación computacional 2D de adsorción de metileno azul (MB) sobre óxido de
 | **Sensibilidad P_ads (computacional)** | `python -m go_mb p-ads-sensitivity` → `data/sensitivity/p_ads_sensitivity/` |
 | **Referencia temporal + S* + P_ads=0.55** | `python -m go_mb final-temporal-reference` → `data/analysis/final_temporal_reference/` |
 | **Campaña final (autorizada)** | `python -m go_mb final-campaign` → `data/final_campaign/` |
+| **Presentación Wiam (GUI)** | Doble clic `Iniciar_Simulacion.vbs` (sin consola) → `docs/GUI_WIAM.md` |
 
 **Rama / PR (contexto sesión):** `cursor/go-mb-simulation-5bed`, PR #1 (actualizado en trabajo previo).
 
@@ -306,6 +307,13 @@ $env:PYTHONPATH = "src"
 - Campaña 30/40 **no** ejecutada.
 
 ---
+
+### 2026-09-26 — Interfaz de presentación (Wiam)
+
+- Pantalla Tkinter de configuración + ventana Matplotlib existente (mismo `advance_step`).
+- Lanzador: **`Iniciar_Simulacion.bat`** o `python -m go_mb` (sin argumentos).
+- Predeterminados desde protocolo final (GO, σ=1.5, 2000 pasos, seed=1, P_ads=1).
+- Guía: `docs/GUI_WIAM.md`. **133 tests** pytest (paridad GUI/headless).
 
 ### 2026-09-26 — Campaña final GO vs AC (40+40)
 

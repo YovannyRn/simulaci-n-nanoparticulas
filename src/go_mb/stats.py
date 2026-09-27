@@ -1,4 +1,9 @@
-"""Media, desviación estándar e IC 95 % opcional (método estadístico, no de adsorción)."""
+"""Media, desviación, coeficiente de variación e intervalo de la media.
+
+Resume un conjunto de semillas. No es un error de laboratorio ni una
+regla de adsorción. La desviación usa el convenio habitual de dividir
+entre n−1 cuando hay más de un valor.
+"""
 
 from __future__ import annotations
 

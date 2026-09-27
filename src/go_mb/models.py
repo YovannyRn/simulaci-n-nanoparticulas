@@ -1,4 +1,9 @@
-"""Referencias macroscópicas Langmuir y PSO. Fuera del detector de contacto."""
+"""Referencias de Langmuir y de pseudo-segundo orden. Fuera del contacto.
+
+Estas fórmulas describen un equilibrio (Langmuir) y una curva en minutos
+de laboratorio (PSO). El motor no las consulta para decidir si adsorbe,
+ni se detiene al llegar a qe. Cada material usa sus propios parámetros.
+"""
 
 from __future__ import annotations
 

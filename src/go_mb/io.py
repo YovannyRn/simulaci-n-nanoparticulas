@@ -1,4 +1,9 @@
-"""Persistencia JSON/CSV. Independiente de Matplotlib."""
+"""Guardado de resultados. No dibuja ni decide la adsorción.
+
+El CSV es la tabla que se puede abrir en una hoja de cálculo.
+El JSON guarda la misma corrida con su configuración y su serie,
+para poder volver a la procedencia de un número o de un gráfico.
+"""
 
 from __future__ import annotations
 

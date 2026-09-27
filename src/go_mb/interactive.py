@@ -78,6 +78,8 @@ class InteractiveSession:
             "qt_mg_g": float(last.get("qt_mg_g", 0.0)),
             "n_contacts": int(last.get("n_contacts", 0)),
             "m_adsorbed_mg": float(last.get("m_adsorbed_mg", 0.0)),
+            "m_free_mg": float(last.get("m_free_mg", 0.0)),
+            "n_adsorption_events": int(last.get("n_adsorption_events", 0)),
             "material": self.config.material.value,
             "seed": self.settings.seed,
             "sigma_px": self.settings.sigma_px,

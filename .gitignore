@@ -10,3 +10,5 @@ data/results/*
 figures/*
 !figures/.gitkeep
 .DS_Store
+build/
+dist/

@@ -1,4 +1,11 @@
-"""Estado computacional del recinto GO–MB."""
+"""Estado computacional del recinto: posiciones, colorante aún libre
+y capacidad que le queda a cada unidad de adsorbente.
+
+La colocación inicial es aleatoria según la semilla y rechaza que los
+cuadrados se solapen. No representa moléculas de agua ni la estructura
+atómica del sólido. GO y AC comparten este estado; lo que cambia es la
+configuración (tamaño, si el adsorbente se mueve y la capacidad).
+"""
 
 from __future__ import annotations
 

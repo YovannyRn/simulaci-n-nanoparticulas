@@ -1,4 +1,9 @@
-"""Campañas de repeticiones. Cada corrida usa su propio RNG y semilla persistida."""
+"""Repeticiones de una misma configuración con semillas distintas.
+
+Cada corrida lleva su semilla guardada. Repetir la misma semilla debe
+devolver la misma trayectoria. Cambiar la semilla es otra realización
+del azar, no otro experimento de laboratorio.
+"""
 
 from __future__ import annotations
 

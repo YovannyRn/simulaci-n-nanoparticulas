@@ -1,4 +1,10 @@
-"""Variables de salida de una corrida. No mezclar Nads adsorbido con N adsorbente."""
+"""Números que se anotan al final de cada paso y de cada corrida.
+
+qt es la masa adsorbida dividida por la masa de adsorbente (mg/g).
+No hay que confundir el número de objetos de colorante adsorbidos
+con el número de unidades de adsorbente (siempre 100 en este modelo).
+Los contactos se cuentan aparte: tocar no es lo mismo que adsorber.
+"""
 
 from __future__ import annotations
 

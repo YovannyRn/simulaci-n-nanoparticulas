@@ -1,4 +1,10 @@
-"""Detección geométrica de contacto. Sin probabilidad de colisión y sin RNG."""
+"""Detección geométrica de contacto. Sin probabilidad de colisión y sin azar.
+
+Un objeto de colorante libre toca una unidad de adsorbente cuando la
+distancia entre centros es menor o igual que la suma de radios. O hay
+contacto o no lo hay: esta función no sortea nada. El radio es una
+decisión de representación, no un tamaño molecular medido.
+"""
 
 from __future__ import annotations
 
