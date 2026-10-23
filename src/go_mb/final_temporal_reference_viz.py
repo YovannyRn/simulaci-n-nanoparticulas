@@ -17,6 +17,7 @@ from go_mb.temporal_calibration import discover_run_json_paths
 
 
 def _p2000_paths(campaign_root: Path, material: str) -> list[Path]:
+    """Explico la función de p2000 paths en el módulo final_temporal_reference_viz."""
     sub = "go" if material == "GO" else "ac"
     return sorted(
         p
@@ -30,6 +31,7 @@ def _fraction_vs_steps_figure(
     material: str,
     output_dir: Path,
 ) -> str:
+    """Explico la función de fraction vs steps figure en el módulo final_temporal_reference_viz."""
     paths = _p2000_paths(campaign_root, material)
     fig, ax = plt.subplots(figsize=(8, 4))
     qe = GO_PSO.qe_pso_mg_g if material == "GO" else AC_PSO.qe_pso_mg_g
@@ -51,6 +53,7 @@ def _fraction_vs_steps_figure(
 
 
 def _alpha_vs_fraction(crossings: list[dict[str, Any]], material: str, output_dir: Path) -> str:
+    """Explico la función de alpha vs fraction en el módulo final_temporal_reference_viz."""
     sub = [r for r in crossings if r["material"] == material and r["reach_status"] == "reached"]
     fig, ax = plt.subplots(figsize=(7, 4))
     for sigma, color in ((1.0, "tab:blue"), (1.5, "tab:orange")):
@@ -88,6 +91,7 @@ def _alpha_vs_fraction(crossings: list[dict[str, Any]], material: str, output_di
 
 
 def _alpha_go_vs_ac(crossings: list[dict[str, Any]], output_dir: Path) -> str:
+    """Explico la función de alpha go vs ac en el módulo final_temporal_reference_viz."""
     fig, ax = plt.subplots(figsize=(7, 4))
     for material, color in (("GO", "tab:blue"), ("AC", "tab:orange")):
         sub = [
@@ -118,6 +122,7 @@ def _alpha_go_vs_ac(crossings: list[dict[str, Any]], output_dir: Path) -> str:
 
 
 def _p_ads_panel(comparison: list[dict[str, Any]], material: str, output_dir: Path) -> str:
+    """Explico la función de p ads panel en el módulo final_temporal_reference_viz."""
     fig, axes = plt.subplots(2, 2, figsize=(10, 7))
     metrics = (
         ("n_adsorbed", "Nads"),
@@ -157,6 +162,7 @@ def _p_ads_panel(comparison: list[dict[str, Any]], material: str, output_dir: Pa
 
 
 def _p_ads_overlay(comparison: list[dict[str, Any]], output_dir: Path) -> str:
+    """Explico la función de p ads overlay en el módulo final_temporal_reference_viz."""
     fig, ax = plt.subplots(figsize=(8, 4))
     for material, color in (("GO", "tab:blue"), ("AC", "tab:orange")):
         for sigma, ls in ((1.0, "-"), (1.5, "--")):
@@ -196,6 +202,7 @@ def plot_final_temporal_reference(
     campaign_root: Path,
     output_dir: Path,
 ) -> list[str]:
+    """Explico la función de plot final temporal reference en el módulo final_temporal_reference_viz."""
     output_dir.mkdir(parents=True, exist_ok=True)
     paths: list[str] = []
 
