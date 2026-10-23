@@ -11,6 +11,7 @@ from go_mb.state import SimulationState
 
 
 def _state_two_particles(dist: float) -> SimulationState:
+    """Compruebo el comportamiento esperado de  state two particles y ayudo a detectar regresiones."""
     cfg = SimulationConfig(n_mb=1, n_go=1)
     mb = np.array([[20.0, 20.0]])
     go = np.array([[20.0 + dist, 20.0]])
@@ -25,6 +26,7 @@ def _state_two_particles(dist: float) -> SimulationState:
 
 
 def test_threshold_inclusive() -> None:
+    """Compruebo el comportamiento esperado de threshold inclusive y ayudo a detectar regresiones."""
     cfg = SimulationConfig()
     thresh = cfg.r_mb_px + cfg.r_go_px
     assert len(contact_pairs(_state_two_particles(thresh))) == 1
@@ -33,6 +35,7 @@ def test_threshold_inclusive() -> None:
 
 
 def test_detector_has_no_rng() -> None:
+    """Compruebo el comportamiento esperado de detector has no rng y ayudo a detectar regresiones."""
     src = inspect.getsource(contact_mod)
     assert "default_rng" not in src
     assert "random(" not in src
