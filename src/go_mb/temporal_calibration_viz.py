@@ -15,10 +15,12 @@ from go_mb.temporal_calibration import PSO_K2_G_MG_MIN, PSO_QE_MG_G
 
 
 def _go_crossings(analysis: dict[str, Any]) -> list[dict[str, Any]]:
+    """Genero la representación visual indicada a partir de los resultados recibidos."""
     return [r for r in analysis["fraction_crossings"] if r["material"] == "GO"]
 
 
 def _filter_go_sigma(crossings: list[dict[str, Any]], sigma: float) -> list[dict[str, Any]]:
+    """Genero la representación visual indicada a partir de los resultados recibidos."""
     return [
         r
         for r in crossings
@@ -31,6 +33,7 @@ def plot_temporal_calibration(
     campaign_root: Path,
     output_dir: Path,
 ) -> list[str]:
+    """Genero la representación visual indicada a partir de los resultados recibidos."""
     output_dir.mkdir(parents=True, exist_ok=True)
     paths: list[str] = []
     go_x = _go_crossings(analysis)
