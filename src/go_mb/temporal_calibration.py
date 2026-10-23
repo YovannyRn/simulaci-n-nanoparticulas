@@ -47,6 +47,7 @@ ReachStatus = Literal["reached", "not_reached"]
 
 
 def provenance_header(*, campaign_root: Path) -> dict[str, Any]:
+    """Explico la responsabilidad de provenance header dentro de este módulo."""
     return {
         "classification": TEMPORAL_CALIBRATION_CLASSIFICATION,
         "not_experimental_validation": True,
@@ -101,6 +102,7 @@ def discover_run_json_paths(campaign_root: Path) -> list[tuple[str, Path]]:
 
 
 def _run_meta(data: dict[str, Any]) -> dict[str, Any]:
+    """Explico la responsabilidad de  run meta dentro de este módulo."""
     run = data.get("run", {})
     summary = data.get("summary", {})
     cfg = data.get("config", {})
@@ -137,6 +139,7 @@ def fraction_crossings_for_run(
     data: dict[str, Any],
     fractions: list[float] | None = None,
 ) -> list[dict[str, Any]]:
+    """Explico la responsabilidad de fraction crossings for run dentro de este módulo."""
     fractions = fractions or DEFAULT_FRACTIONS
     meta = _run_meta(data)
     material = str(meta["material"])
@@ -233,6 +236,7 @@ def load_and_analyze_campaign(
     campaign_root: Path,
     fractions: list[float] | None = None,
 ) -> dict[str, Any]:
+    """Explico la responsabilidad de load and analyze campaign dentro de este módulo."""
     paths = discover_run_json_paths(campaign_root)
     all_crossings: list[dict[str, Any]] = []
     run_summaries: list[dict[str, Any]] = []
@@ -261,6 +265,7 @@ def load_and_analyze_campaign(
 
 
 def write_csv_rows(path: Path, rows: list[dict[str, Any]]) -> None:
+    """Explico la responsabilidad de write csv rows dentro de este módulo."""
     path.parent.mkdir(parents=True, exist_ok=True)
     if not rows:
         path.write_text("", encoding="utf-8")
@@ -283,6 +288,7 @@ def run_temporal_calibration(
     plot: bool = True,
     fractions: list[float] | None = None,
 ) -> dict[str, Any]:
+    """Explico la responsabilidad de run temporal calibration dentro de este módulo."""
     root = campaign_root or Path(HOMOGENEOUS_WIAM_DIR)
     out = output_dir or Path("data/analysis/temporal_calibration")
     out.mkdir(parents=True, exist_ok=True)
