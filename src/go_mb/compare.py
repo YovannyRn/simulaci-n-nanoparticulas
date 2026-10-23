@@ -71,6 +71,7 @@ class ComparisonRow:
 
 
 def _material_from_study(study: dict[str, Any], fallback: MaterialTag) -> MaterialTag:
+    """Explico el propósito de material from study dentro de compare."""
     mat = study.get("study", {}).get("material") or study.get("provenance", {}).get("material")
     if mat in ("GO", "AC"):
         return mat  # type: ignore[return-value]
@@ -81,6 +82,7 @@ def _material_from_study(study: dict[str, Any], fallback: MaterialTag) -> Materi
 
 
 def _rows_for_config(study: dict[str, Any], sigma: float, steps: int) -> list[dict[str, Any]]:
+    """Explico el propósito de rows for config dentro de compare."""
     out: list[dict[str, Any]] = []
     for row in study.get("analysis", {}).get("rows", []):
         if abs(float(row["sigma_px"]) - sigma) < 1e-9 and int(row["n_steps"]) == steps:
@@ -114,6 +116,7 @@ def stats_for_configuration(
     sigma: float,
     steps: int,
 ) -> ConfigurationStats | None:
+    """Explico el propósito de stats for configuration dentro de compare."""
     rows = _rows_for_config(study, sigma, steps)
     if not rows:
         return None
@@ -138,6 +141,7 @@ def stats_for_configuration(
 
 
 def _relative_delta(delta: float, base: float) -> float | None:
+    """Explico el propósito de relative delta dentro de compare."""
     if abs(base) < 1e-12:
         return None
     return delta / base
@@ -148,6 +152,7 @@ def build_comparison_table(
     ac_study: dict[str, Any],
     configurations: list[tuple[float, int]] | None = None,
 ) -> list[ComparisonRow]:
+    """Explico el propósito de build comparison table dentro de compare."""
     configs = configurations or DEFAULT_CONFIGURATIONS
     go_mat = _material_from_study(go_study, "GO")
     ac_mat = _material_from_study(ac_study, "AC")
@@ -181,6 +186,7 @@ def build_comparison_table(
 
 
 def seed_variability_from_study(study: dict[str, Any], material: MaterialTag) -> list[dict[str, Any]]:
+    """Explico el propósito de seed variability from study dentro de compare."""
     items: list[dict[str, Any]] = []
     for entry in study.get("analysis", {}).get("seed_variability", []):
         items.append({**entry, "material": material})
@@ -235,6 +241,7 @@ def provenance_header(
     ac_steps_paths: dict[str, Path],
     seeds: list[int],
 ) -> dict[str, Any]:
+    """Explico el propósito de provenance header dentro de compare."""
     return {
         "comparison_classification": COMPARISON_CLASSIFICATION,
         "not_experimental_validation": True,
@@ -266,6 +273,7 @@ def comparison_report_to_dict(
     seed_var: list[dict[str, Any]],
     evolution: dict[str, Any],
 ) -> dict[str, Any]:
+    """Explico el propósito de comparison report to dict dentro de compare."""
     return {
         "provenance": provenance,
         "comparison_table": [
@@ -295,6 +303,7 @@ def comparison_report_to_dict(
 
 
 def write_comparison_csv(table: list[ComparisonRow], path: Path) -> None:
+    """Explico el propósito de write comparison csv dentro de compare."""
     path.parent.mkdir(parents=True, exist_ok=True)
     fieldnames = [
         "sigma_px",
