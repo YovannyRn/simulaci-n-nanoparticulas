@@ -43,6 +43,7 @@ METRICS_FOR_STATS = (
 
 
 def provenance_block() -> dict[str, Any]:
+    """Explico la responsabilidad de provenance block en el flujo de final_campaign."""
     return {
         "classification": FINAL_CAMPAIGN_CLASSIFICATION,
         "not_experimental_validation": True,
@@ -78,6 +79,7 @@ def provenance_block() -> dict[str, Any]:
 
 
 def _assert_mass(result: dict[str, Any]) -> None:
+    """Explico la responsabilidad de assert mass en el flujo de final_campaign."""
     summary = result["summary"]
     if summary.get("mass_conservation_ok", True):
         return
@@ -94,6 +96,7 @@ def _assert_mass(result: dict[str, Any]) -> None:
 
 
 def run_record(result: dict[str, Any], paths: dict[str, str] | None = None) -> dict[str, Any]:
+    """Explico la responsabilidad de run record en el flujo de final_campaign."""
     cfg = result["config"]
     run = result["run"]
     summary = result["summary"]
@@ -137,6 +140,7 @@ def run_record(result: dict[str, Any], paths: dict[str, str] | None = None) -> d
 
 
 def extended_stats(values: list[float]) -> dict[str, float | None]:
+    """Explico la responsabilidad de extended stats en el flujo de final_campaign."""
     if not values:
         return {
             "mean": None,
@@ -167,6 +171,7 @@ def extended_stats(values: list[float]) -> dict[str, float | None]:
 
 
 def aggregate_material(records: list[dict[str, Any]], material: str) -> dict[str, Any]:
+    """Explico la responsabilidad de aggregate material en el flujo de final_campaign."""
     sub = [r for r in records if r["material"] == material]
     block: dict[str, Any] = {
         "material": material,
@@ -181,6 +186,7 @@ def aggregate_material(records: list[dict[str, Any]], material: str) -> dict[str
 
 
 def comparison_go_ac(agg_go: dict[str, Any], agg_ac: dict[str, Any]) -> list[dict[str, Any]]:
+    """Explico la responsabilidad de comparison go ac en el flujo de final_campaign."""
     rows: list[dict[str, Any]] = []
     for metric in METRICS_FOR_STATS:
         g = agg_go.get(metric, {})
@@ -216,6 +222,7 @@ def comparison_go_ac(agg_go: dict[str, Any], agg_ac: dict[str, Any]) -> list[dic
 
 
 def write_csv(path: Path, rows: list[dict[str, Any]]) -> None:
+    """Explico la responsabilidad de write csv en el flujo de final_campaign."""
     path.parent.mkdir(parents=True, exist_ok=True)
     if not rows:
         path.write_text("", encoding="utf-8")
@@ -232,6 +239,7 @@ def write_csv(path: Path, rows: list[dict[str, Any]]) -> None:
 
 
 def flatten_aggregate_csv(agg: dict[str, Any]) -> dict[str, Any]:
+    """Explico la responsabilidad de flatten aggregate csv en el flujo de final_campaign."""
     row: dict[str, Any] = {
         "material": agg["material"],
         "n_seeds": agg["n_seeds"],
@@ -255,6 +263,7 @@ def run_final_campaign(
     go_seeds: list[int] | None = None,
     ac_seeds: list[int] | None = None,
 ) -> dict[str, Any]:
+    """Explico la responsabilidad de run final campaign en el flujo de final_campaign."""
     out = output_dir or Path("data/final_campaign")
     out.mkdir(parents=True, exist_ok=True)
     go_seeds = go_seeds if go_seeds is not None else GO_SEEDS
@@ -336,6 +345,7 @@ def run_final_campaign(
 
 
 def _write_readme(out: Path) -> None:
+    """Explico la responsabilidad de write readme en el flujo de final_campaign."""
     readme = out / "README.md"
     readme.write_text(
         _readme_body(figure_section="(ver sección final_campaign_figures tras generar figuras)"),
@@ -344,11 +354,13 @@ def _write_readme(out: Path) -> None:
 
 
 def _append_figure_section_to_readme(out: Path, figures: list[dict[str, str]]) -> None:
+    """Explico la responsabilidad de append figure section to readme en el flujo de final_campaign."""
     body = _readme_body(figure_section=_figures_markdown(figures))
     (out / "README.md").write_text(body, encoding="utf-8")
 
 
 def _figures_markdown(figures: list[dict[str, str]]) -> str:
+    """Explico la responsabilidad de figures markdown en el flujo de final_campaign."""
     lines = ["## final_campaign_figures", ""]
     for f in figures:
         lines.append(f"- **{f['filename']}** — {f['description']}")
@@ -356,6 +368,7 @@ def _figures_markdown(figures: list[dict[str, str]]) -> str:
 
 
 def _readme_body(*, figure_section: str) -> str:
+    """Explico la responsabilidad de readme body en el flujo de final_campaign."""
     return f"""# Campaña final computacional GO vs AC
 
 **Clasificación:** `{FINAL_CAMPAIGN_CLASSIFICATION}`  
