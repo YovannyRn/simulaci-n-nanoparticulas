@@ -48,6 +48,7 @@ def _add_sensitivity_common(p: argparse.ArgumentParser) -> None:
 
 
 def main(argv: list[str] | None = None) -> int:
+    """Interpreto los argumentos de línea de comandos y despacho la acción solicitada."""
     parser = argparse.ArgumentParser(description="Simulación 2D GO–MB (motor científico)")
     sub = parser.add_subparsers(dest="cmd", required=True)
 

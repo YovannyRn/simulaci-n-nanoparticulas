@@ -22,6 +22,7 @@ COMPARE_PADS = [0.5, 0.55, 0.75, 1.0]
 
 
 def provenance_block() -> dict[str, Any]:
+    """Explico la responsabilidad de provenance block dentro de p_ads_055."""
     return {
         "classification": PADS_055_CLASSIFICATION,
         "p_ads": P_ADS_VALUE,
@@ -32,6 +33,7 @@ def provenance_block() -> dict[str, Any]:
 
 
 def _assert_mass(result: dict[str, Any]) -> None:
+    """Explico la responsabilidad de assert mass dentro de p_ads_055."""
     summary = result["summary"]
     if summary.get("mass_conservation_ok", True):
         return
@@ -51,6 +53,7 @@ def run_p_ads_055_campaign(
     output_dir: Path,
     store_json: bool = True,
 ) -> list[dict[str, Any]]:
+    """Explico la responsabilidad de run p ads 055 campaign dentro de p_ads_055."""
     validate_p_ads(P_ADS_VALUE)
     records: list[dict[str, Any]] = []
     run_dir = output_dir / "p_ads_055_runs"
@@ -84,6 +87,7 @@ def load_historical_p_ads(
     *,
     p_ads_values: list[float] | None = None,
 ) -> list[dict[str, Any]]:
+    """Explico la responsabilidad de load historical p ads dentro de p_ads_055."""
     csv_path = sensitivity_root / "per_run_records.csv"
     if not csv_path.is_file():
         return []
@@ -122,6 +126,7 @@ def merge_comparison_records(
     historical: list[dict[str, Any]],
     new_055: list[dict[str, Any]],
 ) -> list[dict[str, Any]]:
+    """Explico la responsabilidad de merge comparison records dentro de p_ads_055."""
     merged: list[dict[str, Any]] = []
     for r in historical:
         if abs(float(r["p_ads_effective"]) - 0.55) < 1e-9:
@@ -161,6 +166,7 @@ def aggregate_comparison(records: list[dict[str, Any]]) -> list[dict[str, Any]]:
 
 
 def write_csv(path: Path, rows: list[dict[str, Any]]) -> None:
+    """Explico la responsabilidad de write csv dentro de p_ads_055."""
     path.parent.mkdir(parents=True, exist_ok=True)
     if not rows:
         path.write_text("", encoding="utf-8")

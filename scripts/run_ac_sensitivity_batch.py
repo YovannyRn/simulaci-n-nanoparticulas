@@ -16,6 +16,7 @@ STEPS_SEEDS = "200,400"
 
 
 def run(argv: list[str]) -> None:
+    """Gestiono la operación run del lote de sensibilidad AC."""
     code = main(argv)
     if code != 0:
         raise SystemExit(code)

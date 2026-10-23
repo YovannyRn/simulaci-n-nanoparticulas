@@ -26,6 +26,7 @@ def run_campaign(
     p_ads: float | None = None,
     output_dir: str | Path | None = None,
 ) -> dict[str, Any]:
+    """Explico el propósito de run campaign dentro de experiments."""
     if n_rep < 1:
         raise ValueError("n_rep debe ser ≥ 1 (el PDF no unifica 30 vs 40; hay que inyectarlo)")
     cfg = config or SimulationConfig()

@@ -30,6 +30,7 @@ def provenance_block(
     campaign_root: Path,
     calibration_root: Path,
 ) -> dict[str, Any]:
+    """Explico la responsabilidad de provenance block en el flujo de final_protocol_analysis."""
     return {
         "classification": FINAL_PROTOCOL_CLASSIFICATION,
         "not_experimental_validation": True,
@@ -49,6 +50,7 @@ def provenance_block(
 
 
 def _stats(vals: list[float]) -> dict[str, float | None]:
+    """Explico la responsabilidad de stats en el flujo de final_protocol_analysis."""
     if not vals:
         return {
             "mean": None,
@@ -70,10 +72,12 @@ def _stats(vals: list[float]) -> dict[str, float | None]:
 
 
 def _is_p2000_path(path: Path) -> bool:
+    """Explico la responsabilidad de is p2000 path en el flujo de final_protocol_analysis."""
     return f"_steps_{P2000}_" in path.name
 
 
 def load_p2000_runs(campaign_root: Path) -> list[dict[str, Any]]:
+    """Explico la responsabilidad de load p2000 runs en el flujo de final_protocol_analysis."""
     rows: list[dict[str, Any]] = []
     for material, jpath in discover_run_json_paths(campaign_root):
         if not _is_p2000_path(jpath):
@@ -99,6 +103,7 @@ def load_p2000_runs(campaign_root: Path) -> list[dict[str, Any]]:
 
 
 def aggregate_material_sigma(p2000: list[dict[str, Any]]) -> list[dict[str, Any]]:
+    """Explico la responsabilidad de aggregate material sigma en el flujo de final_protocol_analysis."""
     out: list[dict[str, Any]] = []
     for material in ("GO", "AC"):
         for sigma in SIGMAS:
@@ -124,6 +129,7 @@ def aggregate_material_sigma(p2000: list[dict[str, Any]]) -> list[dict[str, Any]
 
 
 def compare_sigma_descriptive(aggregated: list[dict[str, Any]]) -> list[dict[str, Any]]:
+    """Explico la responsabilidad de compare sigma descriptive en el flujo de final_protocol_analysis."""
     rows: list[dict[str, Any]] = []
     for material in ("GO", "AC"):
         g15 = next(
@@ -155,6 +161,7 @@ def compare_sigma_descriptive(aggregated: list[dict[str, Any]]) -> list[dict[str
 
 
 def _load_fraction_crossings(calibration_root: Path) -> list[dict[str, Any]]:
+    """Explico la responsabilidad de load fraction crossings en el flujo de final_protocol_analysis."""
     path = calibration_root / "fraction_crossings.csv"
     if not path.is_file():
         return []
@@ -163,6 +170,7 @@ def _load_fraction_crossings(calibration_root: Path) -> list[dict[str, Any]]:
 
 
 def fraction_reachability_p2000(crossings: list[dict[str, Any]]) -> list[dict[str, Any]]:
+    """Explico la responsabilidad de fraction reachability p2000 en el flujo de final_protocol_analysis."""
     rows: list[dict[str, Any]] = []
     sub = [
         r
@@ -204,6 +212,7 @@ def fraction_reachability_p2000(crossings: list[dict[str, Any]]) -> list[dict[st
 
 
 def alpha_analysis_p2000_go(crossings: list[dict[str, Any]]) -> dict[str, Any]:
+    """Explico la responsabilidad de alpha analysis p2000 go en el flujo de final_protocol_analysis."""
     sub = [
         r
         for r in crossings
@@ -259,6 +268,7 @@ def alpha_analysis_p2000_go(crossings: list[dict[str, Any]]) -> dict[str, Any]:
 
 
 def candidate_final_protocol() -> dict[str, Any]:
+    """Explico la responsabilidad de candidate final protocol en el flujo de final_protocol_analysis."""
     return {
         "geometry": "Wiam",
         "mb_count": 200,
@@ -340,6 +350,7 @@ def final_campaign_proposal(
 
 
 def write_csv(path: Path, rows: list[dict[str, Any]]) -> None:
+    """Explico la responsabilidad de write csv en el flujo de final_protocol_analysis."""
     path.parent.mkdir(parents=True, exist_ok=True)
     if not rows:
         path.write_text("", encoding="utf-8")
@@ -367,6 +378,7 @@ def run_final_protocol_analysis(
     output_dir: Path | None = None,
     plot: bool = True,
 ) -> dict[str, Any]:
+    """Explico la responsabilidad de run final protocol analysis en el flujo de final_protocol_analysis."""
     camp = campaign_root or Path(HOMOGENEOUS_WIAM_DIR)
     cal = calibration_root or Path("data/analysis/temporal_calibration")
     out = output_dir or Path("data/analysis/final_protocol")
@@ -433,6 +445,7 @@ def run_final_protocol_analysis(
 
 
 def _summary_rows(aggregated: list[dict[str, Any]]) -> list[dict[str, Any]]:
+    """Explico la responsabilidad de summary rows en el flujo de final_protocol_analysis."""
     rows: list[dict[str, Any]] = []
     for block in aggregated:
         row: dict[str, Any] = {

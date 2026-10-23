@@ -17,10 +17,12 @@ from go_mb.io import load_study
 
 @pytest.fixture
 def repo_root() -> Path:
+    """Compruebo el comportamiento esperado de repo root para detectar regresiones en el modelo."""
     return Path(__file__).resolve().parents[1]
 
 
 def test_build_table_matches_documented_means(repo_root: Path) -> None:
+    """Compruebo el comportamiento esperado de build table matches documented means para detectar regresiones en el modelo."""
     go_path = repo_root / "data/sensitivity/seeds/study_sigma_steps_grid.json"
     ac_path = repo_root / "data/sensitivity/ac/seeds/study_ac_seeds.json"
     if not go_path.exists() or not ac_path.exists():
@@ -38,6 +40,7 @@ def test_build_table_matches_documented_means(repo_root: Path) -> None:
 
 
 def test_run_descriptive_comparison_writes_outputs(repo_root: Path, tmp_path: Path) -> None:
+    """Compruebo el comportamiento esperado de run descriptive comparison writes outputs para detectar regresiones en el modelo."""
     go_path = repo_root / "data/sensitivity/seeds/study_sigma_steps_grid.json"
     ac_path = repo_root / "data/sensitivity/ac/seeds/study_ac_seeds.json"
     if not go_path.exists() or not ac_path.exists():
@@ -58,6 +61,7 @@ def test_run_descriptive_comparison_writes_outputs(repo_root: Path, tmp_path: Pa
 
 
 def test_stats_spread_from_seeds(repo_root: Path) -> None:
+    """Compruebo el comportamiento esperado de stats spread from seeds para detectar regresiones en el modelo."""
     go_path = repo_root / "data/sensitivity/seeds/study_sigma_steps_grid.json"
     if not go_path.exists():
         pytest.skip("Estudio GO seeds ausente")

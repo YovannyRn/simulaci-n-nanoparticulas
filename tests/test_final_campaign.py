@@ -17,6 +17,7 @@ from go_mb.engine import run_simulation
 
 
 def test_provenance_final_campaign() -> None:
+    """Compruebo el comportamiento esperado de provenance final campaign y ayudo a detectar regresiones."""
     p = provenance_block()
     assert p["classification"] == FINAL_CAMPAIGN_CLASSIFICATION
     assert p["not_experimental_validation"] is True
@@ -27,6 +28,7 @@ def test_provenance_final_campaign() -> None:
 
 
 def test_extended_stats_percentiles() -> None:
+    """Compruebo el comportamiento esperado de extended stats percentiles y ayudo a detectar regresiones."""
     st = extended_stats([1.0, 2.0, 3.0, 4.0, 5.0])
     assert st["median"] == 3.0
     assert st["percentile_25"] is not None
@@ -34,6 +36,7 @@ def test_extended_stats_percentiles() -> None:
 
 
 def test_run_record_fields() -> None:
+    """Compruebo el comportamiento esperado de run record fields y ayudo a detectar regresiones."""
     r = run_simulation(seed=1, sigma_px=1.5, n_steps=5, p_ads=1.0)
     rec = run_record(r)
     assert rec["c0_mg_l"] == 100.0
@@ -42,6 +45,7 @@ def test_run_record_fields() -> None:
 
 
 def test_comparison_go_ac_smoke() -> None:
+    """Compruebo el comportamiento esperado de comparison go ac smoke y ayudo a detectar regresiones."""
     go = aggregate_material(
         [
             {
@@ -83,6 +87,7 @@ def test_comparison_go_ac_smoke() -> None:
 
 
 def test_final_campaign_mini(tmp_path: Path) -> None:
+    """Compruebo el comportamiento esperado de final campaign mini y ayudo a detectar regresiones."""
     from go_mb import final_campaign as mod
 
     old_go, old_ac = mod.GO_SEEDS, mod.AC_SEEDS

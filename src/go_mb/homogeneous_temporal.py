@@ -46,6 +46,7 @@ def expected_run_count(
     steps: list[int] | None = None,
     seeds: list[int] | None = None,
 ) -> int:
+    """Explico la función de expected run count en el módulo homogeneous_temporal."""
     s = sigmas or DEFAULT_SIGMAS
     p = steps or DEFAULT_STEPS
     sd = seeds or DEFAULT_SEEDS
@@ -53,6 +54,7 @@ def expected_run_count(
 
 
 def _wiam_geometry_block() -> dict[str, Any]:
+    """Explico la función de wiam geometry block en el módulo homogeneous_temporal."""
     return {
         "geometry_era": "wiam_geometry",
         "mb_side_px": WIAM_MB_SIDE_PX,
@@ -78,6 +80,7 @@ def _provenance_block(
     geometry_era: GeometryEra,
     wiam_notes: dict[str, str] | None = None,
 ) -> dict[str, Any]:
+    """Explico la función de provenance block en el módulo homogeneous_temporal."""
     if geometry_era == "wiam_geometry":
         classification = WIAM_HOMOGENEOUS_CLASSIFICATION
         geometry_section: dict[str, Any] = {
@@ -147,6 +150,7 @@ def aggregate_configuration_stats(study: dict[str, Any]) -> list[dict[str, Any]]
         mass_ok = all(it.get("mass_conservation_ok", True) for it in items)
 
         def stats(vals: list[float]) -> dict[str, float]:
+            """Explico la función de stats en el módulo homogeneous_temporal."""
             return {
                 "mean": statistics.mean(vals),
                 "std": statistics.stdev(vals) if len(vals) > 1 else 0.0,
@@ -201,6 +205,7 @@ def write_aggregated_stats_csv(rows: list[dict[str, Any]], path: Path) -> None:
     ]
 
     def flat(prefix: str, block: dict[str, float]) -> dict[str, float]:
+        """Explico la función de flat en el módulo homogeneous_temporal."""
         return {
             f"{prefix}_mean": block["mean"],
             f"{prefix}_std": block["std"],
@@ -227,6 +232,7 @@ def write_aggregated_stats_csv(rows: list[dict[str, Any]], path: Path) -> None:
 
 
 def _attach_geometry_to_runs(study: dict[str, Any], cfg: SimulationConfig) -> None:
+    """Explico la función de attach geometry to runs en el módulo homogeneous_temporal."""
     snap = geometry_snapshot(cfg)
     for rec in study.get("runs", []):
         rec["geometry"] = snap
@@ -242,6 +248,7 @@ def run_material_campaign(
     p_ads: float | None = None,
     geometry_era: GeometryEra = "wiam_geometry",
 ) -> dict[str, Any]:
+    """Explico la función de run material campaign en el módulo homogeneous_temporal."""
     sigmas = sigmas or DEFAULT_SIGMAS
     steps_list = steps_list or DEFAULT_STEPS
     seeds = seeds or DEFAULT_SEEDS
@@ -312,6 +319,7 @@ def build_cross_material_table(
     go_agg: list[dict[str, Any]],
     ac_agg: list[dict[str, Any]],
 ) -> list[dict[str, Any]]:
+    """Explico la función de build cross material table en el módulo homogeneous_temporal."""
     ac_by_key = {(r["sigma_px"], r["n_steps"]): r for r in ac_agg}
     rows: list[dict[str, Any]] = []
     for g in go_agg:
@@ -335,6 +343,7 @@ def build_cross_material_table(
 
 
 def write_cross_material_csv(rows: list[dict[str, Any]], path: Path) -> None:
+    """Explico la función de write cross material csv en el módulo homogeneous_temporal."""
     path.parent.mkdir(parents=True, exist_ok=True)
     fieldnames = [
         "sigma_px",
@@ -377,6 +386,7 @@ def write_cross_material_csv(rows: list[dict[str, Any]], path: Path) -> None:
 
 
 def _load_legacy_aggregated(material: str, legacy_root: Path) -> list[dict[str, Any]] | None:
+    """Explico la función de load legacy aggregated en el módulo homogeneous_temporal."""
     path = legacy_root / ("go" if material == "GO" else "ac") / "aggregated_stats.json"
     if not path.is_file():
         return None
@@ -427,6 +437,7 @@ def build_legacy_vs_wiam_comparison(
 
 
 def write_legacy_vs_wiam_csv(comparison: dict[str, Any], path: Path) -> None:
+    """Explico la función de write legacy vs wiam csv en el módulo homogeneous_temporal."""
     path.parent.mkdir(parents=True, exist_ok=True)
     rows = comparison.get("rows", [])
     if not rows:
@@ -451,6 +462,7 @@ def run_homogeneous_campaign(
     geometry_era: GeometryEra = "wiam_geometry",
     legacy_root: Path | None = None,
 ) -> dict[str, Any]:
+    """Explico la función de run homogeneous campaign en el módulo homogeneous_temporal."""
     if base_dir is None:
         base = (
             Path(HOMOGENEOUS_WIAM_DIR)

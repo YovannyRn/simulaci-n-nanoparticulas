@@ -15,6 +15,7 @@ SIGMA_HELP = "Parámetro de ejecución de la simulación; no es un valor experim
 
 
 def _as_float(raw: str, field: str) -> tuple[float | None, str | None]:
+    """Explico la responsabilidad de as float dentro de launcher_validation."""
     text = raw.strip().replace(",", ".")
     if not text:
         return None, f"Escriba un número en «{field}»."
@@ -25,6 +26,7 @@ def _as_float(raw: str, field: str) -> tuple[float | None, str | None]:
 
 
 def _as_int(raw: str, field: str) -> tuple[int | None, str | None]:
+    """Explico la responsabilidad de as int dentro de launcher_validation."""
     text = raw.strip()
     if not text:
         return None, f"Escriba un número entero en «{field}»."
@@ -44,6 +46,7 @@ def validate_inputs(
     interval_ms: int,
     p_ads: float,
 ) -> str | None:
+    """Compruebo que las opciones de lanzamiento sean coherentes antes de ejecutar el modelo."""
     if sigma_px <= 0:
         return "La magnitud del movimiento (σ) debe ser un número mayor que 0."
     if n_steps < 1:
@@ -108,6 +111,7 @@ def parse_execution_fields(
 
 
 def read_only_info_text(material: MaterialChoice) -> str:
+    """Explico la responsabilidad de read only info text dentro de launcher_validation."""
     cfg = config_for_material(material)
     mov = "fijo" if material == "AC" else "móvil"
     side = cfg.go_size_px

@@ -44,9 +44,11 @@ class PsoReference:
     k2_g_mg_min: float
 
     def qt(self, t_min: float) -> float:
+        """Explico la responsabilidad de qt dentro de pso_reference."""
         return pso_qt(self.k2_g_mg_min, self.qe_pso_mg_g, t_min)
 
     def t_for_fraction(self, fraction: float) -> float | None:
+        """Explico la responsabilidad de t for fraction dentro de pso_reference."""
         return pso_time_for_fraction(self.k2_g_mg_min, self.qe_pso_mg_g, fraction)
 
 
@@ -94,18 +96,21 @@ BIBLIOGRAPHIC_STICKING_S_STAR = {
 
 
 def pso_for_material(material: MaterialRef) -> PsoReference:
+    """Explico la responsabilidad de pso for material dentro de pso_reference."""
     if material == "GO":
         return GO_PSO
     return AC_PSO
 
 
 def langmuir_for_material(material: MaterialRef) -> LangmuirReference:
+    """Explico la responsabilidad de langmuir for material dentro de pso_reference."""
     if material == "GO":
         return GO_LANGMUIR
     return AC_LANGMUIR
 
 
 def pso_fraction_table(material: MaterialRef, fractions: list[float]) -> list[dict[str, Any]]:
+    """Explico la responsabilidad de pso fraction table dentro de pso_reference."""
     pso = pso_for_material(material)
     rows: list[dict[str, Any]] = []
     for f in fractions:
@@ -129,6 +134,7 @@ def pso_curve_samples(
     t_max_min: float = 120.0,
     n_points: int = 241,
 ) -> list[dict[str, Any]]:
+    """Explico la responsabilidad de pso curve samples dentro de pso_reference."""
     pso = pso_for_material(material)
     rows: list[dict[str, Any]] = []
     for i in range(n_points):

@@ -5,6 +5,7 @@ from go_mb.models import langmuir_equilibrium, pso_qt
 
 
 def test_experimental_masses_and_counts() -> None:
+    """Compruebo el comportamiento esperado de experimental masses and counts y ayudo a detectar regresiones."""
     cfg = default_config()
     assert cfg.n_mb == 200
     assert cfg.n_go == 100
@@ -15,12 +16,14 @@ def test_experimental_masses_and_counts() -> None:
 
 
 def test_concentrations() -> None:
+    """Compruebo el comportamiento esperado de concentrations y ayudo a detectar regresiones."""
     cfg = default_config()
     assert cfg.c_go_mg_l == 250.0
     assert cfg.c0_mg_l == 100.0
 
 
 def test_pixel_geometry() -> None:
+    """Compruebo el comportamiento esperado de pixel geometry y ayudo a detectar regresiones."""
     cfg = default_config()
     assert cfg.domain_px == 442
     assert cfg.n_pixels == 195364
@@ -33,12 +36,14 @@ def test_pixel_geometry() -> None:
 
 
 def test_capacity_per_go() -> None:
+    """Compruebo el comportamiento esperado de capacity per go y ayudo a detectar regresiones."""
     cfg = default_config()
     assert abs(cfg.cap_go_mg - 0.07647) < 1e-12
     assert abs(cfg.qmax_mg_g * cfg.m_go_g - 7.647) < 1e-9
 
 
 def test_langmuir_reference_matches_pdf() -> None:
+    """Compruebo el comportamiento esperado de langmuir reference matches pdf y ayudo a detectar regresiones."""
     eq = langmuir_equilibrium(SimulationConfig())
     assert abs(eq["ce_mg_l"] - 4.81) < 0.01
     assert abs(eq["qe_mg_g"] - 380.7) < 0.05
@@ -47,6 +52,7 @@ def test_langmuir_reference_matches_pdf() -> None:
 
 
 def test_pso_example_10_min() -> None:
+    """Compruebo el comportamiento esperado de pso example 10 min y ayudo a detectar regresiones."""
     cfg = SimulationConfig()
     qt = pso_qt(cfg.k2_example_g_mg_min, cfg.qe_pso_mg_g, 10.0)
     mass = qt * cfg.m_go_g
@@ -55,6 +61,7 @@ def test_pso_example_10_min() -> None:
 
 
 def test_pending_parameters_are_labeled() -> None:
+    """Compruebo el comportamiento esperado de pending parameters are labeled y ayudo a detectar regresiones."""
     names = {p.symbol: p.status.value for p in SimulationConfig().parameter_table()}
     assert names["D"] == "PENDIENTE"
     assert names["P"] == "PENDIENTE"

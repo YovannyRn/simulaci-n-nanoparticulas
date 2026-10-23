@@ -5,6 +5,7 @@ from go_mb.state import assert_inside, initialize_state
 
 
 def test_full_counts_and_occupation() -> None:
+    """Compruebo el comportamiento esperado de full counts and occupation y ayudo a detectar regresiones."""
     cfg = SimulationConfig()
     state, _ = initialize_state(cfg, RunSettings(seed=7, sigma_px=1.0, n_steps=1))
     assert state.mb_xy.shape == (200, 2)
@@ -17,6 +18,7 @@ def test_full_counts_and_occupation() -> None:
 
 
 def test_same_seed_same_initial_positions() -> None:
+    """Compruebo el comportamiento esperado de same seed same initial positions y ayudo a detectar regresiones."""
     cfg = SimulationConfig()
     s1, _ = initialize_state(cfg, RunSettings(seed=11, sigma_px=1.0, n_steps=1))
     s2, _ = initialize_state(cfg, RunSettings(seed=11, sigma_px=1.0, n_steps=1))
@@ -25,11 +27,13 @@ def test_same_seed_same_initial_positions() -> None:
 
 
 def test_seed_is_stored() -> None:
+    """Compruebo el comportamiento esperado de seed is stored y ayudo a detectar regresiones."""
     state, _ = initialize_state(SimulationConfig(), RunSettings(seed=42, sigma_px=1.0, n_steps=1))
     assert state.seed == 42
 
 
 def test_initial_capacity_is_massic() -> None:
+    """Compruebo el comportamiento esperado de initial capacity is massic y ayudo a detectar regresiones."""
     cfg = SimulationConfig()
     state, _ = initialize_state(cfg, RunSettings(seed=1, sigma_px=1.0, n_steps=1))
     assert abs(float(state.go_capacity_mg[0]) - cfg.cap_go_mg) < 1e-12

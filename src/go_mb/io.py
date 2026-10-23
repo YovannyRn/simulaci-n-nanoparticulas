@@ -14,6 +14,7 @@ from typing import Any
 
 
 def save_run(result: dict[str, Any], directory: str | Path, stem: str) -> dict[str, str]:
+    """Guardo una corrida: metadatos en JSON y evolución temporal en CSV."""
     directory = Path(directory)
     directory.mkdir(parents=True, exist_ok=True)
     json_path = directory / f"{stem}.json"
@@ -40,10 +41,12 @@ def save_study(study: dict[str, Any], directory: str | Path, stem: str) -> str:
 
 
 def load_study(json_path: str | Path) -> dict[str, Any]:
+    """Leo un estudio guardado en JSON y devuelvo sus datos."""
     return json.loads(Path(json_path).read_text())
 
 
 def load_run(json_path: str | Path) -> dict[str, Any]:
+    """Cargo los metadatos de una corrida y reconstruyo la serie temporal desde el CSV asociado."""
     data = json.loads(Path(json_path).read_text())
     csv_path = data.get("series_csv")
     series: list[dict[str, float | int]] = []

@@ -13,6 +13,7 @@ import numpy as np
 
 
 def plot_run(result: dict[str, Any], output_path: str | Path) -> str:
+    """Genero la representación visual indicada a partir de los resultados recibidos."""
     series = result["series"]
     steps = [row["step"] for row in series]
     qt = [row["qt_mg_g"] for row in series]
@@ -45,6 +46,7 @@ def plot_run(result: dict[str, Any], output_path: str | Path) -> str:
 
 
 def plot_snapshot(result: dict[str, Any], output_path: str | Path) -> str:
+    """Genero la representación visual indicada a partir de los resultados recibidos."""
     cfg = result["config"]
     domain = cfg["domain_px"]
     mb = np.asarray(result["final_state"]["mb_xy"])
@@ -76,6 +78,7 @@ def plot_snapshot(result: dict[str, Any], output_path: str | Path) -> str:
 
 
 def _series_from_study_record(record: dict[str, Any]) -> list[dict[str, float | int]] | None:
+    """Genero la representación visual indicada a partir de los resultados recibidos."""
     paths = record.get("paths") or {}
     json_path = paths.get("json")
     if not json_path:
@@ -114,6 +117,7 @@ def plot_sensitivity_study(study: dict[str, Any], output_dir: str | Path) -> lis
 
 
 def _plot_qt_vs_sigma(study: dict[str, Any], output_dir: Path) -> str:
+    """Genero la representación visual indicada a partir de los resultados recibidos."""
     rows = study["analysis"]["rows"]
     sigmas = sorted({r["sigma_px"] for r in rows})
     means = []
@@ -133,6 +137,7 @@ def _plot_qt_vs_sigma(study: dict[str, Any], output_dir: Path) -> str:
 
 
 def _plot_seed_variability(study: dict[str, Any], output_dir: Path) -> str:
+    """Genero la representación visual indicada a partir de los resultados recibidos."""
     sv = study["analysis"]["seed_variability"]
     if not sv:
         return ""
@@ -157,6 +162,7 @@ def _plot_seed_variability(study: dict[str, Any], output_dir: Path) -> str:
 
 
 def _plot_final_vs_sigma(study: dict[str, Any], output_dir: Path) -> str:
+    """Genero la representación visual indicada a partir de los resultados recibidos."""
     rows = study["analysis"]["rows"]
     sigmas = sorted({r["sigma_px"] for r in rows})
     means = []
@@ -176,6 +182,7 @@ def _plot_final_vs_sigma(study: dict[str, Any], output_dir: Path) -> str:
 
 
 def _plot_final_vs_steps(study: dict[str, Any], output_dir: Path) -> str:
+    """Genero la representación visual indicada a partir de los resultados recibidos."""
     rows = study["analysis"]["rows"]
     steps = sorted({r["n_steps"] for r in rows})
     means = []
@@ -195,6 +202,7 @@ def _plot_final_vs_steps(study: dict[str, Any], output_dir: Path) -> str:
 
 
 def _plot_contacts_vs_steps(study: dict[str, Any], output_dir: Path) -> str:
+    """Genero la representación visual indicada a partir de los resultados recibidos."""
     rows = study["analysis"]["rows"]
     steps = sorted({r["n_steps"] for r in rows})
     means = []
@@ -214,6 +222,7 @@ def _plot_contacts_vs_steps(study: dict[str, Any], output_dir: Path) -> str:
 
 
 def _plot_evolution_by_sigma(study: dict[str, Any], output_dir: Path) -> str:
+    """Genero la representación visual indicada a partir de los resultados recibidos."""
     fig, axes = plt.subplots(2, 1, figsize=(8, 8), sharex=True)
     for rec in study["runs"]:
         series = _series_from_study_record(rec)
@@ -240,6 +249,7 @@ def _plot_evolution_by_sigma(study: dict[str, Any], output_dir: Path) -> str:
 
 
 def _plot_evolution_by_steps(study: dict[str, Any], output_dir: Path) -> str:
+    """Genero la representación visual indicada a partir de los resultados recibidos."""
     fig, axes = plt.subplots(2, 1, figsize=(8, 8), sharex=True)
     for rec in study["runs"]:
         series = _series_from_study_record(rec)
@@ -266,6 +276,7 @@ def _plot_evolution_by_steps(study: dict[str, Any], output_dir: Path) -> str:
 
 
 def _plot_grid_heatmap(study: dict[str, Any], output_dir: Path, metric: str) -> str:
+    """Genero la representación visual indicada a partir de los resultados recibidos."""
     rows = study["analysis"]["rows"]
     sigmas = sorted({r["sigma_px"] for r in rows})
     steps_list = sorted({r["n_steps"] for r in rows})

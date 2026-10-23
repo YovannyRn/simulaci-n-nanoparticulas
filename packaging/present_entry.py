@@ -13,6 +13,7 @@ from go_mb.launcher_ui import run_presentation_app
 
 
 def main() -> None:
+    """Preparo la operación main del punto de entrada de presentación."""
     run_presentation_app()
 
 

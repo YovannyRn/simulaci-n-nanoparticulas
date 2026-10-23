@@ -18,6 +18,7 @@ FONTI = Path(r"C:\Windows\Fonts\ariali.ttf")
 
 class Guide(FPDF):
     def __init__(self) -> None:
+        """Preparo el paso   init   para construir la guía explicativa."""
         super().__init__(format="A4", unit="mm")
         self.set_auto_page_break(auto=True, margin=16)
         self.add_font("Arial", "", str(FONT))
@@ -26,6 +27,7 @@ class Guide(FPDF):
         self.blocks: list[tuple[str, str]] = []
 
     def footer(self) -> None:
+        """Preparo el paso footer para construir la guía explicativa."""
         if self.page_no() == 1:
             return
         self.set_y(-12)
@@ -35,6 +37,7 @@ class Guide(FPDF):
         self.set_text_color(0, 0, 0)
 
     def h1(self, text: str) -> None:
+        """Preparo el paso h1 para construir la guía explicativa."""
         self.set_x(self.l_margin)
         self.ln(1.5)
         self.set_font("Arial", "B", 13)
@@ -45,6 +48,7 @@ class Guide(FPDF):
         self.blocks.append(("h1", text))
 
     def p(self, text: str) -> None:
+        """Preparo el paso p para construir la guía explicativa."""
         self.set_x(self.l_margin)
         self.set_font("Arial", "", 11)
         self.multi_cell(0, 5.3, text)
@@ -52,6 +56,7 @@ class Guide(FPDF):
         self.blocks.append(("p", text))
 
     def bullet(self, text: str) -> None:
+        """Preparo el paso bullet para construir la guía explicativa."""
         self.set_x(self.l_margin)
         self.set_font("Arial", "", 11)
         self.multi_cell(0, 5.3, "•  " + text)
@@ -59,6 +64,7 @@ class Guide(FPDF):
         self.blocks.append(("b", text))
 
     def term(self, name: str, text: str) -> None:
+        """Preparo el paso term para construir la guía explicativa."""
         self.set_x(self.l_margin)
         self.set_font("Arial", "B", 11)
         self.multi_cell(0, 5.2, name)
@@ -69,6 +75,7 @@ class Guide(FPDF):
         self.blocks.append(("term", name + "\n" + text))
 
     def qa(self, q: str, a: str) -> None:
+        """Preparo el paso qa para construir la guía explicativa."""
         self.set_x(self.l_margin)
         self.set_font("Arial", "B", 11)
         self.multi_cell(0, 5.2, q)
@@ -80,6 +87,7 @@ class Guide(FPDF):
 
 
 def build() -> Guide:
+    """Preparo el paso build para construir la guía explicativa."""
     pdf = Guide()
     pdf.add_page()
     pdf.ln(22)
@@ -344,6 +352,7 @@ def build() -> Guide:
 
 
 def write_docx(blocks: list[tuple[str, str]]) -> str | None:
+    """Preparo el paso write docx para construir la guía explicativa."""
     try:
         from docx import Document
     except ImportError:
@@ -376,6 +385,7 @@ def write_docx(blocks: list[tuple[str, str]]) -> str | None:
 
 
 def main() -> None:
+    """Preparo el paso main para construir la guía explicativa."""
     DOCS.mkdir(parents=True, exist_ok=True)
     pdf = build()
     path = DOCS / "guia_explicacion_proyecto.pdf"

@@ -8,10 +8,12 @@ from pathlib import Path
 from fpdf import FPDF
 
 def _num(text: str, digits: int) -> str:
+    """Preparo el paso  num para generar el PDF de documentación."""
     return f"{float(text):.{digits}f}".replace(".", ",")
 
 
 def load_campaign() -> tuple[dict[int, dict[str, str]], dict[int, dict[str, str]]]:
+    """Preparo el paso load campaign para generar el PDF de documentación."""
     path = ROOT / "data" / "final_campaign" / "per_run_records.csv"
     go: dict[int, dict[str, str]] = {}
     ac: dict[int, dict[str, str]] = {}
@@ -35,6 +37,7 @@ FONTI = Path(r"C:\Windows\Fonts\ariali.ttf")
 
 class Doc(FPDF):
     def __init__(self, footer_title: str, body: float = 11, lead: float = 5.6) -> None:
+        """Preparo el paso   init   para generar el PDF de documentación."""
         super().__init__(format="A4", unit="mm")
         self.footer_title = footer_title
         self.body = body
@@ -45,6 +48,7 @@ class Doc(FPDF):
         self.add_font("Arial", "I", str(FONTI))
 
     def footer(self) -> None:
+        """Preparo el paso footer para generar el PDF de documentación."""
         if self.page_no() == 1:
             return
         self.set_y(-12)
@@ -53,6 +57,7 @@ class Doc(FPDF):
         self.cell(0, 6, f"{self.footer_title}  ·  {self.page_no()}", align="C")
 
     def h1(self, text: str, new_page: bool = False) -> None:
+        """Preparo el paso h1 para generar el PDF de documentación."""
         if new_page and self.get_y() > 40:
             self.add_page()
         self.set_x(self.l_margin)
@@ -64,6 +69,7 @@ class Doc(FPDF):
         self.ln(1)
 
     def h2(self, text: str) -> None:
+        """Preparo el paso h2 para generar el PDF de documentación."""
         self.set_x(self.l_margin)
         self.ln(1)
         self.set_font("Arial", "B", 11)
@@ -71,23 +77,27 @@ class Doc(FPDF):
         self.ln(0.5)
 
     def p(self, text: str) -> None:
+        """Preparo el paso p para generar el PDF de documentación."""
         self.set_x(self.l_margin)
         self.set_font("Arial", "", self.body)
         self.multi_cell(0, self.lead, text)
         self.ln(1.4)
 
     def bullet(self, text: str) -> None:
+        """Preparo el paso bullet para generar el PDF de documentación."""
         self.set_x(self.l_margin)
         self.set_font("Arial", "", self.body)
         self.multi_cell(0, self.lead, "•  " + text)
         self.ln(0.5)
 
     def eq(self, text: str) -> None:
+        """Preparo el paso eq para generar el PDF de documentación."""
         self.set_font("Arial", "I", 10)
         self.multi_cell(0, 5, text, align="C")
         self.ln(1.2)
 
     def caption(self, text: str) -> None:
+        """Preparo el paso caption para generar el PDF de documentación."""
         self.set_font("Arial", "I", 8)
         self.set_text_color(60, 60, 60)
         self.multi_cell(0, 4, text)
@@ -95,6 +105,7 @@ class Doc(FPDF):
         self.ln(1.5)
 
     def fig(self, name: str, caption: str, h: float = 62) -> None:
+        """Preparo el paso fig para generar el PDF de documentación."""
         path = FIG / name
         if not path.is_file():
             self.p(f"[Figura no encontrada: {name}]")
@@ -106,7 +117,9 @@ class Doc(FPDF):
         self.caption(caption)
 
     def table(self, headers: list[str], rows: list[list[str]], widths: list[float]) -> None:
+        """Preparo el paso table para generar el PDF de documentación."""
         def room(height: float) -> None:
+            """Preparo el paso room para generar el PDF de documentación."""
             if self.get_y() + height > self.h - self.b_margin - 4:
                 self.add_page()
 
@@ -129,6 +142,7 @@ class Doc(FPDF):
 
 
 def build_memory() -> Doc:
+    """Preparo el paso build memory para generar el PDF de documentación."""
     pdf = Doc("Simulación computacional MB–GO / MB–AC", body=11, lead=5.6)
     pdf.add_page()
     pdf.ln(28)
@@ -600,6 +614,7 @@ def build_memory() -> Doc:
 
 
 def build_guide() -> Doc:
+    """Preparo el paso build guide para generar el PDF de documentación."""
     pdf = Doc("Guía de estudio — modelo MB–GO / MB–AC", body=12, lead=6.6)
     pdf.add_page()
     pdf.ln(18)
@@ -866,6 +881,7 @@ def build_guide() -> Doc:
 
 
 def main() -> None:
+    """Preparo el paso main para generar el PDF de documentación."""
     DOCS.mkdir(parents=True, exist_ok=True)
     memory = build_memory()
     guide = build_guide()

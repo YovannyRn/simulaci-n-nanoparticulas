@@ -10,6 +10,7 @@ from go_mb.state import SimulationState
 
 
 def _state(n_mb: int = 4, n_go: int = 1) -> SimulationState:
+    """Compruebo el comportamiento esperado de  state para detectar regresiones en el modelo."""
     # 4 objetos × 0.02 mg y 1 GO de 0.1 mg → cap = 0.07647 mg (3 objetos enteros).
     cfg = SimulationConfig(n_mb=n_mb, n_go=n_go, m_mb_mg=n_mb * 0.02, m_go_g=n_go * 0.0001)
     mb = np.zeros((n_mb, 2))
@@ -25,6 +26,7 @@ def _state(n_mb: int = 4, n_go: int = 1) -> SimulationState:
 
 
 def test_no_contact_no_adsorption() -> None:
+    """Compruebo el comportamiento esperado de no contact no adsorption para detectar regresiones en el modelo."""
     state = _state()
     apply_adsorption(state, np.empty((0, 2), dtype=np.int64))
     assert state.n_adsorbed == 0
@@ -43,6 +45,7 @@ def test_capacity_blocks_fourth_whole_object() -> None:
 
 
 def test_mb_not_adsorbed_twice() -> None:
+    """Compruebo el comportamiento esperado de mb not adsorbed twice para detectar regresiones en el modelo."""
     state = _state(n_mb=1, n_go=1)
     pairs = np.array([[0, 0], [0, 0]], dtype=np.int64)
     apply_adsorption(state, pairs)
@@ -50,6 +53,7 @@ def test_mb_not_adsorbed_twice() -> None:
 
 
 def test_adsorption_module_does_not_use_langmuir() -> None:
+    """Compruebo el comportamiento esperado de adsorption module does not use langmuir para detectar regresiones en el modelo."""
     src = inspect.getsource(apply_adsorption).lower()
     assert "qmax" not in src
     assert "kl_l" not in src
@@ -75,6 +79,7 @@ def test_default_p_ads_none_matches_p_ads_one() -> None:
 
 
 def test_p_ads_zero_rejects_without_rng() -> None:
+    """Compruebo el comportamiento esperado de p ads zero rejects without rng para detectar regresiones en el modelo."""
     state = _state(n_mb=1, n_go=1)
     pairs = np.array([[0, 0]], dtype=np.int64)
     n = apply_adsorption(state, pairs, rng=None, p_ads=0.0)

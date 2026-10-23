@@ -103,54 +103,67 @@ class SimulationConfig:
 
     @property
     def adsorbent_symbol(self) -> str:
+        """Explico el propósito de adsorbent symbol dentro de este módulo y cómo participa en el flujo de trabajo."""
         return "GO" if self.material == MaterialKind.GO else "AC"
 
     @property
     def m_adsorbent_g(self) -> float:
+        """Explico el propósito de m adsorbent g dentro de este módulo y cómo participa en el flujo de trabajo."""
         return self.m_go_g
 
     @property
     def n_adsorbent(self) -> int:
+        """Explico el propósito de n adsorbent dentro de este módulo y cómo participa en el flujo de trabajo."""
         return self.n_go
 
     @property
     def c_go_mg_l(self) -> float:
+        """Explico el propósito de c go mg l dentro de este módulo y cómo participa en el flujo de trabajo."""
         return (self.m_go_g * 1000.0) / self.volume_l
 
     @property
     def c0_mg_l(self) -> float:
+        """Explico el propósito de c0 mg l dentro de este módulo y cómo participa en el flujo de trabajo."""
         return self.m_mb_mg / self.volume_l
 
     @property
     def peso_mb_mg(self) -> float:
+        """Explico el propósito de peso mb mg dentro de este módulo y cómo participa en el flujo de trabajo."""
         return self.m_mb_mg / self.n_mb
 
     @property
     def peso_go_mg(self) -> float:
+        """Explico el propósito de peso go mg dentro de este módulo y cómo participa en el flujo de trabajo."""
         return (self.m_go_g * 1000.0) / self.n_go
 
     @property
     def cap_go_mg(self) -> float:
+        """Explico el propósito de cap go mg dentro de este módulo y cómo participa en el flujo de trabajo."""
         return self.qmax_mg_g * (self.peso_go_mg / 1000.0)
 
     @property
     def n_pixels(self) -> int:
+        """Explico el propósito de n pixels dentro de este módulo y cómo participa en el flujo de trabajo."""
         return self.domain_px * self.domain_px
 
     @property
     def pixel_area_um2(self) -> float:
+        """Explico el propósito de pixel area um2 dentro de este módulo y cómo participa en el flujo de trabajo."""
         return self.px_side_um ** 2
 
     @property
     def vessel_area_cm2(self) -> float:
+        """Explico el propósito de vessel area cm2 dentro de este módulo y cómo participa en el flujo de trabajo."""
         return self.vessel_side_cm ** 2
 
     @property
     def mb_area_px2(self) -> int:
+        """Explico el propósito de mb area px2 dentro de este módulo y cómo participa en el flujo de trabajo."""
         return self.n_mb * self.mb_size_px * self.mb_size_px
 
     @property
     def go_area_px2(self) -> int:
+        """Explico el propósito de go area px2 dentro de este módulo y cómo participa en el flujo de trabajo."""
         return self.n_go * self.go_size_px * self.go_size_px
 
     @property
@@ -164,6 +177,7 @@ class SimulationConfig:
         return self.go_size_px / 2.0
 
     def parameter_table(self) -> list[Parameter]:
+        """Explico el propósito de parameter table dentro de este módulo y cómo participa en el flujo de trabajo."""
         ads_name = "GO" if self.material == MaterialKind.GO else "AC"
         ads_mass_label = f"Masa {ads_name}"
         rows: list[Parameter] = [
@@ -363,6 +377,7 @@ class SimulationConfig:
         return rows
 
     def to_metadata(self) -> dict[str, Any]:
+        """Explico el propósito de to metadata dentro de este módulo y cómo participa en el flujo de trabajo."""
         table = [
             {
                 "name": p.name,
@@ -409,6 +424,7 @@ class RunSettings:
     max_place_attempts: int = 20000
 
     def metadata(self) -> dict[str, Any]:
+        """Explico el propósito de metadata dentro de este módulo y cómo participa en el flujo de trabajo."""
         if self.p_ads is None or self.p_ads == 1.0:
             rule = "provisional_P_ads_eq_1_after_contact_and_capacity"
             p_ads_effective = 1.0
@@ -449,6 +465,7 @@ class RunSettings:
 
 
 def default_config() -> SimulationConfig:
+    """Devuelvo la configuración predeterminada del modelo GO–MB."""
     return SimulationConfig()
 
 

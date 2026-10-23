@@ -29,6 +29,7 @@ def _bounce_axis(coord: np.ndarray, lo: float, hi: float) -> np.ndarray:
 
 
 def move(state: SimulationState, rng: np.random.Generator, sigma_px: float) -> None:
+    """Actualizo las posiciones de las partículas libres y, cuando corresponde, de las unidades adsorbentes."""
     if sigma_px < 0:
         raise ValueError("sigma_px debe ser ≥ 0")
     domain = float(state.config.domain_px)

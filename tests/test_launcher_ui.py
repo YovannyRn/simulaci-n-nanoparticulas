@@ -12,6 +12,7 @@ from go_mb.config import ac_config
 
 
 def test_presentation_defaults_match_final_protocol() -> None:
+    """Compruebo el comportamiento esperado de presentation defaults match final protocol y ayudo a detectar regresiones."""
     d = default_presentation()
     assert d.material == "GO"
     assert d.sigma_px == 1.5
@@ -21,6 +22,7 @@ def test_presentation_defaults_match_final_protocol() -> None:
 
 
 def test_parse_rejects_text_and_nonpositive_steps() -> None:
+    """Compruebo el comportamiento esperado de parse rejects text and nonpositive steps y ayudo a detectar regresiones."""
     values, err = parse_execution_fields(
         sigma_text="abc",
         steps_text="200",
@@ -60,6 +62,7 @@ def test_parse_rejects_text_and_nonpositive_steps() -> None:
 
 
 def test_consecutive_sessions_do_not_share_state() -> None:
+    """Compruebo el comportamiento esperado de consecutive sessions do not share state y ayudo a detectar regresiones."""
     go = create_session("GO", seed=1, sigma_px=1.5, n_steps=20, p_ads=1.0)
     go.run_to_completion_headless()
     ac = create_session("AC", seed=1, sigma_px=1.5, n_steps=20, p_ads=1.0)
@@ -73,6 +76,7 @@ def test_consecutive_sessions_do_not_share_state() -> None:
 
 
 def test_validate_inputs_rejects_bad_values() -> None:
+    """Compruebo el comportamiento esperado de validate inputs rejects bad values y ayudo a detectar regresiones."""
     assert validate_inputs(sigma_px=0, n_steps=10, seed=1, interval_ms=30, p_ads=1.0)
     assert validate_inputs(sigma_px=1.0, n_steps=0, seed=1, interval_ms=30, p_ads=1.0)
     assert validate_inputs(sigma_px=1.0, n_steps=10, seed=-1, interval_ms=30, p_ads=1.0)
@@ -82,6 +86,7 @@ def test_validate_inputs_rejects_bad_values() -> None:
 
 
 def _assert_session_matches_engine(material: str, **kwargs: object) -> None:
+    """Compruebo el comportamiento esperado de  assert session matches engine y ayudo a detectar regresiones."""
     if material == "GO":
         engine = run_simulation(**kwargs)
     else:
@@ -101,6 +106,7 @@ def _assert_session_matches_engine(material: str, **kwargs: object) -> None:
 
 
 def test_gui_path_matches_headless_go_presentation_config() -> None:
+    """Compruebo el comportamiento esperado de gui path matches headless go presentation config y ayudo a detectar regresiones."""
     _assert_session_matches_engine(
         "GO",
         seed=1,
@@ -111,6 +117,7 @@ def test_gui_path_matches_headless_go_presentation_config() -> None:
 
 
 def test_gui_path_matches_headless_ac_presentation_config() -> None:
+    """Compruebo el comportamiento esperado de gui path matches headless ac presentation config y ayudo a detectar regresiones."""
     _assert_session_matches_engine(
         "AC",
         seed=1,
@@ -121,11 +128,13 @@ def test_gui_path_matches_headless_ac_presentation_config() -> None:
 
 
 def test_gui_path_other_seeds_and_sigma() -> None:
+    """Compruebo el comportamiento esperado de gui path other seeds and sigma y ayudo a detectar regresiones."""
     _assert_session_matches_engine("GO", seed=17, sigma_px=1.0, n_steps=50, p_ads=1.0)
     _assert_session_matches_engine("AC", seed=5, sigma_px=2.0, n_steps=80, p_ads=None)
 
 
 def test_pause_does_not_alter_trajectory() -> None:
+    """Compruebo el comportamiento esperado de pause does not alter trajectory y ayudo a detectar regresiones."""
     kwargs = dict(seed=3, sigma_px=1.2, n_steps=60, p_ads=1.0)
     straight = create_session("GO", **kwargs)
     straight.run_to_completion_headless()
@@ -143,6 +152,7 @@ def test_pause_does_not_alter_trajectory() -> None:
 
 
 def test_reset_reproduces_fresh_session() -> None:
+    """Compruebo el comportamiento esperado de reset reproduces fresh session y ayudo a detectar regresiones."""
     kwargs = dict(seed=9, sigma_px=1.5, n_steps=40, p_ads=1.0)
     a = create_session("GO", **kwargs)
     for _ in range(15):

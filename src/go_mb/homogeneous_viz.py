@@ -20,6 +20,7 @@ def _plot_metric_vs_steps(
     title: str,
     output_path: Path,
 ) -> str:
+    """Explico la responsabilidad de plot metric vs steps dentro de homogeneous_viz."""
     go_pts = sorted([r for r in go_agg if abs(r["sigma_px"] - sigma) < 1e-9], key=lambda x: x["n_steps"])
     ac_pts = sorted([r for r in ac_agg if abs(r["sigma_px"] - sigma) < 1e-9], key=lambda x: x["n_steps"])
     steps = [r["n_steps"] for r in go_pts]
@@ -58,6 +59,7 @@ def plot_homogeneous_comparison(
     ac_agg: list[dict[str, Any]],
     output_dir: Path,
 ) -> list[str]:
+    """Explico la responsabilidad de plot homogeneous comparison dentro de homogeneous_viz."""
     output_dir.mkdir(parents=True, exist_ok=True)
     paths: list[str] = []
     metrics = [

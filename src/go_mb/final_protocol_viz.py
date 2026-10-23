@@ -20,6 +20,7 @@ def _series_for_runs(
     sigma: float,
     seeds: list[int],
 ) -> dict[int, list[dict[str, float | int]]]:
+    """Explico la responsabilidad de series for runs en el flujo de final_protocol_viz."""
     sub = "go" if material == "GO" else "ac"
     prefix = "ac_" if material == "AC" else ""
     out: dict[int, list[dict[str, float | int]]] = {}
@@ -38,6 +39,7 @@ def _mean_std_series(
     by_seed: dict[int, list[dict[str, float | int]]],
     key: str,
 ) -> tuple[list[int], list[float], list[float]]:
+    """Explico la responsabilidad de mean std series en el flujo de final_protocol_viz."""
     if not by_seed:
         return [], [], []
     steps = sorted({int(r["step"]) for s in by_seed.values() for r in s})
@@ -70,6 +72,7 @@ def plot_final_protocol(
     crossings: list[dict[str, Any]],
     output_dir: Path,
 ) -> list[str]:
+    """Explico la responsabilidad de plot final protocol en el flujo de final_protocol_viz."""
     output_dir.mkdir(parents=True, exist_ok=True)
     paths: list[str] = []
     seeds = sorted({int(r["seed"]) for r in p2000})

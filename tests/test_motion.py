@@ -10,16 +10,19 @@ from go_mb.state import assert_inside, initialize_state
 
 
 def test_displacements_are_normal_zero_mean() -> None:
+    """Compruebo el comportamiento esperado de displacements are normal zero mean y ayudo a detectar regresiones."""
     src = inspect.getsource(move)
     assert "rng.normal(0.0, sigma_px" in src
     assert "mb_free" in src
 
 
 def test_reproducible_trajectories() -> None:
+    """Compruebo el comportamiento esperado de reproducible trajectories y ayudo a detectar regresiones."""
     cfg = SimulationConfig()
     settings = RunSettings(seed=3, sigma_px=1.5, n_steps=20)
 
     def evolve() -> tuple[np.ndarray, np.ndarray]:
+        """Compruebo el comportamiento esperado de evolve y ayudo a detectar regresiones."""
         state, rng = initialize_state(cfg, settings)
         for _ in range(20):
             move(state, rng, settings.sigma_px)
@@ -32,6 +35,7 @@ def test_reproducible_trajectories() -> None:
 
 
 def test_particles_stay_inside_and_go_moves() -> None:
+    """Compruebo el comportamiento esperado de particles stay inside and go moves y ayudo a detectar regresiones."""
     cfg = SimulationConfig()
     settings = RunSettings(seed=5, sigma_px=2.0, n_steps=50)
     state, rng = initialize_state(cfg, settings)
@@ -43,6 +47,7 @@ def test_particles_stay_inside_and_go_moves() -> None:
 
 
 def test_adsorbed_mb_does_not_move() -> None:
+    """Compruebo el comportamiento esperado de adsorbed mb does not move y ayudo a detectar regresiones."""
     cfg = SimulationConfig()
     state, rng = initialize_state(cfg, RunSettings(seed=9, sigma_px=3.0, n_steps=1))
     state.mb_free[:] = False
@@ -52,6 +57,7 @@ def test_adsorbed_mb_does_not_move() -> None:
 
 
 def test_sigma_zero_no_displacement() -> None:
+    """Compruebo el comportamiento esperado de sigma zero no displacement y ayudo a detectar regresiones."""
     cfg = SimulationConfig()
     state, rng = initialize_state(cfg, RunSettings(seed=4, sigma_px=0.0, n_steps=1))
     mb0 = state.mb_xy.copy()
@@ -62,6 +68,7 @@ def test_sigma_zero_no_displacement() -> None:
 
 
 def test_bounce_reflects_and_clamps() -> None:
+    """Compruebo el comportamiento esperado de bounce reflects and clamps y ayudo a detectar regresiones."""
     from go_mb.motion import _bounce_axis
 
     lo, hi = 2.5, 439.5

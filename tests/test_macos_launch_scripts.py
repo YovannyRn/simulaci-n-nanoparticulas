@@ -10,12 +10,14 @@ ROOT = Path(__file__).resolve().parents[1]
 
 
 def test_macos_launch_files_exist() -> None:
+    """Compruebo el comportamiento esperado de macos launch files exist y ayudo a detectar regresiones."""
     assert (ROOT / "Instalar_y_abrir.command").is_file()
     assert (ROOT / "Iniciar_Simulacion.command").is_file()
     assert (ROOT / "scripts" / "macos_launch_helpers.sh").is_file()
 
 
 def _bash_for_syntax_check() -> str | None:
+    """Compruebo el comportamiento esperado de  bash for syntax check y ayudo a detectar regresiones."""
     candidates: list[str] = []
     found = shutil.which("bash")
     if found:
@@ -39,6 +41,7 @@ def _bash_for_syntax_check() -> str | None:
 
 
 def test_macos_launch_scripts_bash_syntax() -> None:
+    """Compruebo el comportamiento esperado de macos launch scripts bash syntax y ayudo a detectar regresiones."""
     bash = _bash_for_syntax_check()
     if bash is None:
         return
@@ -58,6 +61,7 @@ def test_macos_launch_scripts_bash_syntax() -> None:
 
 
 def test_macos_installer_is_idempotent_by_design() -> None:
+    """Compruebo el comportamiento esperado de macos installer is idempotent by design y ayudo a detectar regresiones."""
     installer = (ROOT / "Instalar_y_abrir.command").read_text(encoding="utf-8")
     helpers = (ROOT / "scripts" / "macos_launch_helpers.sh").read_text(encoding="utf-8")
     assert "macos_deps_ready" in installer

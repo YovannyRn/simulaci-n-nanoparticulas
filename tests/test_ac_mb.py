@@ -13,6 +13,7 @@ from go_mb.state import initialize_state
 
 
 def test_ac_config_magnitudes_wiam() -> None:
+    """Compruebo el comportamiento esperado de ac config magnitudes wiam para detectar regresiones en el modelo."""
     cfg = ac_config()
     assert cfg.material == MaterialKind.AC
     assert cfg.adsorbent_movable is False
@@ -28,6 +29,7 @@ def test_ac_config_magnitudes_wiam() -> None:
 
 
 def test_ac_langmuir_reference_not_forced() -> None:
+    """Compruebo el comportamiento esperado de ac langmuir reference not forced para detectar regresiones en el modelo."""
     cfg = ac_config()
     eq = langmuir_equilibrium(cfg)
     assert abs(eq["ce_mg_l"] - 27.26) < 0.05
@@ -40,6 +42,7 @@ def test_ac_langmuir_reference_not_forced() -> None:
 
 
 def test_ac_adsorbent_fixed_under_brownian() -> None:
+    """Compruebo el comportamiento esperado de ac adsorbent fixed under brownian para detectar regresiones en el modelo."""
     cfg = ac_config()
     state, rng = initialize_state(cfg, RunSettings(seed=11, sigma_px=2.0, n_steps=1))
     ac0 = state.go_xy.copy()
@@ -49,6 +52,7 @@ def test_ac_adsorbent_fixed_under_brownian() -> None:
 
 
 def test_go_adsorbent_still_movable() -> None:
+    """Compruebo el comportamiento esperado de go adsorbent still movable para detectar regresiones en el modelo."""
     cfg = SimulationConfig()
     assert cfg.adsorbent_movable is True
     state, rng = initialize_state(cfg, RunSettings(seed=5, sigma_px=2.0, n_steps=1))
@@ -58,6 +62,7 @@ def test_go_adsorbent_still_movable() -> None:
 
 
 def test_ac_engine_metrics_and_mass_conservation() -> None:
+    """Compruebo el comportamiento esperado de ac engine metrics and mass conservation para detectar regresiones en el modelo."""
     cfg = ac_config()
     result = run_simulation(config=cfg, seed=7, sigma_px=1.5, n_steps=80)
     s = result["summary"]
@@ -81,6 +86,7 @@ def test_ac_contact_without_adsorption_possible() -> None:
 
 
 def test_ac_persistence_provenance(tmp_path: Path) -> None:
+    """Compruebo el comportamiento esperado de ac persistence provenance para detectar regresiones en el modelo."""
     result = run_simulation(config=ac_config(), seed=3, sigma_px=1.0, n_steps=25)
     paths = save_run(result, tmp_path, "ac_seed_3")
     assert "ac_seed_3.json" in paths["json"]

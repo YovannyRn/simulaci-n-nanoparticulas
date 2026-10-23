@@ -10,6 +10,7 @@ from go_mb.viz import plot_run, plot_snapshot
 
 
 def test_engine_reproducible_and_conserves_mass() -> None:
+    """Compruebo el comportamiento esperado de engine reproducible and conserves mass y ayudo a detectar regresiones."""
     cfg = SimulationConfig()
     kwargs = dict(config=cfg, seed=21, sigma_px=1.0, n_steps=30)
     a = run_simulation(**kwargs)
@@ -29,6 +30,7 @@ def test_engine_reproducible_and_conserves_mass() -> None:
 
 
 def test_langmuir_not_used_as_stop() -> None:
+    """Compruebo el comportamiento esperado de langmuir not used as stop y ayudo a detectar regresiones."""
     result = run_simulation(seed=2, sigma_px=0.0, n_steps=5)
     # sigma 0: poco movimiento; no se fuerza qe.
     qe = result["reference"]["langmuir"]["qe_mg_g"]
@@ -37,6 +39,7 @@ def test_langmuir_not_used_as_stop() -> None:
 
 
 def test_campaign_distinct_seeds_and_replay(tmp_path: Path) -> None:
+    """Compruebo el comportamiento esperado de campaign distinct seeds and replay y ayudo a detectar regresiones."""
     camp = run_campaign(
         n_rep=3,
         base_seed=100,
@@ -53,6 +56,7 @@ def test_campaign_distinct_seeds_and_replay(tmp_path: Path) -> None:
 
 
 def test_save_load_and_plot_do_not_change_metrics(tmp_path: Path) -> None:
+    """Compruebo el comportamiento esperado de save load and plot do not change metrics y ayudo a detectar regresiones."""
     result = run_simulation(seed=8, sigma_px=1.0, n_steps=10)
     q = result["summary"]["qfinal_mg_g"]
     paths = save_run(result, tmp_path, "run8")
@@ -67,6 +71,7 @@ def test_save_load_and_plot_do_not_change_metrics(tmp_path: Path) -> None:
 
 
 def test_run_requires_injected_pending_params() -> None:
+    """Compruebo el comportamiento esperado de run requires injected pending params y ayudo a detectar regresiones."""
     try:
         run_simulation(config=SimulationConfig())
     except ValueError as exc:

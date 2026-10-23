@@ -53,6 +53,7 @@ def show_config_dialog(
     )
 
     def add_row(row: int, label: str, var: tk.StringVar) -> None:
+        """Explico la responsabilidad de add row dentro de launcher_ui."""
         ttk.Label(frm, text=label).grid(row=row, column=0, sticky="w", pady=2)
         ttk.Entry(frm, textvariable=var, width=14).grid(row=row, column=1, sticky="w", pady=2)
 
@@ -69,6 +70,7 @@ def show_config_dialog(
     info.configure(state=tk.DISABLED, background="#f5f5f5")
 
     def refresh_info(*_args: object) -> None:
+        """Explico la responsabilidad de refresh info dentro de launcher_ui."""
         mat = material_var.get()
         info.configure(state=tk.NORMAL)
         info.delete("1.0", tk.END)
@@ -93,6 +95,7 @@ def show_config_dialog(
     warn_lbl.grid_remove()
 
     def toggle_advanced(*_args: object) -> None:
+        """Explico la responsabilidad de toggle advanced dentro de launcher_ui."""
         if advanced_var.get():
             p_ads_entry.configure(state=tk.NORMAL)
             warn_lbl.grid()
@@ -108,6 +111,7 @@ def show_config_dialog(
     btn_frm.grid(row=11, column=0, columnspan=2, pady=(8, 0))
 
     def apply_recommended() -> None:
+        """Explico la responsabilidad de apply recommended dentro de launcher_ui."""
         rec = default_presentation()
         material_var.set(rec.material)
         sigma_var.set(str(rec.sigma_px))
@@ -118,6 +122,7 @@ def show_config_dialog(
         advanced_var.set(False)
 
     def on_start() -> None:
+        """Explico la responsabilidad de on start dentro de launcher_ui."""
         nonlocal result
         p_text = p_ads_var.get() if advanced_var.get() else str(d.p_ads)
         parsed, err = parse_execution_fields(
@@ -146,6 +151,7 @@ def show_config_dialog(
         root.destroy()
 
     def on_quit() -> None:
+        """Explico la responsabilidad de on quit dentro de launcher_ui."""
         root.quit()
         root.destroy()
 

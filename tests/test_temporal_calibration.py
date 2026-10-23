@@ -24,6 +24,7 @@ from go_mb.temporal_calibration import (
 
 
 def test_pso_formula_and_inverse() -> None:
+    """Compruebo el comportamiento esperado de pso formula and inverse y ayudo a detectar regresiones."""
     qe = PSO_QE_MG_G
     k2 = PSO_K2_G_MG_MIN
     t = 10.0
@@ -36,6 +37,7 @@ def test_pso_formula_and_inverse() -> None:
 
 
 def test_pso_time_coherence_roundtrip() -> None:
+    """Compruebo el comportamiento esperado de pso time coherence roundtrip y ayudo a detectar regresiones."""
     for f in (0.1, 0.5, 0.9):
         t = pso_time_for_fraction(PSO_K2_G_MG_MIN, PSO_QE_MG_G, f)
         assert t is not None
@@ -44,6 +46,7 @@ def test_pso_time_coherence_roundtrip() -> None:
 
 
 def test_not_reached_without_extrapolation() -> None:
+    """Compruebo el comportamiento esperado de not reached without extrapolation y ayudo a detectar regresiones."""
     series = [
         {"step": 0, "qt_mg_g": 0.0},
         {"step": 1, "qt_mg_g": 10.0},
@@ -53,6 +56,7 @@ def test_not_reached_without_extrapolation() -> None:
 
 
 def test_first_step_crossing() -> None:
+    """Compruebo el comportamiento esperado de first step crossing y ayudo a detectar regresiones."""
     target = PSO_QE_MG_G * 0.1
     series = [
         {"step": 0, "qt_mg_g": 0.0},
@@ -63,6 +67,7 @@ def test_first_step_crossing() -> None:
 
 
 def test_alpha_computed_for_go_only() -> None:
+    """Compruebo el comportamiento esperado de alpha computed for go only y ayudo a detectar regresiones."""
     fake = {
         "run": {"seed": 1, "sigma_px": 1.0, "n_steps": 100},
         "summary": {
@@ -94,6 +99,7 @@ def test_alpha_computed_for_go_only() -> None:
 
 
 def test_provenance_fields() -> None:
+    """Compruebo el comportamiento esperado de provenance fields y ayudo a detectar regresiones."""
     p = provenance_header(campaign_root=Path("data/x"))
     assert p["classification"] == TEMPORAL_CALIBRATION_CLASSIFICATION
     assert p["steps_are_not_minutes"] is True
@@ -103,6 +109,7 @@ def test_provenance_fields() -> None:
 
 
 def test_analyze_wiam_campaign_smoke() -> None:
+    """Compruebo el comportamiento esperado de analyze wiam campaign smoke y ayudo a detectar regresiones."""
     root = Path("data/sensitivity/homogeneous_temporal_wiam_geometry")
     if not (root / "go").is_dir():
         pytest.skip("Campaña Wiam no presente en disco")
@@ -113,6 +120,7 @@ def test_analyze_wiam_campaign_smoke() -> None:
 
 
 def test_run_temporal_calibration_outputs(tmp_path: Path) -> None:
+    """Compruebo el comportamiento esperado de run temporal calibration outputs y ayudo a detectar regresiones."""
     root = Path("data/sensitivity/homogeneous_temporal_wiam_geometry")
     if not (root / "go").is_dir():
         pytest.skip("Campaña Wiam no presente")
@@ -127,11 +135,13 @@ def test_run_temporal_calibration_outputs(tmp_path: Path) -> None:
 
 
 def test_apply_adsorption_unchanged() -> None:
+    """Compruebo el comportamiento esperado de apply adsorption unchanged y ayudo a detectar regresiones."""
     sig = inspect.signature(apply_adsorption)
     assert list(sig.parameters.keys()) == ["state", "pairs", "rng", "p_ads"]
 
 
 def test_motor_no_matplotlib_in_calibration_module() -> None:
+    """Compruebo el comportamiento esperado de motor no matplotlib in calibration module y ayudo a detectar regresiones."""
     root = Path(__file__).resolve().parents[1] / "src" / "go_mb"
     for name in ("engine.py", "temporal_calibration.py", "adsorption.py"):
         tree = ast.parse((root / name).read_text(encoding="utf-8"))

@@ -32,6 +32,7 @@ PILOT_ROOT = Path("data/sensitivity/geometry_update_pilot")
 
 
 def _pilot_provenance() -> dict[str, Any]:
+    """Explico la función de pilot provenance en el módulo geometry_update_pilot."""
     return {
         "geometry_alignment_classification": PILOT_CLASSIFICATION,
         "not_experimental_validation": True,
@@ -64,6 +65,7 @@ def _pilot_provenance() -> dict[str, Any]:
 
 
 def _legacy_run_path(material: str, seed: int, legacy_root: Path) -> Path:
+    """Explico la función de legacy run path en el módulo geometry_update_pilot."""
     sub = "go" if material == "GO" else "ac"
     prefix = "ac_" if material == "AC" else ""
     stem = f"{prefix}sens_grid_sigma_{DEFAULT_SIGMA:g}_steps_{DEFAULT_STEPS}_seed_{seed}"
@@ -73,6 +75,7 @@ def _legacy_run_path(material: str, seed: int, legacy_root: Path) -> Path:
 def _load_legacy_outcomes(
     material: str, seed: int, legacy_root: Path
 ) -> dict[str, Any] | None:
+    """Explico la función de load legacy outcomes en el módulo geometry_update_pilot."""
     path = _legacy_run_path(material, seed, legacy_root)
     if not path.is_file():
         return None
@@ -99,6 +102,7 @@ def _load_legacy_outcomes(
 
 
 def _record_from_study_run(rec: dict[str, Any]) -> dict[str, Any]:
+    """Explico la función de record from study run en el módulo geometry_update_pilot."""
     out = rec.get("outcomes", {})
     exec_p = rec.get("execution_parameters", {})
     return {
@@ -122,6 +126,7 @@ def run_geometry_pilot(
     output_dir: Path | None = None,
     legacy_root: Path | None = None,
 ) -> dict[str, Any]:
+    """Explico la función de run geometry pilot en el módulo geometry_update_pilot."""
     legacy_dir = legacy_root or DEFAULT_LEGACY_HOMOGENEOUS_ROOT
     base = output_dir or PILOT_ROOT
     base.mkdir(parents=True, exist_ok=True)

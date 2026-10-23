@@ -21,6 +21,7 @@ N_STEPS = 2000
 
 
 def provenance_block() -> dict[str, Any]:
+    """Explico la responsabilidad de provenance block dentro de p_ads_sensitivity."""
     return {
         "classification": P_ADS_SENSITIVITY_CLASSIFICATION,
         "not_experimental_validation": True,
@@ -43,11 +44,13 @@ def provenance_block() -> dict[str, Any]:
 
 
 def validate_p_ads(p_ads: float) -> None:
+    """Explico la responsabilidad de validate p ads dentro de p_ads_sensitivity."""
     if not (0.0 <= p_ads <= 1.0):
         raise ValueError(f"p_ads debe estar en [0, 1], recibido: {p_ads}")
 
 
 def run_record(result: dict[str, Any], paths: dict[str, str] | None = None) -> dict[str, Any]:
+    """Explico la responsabilidad de run record dentro de p_ads_sensitivity."""
     cfg = result["config"]
     run = result["run"]
     summary = result["summary"]
@@ -81,12 +84,14 @@ def run_record(result: dict[str, Any], paths: dict[str, str] | None = None) -> d
 
 
 def aggregate_by_cell(records: list[dict[str, Any]]) -> list[dict[str, Any]]:
+    """Explico la responsabilidad de aggregate by cell dentro de p_ads_sensitivity."""
     groups: dict[tuple[str, float, float], list[dict[str, Any]]] = {}
     for r in records:
         key = (r["material"], float(r["sigma_px"]), float(r["p_ads_effective"]))
         groups.setdefault(key, []).append(r)
 
     def stats(vals: list[float]) -> dict[str, float | None]:
+        """Explico la responsabilidad de stats dentro de p_ads_sensitivity."""
         if not vals:
             return {"mean": None, "std": None, "min": None, "max": None, "cv_percent": None}
         mean = statistics.mean(vals)
@@ -129,6 +134,7 @@ def run_p_ads_sensitivity_campaign(
     output_dir: Path | None = None,
     plot: bool = True,
 ) -> dict[str, Any]:
+    """Explico la responsabilidad de run p ads sensitivity campaign dentro de p_ads_sensitivity."""
     out = output_dir or Path("data/sensitivity/p_ads_sensitivity")
     out.mkdir(parents=True, exist_ok=True)
     records: list[dict[str, Any]] = []
@@ -189,6 +195,7 @@ def run_p_ads_sensitivity_campaign(
 
 
 def write_records_csv(records: list[dict[str, Any]], path: Path) -> None:
+    """Explico la responsabilidad de write records csv dentro de p_ads_sensitivity."""
     path.parent.mkdir(parents=True, exist_ok=True)
     if not records:
         return
@@ -205,6 +212,7 @@ def write_records_csv(records: list[dict[str, Any]], path: Path) -> None:
 
 
 def write_aggregate_csv(aggregated: list[dict[str, Any]], path: Path) -> None:
+    """Explico la responsabilidad de write aggregate csv dentro de p_ads_sensitivity."""
     rows: list[dict[str, Any]] = []
     for block in aggregated:
         row = {
