@@ -21,6 +21,7 @@ _T95 = {
 
 
 def t_crit_95(n: int) -> float:
+    """Explico la responsabilidad de t crit 95 dentro de este módulo."""
     if n < 2:
         raise ValueError("N debe ser ≥ 2 para IC")
     df = n - 1
@@ -40,6 +41,7 @@ def t_crit_95(n: int) -> float:
 
 
 def mean_std(values: list[float]) -> tuple[float, float]:
+    """Explico la responsabilidad de mean std dentro de este módulo."""
     arr = np.asarray(values, dtype=np.float64)
     if arr.size == 0:
         raise ValueError("lista vacía")
@@ -49,6 +51,7 @@ def mean_std(values: list[float]) -> tuple[float, float]:
 
 
 def confidence_interval_95(values: list[float]) -> dict[str, float]:
+    """Explico la responsabilidad de confidence interval 95 dentro de este módulo."""
     n = len(values)
     mean, std = mean_std(values)
     t = t_crit_95(n)
@@ -79,6 +82,7 @@ _SUMMARY_KEYS = [
 
 
 def summarize_campaign(runs: list[dict[str, Any]]) -> dict[str, Any]:
+    """Explico la responsabilidad de summarize campaign dentro de este módulo."""
     n = len(runs)
     stats: dict[str, Any] = {
         "n_rep": n,
