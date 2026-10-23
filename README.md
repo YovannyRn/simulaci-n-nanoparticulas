@@ -96,4 +96,4 @@ PYTHONPATH=src python3 -m pytest
 - No convierte `sigma=1.5` ni `steps=400` en valores científicos definitivos.
 - No ejecuta el sistema CA: el PDF no lo parametriza.
 - Un paso **no** es un minuto.
-- Un recuento como 146/200 **no** valida el experimento de laboratorio.
+- Un recuento como 146/200 **no** valida el experimento de laboratorio
