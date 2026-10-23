@@ -18,6 +18,7 @@ from go_mb.state import SimulationState
 
 
 def snapshot(state: SimulationState, prev_qt: float | None) -> dict[str, float | int]:
+    """Registro las métricas del estado actual, incluida la masa adsorbida, la concentración y qt."""
     cfg = state.config
     m_ads = state.m_adsorbed_mg
     m_free = state.m_free_mg
@@ -56,6 +57,7 @@ def alpha_estimates(
     k2: float,
     qe_pso: float,
 ) -> dict[str, float | None]:
+    """Comparo los pasos de la simulación con los tiempos teóricos del modelo PSO para estimar factores temporales."""
     alphas: dict[str, float | None] = {}
     for pct, n_sim in steps_qe_pso.items():
         frac = int(pct) / 100.0
@@ -72,6 +74,7 @@ def summarize_run(
     series: list[dict[str, float | int]],
     langmuir: dict[str, float],
 ) -> dict[str, Any]:
+    """Construyo el resumen final de la corrida a partir de la última instantánea y de la serie temporal."""
     if not series:
         raise ValueError("serie vacía")
     last = series[-1]
