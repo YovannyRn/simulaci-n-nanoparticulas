@@ -22,4 +22,5 @@ class PresentationDefaults:
 
 
 def default_presentation() -> PresentationDefaults:
+    """Explico la responsabilidad de default presentation dentro de este módulo."""
     return PresentationDefaults()
