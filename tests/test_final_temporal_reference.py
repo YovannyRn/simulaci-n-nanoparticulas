@@ -24,6 +24,7 @@ from go_mb.temporal_calibration import fraction_crossings_for_run
 
 
 def test_pso_go_ac_separate_parameters() -> None:
+    """Compruebo el comportamiento esperado de pso go ac separate parameters y ayudo a detectar regresiones."""
     assert GO_PSO.qe_pso_mg_g == 384.6
     assert AC_PSO.qe_pso_mg_g == 100.4
     assert AC_PSO.k2_g_mg_min == 0.00910
@@ -34,6 +35,7 @@ def test_pso_go_ac_separate_parameters() -> None:
 
 
 def test_pso_ac_inverse_fraction() -> None:
+    """Compruebo el comportamiento esperado de pso ac inverse fraction y ayudo a detectar regresiones."""
     f = 0.3
     t = pso_time_for_fraction(AC_PSO.k2_g_mg_min, AC_PSO.qe_pso_mg_g, f)
     assert t is not None
@@ -42,6 +44,7 @@ def test_pso_ac_inverse_fraction() -> None:
 
 
 def test_fraction_crossings_ac_gets_alpha() -> None:
+    """Compruebo el comportamiento esperado de fraction crossings ac gets alpha y ayudo a detectar regresiones."""
     fake = {
         "run": {"seed": 1, "sigma_px": 1.0, "n_steps": 500},
         "summary": {
@@ -62,6 +65,7 @@ def test_fraction_crossings_ac_gets_alpha() -> None:
 
 
 def test_not_reached_ac() -> None:
+    """Compruebo el comportamiento esperado de not reached ac y ayudo a detectar regresiones."""
     fake = {
         "run": {"seed": 1, "sigma_px": 1.0, "n_steps": 5},
         "summary": {"qfinal_mg_g": 1.0, "mass_conservation_ok": True},
@@ -74,17 +78,20 @@ def test_not_reached_ac() -> None:
 
 
 def test_pso_fraction_table_has_t_pso() -> None:
+    """Compruebo el comportamiento esperado de pso fraction table has t pso y ayudo a detectar regresiones."""
     rows = pso_fraction_table("AC", [0.1, 0.5])
     assert all(r["t_pso_min"] is not None for r in rows)
 
 
 def test_pads_055_provenance() -> None:
+    """Compruebo el comportamiento esperado de pads 055 provenance y ayudo a detectar regresiones."""
     p = provenance_block()
     assert p["classification"] == PADS_055_CLASSIFICATION
     assert p["not_equal_to_bibliographic_s_star"] is True
 
 
 def test_pads_055_small_campaign(tmp_path: Path) -> None:
+    """Compruebo el comportamiento esperado de pads 055 small campaign y ayudo a detectar regresiones."""
     from go_mb import p_ads_055 as mod
 
     old_s, old_sig, old_n = mod.SEEDS, mod.SIGMAS, mod.N_STEPS
@@ -101,6 +108,7 @@ def test_pads_055_small_campaign(tmp_path: Path) -> None:
 
 
 def test_merge_historical_with_055() -> None:
+    """Compruebo el comportamiento esperado de merge historical with 055 y ayudo a detectar regresiones."""
     root = Path("data/sensitivity/p_ads_sensitivity")
     if not (root / "per_run_records.csv").is_file():
         pytest.skip("Sin campaña P_ads previa")
@@ -111,6 +119,7 @@ def test_merge_historical_with_055() -> None:
 
 
 def test_run_final_temporal_reference_smoke(tmp_path: Path) -> None:
+    """Compruebo el comportamiento esperado de run final temporal reference smoke y ayudo a detectar regresiones."""
     from go_mb.final_temporal_reference import provenance_header, run_final_temporal_reference
 
     camp = Path("data/sensitivity/homogeneous_temporal_wiam_geometry")
