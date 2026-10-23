@@ -31,22 +31,27 @@ class SimulationState:
 
     @property
     def n_adsorbed(self) -> int:
+        """Explico el propósito de n adsorbed dentro de este módulo y cómo participa en el flujo de trabajo."""
         return int(np.count_nonzero(~self.mb_free))
 
     @property
     def n_free(self) -> int:
+        """Explico el propósito de n free dentro de este módulo y cómo participa en el flujo de trabajo."""
         return int(np.count_nonzero(self.mb_free))
 
     @property
     def m_adsorbed_mg(self) -> float:
+        """Explico el propósito de m adsorbed mg dentro de este módulo y cómo participa en el flujo de trabajo."""
         return self.n_adsorbed * self.config.peso_mb_mg
 
     @property
     def m_free_mg(self) -> float:
+        """Explico el propósito de m free mg dentro de este módulo y cómo participa en el flujo de trabajo."""
         return self.config.m_mb_mg - self.m_adsorbed_mg
 
     @property
     def qt_mg_g(self) -> float:
+        """Explico el propósito de qt mg g dentro de este módulo y cómo participa en el flujo de trabajo."""
         return self.m_adsorbed_mg / self.config.m_go_g
 
 
@@ -55,6 +60,7 @@ def _aabb_overlap(
     half: float,
     others: list[tuple[np.ndarray, float]],
 ) -> bool:
+    """Compruebo si un cuadrado candidato se solapa con alguno de los objetos ya colocados."""
     x, y = float(xy[0]), float(xy[1])
     for o_xy, o_half in others:
         if abs(x - float(o_xy[0])) < half + o_half and abs(y - float(o_xy[1])) < half + o_half:
@@ -71,6 +77,7 @@ def _place_group(
     avoid_overlap: bool,
     max_attempts: int,
 ) -> np.ndarray:
+    """Coloco un grupo de objetos dentro del recinto y, cuando está activado, evito solapamientos iniciales."""
     lo = half
     hi = domain - half
     if hi <= lo:
@@ -93,6 +100,7 @@ def _place_group(
 
 
 def initialize_state(config: SimulationConfig, settings: RunSettings) -> tuple[SimulationState, np.random.Generator]:
+    """Creo el generador aleatorio y preparo las posiciones, el estado libre del colorante y la capacidad inicial del adsorbente."""
     rng = np.random.default_rng(settings.seed)
     occupied: list[tuple[np.ndarray, float]] = []
     go_xy = _place_group(
@@ -125,6 +133,7 @@ def initialize_state(config: SimulationConfig, settings: RunSettings) -> tuple[S
 
 
 def assert_inside(state: SimulationState) -> None:
+    """Verifico que los objetos permanecen dentro de los límites del recinto."""
     domain = float(state.config.domain_px)
     for xy, half in (
         (state.mb_xy, state.config.r_mb_px),
