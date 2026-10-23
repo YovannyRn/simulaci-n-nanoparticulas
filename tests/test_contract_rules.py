@@ -36,6 +36,7 @@ SCIENTIFIC_MODULES = [
 
 
 def test_domain_masses_and_graphic_sizes() -> None:
+    """Compruebo el comportamiento esperado de domain masses and graphic sizes y ayudo a detectar regresiones."""
     cfg = default_config()
     assert cfg.domain_px == 442
     assert cfg.n_mb == 200
@@ -51,6 +52,7 @@ def test_domain_masses_and_graphic_sizes() -> None:
 
 
 def test_contact_is_distance_threshold_only() -> None:
+    """Compruebo el comportamiento esperado de contact is distance threshold only y ayudo a detectar regresiones."""
     src = inspect.getsource(contact_pairs)
     assert "dist <= thresh" in src or "dist <= thresh + 1e-12" in src
     assert "random" not in src
@@ -59,6 +61,7 @@ def test_contact_is_distance_threshold_only() -> None:
 
 
 def test_langmuir_and_pso_are_isolated_from_detector_and_adsorption() -> None:
+    """Compruebo el comportamiento esperado de langmuir and pso are isolated from detector and adsorption y ayudo a detectar regresiones."""
     contact_src = inspect.getsource(contact_pairs).lower()
     ads_src = inspect.getsource(apply_adsorption).lower()
     motion_src = inspect.getsource(move).lower()
@@ -75,6 +78,7 @@ def test_langmuir_and_pso_are_isolated_from_detector_and_adsorption() -> None:
 
 
 def test_sigma_and_steps_are_injected_not_scientific_defaults() -> None:
+    """Compruebo el comportamiento esperado de sigma and steps are injected not scientific defaults y ayudo a detectar regresiones."""
     cfg_table = {p.symbol: p for p in SimulationConfig().parameter_table()}
     assert cfg_table["D"].status == OriginStatus.PENDIENTE
     assert cfg_table["P"].status == OriginStatus.PENDIENTE
@@ -90,6 +94,7 @@ def test_sigma_and_steps_are_injected_not_scientific_defaults() -> None:
 
 
 def test_mass_conserved_every_recorded_step() -> None:
+    """Compruebo el comportamiento esperado de mass conserved every recorded step y ayudo a detectar regresiones."""
     result = run_simulation(seed=4, sigma_px=1.0, n_steps=25)
     cfg = default_config()
     for row in result["series"]:
@@ -102,6 +107,7 @@ def test_mass_conserved_every_recorded_step() -> None:
 
 
 def test_same_seed_reproduces_full_run() -> None:
+    """Compruebo el comportamiento esperado de same seed reproduces full run y ayudo a detectar regresiones."""
     kwargs = dict(seed=13, sigma_px=0.8, n_steps=12)
     a = run_simulation(**kwargs)
     b = run_simulation(**kwargs)
@@ -112,6 +118,7 @@ def test_same_seed_reproduces_full_run() -> None:
 
 
 def test_scientific_modules_do_not_import_matplotlib() -> None:
+    """Compruebo el comportamiento esperado de scientific modules do not import matplotlib y ayudo a detectar regresiones."""
     for name in SCIENTIFIC_MODULES:
         src = (SRC / name).read_text(encoding="utf-8")
         assert "matplotlib" not in src
@@ -119,6 +126,7 @@ def test_scientific_modules_do_not_import_matplotlib() -> None:
 
 
 def test_cli_imports_viz_only_lazily() -> None:
+    """Compruebo el comportamiento esperado de cli imports viz only lazily y ayudo a detectar regresiones."""
     tree = ast.parse((SRC / "cli.py").read_text(encoding="utf-8"))
     for node in tree.body:
         if isinstance(node, ast.ImportFrom) and node.module == "go_mb.viz":
@@ -129,6 +137,7 @@ def test_cli_imports_viz_only_lazily() -> None:
 
 
 def test_engine_runs_in_process_without_matplotlib() -> None:
+    """Compruebo el comportamiento esperado de engine runs in process without matplotlib y ayudo a detectar regresiones."""
     src_path = (ROOT / "src").as_posix().replace("\\", "/")
     code = (
         "import sys\n"
@@ -153,6 +162,7 @@ def test_engine_runs_in_process_without_matplotlib() -> None:
 
 
 def test_tests_do_not_freeze_demo_count_as_scientific_target() -> None:
+    """Compruebo el comportamiento esperado de tests do not freeze demo count as scientific target y ayudo a detectar regresiones."""
     this = Path(__file__).name
     needle_eq = "n_adsorbed == " + str(146)
     needle_frac = str(146) + "/200"
