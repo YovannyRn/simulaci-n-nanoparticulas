@@ -20,6 +20,7 @@ STEPS_ARE_NOT_MINUTES = True
 
 
 def parse_float_list(text: str) -> list[float]:
+    """Explico el propósito de parse float list dentro de sensitivity."""
     parts = [p.strip() for p in text.split(",") if p.strip()]
     if not parts:
         raise ValueError("La lista de valores no puede estar vacía")
@@ -27,6 +28,7 @@ def parse_float_list(text: str) -> list[float]:
 
 
 def parse_int_list(text: str) -> list[int]:
+    """Explico el propósito de parse int list dentro de sensitivity."""
     parts = [p.strip() for p in text.split(",") if p.strip()]
     if not parts:
         raise ValueError("La lista de valores no puede estar vacía")
@@ -34,12 +36,14 @@ def parse_int_list(text: str) -> list[int]:
 
 
 def parse_seed_list(text: str | None, default_seed: int) -> list[int]:
+    """Explico el propósito de parse seed list dentro de sensitivity."""
     if text is None or not text.strip():
         return [default_seed]
     return parse_int_list(text)
 
 
 def _provenance_header() -> dict[str, Any]:
+    """Explico el propósito de provenance header dentro de sensitivity."""
     return {
         "study_classification": STUDY_CLASSIFICATION,
         "not_experimental_validation": True,
@@ -74,6 +78,7 @@ def _provenance_header() -> dict[str, Any]:
 
 
 def _stem_prefix(config: SimulationConfig) -> str:
+    """Explico el propósito de stem prefix dentro de sensitivity."""
     return "ac_" if config.material == MaterialKind.AC else ""
 
 
@@ -141,6 +146,7 @@ def _run_one(
     output_dir: str | None,
     stem: str,
 ) -> tuple[dict[str, Any], dict[str, str] | None, dict[str, Any]]:
+    """Explico el propósito de run one dentro de sensitivity."""
     settings = RunSettings(seed=seed, sigma_px=sigma_px, n_steps=n_steps, p_ads=p_ads)
     result = run_simulation(config, settings)
     paths: dict[str, str] | None = None
@@ -160,6 +166,7 @@ def _finalize_study(
     *,
     material: str = "GO",
 ) -> dict[str, Any]:
+    """Explico el propósito de finalize study dentro de sensitivity."""
     analysis = analyze_study_records(records)
     prov = _provenance_header()
     prov["material"] = material
@@ -260,6 +267,7 @@ def sweep_sigma(
     p_ads: float | None = None,
     output_dir: str | None = None,
 ) -> dict[str, Any]:
+    """Explico el propósito de sweep sigma dentro de sensitivity."""
     cfg = config or SimulationConfig()
     records: list[dict[str, Any]] = []
     for seed in seeds:
@@ -285,6 +293,7 @@ def sweep_steps(
     p_ads: float | None = None,
     output_dir: str | None = None,
 ) -> dict[str, Any]:
+    """Explico el propósito de sweep steps dentro de sensitivity."""
     cfg = config or SimulationConfig()
     records: list[dict[str, Any]] = []
     for seed in seeds:
@@ -310,6 +319,7 @@ def sweep_sigma_steps_grid(
     p_ads: float | None = None,
     output_dir: str | None = None,
 ) -> dict[str, Any]:
+    """Explico el propósito de sweep sigma steps grid dentro de sensitivity."""
     cfg = config or SimulationConfig()
     records: list[dict[str, Any]] = []
     for seed in seeds:
