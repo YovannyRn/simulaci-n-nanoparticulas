@@ -23,6 +23,7 @@ from go_mb.state import SimulationState
 
 
 def test_validate_p_ads_rejects_invalid() -> None:
+    """Compruebo el comportamiento esperado de validate p ads rejects invalid y ayudo a detectar regresiones."""
     validate_p_ads(0.5)
     with pytest.raises(ValueError):
         validate_p_ads(1.1)
@@ -31,6 +32,7 @@ def test_validate_p_ads_rejects_invalid() -> None:
 
 
 def test_p_ads_zero_no_adsorption_events() -> None:
+    """Compruebo el comportamiento esperado de p ads zero no adsorption events y ayudo a detectar regresiones."""
     cfg = SimulationConfig(n_mb=2, n_go=1)
     state = SimulationState(
         config=cfg,
@@ -46,6 +48,7 @@ def test_p_ads_zero_no_adsorption_events() -> None:
 
 
 def test_p_ads_one_matches_none_full_run() -> None:
+    """Compruebo el comportamiento esperado de p ads one matches none full run y ayudo a detectar regresiones."""
     kw = dict(seed=11, sigma_px=1.0, n_steps=30)
     a = run_simulation(p_ads=None, **kw)
     b = run_simulation(p_ads=1.0, **kw)
@@ -55,11 +58,13 @@ def test_p_ads_one_matches_none_full_run() -> None:
 
 
 def test_mass_conservation_with_p_ads() -> None:
+    """Compruebo el comportamiento esperado de mass conservation with p ads y ayudo a detectar regresiones."""
     r = run_simulation(seed=3, sigma_px=1.5, n_steps=40, p_ads=0.25)
     assert r["summary"]["mass_conservation_ok"]
 
 
 def test_run_record_propagates_p_ads() -> None:
+    """Compruebo el comportamiento esperado de run record propagates p ads y ayudo a detectar regresiones."""
     r = run_simulation(seed=1, sigma_px=1.0, n_steps=5, p_ads=0.75)
     rec = run_record(r)
     assert rec["p_ads_effective"] == 0.75
@@ -67,12 +72,14 @@ def test_run_record_propagates_p_ads() -> None:
 
 
 def test_provenance() -> None:
+    """Compruebo el comportamiento esperado de provenance y ayudo a detectar regresiones."""
     p = provenance_block()
     assert p["classification"] == P_ADS_SENSITIVITY_CLASSIFICATION
     assert p["p_ads_are_computational_not_physical"] is True
 
 
 def test_aggregate_cv() -> None:
+    """Compruebo el comportamiento esperado de aggregate cv y ayudo a detectar regresiones."""
     records = [
         {
             "material": "GO",
@@ -104,6 +111,7 @@ def test_aggregate_cv() -> None:
 
 
 def test_small_campaign(tmp_path: Path) -> None:
+    """Compruebo el comportamiento esperado de small campaign y ayudo a detectar regresiones."""
     from go_mb import p_ads_sensitivity as mod
 
     old_p = mod.PADS_VALUES
@@ -125,11 +133,13 @@ def test_small_campaign(tmp_path: Path) -> None:
 
 
 def test_apply_adsorption_signature_unchanged() -> None:
+    """Compruebo el comportamiento esperado de apply adsorption signature unchanged y ayudo a detectar regresiones."""
     sig = inspect.signature(apply_adsorption)
     assert list(sig.parameters) == ["state", "pairs", "rng", "p_ads"]
 
 
 def test_reproducibility_same_p_ads() -> None:
+    """Compruebo el comportamiento esperado de reproducibility same p ads y ayudo a detectar regresiones."""
     kw = dict(seed=42, sigma_px=1.0, n_steps=25, p_ads=0.5)
     a = run_simulation(**kw)
     b = run_simulation(**kw)
