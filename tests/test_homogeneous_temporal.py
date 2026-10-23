@@ -21,6 +21,7 @@ from go_mb.homogeneous_temporal import (
 
 
 def test_design_constants() -> None:
+    """Compruebo el comportamiento esperado de design constants y ayudo a detectar regresiones."""
     assert DEFAULT_SIGMAS == [1.0, 1.5]
     assert DEFAULT_STEPS == [200, 400, 600, 800, 1000, 1500, 2000]
     assert DEFAULT_SEEDS == [1, 2, 3, 4, 5]
@@ -28,6 +29,7 @@ def test_design_constants() -> None:
 
 
 def test_go_and_ac_same_grid_small(tmp_path: Path) -> None:
+    """Compruebo el comportamiento esperado de go and ac same grid small y ayudo a detectar regresiones."""
     sigmas = [1.0]
     steps = [5, 10]
     seeds = [1, 2]
@@ -68,6 +70,7 @@ def test_go_and_ac_same_grid_small(tmp_path: Path) -> None:
 
 
 def test_aggregate_stats_spread(tmp_path: Path) -> None:
+    """Compruebo el comportamiento esperado de aggregate stats spread y ayudo a detectar regresiones."""
     go = run_material_campaign(
         "GO",
         sigmas=[1.5],
@@ -83,6 +86,7 @@ def test_aggregate_stats_spread(tmp_path: Path) -> None:
 
 
 def test_full_campaign_structure(tmp_path: Path) -> None:
+    """Compruebo el comportamiento esperado de full campaign structure y ayudo a detectar regresiones."""
     result = run_homogeneous_campaign(
         base_dir=tmp_path / "camp",
         sigmas=[1.0],
@@ -100,6 +104,7 @@ def test_full_campaign_structure(tmp_path: Path) -> None:
 
 
 def test_motor_does_not_import_matplotlib() -> None:
+    """Compruebo el comportamiento esperado de motor does not import matplotlib y ayudo a detectar regresiones."""
     engine_path = Path(__file__).resolve().parents[1] / "src" / "go_mb" / "engine.py"
     sens_path = Path(__file__).resolve().parents[1] / "src" / "go_mb" / "sensitivity.py"
     for path in (engine_path, sens_path):
@@ -113,6 +118,7 @@ def test_motor_does_not_import_matplotlib() -> None:
 
 
 def test_go_mobile_ac_fixed_configs() -> None:
+    """Compruebo el comportamiento esperado de go mobile ac fixed configs y ayudo a detectar regresiones."""
     assert SimulationConfig().adsorbent_movable is True
     assert ac_config().adsorbent_movable is False
     assert ac_config().material.value == "AC"
