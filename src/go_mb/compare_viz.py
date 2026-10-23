@@ -15,6 +15,7 @@ from go_mb.compare import ComparisonRow
 
 
 def _config_labels(table: list[ComparisonRow]) -> list[str]:
+    """Explico el propósito de config labels dentro de compare_viz."""
     return [f"σ={r.sigma_px:g}\nP={r.n_steps}" for r in table]
 
 
@@ -23,6 +24,7 @@ def plot_comparison_figures(
     table: list[ComparisonRow],
     output_dir: Path,
 ) -> list[str]:
+    """Explico el propósito de plot comparison figures dentro de compare_viz."""
     output_dir.mkdir(parents=True, exist_ok=True)
     paths: list[str] = []
     labels = _config_labels(table)
@@ -30,6 +32,7 @@ def plot_comparison_figures(
     width = 0.35
 
     def grouped_bar(go_vals, ac_vals, ylabel: str, title: str, fname: str) -> None:
+        """Explico el propósito de grouped bar dentro de compare_viz."""
         fig, ax = plt.subplots(figsize=(9, 4))
         ax.bar(x - width / 2, go_vals, width, label="GO (móvil)", color="tab:gray")
         ax.bar(x + width / 2, ac_vals, width, label="AC (fijo)", color="tab:orange")
