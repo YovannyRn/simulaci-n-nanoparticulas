@@ -12,6 +12,7 @@ import matplotlib.pyplot as plt
 
 
 def _flat_agg(aggregated: list[dict[str, Any]], material: str, sigma: float) -> list[dict[str, Any]]:
+    """Explico la responsabilidad de flat agg dentro de p_ads_sensitivity_viz."""
     return sorted(
         [
             a
@@ -27,6 +28,7 @@ def plot_p_ads_sensitivity(
     records: list[dict[str, Any]],
     output_dir: Path,
 ) -> list[str]:
+    """Explico la responsabilidad de plot p ads sensitivity dentro de p_ads_sensitivity_viz."""
     output_dir.mkdir(parents=True, exist_ok=True)
     paths: list[str] = []
     p_vals = sorted({a["p_ads"] for a in aggregated})
