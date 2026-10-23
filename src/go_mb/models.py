@@ -14,10 +14,12 @@ from go_mb.config import MaterialKind, SimulationConfig
 
 
 def langmuir_qe(qmax: float, kl: float, ce: float) -> float:
+    """Calculo la capacidad de equilibrio de Langmuir para una concentración de equilibrio dada."""
     return qmax * kl * ce / (1.0 + kl * ce)
 
 
 def mass_balance_qe(c0: float, ce: float, volume_l: float, m_g: float) -> float:
+    """Calculo qe a partir del balance de masa entre concentración inicial y de equilibrio."""
     return (c0 - ce) * volume_l / m_g
 
 
@@ -77,6 +79,7 @@ def pso_time_for_fraction(k2: float, qe: float, fraction: float) -> float | None
 
 
 def reference_bundle(config: SimulationConfig) -> dict[str, Any]:
+    """Agrupo los resultados de referencia que corresponden a la configuración seleccionada."""
     eq = langmuir_equilibrium(config)
     bundle: dict[str, Any] = {
         "langmuir": eq,
