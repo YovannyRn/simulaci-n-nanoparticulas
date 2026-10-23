@@ -8,6 +8,7 @@ from go_mb.state import initialize_state
 
 
 def test_advance_step_matches_run_simulation_go() -> None:
+    """Compruebo el comportamiento esperado de advance step matches run simulation go y ayudo a detectar regresiones."""
     cfg = config_for_material("GO")
     settings = RunSettings(seed=12, sigma_px=1.1, n_steps=25)
     full = run_simulation(config=cfg, settings=settings)
@@ -27,6 +28,7 @@ def test_advance_step_matches_run_simulation_go() -> None:
 
 
 def test_interactive_session_ac_fixed_adsorbent() -> None:
+    """Compruebo el comportamiento esperado de interactive session ac fixed adsorbent y ayudo a detectar regresiones."""
     session = create_session("AC", seed=3, sigma_px=1.5, n_steps=15)
     ac0 = session.state.go_xy.copy()
     session.run_to_completion_headless()
@@ -34,6 +36,7 @@ def test_interactive_session_ac_fixed_adsorbent() -> None:
 
 
 def test_interactive_same_as_engine_ac() -> None:
+    """Compruebo el comportamiento esperado de interactive same as engine ac y ayudo a detectar regresiones."""
     engine = run_simulation(config=ac_config(), seed=8, sigma_px=1.0, n_steps=30)
     session = create_session("AC", seed=8, sigma_px=1.0, n_steps=30)
     session.run_to_completion_headless()
@@ -43,6 +46,7 @@ def test_interactive_same_as_engine_ac() -> None:
 
 
 def test_visualization_module_does_not_import_tk_at_import() -> None:
+    """Compruebo el comportamiento esperado de visualization module does not import tk at import y ayudo a detectar regresiones."""
     import go_mb.interactive as interactive
 
     assert "launch_interactive_viewer" in dir(interactive)
