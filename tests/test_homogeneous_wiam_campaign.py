@@ -28,6 +28,7 @@ from go_mb.homogeneous_temporal import (
 
 
 def test_wiam_design_counts() -> None:
+    """Compruebo el comportamiento esperado de wiam design counts y ayudo a detectar regresiones."""
     assert len(DEFAULT_SIGMAS) == 2
     assert len(DEFAULT_STEPS) == 7
     assert len(DEFAULT_SEEDS) == 5
@@ -36,6 +37,7 @@ def test_wiam_design_counts() -> None:
 
 
 def test_configs_use_wiam_geometry() -> None:
+    """Compruebo el comportamiento esperado de configs use wiam geometry y ayudo a detectar regresiones."""
     go = SimulationConfig()
     ac = ac_config()
     assert go.mb_size_px == WIAM_MB_SIDE_PX == 1
@@ -51,6 +53,7 @@ def test_configs_use_wiam_geometry() -> None:
 
 
 def test_small_wiam_campaign_preflight(tmp_path: Path) -> None:
+    """Compruebo el comportamiento esperado de small wiam campaign preflight y ayudo a detectar regresiones."""
     go = run_material_campaign(
         "GO",
         sigmas=[1.0],
@@ -77,11 +80,13 @@ def test_small_wiam_campaign_preflight(tmp_path: Path) -> None:
 
 
 def test_apply_adsorption_unchanged() -> None:
+    """Compruebo el comportamiento esperado de apply adsorption unchanged y ayudo a detectar regresiones."""
     sig = inspect.signature(apply_adsorption)
     assert list(sig.parameters.keys()) == ["state", "pairs", "rng", "p_ads"]
 
 
 def test_scientific_motor_no_matplotlib() -> None:
+    """Compruebo el comportamiento esperado de scientific motor no matplotlib y ayudo a detectar regresiones."""
     root = Path(__file__).resolve().parents[1] / "src" / "go_mb"
     for name in ("engine.py", "homogeneous_temporal.py", "sensitivity.py", "adsorption.py"):
         tree = ast.parse((root / name).read_text(encoding="utf-8"))
@@ -94,6 +99,7 @@ def test_scientific_motor_no_matplotlib() -> None:
 
 
 def test_full_wiam_campaign_structure(tmp_path: Path) -> None:
+    """Compruebo el comportamiento esperado de full wiam campaign structure y ayudo a detectar regresiones."""
     result = run_homogeneous_campaign(
         base_dir=tmp_path / "wiam_camp",
         sigmas=[1.0],
