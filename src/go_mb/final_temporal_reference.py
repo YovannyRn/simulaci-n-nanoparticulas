@@ -32,6 +32,7 @@ from go_mb.temporal_calibration import DEFAULT_FRACTIONS, load_and_analyze_campa
 
 
 def _stats(vals: list[float]) -> dict[str, float | None]:
+    """Explico la función de stats en el módulo final_temporal_reference."""
     if not vals:
         return {"mean": None, "std": None, "min": None, "max": None, "cv_percent": None}
     mean = statistics.mean(vals)
@@ -46,6 +47,7 @@ def _stats(vals: list[float]) -> dict[str, float | None]:
 
 
 def provenance_header(*, campaign_root: Path) -> dict[str, Any]:
+    """Explico la función de provenance header en el módulo final_temporal_reference."""
     return {
         "classification": FINAL_TEMPORAL_CLASSIFICATION,
         "not_experimental_validation": True,
@@ -74,12 +76,14 @@ def provenance_header(*, campaign_root: Path) -> dict[str, Any]:
 
 
 def split_crossings(crossings: list[dict[str, Any]]) -> tuple[list[dict], list[dict]]:
+    """Explico la función de split crossings en el módulo final_temporal_reference."""
     go = [r for r in crossings if r["material"] == "GO"]
     ac = [r for r in crossings if r["material"] == "AC"]
     return go, ac
 
 
 def alpha_rows_from_crossings(crossings: list[dict[str, Any]]) -> list[dict[str, Any]]:
+    """Explico la función de alpha rows from crossings en el módulo final_temporal_reference."""
     rows: list[dict[str, Any]] = []
     for r in crossings:
         rows.append(
@@ -104,6 +108,7 @@ def aggregate_alpha_by_sigma_fraction(
     crossings: list[dict[str, Any]],
     material: str,
 ) -> list[dict[str, Any]]:
+    """Explico la función de aggregate alpha by sigma fraction en el módulo final_temporal_reference."""
     sub = [r for r in crossings if r["material"] == material and r["reach_status"] == "reached"]
     groups: dict[tuple[float, float], list[float]] = {}
     for r in sub:
@@ -128,6 +133,7 @@ def aggregate_alpha_by_sigma_fraction(
 
 
 def reachability_summary(crossings: list[dict[str, Any]], *, horizon: int = 2000) -> list[dict[str, Any]]:
+    """Explico la función de reachability summary en el módulo final_temporal_reference."""
     rows: list[dict[str, Any]] = []
     sub = [r for r in crossings if int(r["n_steps_horizon"]) == horizon]
     keys = sorted({(r["material"], float(r["sigma_px"]), int(r["seed"])) for r in sub})
@@ -159,6 +165,7 @@ def reachability_summary(crossings: list[dict[str, Any]], *, horizon: int = 2000
 
 
 def candidate_final_protocol() -> dict[str, Any]:
+    """Explico la función de candidate final protocol en el módulo final_temporal_reference."""
     return {
         "status": "prepared_for_human_review_not_executed",
         "final_campaign_size": {"GO_replicates": 40, "AC_replicates": 40, "executed": False},
@@ -204,6 +211,7 @@ def run_final_temporal_reference(
     plot: bool = True,
     run_pads_055: bool = True,
 ) -> dict[str, Any]:
+    """Explico la función de run final temporal reference en el módulo final_temporal_reference."""
     camp = campaign_root or Path(HOMOGENEOUS_WIAM_DIR)
     sens = sensitivity_root or Path("data/sensitivity/p_ads_sensitivity")
     out = output_dir or Path("data/analysis/final_temporal_reference")
@@ -298,6 +306,7 @@ def run_final_temporal_reference(
 
 
 def _flatten_agg(blocks: list[dict[str, Any]]) -> list[dict[str, Any]]:
+    """Explico la función de flatten agg en el módulo final_temporal_reference."""
     rows: list[dict[str, Any]] = []
     for block in blocks:
         row = {
