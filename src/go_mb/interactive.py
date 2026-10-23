@@ -20,6 +20,7 @@ MaterialChoice = Literal["GO", "AC"]
 
 
 def config_for_material(material: MaterialChoice) -> SimulationConfig:
+    """Explico la responsabilidad de config for material dentro de interactive."""
     if material == "AC":
         return ac_config()
     return SimulationConfig()
@@ -39,9 +40,11 @@ class InteractiveSession:
 
     @property
     def material_label(self) -> str:
+        """Explico la responsabilidad de material label dentro de interactive."""
         return self.config.adsorbent_symbol
 
     def reset(self) -> None:
+        """Explico la responsabilidad de reset dentro de interactive."""
         self.state, self.rng = initialize_state(self.config, self.settings)
         self.series = []
         self.paused = False
@@ -69,6 +72,7 @@ class InteractiveSession:
         return self.metrics_dict()
 
     def metrics_dict(self) -> dict[str, Any]:
+        """Explico la responsabilidad de metrics dict dentro de interactive."""
         last = self.series[-1] if self.series else {}
         return {
             "step": int(last.get("step", 0)),
@@ -94,6 +98,7 @@ def create_session(
     n_steps: int,
     p_ads: float | None = None,
 ) -> InteractiveSession:
+    """Explico la responsabilidad de create session dentro de interactive."""
     cfg = config_for_material(material)
     settings = RunSettings(seed=seed, sigma_px=sigma_px, n_steps=n_steps, p_ads=p_ads)
     state, rng = initialize_state(cfg, settings)
@@ -177,10 +182,12 @@ def launch_interactive_viewer(
     btn_reset = Button(ax_reset, "Reiniciar")
 
     def toggle_pause(_event) -> None:
+        """Explico la responsabilidad de toggle pause dentro de interactive."""
         session.paused = not session.paused
         btn_pause.label.set_text("Reanudar" if session.paused else "Pausa")
 
     def do_reset(_event) -> None:
+        """Explico la responsabilidad de do reset dentro de interactive."""
         session.reset()
         btn_pause.label.set_text("Pausa")
 
@@ -188,6 +195,7 @@ def launch_interactive_viewer(
     btn_reset.on_clicked(do_reset)
 
     def refresh_artists() -> None:
+        """Explico la responsabilidad de refresh artists dentro de interactive."""
         st = session.state
         free = st.mb_free
         mb = st.mb_xy
@@ -222,6 +230,7 @@ def launch_interactive_viewer(
         ax_series.autoscale_view()
 
     def on_frame(_i: int) -> None:
+        """Explico la responsabilidad de on frame dentro de interactive."""
         if not session.paused and not session.finished:
             session.step_once()
         refresh_artists()
