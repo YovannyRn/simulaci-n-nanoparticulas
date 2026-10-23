@@ -21,6 +21,7 @@ from go_mb.final_protocol_analysis import (
     run_final_protocol_analysis,
 )
 def test_p2000_run_count() -> None:
+    """Compruebo el comportamiento esperado de p2000 run count y ayudo a detectar regresiones."""
     root = Path("data/sensitivity/homogeneous_temporal_wiam_geometry")
     if not (root / "go").is_dir():
         pytest.skip("Campaña Wiam ausente")
@@ -33,6 +34,7 @@ def test_p2000_run_count() -> None:
 
 
 def test_aggregate_stats_cv() -> None:
+    """Compruebo el comportamiento esperado de aggregate stats cv y ayudo a detectar regresiones."""
     root = Path("data/sensitivity/homogeneous_temporal_wiam_geometry")
     if not (root / "go").is_dir():
         pytest.skip("Campaña Wiam ausente")
@@ -44,6 +46,7 @@ def test_aggregate_stats_cv() -> None:
 
 
 def test_sigma_comparison_descriptive() -> None:
+    """Compruebo el comportamiento esperado de sigma comparison descriptive y ayudo a detectar regresiones."""
     root = Path("data/sensitivity/homogeneous_temporal_wiam_geometry")
     if not (root / "go").is_dir():
         pytest.skip("Campaña Wiam ausente")
@@ -54,6 +57,7 @@ def test_sigma_comparison_descriptive() -> None:
 
 
 def test_fraction_reachability() -> None:
+    """Compruebo el comportamiento esperado de fraction reachability y ayudo a detectar regresiones."""
     cal = Path("data/analysis/temporal_calibration")
     if not (cal / "fraction_crossings.csv").is_file():
         pytest.skip("Calibración temporal ausente")
@@ -67,6 +71,7 @@ def test_fraction_reachability() -> None:
 
 
 def test_alpha_p2000_go_structure() -> None:
+    """Compruebo el comportamiento esperado de alpha p2000 go structure y ayudo a detectar regresiones."""
     cal = Path("data/analysis/temporal_calibration")
     if not (cal / "fraction_crossings.csv").is_file():
         pytest.skip("Calibración temporal ausente")
@@ -80,6 +85,7 @@ def test_alpha_p2000_go_structure() -> None:
 
 
 def test_run_final_protocol_reproducible(tmp_path: Path) -> None:
+    """Compruebo el comportamiento esperado de run final protocol reproducible y ayudo a detectar regresiones."""
     camp = Path("data/sensitivity/homogeneous_temporal_wiam_geometry")
     cal = Path("data/analysis/temporal_calibration")
     if not camp.is_dir() or not (cal / "fraction_crossings.csv").is_file():
@@ -100,6 +106,7 @@ def test_run_final_protocol_reproducible(tmp_path: Path) -> None:
 
 
 def test_provenance_classification() -> None:
+    """Compruebo el comportamiento esperado de provenance classification y ayudo a detectar regresiones."""
     p = provenance_block(
         campaign_root=Path("x"),
         calibration_root=Path("y"),
@@ -109,6 +116,7 @@ def test_provenance_classification() -> None:
 
 
 def test_apply_adsorption_unchanged() -> None:
+    """Compruebo el comportamiento esperado de apply adsorption unchanged y ayudo a detectar regresiones."""
     assert list(inspect.signature(apply_adsorption).parameters) == [
         "state",
         "pairs",
@@ -118,6 +126,7 @@ def test_apply_adsorption_unchanged() -> None:
 
 
 def test_analysis_module_no_matplotlib() -> None:
+    """Compruebo el comportamiento esperado de analysis module no matplotlib y ayudo a detectar regresiones."""
     path = Path(__file__).resolve().parents[1] / "src" / "go_mb" / "final_protocol_analysis.py"
     tree = ast.parse(path.read_text(encoding="utf-8"))
     for node in ast.walk(tree):
