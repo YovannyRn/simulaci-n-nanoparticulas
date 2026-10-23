@@ -6,6 +6,7 @@ import sys
 
 
 def _run_presentation() -> int:
+    """Coordino la ejecución del paquete cuando se inicia como módulo."""
     try:
         from go_mb.launcher_ui import run_presentation_app
 
