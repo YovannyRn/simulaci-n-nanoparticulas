@@ -19,6 +19,7 @@ from go_mb.sensitivity import (
 
 
 def run_sensitivity_command(args: Any, config: SimulationConfig) -> dict[str, Any]:
+    """Explico la responsabilidad de run sensitivity command dentro de este módulo."""
     seeds = parse_seed_list(args.seeds, args.seed)
     study_name = args.study_name
     plot_dir = Path(args.out) / "figures"
@@ -76,4 +77,5 @@ def run_sensitivity_command(args: Any, config: SimulationConfig) -> dict[str, An
 
 
 def print_sensitivity_result(payload: dict[str, Any]) -> None:
+    """Explico la responsabilidad de print sensitivity result dentro de este módulo."""
     print(json.dumps(payload, indent=2, default=str))
