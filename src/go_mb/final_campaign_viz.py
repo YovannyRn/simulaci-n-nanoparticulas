@@ -15,6 +15,7 @@ from go_mb.pso_reference import AC_LANGMUIR, AC_PSO, GO_LANGMUIR, GO_PSO
 
 
 def _save(fig, path: Path, description: str, catalog: list[dict[str, str]]) -> None:
+    """Explico la responsabilidad de save en el flujo de final_campaign_viz."""
     path.parent.mkdir(parents=True, exist_ok=True)
     fig.savefig(path, dpi=150, bbox_inches="tight")
     plt.close(fig)
@@ -26,6 +27,7 @@ def plot_final_campaign(
     run_paths: list[tuple[str, Path]],
     output_dir: Path,
 ) -> list[dict[str, str]]:
+    """Explico la responsabilidad de plot final campaign en el flujo de final_campaign_viz."""
     catalog: list[dict[str, str]] = []
     go = sorted([r for r in records if r["material"] == "GO"], key=lambda x: x["seed"])
     ac = sorted([r for r in records if r["material"] == "AC"], key=lambda x: x["seed"])
