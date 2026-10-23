@@ -43,6 +43,7 @@ def run_simulation(
     n_steps: int | None = None,
     p_ads: float | None = None,
 ) -> dict[str, Any]:
+    """Coordino una corrida completa, inicializo el estado, avanzo los pasos y devuelvo la serie y el resumen de resultados."""
     cfg = config or SimulationConfig()
     if settings is None:
         if seed is None or sigma_px is None or n_steps is None:
@@ -94,5 +95,6 @@ def run_simulation(
 
 
 def peek_state(config: SimulationConfig, settings: RunSettings) -> SimulationState:
+    """Obtengo el estado inicial de una ejecución sin avanzar los pasos de la simulación."""
     state, _ = initialize_state(config, settings)
     return state
