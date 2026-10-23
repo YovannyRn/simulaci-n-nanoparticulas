@@ -11,6 +11,7 @@ from go_mb.sensitivity import sweep_sigma, sweep_steps
 
 
 def test_ac_sigma_sweep_reproducible(tmp_path: Path) -> None:
+    """Compruebo el comportamiento esperado de ac sigma sweep reproducible para detectar regresiones en el modelo."""
     cfg = ac_config()
     study = sweep_sigma(
         sigmas=[0.5, 1.0],
@@ -34,6 +35,7 @@ def test_ac_sigma_sweep_reproducible(tmp_path: Path) -> None:
 
 
 def test_ac_steps_sweep_mass_and_provenance(tmp_path: Path) -> None:
+    """Compruebo el comportamiento esperado de ac steps sweep mass and provenance para detectar regresiones en el modelo."""
     study = sweep_steps(
         steps_list=[10, 20],
         seeds=[1, 2],
