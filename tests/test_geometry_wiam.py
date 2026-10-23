@@ -23,6 +23,7 @@ from go_mb.state import SimulationState
 
 
 def test_mb_go_ac_visual_sizes_and_radii() -> None:
+    """Compruebo el comportamiento esperado de mb go ac visual sizes and radii y ayudo a detectar regresiones."""
     go_cfg = default_config()
     ac_cfg = ac_config()
     assert go_cfg.mb_size_px == WIAM_MB_SIDE_PX == 1
@@ -36,6 +37,7 @@ def test_mb_go_ac_visual_sizes_and_radii() -> None:
 
 
 def test_contact_detector_uses_config_radii() -> None:
+    """Compruebo el comportamiento esperado de contact detector uses config radii y ayudo a detectar regresiones."""
     src = inspect.getsource(contact_pairs)
     assert "state.config.r_mb_px + state.config.r_go_px" in src
 
@@ -79,6 +81,7 @@ def test_contact_detector_uses_config_radii() -> None:
 
 
 def _shift_state(state: SimulationState, extra: float) -> SimulationState:
+    """Compruebo el comportamiento esperado de  shift state y ayudo a detectar regresiones."""
     go = state.go_xy.copy()
     go[0, 0] += extra
     return SimulationState(
@@ -92,16 +95,19 @@ def _shift_state(state: SimulationState, extra: float) -> SimulationState:
 
 
 def test_go_mobile_ac_fixed() -> None:
+    """Compruebo el comportamiento esperado de go mobile ac fixed y ayudo a detectar regresiones."""
     assert default_config().adsorbent_movable is True
     assert ac_config().adsorbent_movable is False
 
 
 def test_apply_adsorption_source_unchanged_signature() -> None:
+    """Compruebo el comportamiento esperado de apply adsorption source unchanged signature y ayudo a detectar regresiones."""
     sig = inspect.signature(apply_adsorption)
     assert list(sig.parameters.keys()) == ["state", "pairs", "rng", "p_ads"]
 
 
 def test_motor_scientific_modules_no_matplotlib() -> None:
+    """Compruebo el comportamiento esperado de motor scientific modules no matplotlib y ayudo a detectar regresiones."""
     root = Path(__file__).resolve().parents[1] / "src" / "go_mb"
     for name in (
         "engine.py",
